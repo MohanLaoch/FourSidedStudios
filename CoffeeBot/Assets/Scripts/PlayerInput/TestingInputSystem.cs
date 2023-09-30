@@ -29,14 +29,15 @@ public class TestingInputSystem : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 inputVectorMove = playerInputActions.Player.Movement.ReadValue<Vector2>();
+        float Move = playerInputActions.Player.Movement.ReadValue<float>();
 
-        Vector2 inputVectorRotate = playerInputActions.Player.Rotate.ReadValue<Vector2>();
-        float Speed = 10f;
-        float RotSpeed = 5f;
-       
-        rb.AddForce(new Vector3(inputVectorMove.x, 0, inputVectorMove.y) * Speed, ForceMode.Force);
-        rb.AddTorque(new Vector3(inputVectorRotate.x, 0, inputVectorRotate.y) * RotSpeed, ForceMode.Force);
+        float RotDirection = playerInputActions.Player.Rotate.ReadValue<float>();
+        float Speed = 5f;
+        float RotSpeed = 200f;
+
+
+        transform.Translate(0, 0, Speed * Move * Time.deltaTime);
+        transform.Rotate(Vector3.up * Time.deltaTime * RotSpeed * RotDirection);
     }
 
 
