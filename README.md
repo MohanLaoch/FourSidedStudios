@@ -10,6 +10,12 @@
 - Changed gitignore
 - Added Extra Scenes and Folders
 
+26/09/2023 - Mark
+-Added Models (Coffee Cup/ Travel Cup) to Mark Scene
+
+27/09/2023 - Mark
+-Built small display room in Mark Scene
+
 30/09/2023 - James
 - Added Probuilder
 - Created basic floor layout
