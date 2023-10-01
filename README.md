@@ -2,6 +2,10 @@
 
 ### Commit Log
 
+**01/10/23 - Declan**
+-Added Player Model and Level sandbox to Character Controller
+-Created whitebox demonstration for gameplay + visuals
+
 **26/09/2023 - James**
 - Added Unity Project
 - Changed gitignore
