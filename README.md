@@ -34,3 +34,6 @@
 - Imported Coffee bot concept model and textures
 - Added " to Mark Scene (along with mock up tray)
 
+**03/10/2023 - Mark**
+-Imported chair and stool model
+-Added " to Mark Scene
