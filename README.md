@@ -39,6 +39,10 @@
 -Added " to Mark Scene
 
 **06/10/2023 - Mark**
--Imported Circular table model
--Added " to Mark Scene
--Rescaled Modles in Mark Scene
+- Imported Circular table model
+- Added " to Mark Scene
+- Rescaled Modles in Mark Scene
+
+**10/10/2023 - James**
+- Added Cinemachine
+- Added in a rotating camera with zoom
