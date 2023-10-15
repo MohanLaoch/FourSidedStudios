@@ -53,6 +53,24 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""56deff7d-426a-4f4f-acaa-4b8765dd96b6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ArmRaise"",
+                    ""type"": ""Button"",
+                    ""id"": ""d8bac9bb-85d2-41b9-88c5-e714c1aa9698"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -132,6 +150,28 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""44bff406-7f6a-4608-b782-32845692e57a"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8649136d-c2a5-448c-8ba0-581f3d4d5ffd"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ArmRaise"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -143,6 +183,8 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Player_Flip = m_Player.FindAction("Flip", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Rotate = m_Player.FindAction("Rotate", throwIfNotFound: true);
+        m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+        m_Player_ArmRaise = m_Player.FindAction("ArmRaise", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -205,6 +247,8 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Flip;
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Rotate;
+    private readonly InputAction m_Player_Interact;
+    private readonly InputAction m_Player_ArmRaise;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -212,6 +256,8 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @Flip => m_Wrapper.m_Player_Flip;
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Rotate => m_Wrapper.m_Player_Rotate;
+        public InputAction @Interact => m_Wrapper.m_Player_Interact;
+        public InputAction @ArmRaise => m_Wrapper.m_Player_ArmRaise;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -230,6 +276,12 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Rotate.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
                 @Rotate.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
                 @Rotate.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
+                @Interact.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                @ArmRaise.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnArmRaise;
+                @ArmRaise.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnArmRaise;
+                @ArmRaise.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnArmRaise;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -243,6 +295,12 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Rotate.started += instance.OnRotate;
                 @Rotate.performed += instance.OnRotate;
                 @Rotate.canceled += instance.OnRotate;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
+                @ArmRaise.started += instance.OnArmRaise;
+                @ArmRaise.performed += instance.OnArmRaise;
+                @ArmRaise.canceled += instance.OnArmRaise;
             }
         }
     }
@@ -252,5 +310,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnFlip(InputAction.CallbackContext context);
         void OnMovement(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
+        void OnArmRaise(InputAction.CallbackContext context);
     }
 }

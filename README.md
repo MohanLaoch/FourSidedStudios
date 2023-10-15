@@ -2,10 +2,6 @@
 
 ### Commit Log
 
-**01/10/23 - Declan**
-- Added Player Model and Level sandbox to Character Controller
-- Created whitebox demonstration for gameplay + visuals
-
 **26/09/2023 - James**
 - Added Unity Project
 - Changed gitignore
@@ -34,6 +30,11 @@
 - Imported Coffee bot concept model and textures
 - Added " to Mark Scene (along with mock up tray)
 
+**01/10/23 - Declan**
+- Added Player Model and Level sandbox to Character Controller
+- Created whitebox demonstration for gameplay + visuals
+
+
 **03/10/2023 - Mark**
 -Imported chair and stool model
 -Added " to Mark Scene
@@ -46,3 +47,6 @@
 **10/10/2023 - James**
 - Added Cinemachine
 - Added in a rotating camera with zoom
+
+**15/10/2023 - Declan**
+- Added arm movement functionality
