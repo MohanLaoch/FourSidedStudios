@@ -53,3 +53,9 @@
 
 **16/10/2023 - James**
 - Added Universal Render Pipeline
+
+**16/10/2023 - Declan**
+- Fixed arm movement issue
+- In depth research on interaction model
+
+

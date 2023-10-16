@@ -16,8 +16,20 @@ public class TestingInputSystem : MonoBehaviour
     private PlayerInputActions playerInputActions;
 
     public Transform Arms;
-    public float NewArmpos = 0.4f;
-    public float OldArmPos = 0.1f;
+    public Transform StartArms;
+    public Transform EndArms;
+    public float Speed;
+    public float moveSpeed = 5f;
+    private float startTime;
+    private float journeyLength;
+
+    private bool isMoving;
+    void Start()
+    {
+        startTime = Time.time;
+        journeyLength = Vector3.Distance(StartArms.position, EndArms.position);
+    }
+
 
 
     public Transform HoldArea;
@@ -34,37 +46,57 @@ public class TestingInputSystem : MonoBehaviour
         playerInputActions.Player.Flip.performed += Flip;
         playerInputActions.Player.Interact.performed += Interact;
         playerInputActions.Player.ArmRaise.performed += ArmRaise;
+        
 
 
 
-    }
-
-    private void Start()
-    {
 
     }
 
-    private void OnTriggerEnter(Collider other)
+
+    /*public Vector2 GetMovementVectorNormalized()
     {
-     
-    }
-    private void FixedUpdate()
+        Vector2 inputVector = playerInputActions.Player.Movement.ReadValue<Vector2>();
+
+        inputVector = inputVector.normalized;
+
+
+        return inputVector;
+    }*/
+
+  
+
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("pickup");
-        }
+        // Vector2 inputVector = GetMovementVectorNormalized();
+        // Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
+       //  transform.position += moveDir * moveSpeed * Time.deltaTime;
+
+        //  isMoving = moveDir != Vector3.zero;
+
+
+        Vector3 MoveDir = transform.forward;
         float Move = playerInputActions.Player.Movement.ReadValue<float>();
-
-        float RotDirection = playerInputActions.Player.Rotate.ReadValue<float>();
+        Vector2 RotDirection = playerInputActions.Player.Rotate.ReadValue<Vector2>();
         float Speed = 5f;
         float RotSpeed = 200f;
 
-
+       // transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * RotSpeed);
         transform.Translate(0, 0, Speed * Move * Time.deltaTime);
         transform.Rotate(Vector3.up * Time.deltaTime * RotSpeed * RotDirection);
-    }
 
+       // float playerSize = 0.7f;
+       /* bool canMove = !Physics.Raycast(transform.position, moveDir, playerSize);
+
+        if(canMove)
+        {
+            transform.position += moveDir * Speed * Time.deltaTime;
+        }*/
+    }
+    public bool IsMoving()
+    {
+        return isMoving;
+    }
 
     public void Flip(InputAction.CallbackContext context)
     {
@@ -92,8 +124,22 @@ public class TestingInputSystem : MonoBehaviour
 
     }
  
-   
-   
+   void ArmRising()
+    {
+        float distCovered = (Time.time - startTime) * Speed;
+        float fractionOfJourney = distCovered / journeyLength;
+        Arms.transform.position = Vector3.Slerp(StartArms.position, EndArms.position, fractionOfJourney);
+
+    }
+
+    void ArmLowering()
+    {
+        float distCovered = (Time.time - startTime) * Speed;
+        float fractionOfJourney = distCovered / journeyLength;
+        Arms.transform.position = Vector3.Slerp(EndArms.position, StartArms.position, fractionOfJourney);
+
+    }
+
 
     public void ArmRaise(InputAction.CallbackContext context)
     {
@@ -102,13 +148,14 @@ public class TestingInputSystem : MonoBehaviour
         if (context.performed && !ArmsRaised)
         {
             Debug.Log("Armraised" + context.phase);
-            Arms.position = new Vector3(Arms.transform.position.x, 0.8f, Arms.transform.position.z);
             ArmsRaised = true;
+            ArmRising();
+
         }
         else if (context.performed && ArmsRaised)
         {
-            Arms.position = new Vector3(Arms.transform.position.x, 0.2f, Arms.transform.position.z);
             ArmsRaised = false;
+            ArmLowering();
         }
 
     }
