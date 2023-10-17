@@ -64,3 +64,6 @@
 -setup character animator
 -Replaced defected animated model
 -added seperate coffee bot hat model
+
+**17/10/2023 - Declan**
+-Interaction Model progression

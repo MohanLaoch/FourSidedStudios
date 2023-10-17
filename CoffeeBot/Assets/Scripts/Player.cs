@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    private TestingInputSystem testingInputSystem;
 
 
     private void Awake()
@@ -15,13 +15,22 @@ public class Player : MonoBehaviour
   
     void Start()
     {
-        
+        testingInputSystem.OnInteractAction += TestingInputSystem_OnInteractAction;
 
     }
 
-   
+    private void TestingInputSystem_OnInteractAction(object sender, System.EventArgs e)
+    {
+        
+    }
+
     void Update()
     {
         
+    }
+
+    private void HandleInteractions()
+    {
+
     }
 }

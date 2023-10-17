@@ -68,14 +68,15 @@ public class TestingInputSystem : MonoBehaviour
 
     private void Update()
     {
+        HandleInteraction();
         // Vector2 inputVector = GetMovementVectorNormalized();
         // Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
-       //  transform.position += moveDir * moveSpeed * Time.deltaTime;
+        //  transform.position += moveDir * moveSpeed * Time.deltaTime;
 
         //  isMoving = moveDir != Vector3.zero;
 
 
-        Vector3 MoveDir = transform.forward;
+        //Vector3 MoveDir = Vector3.forward;
         float Move = playerInputActions.Player.Movement.ReadValue<float>();
         Vector2 RotDirection = playerInputActions.Player.Rotate.ReadValue<Vector2>();
         float Speed = 5f;
@@ -85,13 +86,32 @@ public class TestingInputSystem : MonoBehaviour
         transform.Translate(0, 0, Speed * Move * Time.deltaTime);
         transform.Rotate(Vector3.up * Time.deltaTime * RotSpeed * RotDirection);
 
-       // float playerSize = 0.7f;
-       /* bool canMove = !Physics.Raycast(transform.position, moveDir, playerSize);
+        float playerSize = 0.7f;
+       // bool canMove = !Physics.Raycast(transform.position, MoveDir, playerSize);
 
-        if(canMove)
+        /*if(canMove)
         {
-            transform.position += moveDir * Speed * Time.deltaTime;
+            transform.position += MoveDir * Speed * Time.deltaTime;
         }*/
+    }
+
+    private void HandleInteraction()
+    {
+        float interactDistance = 4f;
+
+        Vector3 moveDir = transform.TransformDirection(Vector3.forward);
+
+        Debug.DrawRay(transform.position, moveDir, Color.green);
+        if(Physics.Raycast(transform.position, moveDir, out RaycastHit raycastHit, interactDistance))
+        {
+            Debug.Log(raycastHit.transform);
+        }
+        else
+        {
+            Debug.Log("-");
+        }
+    
+
     }
     public bool IsMoving()
     {
