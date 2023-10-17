@@ -59,3 +59,6 @@
 - In depth research on interaction model
 
 
+**17/10/2023 - Mark**
+-Imported animated concept model (only arm raising and lowering animations
+-setup character animator
