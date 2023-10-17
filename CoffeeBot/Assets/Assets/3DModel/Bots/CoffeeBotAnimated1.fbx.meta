@@ -1,20 +1,20 @@
 fileFormatVersion: 2
-guid: 75c741a54a871fd49b2530434e85d54a
+guid: 9149706e4e982ff44afab2808db7a5fa
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: CoffeeBot_ForksUp
+    second: CoffeeBot_ArmsDown
   - first:
-      74: -8696053030185447859
-    second: CoffeeBot_ForksRaising
+      74: 6822990256861144289
+    second: CoffeeBot_Raising
   - first:
-      74: 7914861901636383263
-    second: CoffeeBot_ForksDown
+      74: -6027944753455754079
+    second: CoffeeBot_ArmsUp
   - first:
-      74: 48314525859265204
-    second: CoffeeBot_ForksLowering
+      74: -1887853671467594380
+    second: CoffeeBot_ArmsLowering
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -45,11 +45,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: CoffeeBot_ForksRaising
+      name: CoffeeBot_ArmsDown
       takeName: Take 001
       internalID: 0
-      firstFrame: 1
-      lastFrame: 20
+      firstFrame: 0
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -74,10 +74,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: CoffeeBot_ForksUp
+      name: CoffeeBot_Raising
       takeName: Take 001
       internalID: 0
-      firstFrame: 20
+      firstFrame: 1
       lastFrame: 21
       wrapMode: 0
       orientationOffsetY: 0
@@ -103,11 +103,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: CoffeeBot_ForksDown
+      name: CoffeeBot_ArmsUp
       takeName: Take 001
       internalID: 0
-      firstFrame: 0
-      lastFrame: 0
+      firstFrame: 21
+      lastFrame: 22
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -132,7 +132,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: CoffeeBot_ForksLowering
+      name: CoffeeBot_ArmsLowering
       takeName: Take 001
       internalID: 0
       firstFrame: 22

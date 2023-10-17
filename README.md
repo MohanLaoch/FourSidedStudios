@@ -62,3 +62,5 @@
 **17/10/2023 - Mark**
 -Imported animated concept model (only arm raising and lowering animations
 -setup character animator
+-Replaced defected animated model
+-added seperate coffee bot hat model
