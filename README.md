@@ -36,8 +36,8 @@
 
 
 **03/10/2023 - Mark**
--Imported chair and stool model
--Added " to Mark Scene
+- Imported chair and stool model
+- Added " to Mark Scene
 
 **06/10/2023 - Mark**
 - Imported Circular table model
@@ -60,10 +60,13 @@
 
 
 **17/10/2023 - Mark**
--Imported animated concept model (only arm raising and lowering animations
--setup character animator
--Replaced defected animated model
--added seperate coffee bot hat model
+- Imported animated concept model (only arm raising and lowering animations
+- setup character animator
+- Replaced defected animated model
+- added seperate coffee bot hat model
 
 **17/10/2023 - Declan**
--Interaction Model progression
+- Interaction Model progression
+
+**18/10/2023 - James**
+- Switched default unity render pipleline to Universal Render Pipeline
