@@ -72,4 +72,7 @@
 - Switched default unity render pipleline to Universal Render Pipeline
 
 **18/10/2023 - Mark**
--Readded models for URP changes
+- Readded models for URP changes
+
+**19/10/2023 - James**
+- Added Wall Cutout shader
