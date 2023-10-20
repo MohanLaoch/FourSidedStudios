@@ -160,7 +160,6 @@ public class TestingInputSystem : MonoBehaviour
                 interactableTest.Interact();
             }
         }
-
         OnInteractAction?.Invoke(this, EventArgs.Empty);
 
 
