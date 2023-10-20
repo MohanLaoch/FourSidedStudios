@@ -6,10 +6,11 @@ using UnityEngine.InputSystem;
 
 public class TestingInputSystem : MonoBehaviour
 {
+    
     public Rigidbody rb;
     public float FlipForce = 5f;
     public float FlipForceRot = 5f;
-
+    private Vector3 lastInteractionDir;
 
     public event EventHandler OnInteractAction;
     public PlayerInput playerInput;
@@ -22,6 +23,8 @@ public class TestingInputSystem : MonoBehaviour
     public float moveSpeed = 5f;
     private float startTime;
     private float journeyLength;
+
+    [SerializeField] private LayerMask interactablesLayerMask;
 
     private bool isMoving;
     void Start()
@@ -68,7 +71,7 @@ public class TestingInputSystem : MonoBehaviour
 
     private void Update()
     {
-        HandleInteraction();
+       // HandleInteraction();
         // Vector2 inputVector = GetMovementVectorNormalized();
         // Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
         //  transform.position += moveDir * moveSpeed * Time.deltaTime;
@@ -97,19 +100,26 @@ public class TestingInputSystem : MonoBehaviour
 
     private void HandleInteraction()
     {
-        float interactDistance = 4f;
+        float interactDistance = 1.5f;
 
         Vector3 moveDir = transform.TransformDirection(Vector3.forward);
 
+        if(moveDir != Vector3.zero)
+        {
+            lastInteractionDir = moveDir;
+        }
+
         Debug.DrawRay(transform.position, moveDir, Color.green);
-        if(Physics.Raycast(transform.position, moveDir, out RaycastHit raycastHit, interactDistance))
+        if(Physics.Raycast(transform.position, moveDir, out RaycastHit raycastHit, interactDistance, interactablesLayerMask))
         {
             Debug.Log(raycastHit.transform);
+
+           if(raycastHit.transform.TryGetComponent(out InteractableTest interactableTest))
+            {
+                interactableTest.Interact();
+            }
         }
-        else
-        {
-            Debug.Log("-");
-        }
+       
     
 
     }
@@ -131,6 +141,25 @@ public class TestingInputSystem : MonoBehaviour
 
     public void Interact(InputAction.CallbackContext context)
     {
+        float interactDistance = 1.5f;
+
+        Vector3 moveDir = transform.TransformDirection(Vector3.forward);
+
+        if (moveDir != Vector3.zero)
+        {
+            lastInteractionDir = moveDir;
+        }
+
+        Debug.DrawRay(transform.position, moveDir, Color.green);
+        if (Physics.Raycast(transform.position, moveDir, out RaycastHit raycastHit, interactDistance, interactablesLayerMask))
+        {
+            Debug.Log(raycastHit.transform);
+
+            if (raycastHit.transform.TryGetComponent(out InteractableTest interactableTest))
+            {
+                interactableTest.Interact();
+            }
+        }
 
         OnInteractAction?.Invoke(this, EventArgs.Empty);
 
