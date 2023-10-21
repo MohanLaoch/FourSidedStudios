@@ -89,3 +89,8 @@
 -Imported store room boxes models (Cups, Milks, Beans)
 -Added " to display room
 -created x3 emmision materials for store room boxes
+
+**21/10/23 - Declan**
+-Refactored some scripts
+-Added baseic interaction
+-Fixed player flipping error
