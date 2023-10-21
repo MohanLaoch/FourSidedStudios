@@ -7,8 +7,7 @@ using UnityEngine.InputSystem;
 public class TestingInputSystem : MonoBehaviour
 {
     
-    public Rigidbody rb;
-    public float FlipForce = 5f;
+    public float FlipForce = 2.5f;
     public float FlipForceRot = 5f;
     private Vector3 lastInteractionDir;
 
@@ -31,6 +30,8 @@ public class TestingInputSystem : MonoBehaviour
     {
         startTime = Time.time;
         journeyLength = Vector3.Distance(StartArms.position, EndArms.position);
+        
+
     }
 
 
@@ -41,134 +42,43 @@ public class TestingInputSystem : MonoBehaviour
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
         playerInput = GetComponent<PlayerInput>();
 
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
-        playerInputActions.Player.Flip.performed += Flip;
-        playerInputActions.Player.Interact.performed += Interact;
+        playerInputActions.Player.Interact.performed += Interact_performed;
         playerInputActions.Player.ArmRaise.performed += ArmRaise;
-        
-
-
 
 
     }
 
 
-    /*public Vector2 GetMovementVectorNormalized()
+    public float GetMovementFloat()
     {
-        Vector2 inputVector = playerInputActions.Player.Movement.ReadValue<Vector2>();
+        float MoveFloat = playerInputActions.Player.Movement.ReadValue<float>();
 
-        inputVector = inputVector.normalized;
+        return MoveFloat;
+    }
 
+    public Vector2 GetRotVector()
+    {
+        Vector2 RotDirection = playerInputActions.Player.Rotate.ReadValue<Vector2>();
 
-        return inputVector;
-    }*/
+        return RotDirection;
+    }
 
   
-
-    private void Update()
-    {
-       // HandleInteraction();
-        // Vector2 inputVector = GetMovementVectorNormalized();
-        // Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
-        //  transform.position += moveDir * moveSpeed * Time.deltaTime;
-
-        //  isMoving = moveDir != Vector3.zero;
-
-
-        //Vector3 MoveDir = Vector3.forward;
-        float Move = playerInputActions.Player.Movement.ReadValue<float>();
-        Vector2 RotDirection = playerInputActions.Player.Rotate.ReadValue<Vector2>();
-        float Speed = 5f;
-        float RotSpeed = 200f;
-
-       // transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * RotSpeed);
-        transform.Translate(0, 0, Speed * Move * Time.deltaTime);
-        transform.Rotate(Vector3.up * Time.deltaTime * RotSpeed * RotDirection);
-
-        float playerSize = 0.7f;
-       // bool canMove = !Physics.Raycast(transform.position, MoveDir, playerSize);
-
-        /*if(canMove)
-        {
-            transform.position += MoveDir * Speed * Time.deltaTime;
-        }*/
-    }
-
-    private void HandleInteraction()
-    {
-        float interactDistance = 1.5f;
-
-        Vector3 moveDir = transform.TransformDirection(Vector3.forward);
-
-        if(moveDir != Vector3.zero)
-        {
-            lastInteractionDir = moveDir;
-        }
-
-        Debug.DrawRay(transform.position, moveDir, Color.green);
-        if(Physics.Raycast(transform.position, moveDir, out RaycastHit raycastHit, interactDistance, interactablesLayerMask))
-        {
-            Debug.Log(raycastHit.transform);
-
-           if(raycastHit.transform.TryGetComponent(out InteractableTest interactableTest))
-            {
-                interactableTest.Interact();
-            }
-        }
-       
-    
-
-    }
     public bool IsMoving()
     {
         return isMoving;
     }
 
-    public void Flip(InputAction.CallbackContext context)
+   
+
+    public void Interact_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        if (context.performed)
-        {
-            Debug.Log("ermwhattheflip" + context.phase);
-            rb.AddForce(Vector3.up * FlipForce, ForceMode.Impulse);
-            rb.AddTorque(Vector3.forward * FlipForceRot, ForceMode.Impulse);
-        }
-
-    }
-
-    public void Interact(InputAction.CallbackContext context)
-    {
-        float interactDistance = 1.5f;
-
-        Vector3 moveDir = transform.TransformDirection(Vector3.forward);
-
-        if (moveDir != Vector3.zero)
-        {
-            lastInteractionDir = moveDir;
-        }
-
-        Debug.DrawRay(transform.position, moveDir, Color.green);
-        if (Physics.Raycast(transform.position, moveDir, out RaycastHit raycastHit, interactDistance, interactablesLayerMask))
-        {
-            Debug.Log(raycastHit.transform);
-
-            if (raycastHit.transform.TryGetComponent(out InteractableTest interactableTest))
-            {
-                interactableTest.Interact();
-            }
-        }
         OnInteractAction?.Invoke(this, EventArgs.Empty);
-
-
-
-        if (context.performed && ArmsRaised)
-        {
-            Debug.Log("Interact" + context.phase);
-            
-        }
+        
 
     }
  
