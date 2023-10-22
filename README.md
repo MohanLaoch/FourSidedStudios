@@ -83,14 +83,18 @@
 - Added Prototype 1 Scene
 
 **20/10/23 - Declan**
--Added Debug.Log testing to interaction system
+- Added Debug.Log testing to interaction system
 
 **21/10/23 - Mark**
--Imported store room boxes models (Cups, Milks, Beans)
--Added " to display room
--created x3 emmision materials for store room boxes
+- Imported store room boxes models (Cups, Milks, Beans)
+- Added " to display room
+- created x3 emmision materials for store room boxes
 
 **21/10/23 - Declan**
--Refactored some scripts
--Added baseic interaction
--Fixed player flipping error
+- Refactored some scripts
+- Added baseic interaction
+- Fixed player flipping error
+
+**22/10/2023 - James**
+- Begun storage script
+- "Finished" Order script until we decide on how orders are fully done

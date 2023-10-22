@@ -6,6 +6,8 @@ public class Order : MonoBehaviour
 {
     public List<string> coffeeOrder = new List<string>();
 
+    string currentOrder;
+
     private void Start()
     {
         CreateOrder();
@@ -15,9 +17,17 @@ public class Order : MonoBehaviour
     {
         int randomIndex = Random.Range(0, coffeeOrder.Count);
 
-        string currentOrder = coffeeOrder[randomIndex];
+        currentOrder = coffeeOrder[randomIndex];
 
         Debug.Log(currentOrder);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == currentOrder)
+        {
+            CreateOrder();
+        }
     }
 }
 
