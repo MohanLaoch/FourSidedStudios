@@ -10,8 +10,10 @@
 **26/09/2023 - Mark**
 - Added Models (Coffee Cup/ Travel Cup) to Mark Scene
 
+
 **27/09/2023 - Mark**
 - Built small display room in Mark Scene
+
 
 **30/09/2023 - Declan**
 - Added Input System package
@@ -20,6 +22,7 @@
 **30/09/2023 - James**
 - Added Probuilder
 - Created basic floor layout
+
 
 **01/10/2023 - James**
 - Finished Basic Whitebox
@@ -39,17 +42,21 @@
 - Imported chair and stool model
 - Added " to Mark Scene
 
+
 **06/10/2023 - Mark**
 - Imported Circular table model
 - Added " to Mark Scene
 - Rescaled Modles in Mark Scene
 
+
 **10/10/2023 - James**
 - Added Cinemachine
 - Added in a rotating camera with zoom
 
+
 **15/10/2023 - Declan**
 - Added arm movement functionality
+
 
 **16/10/2023 - James**
 - Added Universal Render Pipeline
@@ -68,11 +75,13 @@
 **17/10/2023 - Declan**
 - Interaction Model progression
 
+
 **18/10/2023 - James**
 - Switched default unity render pipleline to Universal Render Pipeline
 
 **18/10/2023 - Mark**
 - Readded models for URP changes
+
 
 **19/10/2023 - James**
 - Added Wall Cutout shader
@@ -85,6 +94,7 @@
 **20/10/23 - Declan**
 - Added Debug.Log testing to interaction system
 
+
 **21/10/23 - Mark**
 - Imported store room boxes models (Cups, Milks, Beans)
 - Added " to display room
@@ -94,6 +104,7 @@
 - Refactored some scripts
 - Added baseic interaction
 - Fixed player flipping error
+
 
 **22/10/2023 - James**
 - Begun storage script
