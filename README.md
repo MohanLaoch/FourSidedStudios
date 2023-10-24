@@ -109,3 +109,8 @@
 **22/10/2023 - James**
 - Begun storage script
 - "Finished" Order script until we decide on how orders are fully done
+
+**24/10/2023 - Mark**
+-Imported tray model + tray texture
+-Imported V2 textures for store room boxes models (beans, cups, milk)
+-added " to Mark Scene
