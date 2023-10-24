@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     public float FlipForce = 5f;
     public float FlipForceRot = 5f;
     public Rigidbody rb;
-
+    public Transform RayZone;
 
     public bool Holding;
    
@@ -52,8 +52,8 @@ public class Player : MonoBehaviour
 
         Vector3 moveDir = transform.TransformDirection(Vector3.forward);
 
-        Debug.DrawRay(transform.position, moveDir, Color.green);
-        if (Physics.Raycast(transform.position, moveDir, out RaycastHit raycastHit, interactDistance, interactablesLayerMask))
+        Debug.DrawRay(RayZone.transform.position, moveDir, Color.green);
+        if (Physics.Raycast(RayZone.transform.position, moveDir, out RaycastHit raycastHit, interactDistance, interactablesLayerMask))
         {
             Debug.Log(raycastHit.transform);
 
@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
 
     private void HandleInteractions()
     {
-        /*float interactDistance = 1.5f;
+       /* float interactDistance = 1.5f;
 
         Vector3 moveDir = transform.TransformDirection(Vector3.forward);
 

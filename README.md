@@ -116,3 +116,7 @@
 -added " to Mark Scene
 -made Tray LED material
 -Recut coffeebot animations
+
+**24/10/2023 - Declan**
+-Added interaction script to prototype scene
+-Added player movement script to prototype scene

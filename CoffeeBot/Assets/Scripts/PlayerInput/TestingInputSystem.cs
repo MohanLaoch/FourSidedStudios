@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class TestingInputSystem : MonoBehaviour
 {
-    
+    public Animator PlayerAnim;
     public float FlipForce = 2.5f;
     public float FlipForceRot = 5f;
     private Vector3 lastInteractionDir;
@@ -30,8 +30,6 @@ public class TestingInputSystem : MonoBehaviour
     {
         startTime = Time.time;
         journeyLength = Vector3.Distance(StartArms.position, EndArms.position);
-        
-
     }
 
 
@@ -84,17 +82,23 @@ public class TestingInputSystem : MonoBehaviour
  
    void ArmRising()
     {
-        float distCovered = (Time.time - startTime) * Speed;
+        PlayerAnim.SetBool("ArmsRaised", true);
+        PlayerAnim.SetBool("ArmsLowered", false);
+
+        /*float distCovered = (Time.time - startTime) * Speed;
         float fractionOfJourney = distCovered / journeyLength;
-        Arms.transform.position = Vector3.Slerp(StartArms.position, EndArms.position, fractionOfJourney);
+        Arms.transform.position = Vector3.Slerp(StartArms.position, EndArms.position, fractionOfJourney);*/
 
     }
 
     void ArmLowering()
     {
-        float distCovered = (Time.time - startTime) * Speed;
+        PlayerAnim.SetBool("ArmsLowered", true);
+        PlayerAnim.SetBool("ArmsRaised", false);
+
+       /* float distCovered = (Time.time - startTime) * Speed;
         float fractionOfJourney = distCovered / journeyLength;
-        Arms.transform.position = Vector3.Slerp(EndArms.position, StartArms.position, fractionOfJourney);
+        Arms.transform.position = Vector3.Slerp(EndArms.position, StartArms.position, fractionOfJourney);*/
 
     }
 
