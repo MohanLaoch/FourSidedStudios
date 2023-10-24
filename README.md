@@ -115,3 +115,4 @@
 -Imported V2 textures for store room boxes models (beans, cups, milk)
 -added " to Mark Scene
 -made Tray LED material
+-Recut coffeebot animations
