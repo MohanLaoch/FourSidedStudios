@@ -2578,6 +2578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 225c3317b5df95b4c805c8bfbb4d8263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerAnim: {fileID: 0}
   FlipForce: 2.5
   FlipForceRot: 6
   playerInput: {fileID: 323456752}
@@ -2694,6 +2695,7 @@ MonoBehaviour:
   FlipForce: 2.5
   FlipForceRot: 5
   rb: {fileID: 323456753}
+  RayZone: {fileID: 0}
   Holding: 0
 --- !u!1 &344657073
 GameObject:
@@ -3824,14 +3826,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7033276591943173770, guid: bbf7c53ef3c99ae44b1b719aa158078e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 74eb4a33258182149b1b272dcc82731c, type: 2}
+    - target: {fileID: -6652725513331149018, guid: bbf7c53ef3c99ae44b1b719aa158078e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 964c63ca447d39e45b994f952bff5abc, type: 2}
     - target: {fileID: 919132149155446097, guid: bbf7c53ef3c99ae44b1b719aa158078e, type: 3}
       propertyPath: m_Name
       value: CoffeeBotConcept
       objectReference: {fileID: 0}
+    - target: {fileID: 1525539152500033246, guid: bbf7c53ef3c99ae44b1b719aa158078e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 50d802a9559668649823d1e6ef4d16ca, type: 2}
+    - target: {fileID: 1832475518213299115, guid: bbf7c53ef3c99ae44b1b719aa158078e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9eab8e5d1d8837e489e2779f071fb1e6, type: 2}
+    - target: {fileID: 4233475983920994722, guid: bbf7c53ef3c99ae44b1b719aa158078e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cd83eda9fbb284149bca3c65ecf91556, type: 2}
     - target: {fileID: 6303818255995492756, guid: bbf7c53ef3c99ae44b1b719aa158078e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.042
       objectReference: {fileID: 0}
+    - target: {fileID: 8191169442431946614, guid: bbf7c53ef3c99ae44b1b719aa158078e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d15fc24cffac7cb4281b93b7905f87bb, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: bbf7c53ef3c99ae44b1b719aa158078e, type: 3}
