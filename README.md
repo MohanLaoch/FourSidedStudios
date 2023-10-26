@@ -120,3 +120,7 @@
 **24/10/2023 - Declan**
 -Added interaction script to prototype scene
 -Added player movement script to prototype scene
+
+**26/10/2023 - Mark**
+-Made area in Mark Scene for pitch video footage
+-changed character texture in Declan Scene
