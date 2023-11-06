@@ -124,3 +124,6 @@
 **26/10/2023 - Mark**
 -Made area in Mark Scene for pitch video footage
 -changed character texture in Declan Scene
+
+**06/11/2023 - Declan**
+-Fixed bug where player can flip infinitely

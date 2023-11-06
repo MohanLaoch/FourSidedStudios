@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     public float FlipForceRot = 5f;
     public Rigidbody rb;
     public Transform RayZone;
+    public BoxCollider boxCollider;
 
     public bool Holding;
    
@@ -109,7 +110,7 @@ public class Player : MonoBehaviour
     public void Flip(InputAction.CallbackContext context)
     {
         Vector3 FlipDir = transform.TransformDirection(Vector3.forward);
-        if (context.performed)
+        if (context.performed && IsGrounded())
         {
             Debug.Log("ermwhattheflip" + context.phase);
             rb.AddForce(Vector3.up * FlipForce, ForceMode.Impulse);
@@ -118,6 +119,35 @@ public class Player : MonoBehaviour
 
     }
 
+    private bool IsGrounded()
+    {
+        
+        float extraHeight = 0.1f;
+        RaycastHit raycastHit;
+        Ray ray = new Ray(boxCollider.bounds.center, Vector3.down);
+
+        Physics.Raycast(boxCollider.bounds.center, Vector3.down, boxCollider.bounds.extents.y + extraHeight);
+
+        Color rayColor;
+
+        if (Physics.Raycast(ray, out raycastHit, boxCollider.bounds.extents.y + extraHeight))
+        {
+            Debug.DrawRay(boxCollider.bounds.center, Vector2.down * (boxCollider.bounds.extents.y + extraHeight));
+            rayColor = Color.green;
+            return true;
+        }
+        else
+        {
+            Debug.DrawRay(boxCollider.bounds.center, Vector2.down * (boxCollider.bounds.extents.y + extraHeight));
+            rayColor = Color.red;
+            return false;
+        }
+
+     
+
+        Debug.DrawRay(boxCollider.bounds.center, Vector2.down * (boxCollider.bounds.extents.y + extraHeight));
+        
+    }
 
 
 }
