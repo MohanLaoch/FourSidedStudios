@@ -145,7 +145,7 @@ public class Player : MonoBehaviour
 
      
 
-        Debug.DrawRay(boxCollider.bounds.center, Vector2.down * (boxCollider.bounds.extents.y + extraHeight));
+        
         
     }
 

@@ -127,3 +127,4 @@
 
 **06/11/2023 - Declan**
 -Fixed bug where player can flip infinitely
+-Fixed interaction bug
