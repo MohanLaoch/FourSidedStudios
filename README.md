@@ -122,9 +122,17 @@
 -Added player movement script to prototype scene
 
 **26/10/2023 - Mark**
--Made area in Mark Scene for pitch video footage
--changed character texture in Declan Scene
+- Made area in Mark Scene for pitch video footage
+- Changed character texture in Declan Scene
+
+**01/11/2023 - James**
+- Updated Storage script
 
 **06/11/2023 - Declan**
--Fixed bug where player can flip infinitely
--Fixed interaction bug
+- Fixed bug where player can flip infinitely
+- Fixed interaction bug
+
+**06/11/2023 - James**
+- Created a timer for orders
+- Added TMPro
+
