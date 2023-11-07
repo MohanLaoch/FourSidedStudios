@@ -139,3 +139,7 @@
 **07/11/2023 - Mark**
 - Imported character model and textures V2
 - Created prefabs
+
+**07/11/2023 - Declan**
+- Added prefabs to prototype scene
+- Bug fixes

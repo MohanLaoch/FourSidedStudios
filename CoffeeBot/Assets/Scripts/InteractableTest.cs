@@ -16,7 +16,7 @@ public class InteractableTest : MonoBehaviour
 
     public void Interact()
     {
-
+        
         transform.position = HoldArea.transform.position;
         transform.parent = HoldArea.transform;
 
