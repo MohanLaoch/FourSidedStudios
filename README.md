@@ -136,3 +136,6 @@
 - Created a timer for orders
 - Added TMPro
 
+**07/11/2023 - Mark**
+- Imported character model and textures V2
+- Created prefabs
