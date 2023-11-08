@@ -143,3 +143,7 @@
 **07/11/2023 - Declan**
 - Added prefabs to prototype scene
 - Bug fixes
+
+**08/11/2023 - Niamh**
+- Added HexWall to scene (prefab)
+- Created Environment folder within Prefabs folder
