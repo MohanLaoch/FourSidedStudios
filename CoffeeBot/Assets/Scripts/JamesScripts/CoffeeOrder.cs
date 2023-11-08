@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CoffeeOrder : MonoBehaviour
 {
+    public string coffeetag;
+
     [Header("Scripts")]
     public MoneyTracker moneyTracker;
 
@@ -27,6 +29,15 @@ public class CoffeeOrder : MonoBehaviour
     {
         Instantiate(coffee, new Vector3(spawnObject.transform.position.x, spawnObject.transform.position.y, spawnObject.transform.position.z), Quaternion.identity);
         moneyTracker.StartTimer();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == coffeetag)
+        {
+            moneyTracker.CompleteOrder();
+            Order();
+        }
     }
 
     /*

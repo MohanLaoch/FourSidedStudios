@@ -9,6 +9,7 @@ public class MoneyTracker : MonoBehaviour
 
     [Header("UIComponent")]
     public TextMeshProUGUI timerText;
+    public TextMeshProUGUI moneyText;
 
     [Header("Timer Settings")]
     public float maxTime = 30;
@@ -64,6 +65,7 @@ public class MoneyTracker : MonoBehaviour
     {
         StopTimer();
         money += currentTime;
+        moneyText.text = money.ToString("0");
         StartTimer();
     }
 }
