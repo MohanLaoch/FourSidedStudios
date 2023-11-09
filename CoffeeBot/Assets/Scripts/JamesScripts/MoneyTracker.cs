@@ -25,6 +25,7 @@ public class MoneyTracker : MonoBehaviour
     void Start()
     {
         currentTime = maxTime;
+        moneyText.text = "Money: " + money.ToString("0");
     }
 
     // Update is called once per frame
@@ -65,7 +66,7 @@ public class MoneyTracker : MonoBehaviour
     {
         StopTimer();
         money += currentTime;
-        moneyText.text = money.ToString("0");
+        moneyText.text = "Money: " + money.ToString("0");
         StartTimer();
     }
 }

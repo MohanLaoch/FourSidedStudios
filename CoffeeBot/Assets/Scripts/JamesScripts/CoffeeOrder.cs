@@ -6,7 +6,7 @@ public class CoffeeOrder : MonoBehaviour
 {
     public string coffeetag;
 
-    [Header("Scripts")]
+    [Header("Script References")]
     public MoneyTracker moneyTracker;
 
     [Header("GameObjects")]
@@ -33,8 +33,10 @@ public class CoffeeOrder : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.gameObject.tag == coffeetag)
         {
+            Destroy(other.gameObject);
             moneyTracker.CompleteOrder();
             Order();
         }
