@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class MoneyTracker : MonoBehaviour
@@ -10,6 +11,9 @@ public class MoneyTracker : MonoBehaviour
     [Header("UIComponent")]
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI moneyText;
+    public Slider slider;
+    public Gradient sliderGradient;
+    public Image sliderFill;
 
     [Header("Timer Settings")]
     public float maxTime = 30;
@@ -25,6 +29,12 @@ public class MoneyTracker : MonoBehaviour
     void Start()
     {
         currentTime = maxTime;
+        slider.maxValue = maxTime;
+        slider.value = currentTime;
+
+        sliderFill.color = sliderGradient.Evaluate(1f);
+        sliderFill.color = sliderGradient.Evaluate(slider.normalizedValue);
+
         moneyText.text = "Money: " + money.ToString("0");
     }
 
@@ -49,12 +59,19 @@ public class MoneyTracker : MonoBehaviour
     private void SetTimerText()
     {
         timerText.text = currentTime.ToString("0");
+        slider.value = currentTime;
+        sliderFill.color = sliderGradient.Evaluate(slider.normalizedValue);
     }
 
     public void StartTimer()
     {
         timerActive = true;
         currentTime = maxTime;
+        slider.maxValue = maxTime;
+        slider.value = currentTime;
+
+        sliderFill.color = sliderGradient.Evaluate(1f);
+        sliderFill.color = sliderGradient.Evaluate(slider.normalizedValue);
     }
 
     public void StopTimer()
