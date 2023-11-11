@@ -159,3 +159,4 @@
 **11/11/2023 - James**
 - Added textures for patients slider
 - Added money symbol
+- Added 2D Sprite Package
