@@ -9,7 +9,7 @@ public class MoneyTracker : MonoBehaviour
     public float money = 0;
 
     [Header("UIComponent")]
-    public TextMeshProUGUI timerText;
+    //public TextMeshProUGUI timerText;
     public TextMeshProUGUI moneyText;
     public Slider slider;
     public Gradient sliderGradient;
@@ -35,7 +35,7 @@ public class MoneyTracker : MonoBehaviour
         sliderFill.color = sliderGradient.Evaluate(1f);
         sliderFill.color = sliderGradient.Evaluate(slider.normalizedValue);
 
-        moneyText.text = "Money: " + money.ToString("0");
+        moneyText.text = ": " + money.ToString("0");
     }
 
     // Update is called once per frame
@@ -58,7 +58,7 @@ public class MoneyTracker : MonoBehaviour
 
     private void SetTimerText()
     {
-        timerText.text = currentTime.ToString("0");
+        //timerText.text = currentTime.ToString("0");
         slider.value = currentTime;
         sliderFill.color = sliderGradient.Evaluate(slider.normalizedValue);
     }
@@ -83,7 +83,7 @@ public class MoneyTracker : MonoBehaviour
     {
         StopTimer();
         money += currentTime;
-        moneyText.text = "Money: " + money.ToString("0");
+        moneyText.text = ": " + money.ToString("0");
         StartTimer();
     }
 }

@@ -155,3 +155,7 @@
 - Clamped camera rotation in prototype scene (5, 80)
 - Camera speed from 300 to 250
 - Made a slider that slowly goes from green to red for the NPCs patients
+
+**11/11/2023 - James**
+- Added textures for patients slider
+- Added money symbol
