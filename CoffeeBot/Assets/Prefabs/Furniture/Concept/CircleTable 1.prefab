@@ -202,7 +202,7 @@ Transform:
   - {fileID: 4031148571654243629}
   - {fileID: 6793417871295394772}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &485110983
 Rigidbody:
@@ -254,10 +254,10 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8505089763383127191}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.05
-  m_Height: 0.61028993
+  m_Radius: 0.35
+  m_Height: 0.43
   m_Direction: 1
   m_Center: {x: 0, y: 0.3758213, z: 0}
 --- !u!114 &725604238321872960

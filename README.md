@@ -164,3 +164,4 @@
 **13/11/2023 - Declan**
 - Minor bug fixes
 - Completed tray functionality for prototype
+- Table bug fix
