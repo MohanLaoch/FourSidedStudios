@@ -172,3 +172,4 @@
 
 **13/11/2023 - Niamh**
 - Added plane of glass to Hex Wall
+- Added second Wall Variant
