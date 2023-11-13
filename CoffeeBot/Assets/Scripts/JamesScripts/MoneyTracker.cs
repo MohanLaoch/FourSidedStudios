@@ -7,6 +7,7 @@ using TMPro;
 public class MoneyTracker : MonoBehaviour
 {
     public float money = 0;
+    public float moneyGiven = 5;
     public float tipDivide = 4;
 
     [Header("UIComponent")]
@@ -83,7 +84,7 @@ public class MoneyTracker : MonoBehaviour
     public void CompleteOrder()
     {
         StopTimer();
-        money += 5 + (currentTime / tipDivide);
+        money += moneyGiven + (currentTime / tipDivide);
         moneyText.text = ": " + money.ToString("0");
         StartTimer();
     }
