@@ -7,6 +7,7 @@ using TMPro;
 public class MoneyTracker : MonoBehaviour
 {
     public float money = 0;
+    public float tipDivide = 4;
 
     [Header("UIComponent")]
     //public TextMeshProUGUI timerText;
@@ -82,7 +83,7 @@ public class MoneyTracker : MonoBehaviour
     public void CompleteOrder()
     {
         StopTimer();
-        money += currentTime;
+        money += 5 + (currentTime / tipDivide);
         moneyText.text = ": " + money.ToString("0");
         StartTimer();
     }

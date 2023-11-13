@@ -165,3 +165,7 @@
 - Minor bug fixes
 - Completed tray functionality for prototype
 - Table bug fix
+
+**13/11/2023 - James**
+- Rescaled NPC UI from 0.03 to 0.015
+- Changed money to be 5 + a tip of 1/4 the current delivery time
