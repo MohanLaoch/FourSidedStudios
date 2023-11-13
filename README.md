@@ -160,3 +160,7 @@
 - Added textures for patients slider
 - Added money symbol
 - Added 2D Sprite Package
+
+**13/11/2023 - Declan**
+- Minor bug fixes
+- Completed tray functionality for prototype
