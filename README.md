@@ -165,6 +165,7 @@
 - Minor bug fixes
 - Completed tray functionality for prototype
 - Table bug fix
+- Coffee tray bug fix
 
 **13/11/2023 - James**
 - Rescaled NPC UI from 0.03 to 0.015

@@ -7,11 +7,18 @@ public class InteractableTest : MonoBehaviour
     public Rigidbody rb;
     public Transform CounterObj;
     public Transform HoldArea;
-    private Player player;
+    public GameObject Player;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        HoldArea = GameObject.Find("HoldArea").GetComponent<Transform>();
+
+    }
+
+    public void Start()
+    {
+        
     }
 
     public void Interact()
