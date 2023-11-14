@@ -179,3 +179,4 @@
 - Imported concept NPC with animation
 - Added " to Mark Scene
 - Made NPC Prefab
+- Added NPC to Prototype Scene
