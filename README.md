@@ -111,15 +111,15 @@
 - "Finished" Order script until we decide on how orders are fully done
 
 **24/10/2023 - Mark**
--Imported tray model + tray texture
--Imported V2 textures for store room boxes models (beans, cups, milk)
--added " to Mark Scene
--made Tray LED material
--Recut coffeebot animations
+- Imported tray model + tray texture
+- Imported V2 textures for store room boxes models (beans, cups, milk)
+- added " to Mark Scene
+- made Tray LED material
+- Recut coffeebot animations
 
 **24/10/2023 - Declan**
--Added interaction script to prototype scene
--Added player movement script to prototype scene
+- Added interaction script to prototype scene
+- Added player movement script to prototype scene
 
 **26/10/2023 - Mark**
 - Made area in Mark Scene for pitch video footage
@@ -174,3 +174,8 @@
 **13/11/2023 - Niamh**
 - Added plane of glass to Hex Wall
 - Added second Wall Variant
+
+**14/11/2023 - Mark**
+- Imported concept NPC with animation
+- Added " to Mark Scene
+- Made NPC Prefab
