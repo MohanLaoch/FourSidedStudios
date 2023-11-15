@@ -193,6 +193,7 @@
 - Imported Table asset
 - Added to Niamh Scene
 - Made Table Prefab
+- Fixed NPC Prefab (missing animator)
 
 **15/11/2023 - Declan**
 - fixed interaction bug
