@@ -58,9 +58,9 @@ public class TestingInputSystem : MonoBehaviour
         return MoveFloat;
     }
 
-    public Vector2 GetRotVector()
+    public float GetRotFloat()
     {
-        Vector2 RotDirection = playerInputActions.Player.Rotate.ReadValue<Vector2>();
+        float RotDirection = playerInputActions.Player.Rotate.ReadValue<float>();
 
         return RotDirection;
     }

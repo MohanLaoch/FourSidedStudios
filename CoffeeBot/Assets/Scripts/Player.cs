@@ -15,10 +15,10 @@ public class Player : MonoBehaviour
     public Transform Arms;
     public Transform StartArms;
     public Transform EndArms;
-    public float Speed;
-    public float moveSpeed = 5f;
+    public float Speed = 5f;
     public float FlipForce = 5f;
     public float FlipForceRot = 5f;
+    public float RotSpeed = 50f;
     public Rigidbody rb;
     public Transform RayZone;
     public BoxCollider boxCollider;
@@ -98,17 +98,24 @@ public class Player : MonoBehaviour
     private void HandleMovement()
     {
         float Move = testingInputSystem.GetMovementFloat();
-        Vector2 RotDirection = testingInputSystem.GetRotVector();
-        float Speed = 5f;
-        float RotSpeed = 200f;
+        float RotDirection = testingInputSystem.GetRotFloat();
+        
+        
 
-        transform.Translate(0, 0, Speed * Move * Time.deltaTime);
-        transform.Rotate(Vector3.up * Time.deltaTime * RotSpeed * RotDirection);
+        rb.MovePosition(transform.position + (transform.forward * Move) * Speed * Time.deltaTime);
+        
+        var rotationVelocity = new Vector3(0, RotSpeed * RotDirection, 0);
 
+        rb.MoveRotation(rb.rotation * Quaternion.Euler(rotationVelocity * Time.fixedDeltaTime));
     }
 
     public void Flip(InputAction.CallbackContext context)
     {
+        if (Holding)
+        {
+            return;
+        }
+
         Vector3 FlipDir = transform.TransformDirection(Vector3.forward);
         if (context.performed && IsGrounded())
         {

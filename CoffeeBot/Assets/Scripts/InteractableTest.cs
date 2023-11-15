@@ -23,10 +23,9 @@ public class InteractableTest : MonoBehaviour
 
     public void Interact()
     {
-        
-        transform.position = HoldArea.transform.position;
         transform.parent = HoldArea.transform;
-
+        rb.position = HoldArea.transform.position;
+        
         rb.constraints = RigidbodyConstraints.FreezeAll;
     }
 
