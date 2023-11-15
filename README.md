@@ -188,3 +188,8 @@
 
 **15/11/2023 - Mark**
 - Repaired prefab + Readded eyes
+
+**15/11/2023 - Niamh**
+- Imported Table asset
+- Added to Niamh Scene
+- Made Table Prefab
