@@ -188,12 +188,12 @@
 
 **15/11/2023 - Mark**
 - Repaired prefab + Readded eyes
+- Fixed NPC Prefab (missing animator)
 
 **15/11/2023 - Niamh**
 - Imported Table asset
 - Added to Niamh Scene
 - Made Table Prefab
-- Fixed NPC Prefab (missing animator)
 
 **15/11/2023 - Declan**
 - fixed interaction bug
@@ -202,3 +202,8 @@
 
 **16/11/2023 - James**
 - Changed prototype scene to have textured walls and floor
+
+**16/11/2023 - Niamh**
+- Imported Door asset
+- Added to Niamh Scene
+- Made Door Prefab
