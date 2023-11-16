@@ -102,11 +102,11 @@ public class Player : MonoBehaviour
         
         
 
-        rb.MovePosition(transform.position + (transform.forward * Move) * Speed * Time.deltaTime);
+        rb.MovePosition(transform.position + (transform.forward * Move) * Speed * Time.fixedDeltaTime);
         
         var rotationVelocity = new Vector3(0, RotSpeed * RotDirection, 0);
 
-        rb.MoveRotation(rb.rotation * Quaternion.Euler(rotationVelocity * Time.fixedDeltaTime));
+        rb.MoveRotation(rb.rotation * Quaternion.Euler(rotationVelocity * Time.deltaTime));
     }
 
     public void Flip(InputAction.CallbackContext context)

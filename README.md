@@ -210,4 +210,5 @@
 
 **16/11/2023 - Declan**
 - Fixed floor tile bug
+- created prototype .exe build
 
