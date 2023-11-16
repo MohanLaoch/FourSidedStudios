@@ -199,3 +199,6 @@
 - fixed interaction bug
 - fixed flipping bug
 - fixed clipping bug
+
+**16/11/2023 - James**
+- Changed prototype scene to have textured walls and floor
