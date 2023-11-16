@@ -207,3 +207,7 @@
 - Imported Door asset
 - Added to Niamh Scene
 - Made Door Prefab
+
+**16/11/2023 - Declan**
+- Fixed floor tile bug
+
