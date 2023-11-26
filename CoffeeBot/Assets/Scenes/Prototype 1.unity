@@ -204,7 +204,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33752
+  m_Name: pb_Mesh28828
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -3216,7 +3216,7 @@ GameObject:
   - component: {fileID: 395742598}
   - component: {fileID: 395742597}
   - component: {fileID: 395742596}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FrontWallGlass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4260,7 +4260,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh91100
+  m_Name: pb_Mesh28850
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -5062,7 +5062,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33518
+  m_Name: pb_Mesh28526
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -14986,7 +14986,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh90924
+  m_Name: pb_Mesh28808
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -16202,7 +16202,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh90564
+  m_Name: pb_Mesh28714
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -16744,7 +16744,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh34832
+  m_Name: pb_Mesh28962
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -18117,8 +18117,32 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+      propertyPath: MaxSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
       propertyPath: RotSpeed
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+      propertyPath: boxSize.x
+      value: 0.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+      propertyPath: boxSize.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+      propertyPath: boxSize.z
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+      propertyPath: maxDistance
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+      propertyPath: layermask.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 8495281088446297272, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
       propertyPath: m_Name

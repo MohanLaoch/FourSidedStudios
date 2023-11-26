@@ -212,3 +212,7 @@
 - Fixed floor tile bug
 - created prototype .exe build
 
+**25/11/2023 - Declan**
+- Fixed wall bug
+- Added player acceleration
+

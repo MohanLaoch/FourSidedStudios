@@ -16,16 +16,22 @@ public class Player : MonoBehaviour
     public Transform StartArms;
     public Transform EndArms;
     public float Speed = 5f;
+    public float OgSpeed = 2f;
     public float FlipForce = 5f;
     public float FlipForceRot = 5f;
     public float RotSpeed = 50f;
+    public float MaxSpeed = 7f;
+    public float Acceleration = 1f;
     public Rigidbody rb;
     public Transform RayZone;
     public BoxCollider boxCollider;
 
     public bool Holding;
-   
+    public bool isMoving = false;
 
+    public Vector3 boxSize;
+    public float maxDistance;
+    public LayerMask layermask;
 
 
     private void Awake()
@@ -73,8 +79,12 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        HandleMovement();
-        HandleInteractions();
+      
+        
+            HandleMovement();
+        
+        
+       // HandleInteractions();
     }
 
     private void HandleInteractions()
@@ -99,12 +109,39 @@ public class Player : MonoBehaviour
     {
         float Move = testingInputSystem.GetMovementFloat();
         float RotDirection = testingInputSystem.GetRotFloat();
-        
+
         
 
-        rb.MovePosition(transform.position + (transform.forward * Move) * Speed * Time.fixedDeltaTime);
+
+            rb.MovePosition(transform.position + (transform.forward * Move) * Speed * Time.fixedDeltaTime);
+            if (Move != 0)
+            {
+                isMoving = true;
+            }
+            else
+            {
+                isMoving = false;
+            }
+
+
+            if (isMoving)
+            {
+
+
+                Speed += Acceleration * Time.fixedDeltaTime;
+                if (Speed >= MaxSpeed)
+                {
+                    Speed = MaxSpeed;
+                    Debug.Log("SLOW DOWN JACKASS");
+                }
+            }
+            else
+            {
+                Speed = OgSpeed;
+            }
         
-        var rotationVelocity = new Vector3(0, RotSpeed * RotDirection, 0);
+
+            var rotationVelocity = new Vector3(0, RotSpeed * RotDirection, 0);
 
         rb.MoveRotation(rb.rotation * Quaternion.Euler(rotationVelocity * Time.deltaTime));
     }
@@ -150,10 +187,27 @@ public class Player : MonoBehaviour
             return false;
         }
 
-     
+     //gonna do some outloud thinking here to see if it helps, i need to not be moving if the player is flipped on their side, but this ground check needs to be able to work when the player is on all sides
+     //i could make a new ground check specifically so the player cant move, which would be a copy paste of this but idk exactly what to change about it that makes the raycast stay going straight down and not flip with the player
+     //i could create an OnSide() bool that checks if the player is on any side that isnt the normal orientation          
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawCube(transform.position -transform.up * maxDistance, boxSize);
+    }
+    private bool WheelsGrounded()
+    {
+        if (Physics.BoxCast(transform.position, boxSize, -transform.up, transform.rotation, maxDistance, layermask))
+        {
+            Debug.Log("wheelsonground");
+            return true;
 
-        
-        
+        }
+        else
+        {
+            return false;
+        }
     }
 
 
