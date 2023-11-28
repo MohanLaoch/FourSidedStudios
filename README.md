@@ -216,3 +216,6 @@
 - Fixed wall bug
 - Added player acceleration
 
+**28/11/2023 - Niamh**
+- Added Table asset to Prototype scene
+
