@@ -14,14 +14,14 @@ public class Storage : MonoBehaviour
     public string storedItem;
 
     public List<string> acceptedItems = new List<string>();
-    public List<Sprite> acceptedItemSprites = new List<Sprite>();
+    //public List<Sprite> acceptedItemSprites = new List<Sprite>();
 
 
-    [Header("Sprites")]
+    /*[Header("Sprites")]
     public Sprite currrentSprite;
     public Sprite nullSprite;
 
-    public SpriteRenderer storageImage;
+    public SpriteRenderer storageImage;*/
 
     private void Update()
     {
@@ -29,7 +29,7 @@ public class Storage : MonoBehaviour
         if (currentCapacity <= 0)
         {
             storedItem = null;
-            storageImage.sprite = nullSprite;
+            //storageImage.sprite = nullSprite;
         }
 
         // if the storge goes above current capacity bring it back down to the current (so no item overflow)
@@ -75,7 +75,7 @@ public class Storage : MonoBehaviour
     {
         currentCapacity = 0;
         storedItem = null;
-        storageImage.sprite = nullSprite;
+        //storageImage.sprite = nullSprite;
     }
 
 }

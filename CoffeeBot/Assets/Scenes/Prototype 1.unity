@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6551,6 +6551,8 @@ GameObject:
   - component: {fileID: 606247689}
   - component: {fileID: 606247688}
   - component: {fileID: 606247687}
+  - component: {fileID: 606247692}
+  - component: {fileID: 606247691}
   m_Layer: 6
   m_Name: StorageA
   m_TagString: Untagged
@@ -6636,6 +6638,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &606247691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606247686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8137b824c9e47d64ebe523de1cf59354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCapacity: 0
+  totalCapacity: 10
+  fillCapacity: 5
+  storedItem: 
+  acceptedItems:
+  - CoffeeBox
+  - CupBox
+  - MilkBox
+--- !u!65 &606247692
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606247686}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &610709037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7669,6 +7704,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 9169328361245774315, guid: 4c47073255887ae45ba9155de60a6a55, type: 3}
+      propertyPath: m_TagString
+      value: MilkBox
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c47073255887ae45ba9155de60a6a55, type: 3}
@@ -8358,7 +8397,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912223781}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.67, y: 1.197, z: -4.479996}
+  m_LocalPosition: {x: 4.67, y: 1.197, z: -2.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9768,7 +9807,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 5.999996
+  m_CameraDistance: 4
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -13244,6 +13283,10 @@ PrefabInstance:
     - target: {fileID: 7097770485559516758, guid: 6d85b5dbadd59fe42bd7d72185b8a92a, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097770485559516758, guid: 6d85b5dbadd59fe42bd7d72185b8a92a, type: 3}
+      propertyPath: m_TagString
+      value: CupBox
       objectReference: {fileID: 0}
     - target: {fileID: 7623336371653346540, guid: 6d85b5dbadd59fe42bd7d72185b8a92a, type: 3}
       propertyPath: m_RootOrder
@@ -17713,6 +17756,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beans_StoreRoomBox
       objectReference: {fileID: 0}
+    - target: {fileID: 4443390818867508377, guid: 6736df27cdbe5a148a9a76b2359443af, type: 3}
+      propertyPath: m_TagString
+      value: CoffeeBox
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 6736df27cdbe5a148a9a76b2359443af, type: 3}
@@ -17798,7 +17845,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008269767}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.67, y: 1.197, z: -4.479996}
+  m_LocalPosition: {x: 4.67, y: 1.197, z: -2.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
