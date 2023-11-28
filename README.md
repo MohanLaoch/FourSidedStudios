@@ -219,3 +219,6 @@
 **28/11/2023 - Niamh**
 - Added Table asset to Prototype scene
 
+**28/11/2023 - Mark**
+- Added 4 new NPCs (4 texture variations + Smooth animations)
+- Prefab NPCs
