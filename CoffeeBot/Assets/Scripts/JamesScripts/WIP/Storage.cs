@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Storage : MonoBehaviour
 {
+
     [Header("Storage Stats")]
     public int currentCapacity = 0;
     public int totalCapacity = 10;
@@ -41,11 +42,15 @@ public class Storage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == "Player")
+        {
+            EmptyStorage();
+        }
 
         if (other.gameObject.tag == storedItem)
         {
             currentCapacity += fillCapacity;
-            Destroy(other.gameObject);
+            
         }
 
         if (storedItem == null)
@@ -60,7 +65,7 @@ public class Storage : MonoBehaviour
                 {
                     storedItem = other.gameObject.tag.ToString();
                     currentCapacity += fillCapacity;
-                    Destroy(other.gameObject);
+                    
                 }
                 else
                 {
