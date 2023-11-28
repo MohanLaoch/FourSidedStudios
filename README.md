@@ -222,3 +222,6 @@
 **28/11/2023 - Mark**
 - Added 4 new NPCs (4 texture variations + Smooth animations)
 - Prefab NPCs
+
+**28/11/2023 - James**
+- Can store items and empty storage
