@@ -228,3 +228,7 @@
 
 **03/12/2023 - James**
 - Added see through cut out to walls
+
+**03/12/2023 - Declan**
+- Fixed table collider issue
+- Fixed cutout issue

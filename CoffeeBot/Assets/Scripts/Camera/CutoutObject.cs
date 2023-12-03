@@ -13,7 +13,7 @@ public class CutoutObject : MonoBehaviour
     private Camera mainCamera;
 
     [Header("Cutout")]
-    [Range (0.1f, 1f)]
+    [Range (0.1f, 0.3f)]
     public float size = 0.1f;
 
     private void Awake()
