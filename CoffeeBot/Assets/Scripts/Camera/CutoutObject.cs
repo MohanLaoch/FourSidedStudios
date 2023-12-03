@@ -12,6 +12,10 @@ public class CutoutObject : MonoBehaviour
 
     private Camera mainCamera;
 
+    [Header("Cutout")]
+    [Range (0.1f, 1f)]
+    public float size = 0.1f;
+
     private void Awake()
     {
         mainCamera = GetComponent<Camera>();
@@ -32,7 +36,7 @@ public class CutoutObject : MonoBehaviour
             for (int m = 0; m < materials.Length; ++m)
             {
                 materials[m].SetVector("CutoutPosition", cutoutPos);
-                materials[m].SetFloat("CutoutSize", 0.1f);
+                materials[m].SetFloat("CutoutSize", size);
                 materials[m].SetFloat("FalloffSize", 0.05f);
             }
         }

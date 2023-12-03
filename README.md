@@ -225,3 +225,6 @@
 
 **28/11/2023 - James**
 - Can store items and empty storage
+
+**03/12/2023 - James**
+- Added see through cut out to walls
