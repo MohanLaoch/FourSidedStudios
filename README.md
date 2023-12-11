@@ -232,3 +232,6 @@
 **03/12/2023 - Declan**
 - Fixed table collider issue
 - Fixed cutout issue
+
+**11/12/2023 - Mark**
+- Updated Animated NPC
