@@ -235,3 +235,7 @@
 
 **11/12/2023 - Mark**
 - Updated Animated NPC
+
+**11/12/2023 - Declan**
+-improved NPC interaction
+-added animation triggers for NPC
