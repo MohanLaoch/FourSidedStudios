@@ -239,3 +239,7 @@
 **11/12/2023 - Declan**
 -improved NPC interaction
 -added animation triggers for NPC
+
+**12/12/2023 - Declan**
+-minor tweaks to interaction
+-added flip reset

@@ -28,7 +28,7 @@ public class InteractableTest : MonoBehaviour
         if (gameObject.CompareTag("NPC"))
         {
             transform.parent = HoldArea.transform;
-            rb.position = HoldArea.transform.position;
+            rb.transform.position = HoldArea.transform.position;
 
             rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
 
