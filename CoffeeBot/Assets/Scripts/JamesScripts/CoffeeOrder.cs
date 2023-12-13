@@ -13,6 +13,8 @@ public class CoffeeOrder : MonoBehaviour
     public GameObject coffee;
     public GameObject spawnObject;
 
+    [Header("PlayerScript")]
+    public Player player;
 
     // Start is called before the first frame update
     void Awake()
@@ -37,6 +39,8 @@ public class CoffeeOrder : MonoBehaviour
 
         if (other.gameObject.tag == coffeetag)
         {
+            //reset itemholding bool here
+            player.Holding = false;
             Destroy(other.gameObject);
             moneyTracker.CompleteOrder();
             Order();

@@ -1974,6 +1974,7 @@ MonoBehaviour:
   moneyTracker: {fileID: 215019804}
   coffee: {fileID: 5804953793599844782, guid: 89fd347430082f94e9b099dd1416ff21, type: 3}
   spawnObject: {fileID: 1757526389}
+  player: {fileID: 1540274517}
 --- !u!23 &215019807
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13921,6 +13922,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8495281088446297272, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
   m_PrefabInstance: {fileID: 3433931971128358103}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1540274517 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+  m_PrefabInstance: {fileID: 3433931971128358103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540274514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c7b82ee37f6b484d9d0686464836bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1540824669
 GameObject:
   m_ObjectHideFlags: 0
