@@ -1834,7 +1834,7 @@ GameObject:
   - component: {fileID: 197767414}
   - component: {fileID: 197767416}
   - component: {fileID: 197767415}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: FlipReset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1870,7 +1870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layermask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
 --- !u!65 &197767416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1882,8 +1882,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.68124723, y: 0.08778763, z: 0.52045655}
-  m_Center: {x: -0.014482737, y: 0.48148727, z: -0.00277102}
+  m_Size: {x: 0.68124723, y: 0.025066257, z: 0.52045655}
+  m_Center: {x: -0.014482737, y: 0.5236824, z: -0.00277102}
 --- !u!1 &215019803
 GameObject:
   m_ObjectHideFlags: 0
@@ -17155,15 +17155,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 49191789847676346, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.223
+      value: -0.22
       objectReference: {fileID: 0}
     - target: {fileID: 49191789847676346, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.203
+      value: -0.206
       objectReference: {fileID: 0}
     - target: {fileID: 49191789847676346, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.003
+      value: 0.537
       objectReference: {fileID: 0}
     - target: {fileID: 442565670519915328, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
       propertyPath: m_LocalPosition.x

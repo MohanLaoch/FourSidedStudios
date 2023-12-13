@@ -243,3 +243,7 @@
 **12/12/2023 - Declan**
 -minor tweaks to interaction
 -added flip reset
+
+**13/12/2023 - Declan**
+-fixed flipping issue
+-fixed interaction issue
