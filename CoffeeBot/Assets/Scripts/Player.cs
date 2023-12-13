@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     public float FlipForceRot = 5f;
     public float RotSpeed = 50f;
     public float MaxSpeed = 7f;
-    public float Acceleration = 1f;
+    public float Acceleration = 2f;
     public Rigidbody rb;
     public Transform RayZone;
     public BoxCollider boxCollider;
@@ -209,6 +209,30 @@ public class Player : MonoBehaviour
             return false;
         }
     }
+
+     public void UpgradeSpeed()
+     {
+        MaxSpeed++;
+     }
+
+    public void UpgradeHandling()
+     {
+        RotSpeed += 50;
+     }
+
+    public void UpgradeAcceleration()
+     {
+        Acceleration += 5;
+     }
+
+
+
+
+
+
+
+
+
 
 
 }

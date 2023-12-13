@@ -248,3 +248,5 @@
 -fixed flipping issue
 -fixed interaction issue
 -fixed interaction with coffee tray bug
+-added upgrades menu 
+-created showcase build
