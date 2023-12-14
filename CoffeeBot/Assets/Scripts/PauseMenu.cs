@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 
 public class PauseMenu : MonoBehaviour
@@ -72,6 +73,13 @@ public class PauseMenu : MonoBehaviour
         playerInputActions.Player.Flip.Enable();
 
 
+    }
+
+    public void ResetScene()
+    {
+        SceneManager.LoadScene("Prototype 1");
+        Time.timeScale = 1;
+        DeactivateMenu();
     }
 
 
