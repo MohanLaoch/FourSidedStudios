@@ -132,7 +132,7 @@ public class Player : MonoBehaviour
                 if (Speed >= MaxSpeed)
                 {
                     Speed = MaxSpeed;
-                    Debug.Log("SLOW DOWN JACKASS");
+                    //Debug.Log("SLOW DOWN JACKASS");
                 }
             }
             else

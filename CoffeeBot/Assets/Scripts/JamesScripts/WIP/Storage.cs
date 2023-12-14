@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using TMPro;
 
 public class Storage : MonoBehaviour
 {
+    [SerializeField] private PlayerInputActions playerInputActions;
 
     [Header("Storage Stats")]
     public int currentCapacity = 0;
@@ -15,6 +19,10 @@ public class Storage : MonoBehaviour
     public string storedItem;
 
     public List<string> acceptedItems = new List<string>();
+
+    [Header("UI Components")]
+    public TextMeshProUGUI storageText;
+
     //public List<Sprite> acceptedItemSprites = new List<Sprite>();
 
 
@@ -23,6 +31,15 @@ public class Storage : MonoBehaviour
     public Sprite nullSprite;
 
     public SpriteRenderer storageImage;*/
+
+    private bool atStorage;
+
+
+    private void Awake()
+    {
+        playerInputActions = new PlayerInputActions();
+        playerInputActions.Player.Enable();
+    }
 
     private void Update()
     {
@@ -38,14 +55,32 @@ public class Storage : MonoBehaviour
         {
             currentCapacity = totalCapacity;
         }
-    }
+
+        // for emptying the storage
+        if (atStorage)
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                EmptyStorage();
+            }
+        }
+
+        storageText.text = storedItem + " " + currentCapacity.ToString();
+;    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+
+        /*if (other.gameObject.tag == "Player") 
         {
             EmptyStorage();
+        }*/
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            atStorage = true;
         }
+
 
         if (other.gameObject.tag == storedItem)
         {
@@ -73,6 +108,14 @@ public class Storage : MonoBehaviour
                     return;
                 }
             }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            atStorage = false;
         }
     }
 

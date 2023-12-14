@@ -237,16 +237,20 @@
 - Updated Animated NPC
 
 **11/12/2023 - Declan**
--improved NPC interaction
--added animation triggers for NPC
+- improved NPC interaction
+- added animation triggers for NPC
 
 **12/12/2023 - Declan**
--minor tweaks to interaction
--added flip reset
+- minor tweaks to interaction
+- added flip reset
 
 **13/12/2023 - Declan**
--fixed flipping issue
--fixed interaction issue
--fixed interaction with coffee tray bug
--added upgrades menu 
--created showcase build
+- fixed flipping issue
+- fixed interaction issue
+- fixed interaction with coffee tray bug
+- added upgrades menu 
+- created showcase build
+
+**14/12/20023 - James**
+- Player can now empty storage with F key
+- Storage shows what is currently in it, with UI above
