@@ -1,0 +1,432 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8405391959790259344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Arms_UpDown/Parameter 1
+  m_EditorClassIdentifier: 
+  Name: Parameter 1
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3994997545
+    data2: 2731924659
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - ArmsUp
+  - ArmsDown
+  Exists: 1
+--- !u!114 &-7092580460011024956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Busyness/Business
+  m_EditorClassIdentifier: 
+  Name: Business
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3884793223
+    data2: 2575968179
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Cafe_Quiet
+  - Cafe_Busy
+  Exists: 1
+--- !u!114 &-6131925083743177351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/NPC.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD1/FMOD1/Build/Desktop/NPC.bank
+  Name: NPC
+  StudioPath: bank:/NPC
+  lastModified: 638400497942965802
+  FileSizes:
+  - Name: Desktop
+    Value: 95872
+  Exists: 1
+--- !u!114 &-6008253243196770831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPCAngry
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPCAngry
+  Guid:
+    Data1: 1223598754
+    Data2: 1100144653
+    Data3: -1324785781
+    Data4: 815476498
+  Banks:
+  - {fileID: -6131925083743177351}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &-5860729839832597584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Environment.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD1/FMOD1/Build/Desktop/Environment.bank
+  Name: Environment
+  StudioPath: bank:/Environment
+  lastModified: 638400496117219081
+  FileSizes:
+  - Name: Desktop
+    Value: 5449120
+  Exists: 1
+--- !u!114 &-4573690876046282634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Serg.io/Arms_UpDown
+  m_EditorClassIdentifier: 
+  Path: event:/Serg.io/Arms_UpDown
+  Guid:
+    Data1: 1774391732
+    Data2: 1103629125
+    Data3: 108084671
+    Data4: 1133308115
+  Banks:
+  - {fileID: 4546666354836923730}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -8405391959790259344}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 900
+--- !u!114 &-4507978985598649520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPCPayment
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPCPayment
+  Guid:
+    Data1: -1482356548
+    Data2: 1080036121
+    Data3: 1320525756
+    Data4: 600234998
+  Banks:
+  - {fileID: -6131925083743177351}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 692
+--- !u!114 &-4066125293245743347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environmet/StrainRadio
+  m_EditorClassIdentifier: 
+  Path: event:/Environmet/StrainRadio
+  Guid:
+    Data1: -1834768731
+    Data2: 1287688226
+    Data3: 478278806
+    Data4: 1132251173
+  Banks:
+  - {fileID: 4546666354836923730}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7896832667238570814}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 140878
+--- !u!114 &-1974053820673733896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Serg.io/CarryingTooMuch
+  m_EditorClassIdentifier: 
+  Path: event:/Serg.io/CarryingTooMuch
+  Guid:
+    Data1: -862905150
+    Data2: 1085415783
+    Data3: 442458264
+    Data4: -2142439501
+  Banks:
+  - {fileID: 4546666354836923730}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 13500
+--- !u!114 &-1603729095389107358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Serg.io/Serg.ioGrabDrop
+  m_EditorClassIdentifier: 
+  Path: event:/Serg.io/Serg.ioGrabDrop
+  Guid:
+    Data1: 1489365972
+    Data2: 1182188900
+    Data3: 1455324074
+    Data4: -249611924
+  Banks:
+  - {fileID: 4546666354836923730}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1026344670617334066}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 498
+--- !u!114 &-1026344670617334066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Serg.ioGrabDrop/Parameter 2
+  m_EditorClassIdentifier: 
+  Name: Parameter 2
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2158111638
+    data2: 3214400185
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Grab
+  - Drop
+  Exists: 1
+--- !u!114 &-918684608408477373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD1/FMOD1/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638400497942335695
+  FileSizes:
+  - Name: Desktop
+    Value: 1394
+  Exists: 1
+--- !u!114 &-609534078325550806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD1/FMOD1/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638400497942315692
+  FileSizes:
+  - Name: Desktop
+    Value: 1036
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -918684608408477373}
+  - {fileID: -5860729839832597584}
+  - {fileID: -609534078325550806}
+  - {fileID: -6131925083743177351}
+  - {fileID: 4546666354836923730}
+  EditorEvents:
+  - {fileID: 1371361916014246249}
+  - {fileID: -6008253243196770831}
+  - {fileID: -4507978985598649520}
+  - {fileID: -4066125293245743347}
+  - {fileID: -4573690876046282634}
+  - {fileID: -1974053820673733896}
+  - {fileID: -1603729095389107358}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -609534078325550806}
+  StringsBanks:
+  - {fileID: -918684608408477373}
+  cacheTime: 638400624709974962
+  cacheVersion: 131609
+--- !u!114 &1371361916014246249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environmet/Busyness
+  m_EditorClassIdentifier: 
+  Path: event:/Environmet/Busyness
+  Guid:
+    Data1: -1706882955
+    Data2: 1272835492
+    Data3: 405113238
+    Data4: 1080633855
+  Banks:
+  - {fileID: -5860729839832597584}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7092580460011024956}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 435169
+--- !u!114 &4546666354836923730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Serg.io.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD1/FMOD1/Build/Desktop/Serg.io.bank
+  Name: Serg.io
+  StudioPath: bank:/Serg.io
+  lastModified: 638400624709974962
+  FileSizes:
+  - Name: Desktop
+    Value: 2245152
+  Exists: 1
+--- !u!114 &7896832667238570814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/StrainRadio/Strained
+  m_EditorClassIdentifier: 
+  Name: Strained
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2148146110
+    data2: 1476704633
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - NotStrained
+  - Strained
+  Exists: 1

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{c14f6ad0-df27-4479-96e8-81bb29c52d64}">
+		<property name="name">
+			<value>Strain</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b783f037-4ba4-4efc-b29c-bfe5af68f5fe}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{525198f9-e891-4f40-8a12-7cead5c75763}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{525198f9-e891-4f40-8a12-7cead5c75763}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Relaxed</value>
+			<value>Strained</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
