@@ -11,10 +11,8 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerInputActions playerInputActions;
     [SerializeField] private PlayerInput playerInput;
 
-
-    public Transform Arms;
-    public Transform StartArms;
-    public Transform EndArms;
+    public Animator PlayerAnim;
+    public bool ArmsRaised = false;    
     public float Speed = 5f;
     public float OgSpeed = 2f;
     public float FlipForce = 5f;
@@ -42,6 +40,7 @@ public class Player : MonoBehaviour
         playerInputActions.Player.Enable();
         rb = GetComponent<Rigidbody>();
         playerInputActions.Player.Flip.performed += Flip;
+        playerInputActions.Player.ArmRaise.performed += ArmRaise;
 
 
     }
@@ -78,32 +77,11 @@ public class Player : MonoBehaviour
     }
 
     void Update()
-    {
-      
-        
-            HandleMovement();
-        
-        
-       // HandleInteractions();
+    {          
+            HandleMovement();    
     }
 
-    private void HandleInteractions()
-    {
-       /* float interactDistance = 1.5f;
-
-        Vector3 moveDir = transform.TransformDirection(Vector3.forward);
-
-        Debug.DrawRay(transform.position, moveDir, Color.green);
-        if (Physics.Raycast(transform.position, moveDir, out RaycastHit raycastHit, interactDistance, interactablesLayerMask))
-        {
-            Debug.Log(raycastHit.transform);
-
-            if (raycastHit.transform.TryGetComponent(out InteractableTest interactableTest))
-            {
-                interactableTest.Interact();
-            }
-        }*/
-    }
+   
 
     private void HandleMovement()
     {
@@ -163,6 +141,47 @@ public class Player : MonoBehaviour
 
     }
 
+    void ArmRising()
+    {
+        PlayerAnim.SetBool("ArmsRaised", true);
+        PlayerAnim.SetBool("ArmsLowered", false);
+
+    }
+
+    void ArmLowering()
+    {
+        PlayerAnim.SetBool("ArmsLowered", true);
+        PlayerAnim.SetBool("ArmsRaised", false);
+
+    }
+
+
+    public void ArmRaise(InputAction.CallbackContext context)
+    {
+
+
+        if (context.performed && !ArmsRaised)
+        {
+            Debug.Log("Armraised" + context.phase);
+            ArmsRaised = true;
+            ArmRising();
+
+        }
+        else if (context.performed && ArmsRaised)
+        {
+            ArmsRaised = false;
+            ArmLowering();
+        }
+
+    }
+
+
+
+
+
+
+
+
     private bool IsGrounded()
     {
         
@@ -187,29 +206,10 @@ public class Player : MonoBehaviour
             return false;
         }
 
-     //gonna do some outloud thinking here to see if it helps, i need to not be moving if the player is flipped on their side, but this ground check needs to be able to work when the player is on all sides
-     //i could make a new ground check specifically so the player cant move, which would be a copy paste of this but idk exactly what to change about it that makes the raycast stay going straight down and not flip with the player
-     //i could create an OnSide() bool that checks if the player is on any side that isnt the normal orientation          
-    }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawCube(transform.position -transform.up * maxDistance, boxSize);
-    }
-    private bool WheelsGrounded()
-    {
-        if (Physics.BoxCast(transform.position, boxSize, -transform.up, transform.rotation, maxDistance, layermask))
-        {
-            Debug.Log("wheelsonground");
-            return true;
-
-        }
-        else
-        {
-            return false;
-        }
+       
     }
 
+    
      public void UpgradeSpeed()
      {
         MaxSpeed++;

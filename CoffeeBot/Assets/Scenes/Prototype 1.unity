@@ -188,7 +188,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28958
+  m_Name: pb_Mesh60782
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -476,7 +476,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29094
+  m_Name: pb_Mesh60926
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2469,8 +2469,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.53241587, y: 0.07435489, z: 0.46664238}
-  m_Center: {x: 0.012158155, y: -0.8759265, z: 0.017991543}
+  m_Size: {x: 0.53241587, y: 0.02064228, z: 0.46664238}
+  m_Center: {x: 0.012158155, y: -0.9027828, z: 0.017991543}
 --- !u!54 &215019811
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4748,7 +4748,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28992
+  m_Name: pb_Mesh60816
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -5360,7 +5360,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28612
+  m_Name: pb_Mesh60428
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -12868,8 +12868,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.321408, z: 1}
-  m_Center: {x: 0, y: 1.2290045, z: 0}
+  m_Size: {x: 1, y: 0.30734706, z: 0.33948135}
+  m_Center: {x: 0, y: 1.4504579, z: 0.061143875}
 --- !u!114 &1285227983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15268,6 +15268,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7b82ee37f6b484d9d0686464836bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1540274522 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6006162786727262767, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+  m_PrefabInstance: {fileID: 3433931971128358103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1540274523 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7923447611962627193, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+  m_PrefabInstance: {fileID: 3433931971128358103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540274514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225c3317b5df95b4c805c8bfbb4d8263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1540824669
 GameObject:
   m_ObjectHideFlags: 0
@@ -15582,7 +15598,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28928
+  m_Name: pb_Mesh60752
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -16769,7 +16785,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28818
+  m_Name: pb_Mesh60634
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -18946,12 +18962,24 @@ PrefabInstance:
       value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+      propertyPath: PlayerAnim
+      value: 
+      objectReference: {fileID: 1540274522}
+    - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
       propertyPath: maxDistance
       value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
       propertyPath: layermask.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+      propertyPath: testingInputSystem
+      value: 
+      objectReference: {fileID: 1540274523}
+    - target: {fileID: 7923447611962627193, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8495281088446297272, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
       propertyPath: m_Name
