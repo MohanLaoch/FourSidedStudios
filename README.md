@@ -256,5 +256,8 @@
 - Storage shows what is currently in it, with UI above
 
 **14/12/20023 - Declan**
--Created showcase build 
--Added reset button
+- Created showcase build 
+- Added reset button
+
+**03/02/2024 - Mark**
+- Added Prototype hierarchy to Mark Scene
