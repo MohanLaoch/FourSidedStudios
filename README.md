@@ -262,3 +262,7 @@
 **03/02/2024 - Mark**
 - Added Prototype hierarchy to Mark Scene
 - Imported Fmod
+
+**03/02/2024 - Declan**
+-Cleaned up some code
+- fixed coffee spawning bug
