@@ -30,15 +30,19 @@ public class CoffeeOrder : MonoBehaviour
 
     void Order()
     {
+        // spawn a coffee at the spawnObject's position & start the money timer
         Instantiate(coffee, new Vector3(spawnObject.transform.position.x, spawnObject.transform.position.y, spawnObject.transform.position.z), Quaternion.identity);
         moneyTracker.StartTimer();
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        // if the colliding object has the "coffeetag"
 
         if (other.gameObject.tag == coffeetag)
         {
+            // destroy the "coffeetag" object & call CompleteOrder in the MoneyTracker script & create a new order
+
             //reset itemholding bool here
             player.Holding = false;
             Destroy(other.gameObject);

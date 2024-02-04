@@ -30,12 +30,18 @@ public class MoneyTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // set the timer to maxTime, and the value of the slider to currentTime
+
         currentTime = maxTime;
         slider.maxValue = maxTime;
         slider.value = currentTime;
 
+        // colour of the slider
+
         sliderFill.color = sliderGradient.Evaluate(1f);
         sliderFill.color = sliderGradient.Evaluate(slider.normalizedValue);
+
+        // set the money text
 
         moneyText.text = ": " + money.ToString("0");
     }
@@ -43,10 +49,14 @@ public class MoneyTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if the timer is active, countdown
+
         if (timerActive)
         {
             currentTime = countDown ? currentTime -= Time.deltaTime : currentTime += Time.deltaTime;
         }
+
+       // if the timer has limit and is above or below that limit set the timer text
 
         if (hasLimit && ((countDown && currentTime <= timerLimit) || (!countDown && currentTime >= timerLimit)))
         { 
@@ -60,6 +70,8 @@ public class MoneyTracker : MonoBehaviour
 
     private void SetTimerText()
     {
+        // update the timer text
+
         //timerText.text = currentTime.ToString("0");
         slider.value = currentTime;
         sliderFill.color = sliderGradient.Evaluate(slider.normalizedValue);
@@ -67,10 +79,14 @@ public class MoneyTracker : MonoBehaviour
 
     public void StartTimer()
     {
+        // set the timer to maxTime, and the value of the slider to currentTime
+
         timerActive = true;
         currentTime = maxTime;
         slider.maxValue = maxTime;
         slider.value = currentTime;
+
+        // set the colour of the timer
 
         sliderFill.color = sliderGradient.Evaluate(1f);
         sliderFill.color = sliderGradient.Evaluate(slider.normalizedValue);
@@ -83,6 +99,8 @@ public class MoneyTracker : MonoBehaviour
 
     public void CompleteOrder()
     {
+        // stop the timer & give the player money and a tip & set the new money text & start the timer again
+
         StopTimer();
         money += moneyGiven + (currentTime / tipDivide);
         moneyText.text = ": " + money.ToString("0");
