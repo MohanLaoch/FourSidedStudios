@@ -15268,6 +15268,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7b82ee37f6b484d9d0686464836bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1540274522 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6006162786727262767, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+  m_PrefabInstance: {fileID: 3433931971128358103}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1540824669
 GameObject:
   m_ObjectHideFlags: 0
@@ -18945,6 +18950,10 @@ PrefabInstance:
       propertyPath: boxSize.z
       value: 0.45
       objectReference: {fileID: 0}
+    - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+      propertyPath: PlayerAnim
+      value: 
+      objectReference: {fileID: 1540274522}
     - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
       propertyPath: maxDistance
       value: 0.03
