@@ -83,7 +83,10 @@ crashlytics-build.properties
 /[Aa]ssets/**/FMODStudioCache.asset.meta
 /[Aa]ssets/Plugins/FMOD/Cache.meta
 /[Aa]ssets/Plugins/FMOD/Cache/Editor.meta
-
+/Assets/FMODStudioCache.asset
+/Assets/FMODStudioCache.asset.meta
+fmod.log
+fmod_editor.log
 
 
 # Ignore bank files in the StreamingAssets folder.
@@ -94,6 +97,7 @@ crashlytics-build.properties
 # Log files can be ignored.
 CoffeeBot\fmod_editor.log
 fmod.log
+
 
 # FMOD 1.10.x (Legacy)
 /Assets/FMODAssets/*
