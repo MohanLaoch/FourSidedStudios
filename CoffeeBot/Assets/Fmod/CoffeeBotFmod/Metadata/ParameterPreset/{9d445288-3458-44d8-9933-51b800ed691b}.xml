@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{9d445288-3458-44d8-9933-51b800ed691b}">
+		<property name="name">
+			<value>Business</value>
+		</property>
+		<relationship name="folder">
+			<destination>{a5a698e4-65d6-48d0-a410-17dedc30826f}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{41d8984e-1475-475b-b554-fbd3bfda7c80}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{41d8984e-1475-475b-b554-fbd3bfda7c80}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Cafe_Quiet</value>
+			<value>Cafe_Busy</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
