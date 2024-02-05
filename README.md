@@ -273,3 +273,6 @@
 **05/02/2024 - Mark**
 - Added banks to Fmod
 - Radio audio in Mark Scene
+
+**05/02/2024 - Declan**
+- npc now stands up after being knocked over
