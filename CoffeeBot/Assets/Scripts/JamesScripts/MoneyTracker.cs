@@ -66,6 +66,7 @@ public class MoneyTracker : MonoBehaviour
         }
         
         SetTimerText();
+        moneyText.text = ": " + money.ToString("0");
     }
 
     private void SetTimerText()

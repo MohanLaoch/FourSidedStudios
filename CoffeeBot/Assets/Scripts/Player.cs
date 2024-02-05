@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public Rigidbody rb;
     public Transform RayZone;
     public BoxCollider boxCollider;
+    public MoneyTracker moneytracker;
 
     public bool Holding;
     public bool isMoving = false;
@@ -145,10 +146,6 @@ public class Player : MonoBehaviour
         PlayerAnim.SetBool("ArmsRaised", true);
         PlayerAnim.SetBool("ArmsLowered", false);
 
-        /*float distCovered = (Time.time - startTime) * Speed;
-        float fractionOfJourney = distCovered / journeyLength;
-        Arms.transform.position = Vector3.Slerp(StartArms.position, EndArms.position, fractionOfJourney);*/
-
     }
 
     void ArmLowering()
@@ -156,9 +153,6 @@ public class Player : MonoBehaviour
         PlayerAnim.SetBool("ArmsLowered", true);
         PlayerAnim.SetBool("ArmsRaised", false);
 
-        /* float distCovered = (Time.time - startTime) * Speed;
-         float fractionOfJourney = distCovered / journeyLength;
-         Arms.transform.position = Vector3.Slerp(EndArms.position, StartArms.position, fractionOfJourney);*/
 
     }
 
@@ -217,18 +211,42 @@ public class Player : MonoBehaviour
 
      public void UpgradeSpeed()
      {
-        MaxSpeed++;
+        if(moneytracker.money >= 20)
+        {
+            moneytracker.money -= 20;
+            MaxSpeed++;
+        }
+        else
+        {
+            Debug.Log("Notenoughcash");
+        }
      }
 
     public void UpgradeHandling()
      {
-        RotSpeed += 50;
-     }
+        if (moneytracker.money >= 20)
+        {
+            moneytracker.money -= 20;
+            RotSpeed += 20;
+        }
+        else
+        {
+            Debug.Log("Notenoughcash");
+        }
+    }
 
     public void UpgradeAcceleration()
      {
-        Acceleration += 5;
-     }
+        if (moneytracker.money >= 20)
+        {
+            moneytracker.money -= 20;
+            Acceleration += 5;
+        }
+        else
+        {
+            Debug.Log("Notenoughcash");
+        }
+    }
 
 
 
