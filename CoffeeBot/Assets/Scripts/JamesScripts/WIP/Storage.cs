@@ -16,7 +16,7 @@ public class Storage : MonoBehaviour
     public int fillCapacity = 5;
 
     [Header("Items")]
-    public string storedItem;
+    public string itemName;
 
     public List<string> acceptedItems = new List<string>();
 
@@ -46,7 +46,7 @@ public class Storage : MonoBehaviour
         // if the storage is at or below 0 it'll make storedItem null
         if (currentCapacity <= 0)
         {
-            storedItem = null;
+            itemName = null;
             //storageImage.sprite = nullSprite;
         }
 
@@ -65,7 +65,7 @@ public class Storage : MonoBehaviour
             }
         }
 
-        storageText.text = storedItem + " " + currentCapacity.ToString();
+        storageText.text = itemName + " " + currentCapacity.ToString();
 ;    }
 
     private void OnTriggerEnter(Collider other)
@@ -82,13 +82,13 @@ public class Storage : MonoBehaviour
         }
 
 
-        if (other.gameObject.tag == storedItem)
+        if (other.gameObject.tag == itemName)
         {
             currentCapacity += fillCapacity;
             
         }
 
-        if (storedItem == null)
+        if (itemName == null)
         {
             for (int i = 0; i < acceptedItems.Count; i++)
             {
@@ -98,7 +98,7 @@ public class Storage : MonoBehaviour
                 // also I need to make it so that if the item already matchs the current storedItem it'll just top up
                 if (acceptedItems.Contains(other.gameObject.tag.ToString()))
                 {
-                    storedItem = other.gameObject.tag.ToString();
+                    itemName = other.gameObject.tag.ToString();
                     currentCapacity += fillCapacity;
                     
                 }
@@ -122,7 +122,7 @@ public class Storage : MonoBehaviour
     public void EmptyStorage()
     {
         currentCapacity = 0;
-        storedItem = null;
+        itemName = null;
         //storageImage.sprite = nullSprite;
     }
 
