@@ -277,6 +277,11 @@
 **05/02/2024 - Declan**
 - npc now stands up after being knocked over
 
+**05/02/2024 - James**
+- Ability to craft coffee
 
 **06/02/2024 - Mark**
 - Imported NPC walk animation
+
+**06/02/2024 - James**
+- Coffee will actually spawn when crafted

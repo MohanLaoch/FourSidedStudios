@@ -1988,13 +1988,24 @@ MonoBehaviour:
   storageA: {fileID: 606247691}
   storageB: {fileID: 729852761}
   storageC: {fileID: 762203757}
+  capacityRemoveAmount: 10
   storedItems:
   - 
   - 
   - 
   recipes:
   - CupBoxCoffeeBoxMilkBox
+  - CupBoxMilkBoxCoffeeBox
+  - CoffeeBoxCupBoxMilkBox
+  - CoffeeBoxMilkBoxCupBox
+  - MilkBoxCupBoxCoffeeBox
+  - MilkBoxCoffeeBoxCupBox
   recipieResults:
+  - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
+  - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
+  - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
+  - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
+  - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
   - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
 --- !u!65 &143513329
 BoxCollider:
@@ -2005,7 +2016,7 @@ BoxCollider:
   m_GameObject: {fileID: 143513327}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2016,7 +2027,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143513327}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -9297,7 +9308,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912223781}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.67, y: 1.197, z: -3.980019}
+  m_LocalPosition: {x: 4.67, y: 1.197, z: -2.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11066,7 +11077,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 5.500019
+  m_CameraDistance: 4
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -19105,7 +19116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008269767}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.67, y: 1.197, z: -3.980019}
+  m_LocalPosition: {x: 4.67, y: 1.197, z: -2.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

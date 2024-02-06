@@ -11,6 +11,8 @@ public class CraftCoffee : MonoBehaviour
     public Storage storageB;
     public Storage storageC;
 
+    public int capacityRemoveAmount = 5;
+
     public List<string> storedItems = new List<string>();
 
     public string[] recipes;
@@ -52,11 +54,27 @@ public class CraftCoffee : MonoBehaviour
             // if the current recipe equals a craftable recipie, craft that recipe
             if(recipes[i] == currentRecipeString)
             {
+                int currentRecipe = i;
+
+                Vector3 spawnPos = this.transform.position;
+
+                GameObject newCoffee = Instantiate(recipieResults[i], spawnPos, Quaternion.identity);
+
+                EmptyCapacity();
+
                 //spawn the coffee
                 Debug.Log("I am HIM!");
             }
         }
     }
+
+    void EmptyCapacity()
+    {
+        storageA.currentCapacity -= capacityRemoveAmount;
+        storageB.currentCapacity -= capacityRemoveAmount;
+        storageC.currentCapacity -= capacityRemoveAmount;
+    }
+
 }
 
 /*
