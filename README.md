@@ -285,3 +285,6 @@
 
 **06/02/2024 - James**
 - Coffee will actually spawn when crafted
+
+**06/02/2024 - Declan**
+- added npc wander behaviour

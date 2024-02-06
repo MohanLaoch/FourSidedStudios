@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
 
 public class InteractableTest : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class InteractableTest : MonoBehaviour
     public Transform HoldArea;
     public GameObject Player;
     public Animator NPCAnim;
+    public NPCFlailTest flail;
 
     private void Awake()
     {
@@ -27,6 +30,9 @@ public class InteractableTest : MonoBehaviour
 
         if (gameObject.CompareTag("NPC"))
         {
+            GetComponent<NavMeshAgent>().enabled = false;
+            GetComponent<NpcWander>().enabled = false;
+
             transform.parent = HoldArea.transform;
             rb.transform.position = HoldArea.transform.position;
 
@@ -52,6 +58,12 @@ public class InteractableTest : MonoBehaviour
 
     public void Drop()
     {
+        if (gameObject.CompareTag("NPC")) 
+        {
+            StartCoroutine(GetComponentInChildren<NPCFlailTest>().NPCFlailing());
+        }
+
+
         transform.parent = null;
         rb.constraints = RigidbodyConstraints.None;
         Debug.Log("dropping item");

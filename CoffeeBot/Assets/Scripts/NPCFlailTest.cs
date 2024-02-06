@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
+
 
 public class NPCFlailTest : MonoBehaviour
 {
@@ -11,13 +14,18 @@ public class NPCFlailTest : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         
-        if(other.gameObject.layer == LayerMask.NameToLayer("Walls"))
+        if(other.gameObject.layer == LayerMask.NameToLayer("Floor"))
         {
             StartCoroutine(NPCFlailing());
+            GetComponentInParent<NavMeshAgent>().enabled = false;
+            GetComponentInParent<NpcWander>().enabled = false;
+
+
+
         }
     }
 
-    IEnumerator NPCFlailing()
+    public IEnumerator NPCFlailing()
     {
         Anim.SetBool("Fallen", true);
 
@@ -25,7 +33,13 @@ public class NPCFlailTest : MonoBehaviour
 
         transform.parent.rotation = Quaternion.Euler(0, 0, 0);
         transform.parent.position = new Vector3(transform.position.x, 2f, transform.position.z);
-       Anim.SetBool("Fallen", false);
+        Anim.SetBool("Fallen", false);
+        GetComponentInParent<NavMeshAgent>().enabled = true;
+        GetComponentInParent<NpcWander>().enabled = true;
+
+
+
+
     }
 
 

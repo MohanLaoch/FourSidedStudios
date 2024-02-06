@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 2097996650788612440}
   - component: {fileID: 2097996650788612441}
   - component: {fileID: 1660783603282193874}
+  - component: {fileID: 4892935917054380668}
   m_Layer: 7
   m_Name: Table
   m_TagString: Untagged
@@ -277,6 +278,23 @@ MonoBehaviour:
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
   Player: {fileID: 8495281088446297272, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+  NPCAnim: {fileID: 0}
+--- !u!208 &4892935917054380668
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7716270097821593861}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &2097996652246372324
 PrefabInstance:
   m_ObjectHideFlags: 0
