@@ -297,3 +297,4 @@
 **07/02/2024 - Declan**
 - Improved AI collision
 - Set up Npc walking animation
+- Added AI to main scene
