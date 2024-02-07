@@ -293,6 +293,7 @@
 - Imported barista NPC model + texture
 - Created NPC barista prefab
 - added Barista NPC into Mark Scene
+- Added Hat to Barista NPC
 
 **07/02/2024 - Declan**
 - Improved AI collision
