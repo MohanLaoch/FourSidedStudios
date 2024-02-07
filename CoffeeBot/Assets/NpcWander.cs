@@ -12,16 +12,18 @@ public class NpcWander : MonoBehaviour
     private float timer;
     public Animator NpcAnim;
 
+
     // Use this for initialization
     void OnEnable()
     {
         agent = GetComponent<NavMeshAgent>();
-        timer = wanderTimer;
+        timer = wanderTimer;       
     }
 
     // Update is called once per frame
     void Update()
     {
+
         timer += Time.deltaTime;
         
         if (timer >= wanderTimer)
@@ -30,6 +32,17 @@ public class NpcWander : MonoBehaviour
             agent.SetDestination(newPos);
             timer = 0;
         }
+
+        if(agent.remainingDistance < 0.1)
+        {
+            NpcAnim.SetBool("IsWalking", false);
+        }
+        else
+        {
+            NpcAnim.SetBool("IsWalking", true);
+
+        }
+
     }
 
     public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
@@ -44,11 +57,6 @@ public class NpcWander : MonoBehaviour
 
         return navHit.position;
     }
-    /*Current issues: 
-      npc freaks out when player hits them
-      need to create two states, wander state and falling state
-      npc should wander as normal until they come into contact with the player 
-      then, normal rigidbody physics should occur, putting the npc into flailing state.
-      flailing animation starts, they struggle for a few seconds, then get up and return to their wander state.*/
+
      
 }
