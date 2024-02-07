@@ -288,3 +288,8 @@
 
 **06/02/2024 - Declan**
 - added npc wander behaviour
+
+**07/02/2024 - Mark**
+- Imported barista NPC model + texture
+- Created NPC barista prefab
+- added Barista NPC into Mark Scene
