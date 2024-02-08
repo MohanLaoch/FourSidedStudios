@@ -306,3 +306,4 @@
 
 **08/02/2024- Declan**
 - Improved Npc collision 
+- Added slippery floor mechanic

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -85,21 +86,25 @@ public class Player : MonoBehaviour
 
     private void HandleMovement()
     {
+
+
+        
         float Move = testingInputSystem.GetMovementFloat();
         float RotDirection = testingInputSystem.GetRotFloat();
 
         
 
-
-            rb.MovePosition(transform.position + (transform.forward * Move) * Speed * Time.fixedDeltaTime);
-            if (Move != 0)
-            {
-                isMoving = true;
-            }
-            else
-            {
+       // rb.MovePosition(transform.position + (transform.forward * Move) * Speed * Time.fixedDeltaTime);
+       
+        if (Move != 0)
+        {
+            isMoving = true;
+            rb.velocity = (transform.forward * Move) * Speed * Time.fixedDeltaTime;
+        }
+        else
+        {
                 isMoving = false;
-            }
+        }
 
 
             if (isMoving)
