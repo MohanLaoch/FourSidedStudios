@@ -13,7 +13,7 @@ public class Storage : MonoBehaviour
     public int currentCapacity = 0;
     public int totalCapacity = 10;
 
-    public int fillCapacity = 5;
+    [SerializeField] private int fillCapacity = 1;
 
     [Header("Items")]
     public string itemName;

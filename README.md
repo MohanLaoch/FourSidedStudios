@@ -304,5 +304,8 @@
 - Imported NPC getting up animation
 - Added animation to animator
 
-**08/02/2024- Declan**
+**08/02/2024 - Declan**
 - Improved Npc collision 
+
+**08/02/2024 - James**
+- Slow depletion of coffee resources

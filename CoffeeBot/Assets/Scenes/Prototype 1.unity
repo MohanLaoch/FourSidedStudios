@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -188,7 +188,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh163772
+  m_Name: pb_Mesh30000
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -571,7 +571,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29094
+  m_Name: pb_Mesh30148
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2083,18 +2083,17 @@ MonoBehaviour:
   storageA: {fileID: 606247691}
   storageB: {fileID: 729852761}
   storageC: {fileID: 762203757}
-  capacityRemoveAmount: 10
   storedItems:
   - 
   - 
   - 
-  recipes:
-  - CupBoxCoffeeBoxMilkBox
-  - CupBoxMilkBoxCoffeeBox
-  - CoffeeBoxCupBoxMilkBox
+  recipies:
   - CoffeeBoxMilkBoxCupBox
-  - MilkBoxCupBoxCoffeeBox
+  - CoffeeBoxCupBoxMilkBox
   - MilkBoxCoffeeBoxCupBox
+  - MilkBoxCupBoxCoffeeBox
+  - CupBoxMilkBoxCoffeeBox
+  - CupBoxCoffeeBoxMilkBox
   recipieResults:
   - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
   - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
@@ -2102,6 +2101,8 @@ MonoBehaviour:
   - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
   - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
   - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
+  secondsToWait: 1
+  capacityRemoveAmount: 1
 --- !u!65 &143513329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2421,7 +2422,7 @@ RectTransform:
   m_GameObject: {fileID: 201362547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.034114502, y: 0.015, z: 0.015}
+  m_LocalScale: {x: 0.034114502, y: 0.025, z: 0.015}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1486374535}
@@ -4873,7 +4874,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh134958
+  m_Name: pb_Mesh30034
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -5406,7 +5407,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28612
+  m_Name: pb_Mesh29640
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -6913,8 +6914,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 606247686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 2, z: 7.75}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalPosition: {x: 1.4000001, y: 1.5500002, z: 7.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 201362548}
@@ -6935,7 +6936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCapacity: 0
   totalCapacity: 10
-  fillCapacity: 5
+  fillCapacity: 1
   itemName: 
   acceptedItems:
   - CoffeeBox
@@ -7872,7 +7873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCapacity: 0
   totalCapacity: 10
-  fillCapacity: 5
+  fillCapacity: 1
   itemName: 
   acceptedItems:
   - CoffeeBox
@@ -7887,8 +7888,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729852760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.7, y: 2, z: 7.75}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalPosition: {x: 3.4, y: 1.5500002, z: 7.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 975276224}
@@ -8255,7 +8256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCapacity: 0
   totalCapacity: 10
-  fillCapacity: 5
+  fillCapacity: 1
   itemName: 
   acceptedItems:
   - CoffeeBox
@@ -8270,8 +8271,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762203756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9, y: 2, z: 7.75}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalPosition: {x: 5.2000003, y: 1.5500002, z: 7.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1659666578}
@@ -10415,7 +10416,7 @@ RectTransform:
   m_GameObject: {fileID: 975276223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.034114502, y: 0.015, z: 0.015}
+  m_LocalScale: {x: 0.034114502, y: 0.025, z: 0.015}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1560086372}
@@ -15815,7 +15816,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh134894
+  m_Name: pb_Mesh29980
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -16916,7 +16917,7 @@ RectTransform:
   m_GameObject: {fileID: 1659666577}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.034114502, y: 0.015, z: 0.015}
+  m_LocalScale: {x: 0.034114502, y: 0.025, z: 0.015}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 269543697}
@@ -17118,7 +17119,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28818
+  m_Name: pb_Mesh29860
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

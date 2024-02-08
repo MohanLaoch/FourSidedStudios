@@ -11,13 +11,22 @@ public class CraftCoffee : MonoBehaviour
     public Storage storageB;
     public Storage storageC;
 
-    public int capacityRemoveAmount = 5;
-
     public List<string> storedItems = new List<string>();
 
-    public string[] recipes;
+    [Header("Recipie Crafting")]
+
+    public string[] recipies;
     public GameObject[] recipieResults;
-    
+
+
+    [Header("Ability to Craft")]
+
+    public int secondsToWait = 1;
+
+    [SerializeField] private int capacityRemoveAmount = 1;
+
+    private bool canCraft = true;
+
     // Update is called once per frame
     void Update()
     {
@@ -30,6 +39,18 @@ public class CraftCoffee : MonoBehaviour
 
     void CheckForCreatedRecipies()
     {
+        if (canCraft)
+        {
+            StartCoroutine(CreateCoffee());
+        }
+        else
+            return;
+    }
+
+    IEnumerator CreateCoffee()
+    {
+        canCraft = false;
+
         // make the currentRecipeString blank
         string currentRecipeString = "";
 
@@ -38,7 +59,7 @@ public class CraftCoffee : MonoBehaviour
         {
 
             // if there is a stored item, add the name to the current recipe
-            if(storedItem != null)
+            if (storedItem != null)
             {
                 currentRecipeString += storedItem;
             }
@@ -49,23 +70,26 @@ public class CraftCoffee : MonoBehaviour
         }
 
         // check all recipies 
-        for (int i = 0; i < recipes.Length; i++)
+        for (int i = 0; i < recipies.Length; i++)
         {
             // if the current recipe equals a craftable recipie, craft that recipe
-            if(recipes[i] == currentRecipeString)
+            if (recipies[i] == currentRecipeString)
             {
                 int currentRecipe = i;
 
                 Vector3 spawnPos = this.transform.position;
 
+                //spawn the coffee
                 GameObject newCoffee = Instantiate(recipieResults[i], spawnPos, Quaternion.identity);
 
                 EmptyCapacity();
-
-                //spawn the coffee
-                Debug.Log("I am HIM!");
             }
         }
+
+        yield return new WaitForSeconds(secondsToWait);
+
+        canCraft = true;
+
     }
 
     void EmptyCapacity()
