@@ -13,7 +13,7 @@ public class Storage : MonoBehaviour
     public int currentCapacity = 0;
     public int totalCapacity = 10;
 
-    public int fillCapacity = 5;
+    [SerializeField] private int fillCapacity = 1;
 
     [Header("Items")]
     public string itemName;
@@ -22,15 +22,13 @@ public class Storage : MonoBehaviour
 
     [Header("UI Components")]
     public TextMeshProUGUI storageText;
+    public Image storageImage;
 
-    //public List<Sprite> acceptedItemSprites = new List<Sprite>();
+    [Header("Sprites")]
+    public List<Sprite> acceptedItemSprites = new List<Sprite>();
 
-
-    /*[Header("Sprites")]
     public Sprite currrentSprite;
     public Sprite nullSprite;
-
-    public SpriteRenderer storageImage;*/
 
     private bool atStorage;
 
@@ -47,7 +45,7 @@ public class Storage : MonoBehaviour
         if (currentCapacity <= 0)
         {
             itemName = null;
-            //storageImage.sprite = nullSprite;
+            storageImage.sprite = nullSprite;
         }
 
         // if the storge goes above current capacity bring it back down to the current (so no item overflow)
@@ -65,16 +63,11 @@ public class Storage : MonoBehaviour
             }
         }
 
-        storageText.text = itemName + " " + currentCapacity.ToString();
+        storageText.text = /*itemName + " " + */ currentCapacity.ToString();
 ;    }
 
     private void OnTriggerEnter(Collider other)
     {
-
-        /*if (other.gameObject.tag == "Player") 
-        {
-            EmptyStorage();
-        }*/
 
         if (other.gameObject.CompareTag("Player"))
         {
@@ -90,24 +83,24 @@ public class Storage : MonoBehaviour
 
         if (itemName == null)
         {
-            for (int i = 0; i < acceptedItems.Count; i++)
-            {
-                // if there is no stored item, store the current item. Using its tag as the name for the currently stored item
+            // if there is no stored item, store the current item. Using its tag as the name for the currently stored item
 
-                // I do need to fix this so there isn't an and
-                // also I need to make it so that if the item already matchs the current storedItem it'll just top up
-                if (acceptedItems.Contains(other.gameObject.tag.ToString()))
-                {
-                    itemName = other.gameObject.tag.ToString();
-                    currentCapacity += fillCapacity;
-                    
-                }
-                else
-                {
-                    // this "else" might not need to be here
-                    return;
-                }
+            // I do need to fix this so there isn't an and
+            // also I need to make it so that if the item already matchs the current storedItem it'll just top up
+            if (acceptedItems.Contains(other.gameObject.tag.ToString()))
+            {
+                int currentNumber = acceptedItems.IndexOf(other.gameObject.tag);
+
+                currrentSprite = acceptedItemSprites[currentNumber];
+
+                storageImage.sprite = currrentSprite;
+
+                itemName = other.gameObject.tag.ToString();
+                currentCapacity += fillCapacity;
+
             }
+            else
+                return;
         }
     }
 
@@ -123,7 +116,7 @@ public class Storage : MonoBehaviour
     {
         currentCapacity = 0;
         itemName = null;
-        //storageImage.sprite = nullSprite;
+        storageImage.sprite = nullSprite;
     }
 
 }

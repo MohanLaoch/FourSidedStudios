@@ -9,9 +9,9 @@ public class CoffeeOrder : MonoBehaviour
     [Header("Script References")]
     public MoneyTracker moneyTracker;
 
-    [Header("GameObjects")]
+    /*[Header("GameObjects")]
     public GameObject coffee;
-    public GameObject spawnObject;
+    public GameObject spawnObject;*/
 
     [Header("PlayerScript")]
     public Player player;
@@ -31,7 +31,7 @@ public class CoffeeOrder : MonoBehaviour
     void Order()
     {
         // spawn a coffee at the spawnObject's position & start the money timer
-        Instantiate(coffee, new Vector3(spawnObject.transform.position.x, spawnObject.transform.position.y, spawnObject.transform.position.z), Quaternion.identity);
+        //Instantiate(coffee, new Vector3(spawnObject.transform.position.x, spawnObject.transform.position.y, spawnObject.transform.position.z), Quaternion.identity);
         moneyTracker.StartTimer();
     }
 

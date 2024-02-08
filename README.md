@@ -303,7 +303,12 @@
 **08/02/2024 - Mark**
 - Imported NPC getting up animation
 - Added animation to animator
+- Imported Refined NPC getting up animation
 
-**08/02/2024- Declan**
+**08/02/2024 - Declan**
 - Improved Npc collision 
-- Added slippery floor mechanic
+
+**08/02/2024 - James**
+- Slow depletion of coffee resources
+- Icons for storage units that change
+- Removed spawn coffee from npc ordering script
