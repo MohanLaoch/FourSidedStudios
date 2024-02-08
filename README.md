@@ -309,3 +309,5 @@
 
 **08/02/2024 - James**
 - Slow depletion of coffee resources
+- Icons for storage units that change
+- Removed spawn coffee from npc ordering script
