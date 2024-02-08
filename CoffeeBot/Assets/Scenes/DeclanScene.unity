@@ -11563,6 +11563,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8637d8e244176d2419924aa9ce5cfe56, type: 3}
+--- !u!95 &1179421900 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7554220197215085693, guid: f79bddfcf297aec4f8c63d88fe857e43, type: 3}
+  m_PrefabInstance: {fileID: 3293066057432797341}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1189931765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17975,10 +17980,30 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3293066056719402976, guid: f79bddfcf297aec4f8c63d88fe857e43, type: 3}
+      propertyPath: m_Height
+      value: 1.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293066056719402978, guid: f79bddfcf297aec4f8c63d88fe857e43, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1398014
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293066056719402978, guid: f79bddfcf297aec4f8c63d88fe857e43, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293066056719402978, guid: f79bddfcf297aec4f8c63d88fe857e43, type: 3}
+      propertyPath: m_Center.y
+      value: -0.33237547
+      objectReference: {fileID: 0}
     - target: {fileID: 3293066056719402979, guid: f79bddfcf297aec4f8c63d88fe857e43, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 162336952}
+    - target: {fileID: 3293066056719402979, guid: f79bddfcf297aec4f8c63d88fe857e43, type: 3}
+      propertyPath: NpcAnim
+      value: 
+      objectReference: {fileID: 1179421900}
     - target: {fileID: 3293066056719402981, guid: f79bddfcf297aec4f8c63d88fe857e43, type: 3}
       propertyPath: player
       value: 

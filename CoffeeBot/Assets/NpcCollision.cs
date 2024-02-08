@@ -8,12 +8,14 @@ using UnityEngine.AI;
 public class NpcCollision : MonoBehaviour
 {
     public Player player;
+    public Animator NpcAnim;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {       
             GetComponent<NavMeshAgent>().enabled = false;
             GetComponent<NpcWander>().enabled = false;
+            NpcAnim.SetBool("IsWalking", false);
 
             if(player.Holding == false)
             {
