@@ -299,3 +299,7 @@
 - Improved AI collision
 - Set up Npc walking animation
 - Added AI to main scene
+
+**08/02/2024 - Mark**
+- Imported NPC getting up animation
+- Added animation to animator
