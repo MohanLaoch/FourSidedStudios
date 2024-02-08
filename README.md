@@ -303,6 +303,7 @@
 **08/02/2024 - Mark**
 - Imported NPC getting up animation
 - Added animation to animator
+- Imported Refined NPC getting up animation
 
 **08/02/2024 - Declan**
 - Improved Npc collision 
