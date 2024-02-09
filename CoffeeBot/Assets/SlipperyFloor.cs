@@ -12,16 +12,19 @@ public class SlipperyFloor : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        //Vector3 FlipDir = transform.TransformDirection(Vector3.forward);
+        Vector3 FlipDir = transform.TransformDirection(Vector3.forward);
         if (other.CompareTag("NPC"))
         {
             Debug.Log("slippy");
             Npc.GetComponent<Rigidbody>().AddForce(Vector3.up * FlipForce, ForceMode.Impulse);
             Npc.GetComponent<Rigidbody>().AddForce(Vector3.left * FlipForce, ForceMode.Impulse);
-            //Npc.GetComponent<Rigidbody>().AddTorque(FlipDir * FlipForceRot, ForceMode.Impulse);
+            Npc.GetComponent<Rigidbody>().AddTorque(FlipDir * FlipForceRot, ForceMode.Impulse);
             Npc.GetComponent<NavMeshAgent>().enabled = false;
             Npc.GetComponent<NpcWander>().enabled = false;
-
+        }
+        else if (other.CompareTag("Mop"))
+        {
+            Destroy(gameObject);
         }
     }
 }
