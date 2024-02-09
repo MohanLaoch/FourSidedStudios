@@ -319,3 +319,7 @@
 - Added v2 nametag to mark scene
 - Added Serg.io nametag to Serg.io prefab
 - Added fmod sounds to prototype scene (Radio music, cafe ambience, carrying too much)
+
+**09/02/2024 - Declan**
+- added slippery surface interaction
+- starting refining storage
