@@ -312,3 +312,10 @@
 - Slow depletion of coffee resources
 - Icons for storage units that change
 - Removed spawn coffee from npc ordering script
+
+**09/02/2024 - Mark**
+- Imported V2 nametag
+- Imported Serg.io nametag texture
+- Added v2 nametag to mark scene
+- Added Serg.io nametag to Serg.io prefab
+- Added fmod sounds to prototype scene (Radio music, cafe ambience, carrying too much)
