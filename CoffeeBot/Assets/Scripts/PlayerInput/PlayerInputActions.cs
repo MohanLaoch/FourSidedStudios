@@ -80,6 +80,15 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Empty"",
+                    ""type"": ""Button"",
+                    ""id"": ""95c41f0a-590c-432e-9789-6763d67ae5ce"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -185,11 +194,22 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""79b3c18d-90d0-4db0-a061-dbb8e7252e20"",
-                    ""path"": ""<Keyboard>/f"",
+                    ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Store"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d81a3f39-4ac2-4cfe-9be0-9e6373c45694"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Empty"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -234,6 +254,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_ArmRaise = m_Player.FindAction("ArmRaise", throwIfNotFound: true);
         m_Player_Store = m_Player.FindAction("Store", throwIfNotFound: true);
+        m_Player_Empty = m_Player.FindAction("Empty", throwIfNotFound: true);
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
         m_Menu_Escape = m_Menu.FindAction("Escape", throwIfNotFound: true);
@@ -302,6 +323,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_ArmRaise;
     private readonly InputAction m_Player_Store;
+    private readonly InputAction m_Player_Empty;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -312,6 +334,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @ArmRaise => m_Wrapper.m_Player_ArmRaise;
         public InputAction @Store => m_Wrapper.m_Player_Store;
+        public InputAction @Empty => m_Wrapper.m_Player_Empty;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -339,6 +362,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Store.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStore;
                 @Store.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStore;
                 @Store.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStore;
+                @Empty.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmpty;
+                @Empty.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmpty;
+                @Empty.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmpty;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -361,6 +387,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Store.started += instance.OnStore;
                 @Store.performed += instance.OnStore;
                 @Store.canceled += instance.OnStore;
+                @Empty.started += instance.OnEmpty;
+                @Empty.performed += instance.OnEmpty;
+                @Empty.canceled += instance.OnEmpty;
             }
         }
     }
@@ -406,6 +435,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnArmRaise(InputAction.CallbackContext context);
         void OnStore(InputAction.CallbackContext context);
+        void OnEmpty(InputAction.CallbackContext context);
     }
     public interface IMenuActions
     {

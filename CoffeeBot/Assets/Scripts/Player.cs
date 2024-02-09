@@ -33,6 +33,8 @@ public class Player : MonoBehaviour
     public LayerMask layermask;
     public bool ArmsRaised = false;
 
+    public Storage storage;
+
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -64,16 +66,19 @@ public class Player : MonoBehaviour
         {
             Debug.Log(raycastHit.transform);
 
+
             if (raycastHit.transform.TryGetComponent(out InteractableTest interactableTest) && Holding == false)
             {
-                interactableTest.Interact();
                 Holding = true;
+                interactableTest.Interact();                
             }
             else
             {
                 interactableTest.Drop();
                 Holding = false;
             }
+
+
         }
     }
 
@@ -146,6 +151,9 @@ public class Player : MonoBehaviour
 
     }
 
+
+
+
     void ArmRising()
     {
         PlayerAnim.SetBool("ArmsRaised", true);
@@ -180,6 +188,9 @@ public class Player : MonoBehaviour
         }
 
     }
+
+
+
 
     private bool IsGrounded()
     {

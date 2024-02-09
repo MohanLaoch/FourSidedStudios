@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Empty",
+                    "type": "Button",
+                    "id": "95c41f0a-590c-432e-9789-6763d67ae5ce",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -163,11 +172,22 @@
                 {
                     "name": "",
                     "id": "79b3c18d-90d0-4db0-a061-dbb8e7252e20",
-                    "path": "<Keyboard>/f",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Store",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d81a3f39-4ac2-4cfe-9be0-9e6373c45694",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Empty",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

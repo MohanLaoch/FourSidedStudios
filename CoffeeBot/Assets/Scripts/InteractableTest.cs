@@ -9,7 +9,6 @@ public class InteractableTest : MonoBehaviour
     public Rigidbody rb;
     public Transform CounterObj;
     public Transform HoldArea;
-    public GameObject Player;
     public Animator NPCAnim;
     public NPCFlailTest flail;
 
@@ -27,6 +26,7 @@ public class InteractableTest : MonoBehaviour
 
     public void Interact()
     {
+
 
         if (gameObject.CompareTag("NPC"))
         {
@@ -50,11 +50,12 @@ public class InteractableTest : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezeAll;
 
         }
-      
-        
 
-       
+  
+
     }
+
+
 
     public void Drop()
     {
@@ -67,6 +68,17 @@ public class InteractableTest : MonoBehaviour
         transform.parent = null;
         rb.constraints = RigidbodyConstraints.None;
         Debug.Log("dropping item");
+    }
+
+
+    public void Store()
+    {
+
+    }
+
+    public void Empty()
+    {
+
     }
 
 }

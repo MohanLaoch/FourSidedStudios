@@ -30,7 +30,7 @@ public class Storage : MonoBehaviour
     public Sprite currrentSprite;
     public Sprite nullSprite;
 
-    private bool atStorage;
+    public bool atStorage;
 
     public bool husband = false;
 
@@ -124,6 +124,7 @@ public class Storage : MonoBehaviour
             if (other.gameObject.tag == itemName)
             {
                 currentCapacity += fillCapacity;
+                husband = false;
 
             }
 
@@ -143,6 +144,7 @@ public class Storage : MonoBehaviour
 
                     itemName = other.gameObject.tag.ToString();
                     currentCapacity += fillCapacity;
+                    husband = false;
 
                 }
                 else
@@ -153,6 +155,16 @@ public class Storage : MonoBehaviour
         }
         
     }
+    public void Store(InputAction.CallbackContext context)
+    {
+        if (context.performed && atStorage == true)
+        {
+            husband = true;
+        }
+
+    }
+
+
 
     public void EmptyStorage()
     {
