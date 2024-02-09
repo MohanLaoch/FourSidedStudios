@@ -32,6 +32,7 @@ public class Storage : MonoBehaviour
 
     private bool atStorage;
 
+    public bool husband = false;
 
     private void Awake()
     {
@@ -64,9 +65,9 @@ public class Storage : MonoBehaviour
         }
 
         storageText.text = /*itemName + " " + */ currentCapacity.ToString();
-;    }
+    }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
 
         if (other.gameObject.CompareTag("Player"))
@@ -74,11 +75,11 @@ public class Storage : MonoBehaviour
             atStorage = true;
         }
 
-
+        // if an item is already in the storage and you come with the same item. It will add another of that item
         if (other.gameObject.tag == itemName)
         {
             currentCapacity += fillCapacity;
-            
+
         }
 
         if (itemName == null)
@@ -101,7 +102,10 @@ public class Storage : MonoBehaviour
             }
             else
                 return;
+
+
         }
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -110,6 +114,44 @@ public class Storage : MonoBehaviour
         {
             atStorage = false;
         }
+    }*/
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (husband == true)
+        {
+            // if an item is already in the storage and you come with the same item. It will add another of that item
+            if (other.gameObject.tag == itemName)
+            {
+                currentCapacity += fillCapacity;
+
+            }
+
+            if (itemName == null)
+            {
+                // if there is no stored item, store the current item. Using its tag as the name for the currently stored item
+
+                // I do need to fix this so there isn't an and
+                // also I need to make it so that if the item already matchs the current storedItem it'll just top up
+                if (acceptedItems.Contains(other.gameObject.tag.ToString()))
+                {
+                    int currentNumber = acceptedItems.IndexOf(other.gameObject.tag);
+
+                    currrentSprite = acceptedItemSprites[currentNumber];
+
+                    storageImage.sprite = currrentSprite;
+
+                    itemName = other.gameObject.tag.ToString();
+                    currentCapacity += fillCapacity;
+
+                }
+                else
+                    return;
+
+
+            }
+        }
+        
     }
 
     public void EmptyStorage()
@@ -118,7 +160,6 @@ public class Storage : MonoBehaviour
         itemName = null;
         storageImage.sprite = nullSprite;
     }
-
 }
 /*
  * WHEN ADDING A NEW ACCEPTED ITEM PLEASE CREATE A TAG WITH THE EXACT SAME NAME!!!
