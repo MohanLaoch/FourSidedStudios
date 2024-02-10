@@ -64,6 +64,10 @@ public class InteractableTest : MonoBehaviour
         {
             StartCoroutine(GetComponentInChildren<NPCFlailTest>().NPCFlailing());
         }
+        else if(gameObject.CompareTag("Storage"))
+        {
+            Store();
+        }
 
 
         transform.parent = null;
@@ -76,10 +80,10 @@ public class InteractableTest : MonoBehaviour
 
     public void Store()
     {
-        if(TryGetComponent(out Storage storage))
-        {
-            Debug.Log("storing2");
-            storage.husband = true;
+        if(gameObject.CompareTag("Storage"))
+        {           
+            Debug.Log("HUSBANDISMYBELOVED");
+            GetComponent<Storage>().husband = true;
         }
     }
 

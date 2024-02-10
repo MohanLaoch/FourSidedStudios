@@ -80,7 +80,7 @@ public class Player : MonoBehaviour
             }
             else if(storage.atStorage)
             {
-                Debug.Log("storing");
+                Debug.Log("storing1");
                 interactableTest.Store();                              
             }
             else if (storage2.atStorage)
@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
             }
             else if (storage3.atStorage)
             {
-                Debug.Log("storing");
+                Debug.Log("storing3");
                 interactableTest.Store();
             }
             else
