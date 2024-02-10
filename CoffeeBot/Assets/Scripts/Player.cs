@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
     public bool ArmsRaised = false;
 
     public Storage storage;
+    public Storage storage2;
+    public Storage storage3;
 
     private void Awake()
     {
@@ -69,14 +71,34 @@ public class Player : MonoBehaviour
 
             if (raycastHit.transform.TryGetComponent(out InteractableTest interactableTest) && Holding == false)
             {
+                if(interactableTest.CompareTag("Storage"))
+                {
+                    return;
+                }
                 Holding = true;
                 interactableTest.Interact();                
+            }
+            else if(storage.atStorage)
+            {
+                Debug.Log("storing");
+                interactableTest.Store();                              
+            }
+            else if (storage2.atStorage)
+            {
+                Debug.Log("storing2");
+                interactableTest.Store();
+            }
+            else if (storage3.atStorage)
+            {
+                Debug.Log("storing3");
+                interactableTest.Store();
             }
             else
             {
                 interactableTest.Drop();
                 Holding = false;
             }
+            
 
 
         }

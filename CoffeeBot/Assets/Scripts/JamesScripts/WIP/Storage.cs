@@ -116,8 +116,30 @@ public class Storage : MonoBehaviour
         }
     }*/
 
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            atStorage = false;
+        }
+    }
+
     private void OnTriggerStay(Collider other)
     {
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            atStorage = true;
+        }
+
+        // if an item is already in the storage and you come with the same item. It will add another of that item
+        if (other.gameObject.tag == itemName)
+        {
+            currentCapacity += fillCapacity;
+
+        }
+
         if (husband == true)
         {
             // if an item is already in the storage and you come with the same item. It will add another of that item
@@ -155,14 +177,7 @@ public class Storage : MonoBehaviour
         }
         
     }
-    public void Store(InputAction.CallbackContext context)
-    {
-        if (context.performed && atStorage == true)
-        {
-            husband = true;
-        }
 
-    }
 
 
 

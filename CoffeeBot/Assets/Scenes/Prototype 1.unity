@@ -6375,7 +6375,8 @@ GameObject:
   - component: {fileID: 606247687}
   - component: {fileID: 606247692}
   - component: {fileID: 606247691}
-  m_Layer: 0
+  - component: {fileID: 606247693}
+  m_Layer: 7
   m_Name: StorageUnitA
   m_TagString: Storage
   m_Icon: {fileID: 0}
@@ -6504,6 +6505,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &606247693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606247686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c0170f940027940baaa86e7ce8a6c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  CounterObj: {fileID: 0}
+  HoldArea: {fileID: 0}
+  NPCAnim: {fileID: 0}
+  flail: {fileID: 0}
 --- !u!1001 &610709037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7518,7 +7536,7 @@ GameObject:
   - component: {fileID: 729852763}
   - component: {fileID: 729852761}
   - component: {fileID: 729852767}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: StorageUnitB
   m_TagString: Storage
   m_Icon: {fileID: 0}
@@ -7928,7 +7946,7 @@ GameObject:
   - component: {fileID: 762203759}
   - component: {fileID: 762203757}
   - component: {fileID: 762203763}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: StorageUnitC
   m_TagString: Storage
   m_Icon: {fileID: 0}
@@ -20172,6 +20190,14 @@ PrefabInstance:
       propertyPath: RotSpeed
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+      propertyPath: storage2
+      value: 
+      objectReference: {fileID: 729852761}
+    - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+      propertyPath: storage3
+      value: 
+      objectReference: {fileID: 762203757}
     - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
       propertyPath: boxSize.x
       value: 0.46

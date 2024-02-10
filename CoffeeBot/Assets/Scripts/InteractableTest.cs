@@ -73,7 +73,11 @@ public class InteractableTest : MonoBehaviour
 
     public void Store()
     {
-
+        if(TryGetComponent(out Storage storage))
+        {
+            Debug.Log("storing2");
+            storage.husband = true;
+        }
     }
 
     public void Empty()
