@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CoffeeOrder : MonoBehaviour
 {
@@ -16,22 +17,31 @@ public class CoffeeOrder : MonoBehaviour
     [Header("PlayerScript")]
     public Player player;
 
+    [Header("Complete Order")]
+
+    [SerializeField] private int secondsToWait = 5;
+
+    [TextArea(3, 10)]
+    public string[] orderResponses;
+
+    public TextMeshProUGUI responseText;
+
+    public GameObject timerBubble;
+    public GameObject responseBubble;
+
+
     // Start is called before the first frame update
     void Awake()
     {
         Order();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void Order()
     {
-        // spawn a coffee at the spawnObject's position & start the money timer
-        //Instantiate(coffee, new Vector3(spawnObject.transform.position.x, spawnObject.transform.position.y, spawnObject.transform.position.z), Quaternion.identity);
+        responseBubble.SetActive(false);
+
+        timerBubble.SetActive(true);
+
         moneyTracker.StartTimer();
     }
 
@@ -47,8 +57,33 @@ public class CoffeeOrder : MonoBehaviour
             player.Holding = false;
             Destroy(other.gameObject);
             moneyTracker.CompleteOrder();
-            Order();
+
+            OrderResponse();
+            
         }
+    }
+
+    void OrderResponse()
+    {
+        timerBubble.SetActive(false);
+
+        responseBubble.SetActive(true);
+
+        int randomIndex = Random.Range(0, orderResponses.Length);
+
+        string randomResponse = orderResponses[randomIndex];
+
+        responseText.text = randomResponse;
+
+        StartCoroutine(NewOrder());
+    }
+
+    IEnumerator NewOrder()
+    {
+        yield return new WaitForSeconds(secondsToWait);
+
+        Order();
+
     }
 
     /*

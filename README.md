@@ -329,4 +329,11 @@
 - Imported Mop + textures
 - Created Puddle 1, 2, and mop prefabs
 - Added puddle 1, 2, and mop to mark scene
-- Impoted Upgrade buttons (acceleration, handling, speed)
+- Imported Upgrade buttons (acceleration, handling, speed)
+- Imported Speech Bubbles
+
+**10/02/2024 - James**
+- Storage System goes from 1-10 smoothly again
+- Added indicators of what to press above storage system
+- Added responses to delievering coffee
+

@@ -23,6 +23,7 @@ public class Storage : MonoBehaviour
 
     [Header("UI Components")]
     public TextMeshProUGUI storageText;
+    public TextMeshProUGUI buttonText;
     public Image storageImage;
 
     [Header("Sprites")]
@@ -122,6 +123,8 @@ public class Storage : MonoBehaviour
 
                     storageImage.sprite = currrentSprite;
 
+                    buttonText.text = "F".ToString();
+
                     itemName = other.gameObject.tag.ToString();
 
                     AddStorage();
@@ -150,6 +153,7 @@ public class Storage : MonoBehaviour
         currentCapacity = 0;
         itemName = null;
         storageImage.sprite = nullSprite;
+        buttonText.text = "E".ToString();
     }
 }
 /*
