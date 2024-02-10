@@ -67,6 +67,7 @@ public class InteractableTest : MonoBehaviour
         else if(gameObject.CompareTag("Storage"))
         {
             Store();
+            return;
         }
 
 

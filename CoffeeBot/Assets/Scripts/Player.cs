@@ -253,6 +253,7 @@ public class Player : MonoBehaviour
         {
             moneytracker.money -= 20;
             MaxSpeed += 20;
+            moneytracker.moneyText.text = ": " + moneytracker.money.ToString("0");
         }
         else
         {
@@ -266,11 +267,13 @@ public class Player : MonoBehaviour
         {
             moneytracker.money -= 20;
             RotSpeed += 20;
+            moneytracker.moneyText.text = ": " + moneytracker.money.ToString("0");
         }
         else
         {
             Debug.Log("Notenoughcash");
         }
+        
     }
 
     public void UpgradeAcceleration()
@@ -279,6 +282,7 @@ public class Player : MonoBehaviour
         {
             moneytracker.money -= 20;
             Acceleration += 20;
+            moneytracker.moneyText.text = ": " + moneytracker.money.ToString("0");
         }
         else
         {
