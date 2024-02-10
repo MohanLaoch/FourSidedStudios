@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMOD.Studio;
+
 
 public class Player : MonoBehaviour
 {
@@ -11,6 +13,13 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask interactablesLayerMask;
     [SerializeField] private PlayerInputActions playerInputActions;
     [SerializeField] private PlayerInput playerInput;
+
+
+    private EventInstance Arms;
+    private EventInstance Grabbing;
+
+
+
 
     public Animator PlayerAnim;
     public float Speed = 5f;
@@ -55,6 +64,9 @@ public class Player : MonoBehaviour
     {
         testingInputSystem.OnInteractAction += TestingInputSystem_OnInteractAction;
 
+        Grabbing = AudioManager.instance.CreateInstance(FMODEvents.instance.grabSound);
+        Arms = AudioManager.instance.CreateInstance(FMODEvents.instance.armRisingSound);
+
     }
 
     private void TestingInputSystem_OnInteractAction(object sender, System.EventArgs e)
@@ -76,7 +88,11 @@ public class Player : MonoBehaviour
                     return;
                 }
                 Holding = true;
-                interactableTest.Interact();                
+                interactableTest.Interact();
+                Grabbing.setParameterByNameWithLabel("Parameter 2", "Grab");
+                UpdateGrabSound();
+                //AudioManager.instance.PlayOneShot(FMODEvents.instance.grabSound, this.transform.position);
+                //setparameterbynamewithlabel("Parameter2, "grab");
             }
             else if(storage.atStorage)
             {
@@ -96,7 +112,11 @@ public class Player : MonoBehaviour
             else
             {
                 interactableTest.Drop();
+                Grabbing.setParameterByNameWithLabel("Parameter 2", "Drop");
+                UpdateGrabSound();
+                //AudioManager.instance.PlayOneShot(FMODEvents.instance.dropSound, this.transform.position);
                 Holding = false;
+
             }
             
 
@@ -106,11 +126,32 @@ public class Player : MonoBehaviour
 
     void Update()
     {    
-        HandleMovement();      
+        HandleMovement();
+        
     }
 
 
+    private void UpdateGrabSound()
+    {
 
+            PLAYBACK_STATE playbackState;
+            Grabbing.getPlaybackState(out playbackState);
+            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+            {
+                Grabbing.start();
+            }       
+    }
+
+    private void UpdateArmSound()
+    {
+
+        PLAYBACK_STATE playbackState;
+        Grabbing.getPlaybackState(out playbackState);
+        if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+        {
+            Arms.start();
+        }
+    }
     private void HandleMovement()
     {
 
@@ -178,6 +219,11 @@ public class Player : MonoBehaviour
 
     void ArmRising()
     {
+
+        Arms.setParameterByName("Parameter 1", 0);
+        UpdateArmSound();
+        
+        //armies.setparamaterbyname("parameter1, 0);
         PlayerAnim.SetBool("ArmsRaised", true);
         PlayerAnim.SetBool("ArmsLowered", false);
 
@@ -185,6 +231,10 @@ public class Player : MonoBehaviour
 
     void ArmLowering()
     {
+        Arms.setParameterByName("Parameter 1", 1);
+        UpdateArmSound();
+
+
         PlayerAnim.SetBool("ArmsLowered", true);
         PlayerAnim.SetBool("ArmsRaised", false);
 
