@@ -48,6 +48,7 @@ public class InteractableTest : MonoBehaviour
             transform.parent = HoldArea.transform;
             rb.position = HoldArea.transform.position;
             rb.constraints = RigidbodyConstraints.FreezeAll;
+            rb.mass = 0;
 
         }
 
@@ -68,6 +69,8 @@ public class InteractableTest : MonoBehaviour
         transform.parent = null;
         rb.constraints = RigidbodyConstraints.None;
         Debug.Log("dropping item");
+        rb.mass = 1;
+
     }
 
 

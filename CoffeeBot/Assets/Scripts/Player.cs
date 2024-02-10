@@ -252,7 +252,7 @@ public class Player : MonoBehaviour
         if(moneytracker.money >= 20)
         {
             moneytracker.money -= 20;
-            MaxSpeed++;
+            MaxSpeed += 20;
         }
         else
         {
@@ -278,7 +278,7 @@ public class Player : MonoBehaviour
         if (moneytracker.money >= 20)
         {
             moneytracker.money -= 20;
-            Acceleration += 5;
+            Acceleration += 20;
         }
         else
         {
