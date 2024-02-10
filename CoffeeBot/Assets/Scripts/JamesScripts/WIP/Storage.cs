@@ -11,7 +11,8 @@ public class Storage : MonoBehaviour
 
     [Header("Storage Stats")]
     public int currentCapacity = 0;
-    public int totalCapacity = 10;
+    public int totalCurrentCapacity = 0;
+    public int maxCapacity = 10;
 
     [SerializeField] private int fillCapacity = 1;
 
@@ -29,6 +30,8 @@ public class Storage : MonoBehaviour
 
     public Sprite currrentSprite;
     public Sprite nullSprite;
+
+    [Header("Bools")]
 
     public bool atStorage;
 
@@ -50,9 +53,14 @@ public class Storage : MonoBehaviour
         }
 
         // if the storge goes above current capacity bring it back down to the current (so no item overflow)
-        if (currentCapacity > totalCapacity)
+        if (currentCapacity > totalCurrentCapacity)
         {
-            currentCapacity = totalCapacity;
+            currentCapacity = totalCurrentCapacity;
+        }
+
+        if (totalCurrentCapacity > maxCapacity)
+        {
+            totalCurrentCapacity = maxCapacity;
         }
 
         // for emptying the storage
@@ -66,55 +74,6 @@ public class Storage : MonoBehaviour
 
         storageText.text = /*itemName + " " + */ currentCapacity.ToString();
     }
-
-    /*private void OnTriggerEnter(Collider other)
-    {
-
-        if (other.gameObject.CompareTag("Player"))
-        {
-            atStorage = true;
-        }
-
-        // if an item is already in the storage and you come with the same item. It will add another of that item
-        if (other.gameObject.tag == itemName)
-        {
-            currentCapacity += fillCapacity;
-
-        }
-
-        if (itemName == null)
-        {
-            // if there is no stored item, store the current item. Using its tag as the name for the currently stored item
-
-            // I do need to fix this so there isn't an and
-            // also I need to make it so that if the item already matchs the current storedItem it'll just top up
-            if (acceptedItems.Contains(other.gameObject.tag.ToString()))
-            {
-                int currentNumber = acceptedItems.IndexOf(other.gameObject.tag);
-
-                currrentSprite = acceptedItemSprites[currentNumber];
-
-                storageImage.sprite = currrentSprite;
-
-                itemName = other.gameObject.tag.ToString();
-                currentCapacity += fillCapacity;
-
-            }
-            else
-                return;
-
-
-        }
-
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            atStorage = false;
-        }
-    }*/
 
 
     private void OnTriggerExit(Collider other)
@@ -145,8 +104,7 @@ public class Storage : MonoBehaviour
             // if an item is already in the storage and you come with the same item. It will add another of that item
             if (other.gameObject.tag == itemName)
             {
-                currentCapacity += fillCapacity;
-                husband = false;
+                AddStorage();
 
             }
 
@@ -165,8 +123,8 @@ public class Storage : MonoBehaviour
                     storageImage.sprite = currrentSprite;
 
                     itemName = other.gameObject.tag.ToString();
-                    currentCapacity += fillCapacity;
-                    husband = false;
+
+                    AddStorage();
 
                 }
                 else
@@ -178,7 +136,13 @@ public class Storage : MonoBehaviour
         
     }
 
+    public void AddStorage()
+    {
+        husband = false;
+        currentCapacity += fillCapacity;
+        totalCurrentCapacity += fillCapacity;
 
+    }
 
 
     public void EmptyStorage()
