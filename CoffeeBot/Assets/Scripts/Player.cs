@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
             }
             else if (storage3.atStorage)
             {
-                Debug.Log("storing3");
+                Debug.Log("storing");
                 interactableTest.Store();
             }
             else
@@ -123,7 +123,7 @@ public class Player : MonoBehaviour
 
        // rb.MovePosition(transform.position + (transform.forward * Move) * Speed * Time.fixedDeltaTime);
        
-        if (Move != 0)
+        if (Move != 0 && IsGrounded())
         {
             isMoving = true;
             rb.velocity = (transform.forward * Move) * Speed * Time.fixedDeltaTime;
@@ -142,7 +142,7 @@ public class Player : MonoBehaviour
                 if (Speed >= MaxSpeed)
                 {
                     Speed = MaxSpeed;
-                    //Debug.Log("SLOW DOWN JACKASS");
+
                 }
             }
             else
@@ -158,7 +158,7 @@ public class Player : MonoBehaviour
 
     public void Flip(InputAction.CallbackContext context)
     {
-        if (Holding)
+        if (Holding || isMoving)
         {
             return;
         }
