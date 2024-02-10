@@ -329,4 +329,5 @@
 - Imported Mop + textures
 - Created Puddle 1, 2, and mop prefabs
 - Added puddle 1, 2, and mop to mark scene
-- Impoted Upgrade buttons (acceleration, handling, speed)
+- Imported Upgrade buttons (acceleration, handling, speed)
+- Imported Speech Bubbles
