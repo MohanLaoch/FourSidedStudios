@@ -323,3 +323,10 @@
 **09/02/2024 - Declan**
 - added slippery surface interaction
 - starting refining storage
+
+**10/02/2024 - Mark**
+- Imported Puddle 1 and 2 + textures
+- Imported Mop + textures
+- Created Puddle 1, 2, and mop prefabs
+- Added puddle 1, 2, and mop to mark scene
+
