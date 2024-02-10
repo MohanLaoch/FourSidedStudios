@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
 
     private EventInstance Arms;
     private EventInstance Grabbing;
+    private EventInstance PlayerMovement;
+
 
 
 
@@ -66,6 +68,8 @@ public class Player : MonoBehaviour
 
         Grabbing = AudioManager.instance.CreateInstance(FMODEvents.instance.grabSound);
         Arms = AudioManager.instance.CreateInstance(FMODEvents.instance.armRisingSound);
+        PlayerMovement = AudioManager.instance.CreateInstance(FMODEvents.instance.Drive);
+
 
     }
 
@@ -125,8 +129,11 @@ public class Player : MonoBehaviour
     }
 
     void Update()
-    {    
+    {
+        PlayerMovement.setParameterByName("PitchChange", Speed);
+
         HandleMovement();
+        UpdateMovementSound();
         
     }
 
@@ -150,6 +157,26 @@ public class Player : MonoBehaviour
         if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
         {
             Arms.start();
+        }
+    }
+
+    private void UpdateMovementSound()
+    {
+        if (isMoving)
+        {
+            PLAYBACK_STATE playbackState;
+            PlayerMovement.getPlaybackState(out playbackState);
+            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+            {
+                PlayerMovement.start();
+
+            }
+
+        }
+        else if (!isMoving)
+        {
+            PlayerMovement.stop(STOP_MODE.ALLOWFADEOUT);
+
         }
     }
     private void HandleMovement()
@@ -210,6 +237,7 @@ public class Player : MonoBehaviour
             Debug.Log("ermwhattheflip" + context.phase);
             rb.AddForce(Vector3.up * FlipForce, ForceMode.Impulse);
             rb.AddTorque(FlipDir * FlipForceRot, ForceMode.Impulse);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Flip, this.transform.position);
         }
 
     }
