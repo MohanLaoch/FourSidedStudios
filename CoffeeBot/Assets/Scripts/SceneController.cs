@@ -7,7 +7,7 @@ public class SceneController : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("Prototype 1");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void QuitGame()

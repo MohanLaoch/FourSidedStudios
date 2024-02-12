@@ -25,6 +25,9 @@ public class FMODEvents : MonoBehaviour
     [field: Header("NPCSFX")]
     [field: SerializeField] public EventReference NPC { get; private set; }
 
+    [field: Header("CoffeeSFX")]
+    [field: SerializeField] public EventReference CoffeeSFX { get; private set; }
+
 
     public static FMODEvents instance { get; private set; }
 

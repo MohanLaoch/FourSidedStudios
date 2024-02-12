@@ -42,6 +42,7 @@ public class CraftCoffee : MonoBehaviour
         if (canCraft)
         {
             StartCoroutine(CreateCoffee());
+            
         }
         else
             return;
@@ -89,6 +90,7 @@ public class CraftCoffee : MonoBehaviour
         yield return new WaitForSeconds(secondsToWait);
 
         canCraft = true;
+        
 
     }
 

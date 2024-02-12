@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4475520784811740057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4475520784811740056}
+  - component: {fileID: 4475520784811740059}
+  m_Layer: 0
+  m_Name: FMODEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4475520784811740056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4475520784811740057}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4475520785044726938}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4475520784811740059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4475520784811740057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec36b01efb31224290f845a5bff176f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <armRisingSound>k__BackingField:
+    Guid:
+      Data1: -921839500
+      Data2: 1201279857
+      Data3: -77358195
+      Data4: 1095801632
+    Path: event:/Serg.io/Arms_UpDown
+  <grabSound>k__BackingField:
+    Guid:
+      Data1: -664342581
+      Data2: 1217279004
+      Data3: -1675394626
+      Data4: -1849823511
+    Path: event:/Serg.io/Serg.ioGrabDrop
+  <Flip>k__BackingField:
+    Guid:
+      Data1: 852315113
+      Data2: 1186605323
+      Data3: -1817779551
+      Data4: 181311104
+    Path: event:/Serg.io/PlayerFlip
+  <Drive>k__BackingField:
+    Guid:
+      Data1: 1832409504
+      Data2: 1122824177
+      Data3: -2092996736
+      Data4: -1171653887
+    Path: event:/Serg.io/PlayerMove
+  <Radio>k__BackingField:
+    Guid:
+      Data1: -2133373184
+      Data2: 1242312114
+      Data3: -545283155
+      Data4: 1256072622
+    Path: event:/Environmet/StrainRadio
+  <NPC>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <CoffeeSFX>k__BackingField:
+    Guid:
+      Data1: 1122483876
+      Data2: 1145370858
+      Data3: -1711349330
+      Data4: 1101864709
+    Path: event:/Serg.io/CarryingTooMuch
+--- !u!1 &4475520785044726936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4475520785044726938}
+  - component: {fileID: 4475520785044726939}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4475520785044726938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4475520785044726936}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.0268183, y: 1.162554, z: 1.8579733}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4475520784811740056}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4475520785044726939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4475520785044726936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a75417cc7ed9034286eb66627602334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Radio: {fileID: 0}
