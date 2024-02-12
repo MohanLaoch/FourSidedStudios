@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4075093524184953386}
   m_Layer: 0
   m_Name: Cups_StoreRoomBox
-  m_TagString: Untagged
+  m_TagString: CupBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,6 +135,8 @@ MonoBehaviour:
   rb: {fileID: 4075093524184953386}
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
+  NPCAnim: {fileID: 0}
+  flail: {fileID: 0}
 --- !u!65 &1443124442993012017
 BoxCollider:
   m_ObjectHideFlags: 0

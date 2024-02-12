@@ -342,3 +342,7 @@
 
 **12/02/2024 - Declan**
 - Added main menu and options menu
+
+
+**12/02/2024 - James**
+- Added Tutorial Scene
