@@ -10,6 +10,7 @@ public class NPCFlailTest : MonoBehaviour
     public LayerMask layermask;
     public Animator Anim;
     public Transform NpcTransform;
+    public Player player;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -20,7 +21,7 @@ public class NPCFlailTest : MonoBehaviour
             GetComponentInParent<NavMeshAgent>().enabled = false;
             GetComponentInParent<NpcWander>().enabled = false;
 
-
+  
 
         }
     }
@@ -29,13 +30,22 @@ public class NPCFlailTest : MonoBehaviour
     {
         Anim.SetBool("Fallen", true);
 
-        yield return new WaitForSeconds(5);
+        if(player.Holding == true)
+        {
+            yield return null;
+        }
+        else
+        {
+            yield return new WaitForSeconds(5);
 
-        transform.parent.rotation = Quaternion.Euler(0, 0, 0);
-        transform.parent.position = new Vector3(transform.position.x, 2f, transform.position.z);
-        Anim.SetBool("Fallen", false);
-        GetComponentInParent<NavMeshAgent>().enabled = true;
-        GetComponentInParent<NpcWander>().enabled = true;
+            transform.parent.rotation = Quaternion.Euler(0, 0, 0);
+            transform.parent.position = new Vector3(transform.position.x, 2f, transform.position.z);
+            Anim.SetBool("Fallen", false);
+            GetComponentInParent<NavMeshAgent>().enabled = true;
+            GetComponentInParent<NpcWander>().enabled = true;
+        }
+
+       
 
 
 

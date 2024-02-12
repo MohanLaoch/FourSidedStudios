@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public class ToMainScene : MonoBehaviour
 {
     public string sceneName;
+    public SceneInfo sceneInfo;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "CoffeeCup")
         {
             SceneManager.LoadScene(sceneName);
+            sceneInfo.Reset();
         }
     }
 }

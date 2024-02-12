@@ -4,6 +4,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using FMOD.Studio;
+using TMPro;
 
 
 public class Player : MonoBehaviour
@@ -20,8 +21,8 @@ public class Player : MonoBehaviour
     private EventInstance PlayerMovement;
 
 
-
-
+    public SceneInfo sceneInfo;
+    public TextMeshProUGUI Daytext; 
 
     public Animator PlayerAnim;
     public float Speed = 5f;
@@ -70,7 +71,7 @@ public class Player : MonoBehaviour
         Arms = AudioManager.instance.CreateInstance(FMODEvents.instance.armRisingSound);
         PlayerMovement = AudioManager.instance.CreateInstance(FMODEvents.instance.Drive);
 
-
+        Daytext.text = "Day:" + sceneInfo.dayCount.ToString("0");
     }
 
     private void TestingInputSystem_OnInteractAction(object sender, System.EventArgs e)
@@ -331,6 +332,7 @@ public class Player : MonoBehaviour
         {
             moneytracker.money -= 20;
             MaxSpeed += 20;
+            sceneInfo.money = moneytracker.money;
             moneytracker.moneyText.text = ": " + moneytracker.money.ToString("0");
         }
         else
@@ -345,6 +347,7 @@ public class Player : MonoBehaviour
         {
             moneytracker.money -= 20;
             RotSpeed += 20;
+            sceneInfo.money = moneytracker.money;
             moneytracker.moneyText.text = ": " + moneytracker.money.ToString("0");
         }
         else
@@ -360,6 +363,7 @@ public class Player : MonoBehaviour
         {
             moneytracker.money -= 20;
             Acceleration += 20;
+            sceneInfo.money = moneytracker.money;
             moneytracker.moneyText.text = ": " + moneytracker.money.ToString("0");
         }
         else

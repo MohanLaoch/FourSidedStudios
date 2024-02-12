@@ -10,7 +10,16 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private PlayerInputActions playerInputActions;
     [SerializeField] private InputAction menu;
     [SerializeField] private GameObject pauseUI;
+    [SerializeField] private GameObject upgradeUI;
+
+
+
     [SerializeField] private bool isPaused;
+
+    [SerializeField]
+    public SceneInfo sceneInfo;
+
+    public bool isNextScene = true;
     private void Awake()
     {
         playerInputActions = new PlayerInputActions();
@@ -62,6 +71,8 @@ public class PauseMenu : MonoBehaviour
 
     }
 
+
+
     public void DeactivateMenu()
     {
         Time.timeScale = 1;
@@ -80,6 +91,27 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("Prototype 1");
         Time.timeScale = 1;
         DeactivateMenu();
+
+        sceneInfo.isNextScene = isNextScene;
+        sceneInfo.Reset();
+
+        
+
+
+    }
+
+    public void NextDay()
+    {
+        DeactivateMenu();
+        sceneInfo.dayCount++;
+        SceneManager.LoadScene("Prototype 1");
+        Time.timeScale = 1;
+        if (sceneInfo.dayCount >= 5)
+        {
+            SceneManager.LoadScene("EndScene");
+            Cursor.visible = true;
+            sceneInfo.Reset();
+        }
     }
 
 

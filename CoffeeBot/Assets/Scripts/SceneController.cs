@@ -5,13 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+    public SceneInfo sceneInfo;
     public void StartGame()
     {
         SceneManager.LoadScene("Tutorial");
+        sceneInfo.Reset();
     }
 
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("Prototype 1");
+        Time.timeScale = 1;
+
+        
     }
 }

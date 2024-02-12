@@ -6,6 +6,7 @@ using TMPro;
 
 public class MoneyTracker : MonoBehaviour
 {
+    public SceneInfo sceneInfo;
     public float money = 0;
     public float moneyGiven = 5;
     public float tipDivide = 4;
@@ -30,6 +31,7 @@ public class MoneyTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        money = sceneInfo.money;
         // set the timer to maxTime, and the value of the slider to currentTime
 
         currentTime = maxTime;
@@ -49,6 +51,7 @@ public class MoneyTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        money = sceneInfo.money;
         // if the timer is active, countdown
 
         if (timerActive)
@@ -105,6 +108,7 @@ public class MoneyTracker : MonoBehaviour
         StopTimer();
         money += moneyGiven + (currentTime / tipDivide);
         moneyText.text = ": " + money.ToString("0");
+        sceneInfo.money = money;
         StartTimer();
     }
 }
