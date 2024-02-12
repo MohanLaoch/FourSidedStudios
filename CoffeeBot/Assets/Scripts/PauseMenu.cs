@@ -83,4 +83,14 @@ public class PauseMenu : MonoBehaviour
     }
 
 
+    public void QuitGame()
+    {
+        SceneManager.LoadScene("StartMenu");
+        DeactivateMenu();
+        Cursor.visible = true;
+        Time.timeScale = 1;
+        
+    }
+
+
 }

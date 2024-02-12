@@ -30,8 +30,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-
-        //InitializeMusic(FMODEvents.instance.DayToEvening);
+        InitializeMusic(FMODEvents.instance.Radio);
     }
 
     private void InitializeMusic(EventReference musicEventReference)
@@ -39,6 +38,7 @@ public class AudioManager : MonoBehaviour
         musicEventInstance = CreateInstance(musicEventReference);
         RuntimeManager.AttachInstanceToGameObject(musicEventInstance, Radio.transform);
         musicEventInstance.start();
+        
     }
     public StudioEventEmitter InitializeEventEmitter(EventReference eventReference, GameObject emitterGameObject)
     {

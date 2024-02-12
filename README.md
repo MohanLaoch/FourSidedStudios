@@ -340,3 +340,5 @@
 **10/02/2024 - Declan**
 - Created audio system 
 
+**12/02/2024 - Declan**
+- Added main menu and options menu
