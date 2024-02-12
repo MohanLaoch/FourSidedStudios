@@ -350,3 +350,10 @@
 **12/02/2024 - Mark**
 - Imported coffee cup icons + main menu buttons
 
+**12/02/2024 - Declan**
+- Fixed npc flailing issue
+- added scriptable object values carrying over to other scenes
+- added progression for alpha
+- added ending screen and restart capabilities
+
+
