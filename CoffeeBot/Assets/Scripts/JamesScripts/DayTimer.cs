@@ -52,7 +52,7 @@ public class DayTimer : MonoBehaviour
         }
         
 
-        if (currentTime <= 177)
+        if (currentTime <= 0)
         {
             FinishDay();
         }
