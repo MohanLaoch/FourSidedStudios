@@ -52,6 +52,7 @@ public class MoneyTracker : MonoBehaviour
     void Update()
     {
         money = sceneInfo.money;
+
         // if the timer is active, countdown
 
         if (timerActive)

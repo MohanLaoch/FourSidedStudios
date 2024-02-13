@@ -360,3 +360,6 @@
 - Imported menu buttons (restart, resume, back)
 - Implemented ui buttons to prototype scene + start menu + upgrades
 - Updated mark scene rigidbody sim
+
+**13/02/2024 - James**
+Added Day Timer
