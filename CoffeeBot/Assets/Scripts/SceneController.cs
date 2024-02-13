@@ -8,6 +8,7 @@ public class SceneController : MonoBehaviour
     public SceneInfo sceneInfo;
     public void StartGame()
     {
+        Cursor.visible = true;
         SceneManager.LoadScene("Tutorial");
         sceneInfo.Reset();
     }

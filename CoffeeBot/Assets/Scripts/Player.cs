@@ -136,7 +136,10 @@ public class Player : MonoBehaviour
 
         HandleMovement();
         UpdateMovementSound();
-        
+
+        MaxSpeed = sceneInfo.playerSpeed;
+        Acceleration = sceneInfo.playerAcceleration;
+        RotSpeed = sceneInfo.playerRotSpeed;
     }
 
 
@@ -333,6 +336,7 @@ public class Player : MonoBehaviour
         {
             moneytracker.money -= 20;
             MaxSpeed += 20;
+            sceneInfo.playerSpeed = MaxSpeed;
             sceneInfo.money = moneytracker.money;
             moneytracker.moneyText.text = ": " + moneytracker.money.ToString("0");
         }
@@ -348,6 +352,7 @@ public class Player : MonoBehaviour
         {
             moneytracker.money -= 20;
             RotSpeed += 20;
+            sceneInfo.playerRotSpeed = RotSpeed;
             sceneInfo.money = moneytracker.money;
             moneytracker.moneyText.text = ": " + moneytracker.money.ToString("0");
         }
@@ -364,6 +369,7 @@ public class Player : MonoBehaviour
         {
             moneytracker.money -= 20;
             Acceleration += 20;
+            sceneInfo.playerAcceleration = Acceleration;
             sceneInfo.money = moneytracker.money;
             moneytracker.moneyText.text = ": " + moneytracker.money.ToString("0");
         }

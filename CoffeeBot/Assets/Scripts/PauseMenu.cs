@@ -136,6 +136,8 @@ public class PauseMenu : MonoBehaviour
         if (sceneInfo.dayCount >= 5)
         {
             SceneManager.LoadScene("EndScene");
+            DeactivateMenu();
+            DeactivateUpgradesMenu();
             Cursor.visible = true;
             sceneInfo.Reset();
         }

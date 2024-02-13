@@ -7,7 +7,7 @@ using TMPro;
 public class MoneyTracker : MonoBehaviour
 {
     public SceneInfo sceneInfo;
-    public float money = 0;
+    public float money;
     public float moneyGiven = 5;
     public float tipDivide = 4;
 
