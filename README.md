@@ -365,3 +365,8 @@
 
 **13/02/2024 - James**
 Added Day Timer
+
+**13/02/2024 - Niamh**
+- Imported milk jug, coffee hopper, coffee cups, plaques and storage units into Niamh Scene
+- Assembled Milk Jug Storage Unit, Coffee Cup Storage Unit and Coffee Hopper Storage Unit
+- Created prefabs for storage units
