@@ -55,6 +55,7 @@ public class PauseMenu : MonoBehaviour
         else
         {
             DeactivateMenu();
+            DeactivateUpgradesMenu();
         }
     }
 
@@ -69,6 +70,15 @@ public class PauseMenu : MonoBehaviour
 
 
 
+    }
+    public void ActivateUpgradesMenu()
+    {
+        Time.timeScale = 0;
+        //Audiolistener.pause = true;
+        upgradeUI.SetActive(true);
+        Cursor.visible = true;
+        playerInputActions.Player.Disable();
+        playerInputActions.Player.Flip.Disable();
     }
 
 
@@ -85,6 +95,19 @@ public class PauseMenu : MonoBehaviour
 
 
     }
+    public void DeactivateUpgradesMenu()
+    {
+        Time.timeScale = 1;
+        //Audiolistener.pause = false;
+        upgradeUI.SetActive(false);
+        isPaused = false;
+        Cursor.visible = false;
+        playerInputActions.Player.Enable();
+        playerInputActions.Player.Flip.Enable();
+
+
+    }
+
 
     public void ResetScene()
     {
@@ -102,10 +125,14 @@ public class PauseMenu : MonoBehaviour
 
     public void NextDay()
     {
-        DeactivateMenu();
-        sceneInfo.dayCount++;
         SceneManager.LoadScene("Prototype 1");
         Time.timeScale = 1;
+        DeactivateMenu();
+        DeactivateUpgradesMenu();
+
+        sceneInfo.dayCount++;
+        
+  
         if (sceneInfo.dayCount >= 5)
         {
             SceneManager.LoadScene("EndScene");

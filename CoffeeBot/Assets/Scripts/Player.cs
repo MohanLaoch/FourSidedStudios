@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 1;
         playerInput = GetComponent<PlayerInput>();
 
         playerInputActions = new PlayerInputActions();

@@ -6,6 +6,7 @@ using TMPro;
 public class DayTimer : MonoBehaviour
 {
     public PauseMenu pauseMenu;
+    public SceneInfo sceneInfo;
 
     [Header("UI Elements")]
     public TextMeshProUGUI timerText;
@@ -22,7 +23,7 @@ public class DayTimer : MonoBehaviour
 
     private bool timerActive = true;
 
-    public float day = 1;
+    public int day = 1;
 
     private void Start()
     {
@@ -68,7 +69,7 @@ public class DayTimer : MonoBehaviour
 
     }
 
-    public void StartNewDay()
+   /* public void StartNewDay()
     {
         if (day >= 5)
         {
@@ -77,23 +78,25 @@ public class DayTimer : MonoBehaviour
 
         upgradesMenu.SetActive(false);
         day += 1;
+        sceneInfo.dayCount = day;
         timerActive = true;
         currentTime = maxTime;
-    }
+    }*/
 
     private void SetTimerText()
     {
 
         float minutes = Mathf.FloorToInt (currentTime / 60);
         float seconds = Mathf.FloorToInt (currentTime % 60);
-        timerText.text = "Day: " + day.ToString("0") + " | Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+        timerText.text = "Day: " + sceneInfo.dayCount.ToString("0") + " | Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
 
     }
 
     private void FinishDay()
     {
         timerActive = false;
-        upgradesMenu.SetActive(true);
+        pauseMenu.ActivateUpgradesMenu();
+        
 
     }
 
