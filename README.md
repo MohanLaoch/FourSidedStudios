@@ -370,3 +370,6 @@ Added Day Timer
 - Imported milk jug, coffee hopper, coffee cups, plaques and storage units into Niamh Scene
 - Assembled Milk Jug Storage Unit, Coffee Cup Storage Unit and Coffee Hopper Storage Unit
 - Created prefabs for storage units
+
+**14/02/2024 - Niamh**
+- Fixed Storage Unit plaque textures
