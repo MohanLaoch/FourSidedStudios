@@ -1,216 +1,318 @@
 # FourSidedStudios
 
-### Commit Log
+## Team Members
 
-**26/09/2023 - James**
-- Added Unity Project
-- Changed gitignore
-- Added Extra Scenes and Folders
-
-**26/09/2023 - Mark**
-- Added Models (Coffee Cup/ Travel Cup) to Mark Scene
-
-
-**27/09/2023 - Mark**
-- Built small display room in Mark Scene
+| **Name** | **Student Number** | **Role** |
+| --- | --- | --- |
+| Declan Cooke | C20465442 | Programmer/ Level Designer |
+| James Mohan | C20305011 | Programmer/ Sound Designer |
+| Mark Lambe | C20349251 | Artist/ Sound Designer |
+| Niamh Homan | C20388086 | Artist/ Environmental Designer |
 
 
-**30/09/2023 - Declan**
-- Added Input System package
-- Created basic character controller
-
-**30/09/2023 - James**
-- Added Probuilder
-- Created basic floor layout
+# Commit Log
 
 
-**01/10/2023 - James**
-- Finished Basic Whitebox
-- Created Materials for Whitebox
-- Added Rigidbodies to "Tables and Chairs"
+### 26/09/2023
 
-**01/10/2023 - Mark**
-- Imported Coffee bot concept model and textures
-- Added " to Mark Scene (along with mock up tray)
+| **James** |
+| :--- |
+| Added Unity Project |
+| Changed .gitignore |
+| Added Extra Scenes and Folders |
 
-**01/10/23 - Declan**
-- Added Player Model and Level sandbox to Character Controller
-- Created whitebox demonstration for gameplay + visuals
+| **Mark** |
+| :--- |
+| Added Models (Coffee Cup/ Travel Cup) to Mark Scene | 
 
+### 27/09/2023 
 
-**03/10/2023 - Mark**
-- Imported chair and stool model
-- Added " to Mark Scene
+| **Mark** |
+| :--- |
+| Built small display room in Mark Scene | 
 
+### 30/09/2023 
 
-**06/10/2023 - Mark**
-- Imported Circular table model
-- Added " to Mark Scene
-- Rescaled Modles in Mark Scene
+| **Declan** |
+| :--- |
+| Added Input System package | 
+| Created basic character controller | 
 
+| **James**
+| :--- |
+| Added Probuilder |
+| Created basic level floor layout |
 
-**10/10/2023 - James**
-- Added Cinemachine
-- Added in a rotating camera with zoom
+### 01/10/2023
 
+| **Declan** |
+| :--- |
+| Added Player Model and Level sandbox to Character Controller |
+| Created whitebox demonstration for gameplay & visuals |
 
-**15/10/2023 - Declan**
-- Added arm movement functionality
+| **James** |
+| :--- |
+| Finished Basic Whitebox |
+| Created Materials for Whitebox |
+| Added Rigidbodies to "Tables and Chairs" |
 
+| **Mark** |
+| :--- |
+| Imported Coffee bot concept model and textures |
+| Added " to Mark Scene (along with mock-up tray) |
 
-**16/10/2023 - James**
-- Added Universal Render Pipeline
+### 03/10/2023
 
-**16/10/2023 - Declan**
-- Fixed arm movement issue
-- In depth research on interaction model
+| **Mark** |
+| :--- |
+| Imported chair and stool model |
+| Added " to Mark Scene |
 
+### 06/10/2023
 
-**17/10/2023 - Mark**
-- Imported animated concept model (only arm raising and lowering animations
-- setup character animator
-- Replaced defected animated model
-- added seperate coffee bot hat model
+| **Mark** |
+| :--- |
+| Imported Circular table model |
+| Added " to Mark Scene |
+| Rescaled Models in Mark Scene |
 
-**17/10/2023 - Declan**
-- Interaction Model progression
+### 10/10/2023 
 
+| **James** |
+| :--- |
+| Added Cinemachine |
+| Added a rotating camera with zoom |
 
-**18/10/2023 - James**
-- Switched default unity render pipleline to Universal Render Pipeline
+### 15/10/2023
 
-**18/10/2023 - Mark**
-- Readded models for URP changes
+| **Declan** |
+| :--- |
+| Added arm movement functionality to player |
 
+### 16/10/2023
 
-**19/10/2023 - James**
-- Added Wall Cutout shader
+| **Declan** |
+| :--- |
+| Fixed arm movement issue |
+| In-depth research on interaction model |
 
+| **James** |
+| :--- |
+| Added Universal Render Pipeline |
 
-**20/10/2023 - James**
-- Started basic order system
-- Added Prototype 1 Scene
+### 17/10/2023
 
-**20/10/23 - Declan**
-- Added Debug.Log testing to interaction system
+| **Declan** |
+| :--- |
+| Interaction Model progression |
 
+| **Mark** |
+| :--- |
+| Imported animated concept model (only arm raising and lowering animations |
+| Setup character animator |
+| Replaced animated model |
+| Added separate coffee bot hat model |
 
-**21/10/23 - Mark**
-- Imported store room boxes models (Cups, Milks, Beans)
-- Added " to display room
-- created x3 emmision materials for store room boxes
+### 18/10/2023
 
-**21/10/23 - Declan**
-- Refactored some scripts
-- Added baseic interaction
-- Fixed player flipping error
+| **James** |
+| :--- |
+| Switched default unity render pipeline to Universal Render Pipeline |
 
+| **Mark** |
+| :--- |
+| Readded models for URP changes |
 
-**22/10/2023 - James**
-- Begun storage script
-- "Finished" Order script until we decide on how orders are fully done
+### 19/10/2023 
 
-**24/10/2023 - Mark**
-- Imported tray model + tray texture
-- Imported V2 textures for store room boxes models (beans, cups, milk)
-- added " to Mark Scene
-- made Tray LED material
-- Recut coffeebot animations
+| **James** |
+| :--- |
+| Added Wall Cutout shader |
 
-**24/10/2023 - Declan**
-- Added interaction script to prototype scene
-- Added player movement script to prototype scene
+### 20/10/2023 
 
-**26/10/2023 - Mark**
-- Made area in Mark Scene for pitch video footage
-- Changed character texture in Declan Scene
+| **Declan** |
+| :--- |
+| Added Debug.Log testing to the interaction system |
 
-**01/11/2023 - James**
-- Updated Storage script
+| **James** |
+| :--- |
+| Started basic order system |
+| Created Prototype 1 Scene |
 
-**06/11/2023 - Declan**
-- Fixed bug where player can flip infinitely
-- Fixed interaction bug
+### 21/10/2023 
 
-**06/11/2023 - James**
-- Created a timer for orders
-- Added TMPro
+| **Declan** |
+| :--- |
+| Refactored some scripts |
+| Added basic interaction |
+| Fixed player flipping error |
 
-**07/11/2023 - Mark**
-- Imported character model and textures V2
-- Created prefabs
+| **Mark** |
+| :--- |
+| Imported store room boxes models (Cups, Milk, Beans) |
+| Added " to display room |
+| Created x3 emission materials for store room boxes |
 
-**07/11/2023 - Declan**
-- Added prefabs to prototype scene
-- Bug fixes
+### 22/10/2023
 
-**08/11/2023 - Niamh**
-- Added HexWall to scene (prefab)
-- Created Environment folder within Prefabs folder
+| **James** |
+| :--- |
+| Begun storage script |
+| "Finished" Order script until we decide on how orders are fully done |
 
-**09/11/2023 - James**
-- Coffee order and money interaction
+### 24/10/2023
 
-**10/11/2023 - James**
-- Clamped camera rotation in prototype scene (5, 80)
-- Camera speed from 300 to 250
-- Made a slider that slowly goes from green to red for the NPCs patients
+| **Mark** |
+| :--- |
+| Imported tray model & tray texture |
+| Imported V2 textures for store room boxes models (Cups, Milk, Beans) |
+| Added " to Mark Scene |
+| Made Tray LED material |
+| Recut coffeebot animations |
 
-**11/11/2023 - James**
-- Added textures for patients slider
-- Added money symbol
-- Added 2D Sprite Package
+| **Declan** |
+| :--- |
+| Added interaction script to prototype scene |
+| Added player movement script to prototype scene |
 
-**13/11/2023 - Declan**
-- Minor bug fixes
-- Completed tray functionality for prototype
-- Table bug fix
-- Coffee tray bug fix
+### 26/10/2023
 
-**13/11/2023 - James**
-- Rescaled NPC UI from 0.03 to 0.015
-- Changed money to be 5 + a tip of 1/4 the current delivery time
+| **Mark** |
+| :--- |
+| Made area in Mark Scene for pitch video footage |
+| Changed character texture in Declan Scene |
 
-**13/11/2023 - Niamh**
-- Added plane of glass to Hex Wall
-- Added second Wall Variant
+### 01/11/2023
 
-**14/11/2023 - Mark**
-- Imported concept NPC with animation
-- Added " to Mark Scene
-- Made NPC Prefab
-- Added NPC to Prototype Scene
+| **James** |
+| :--- |
+| Updated Storage script |
 
-**14/11/2023 - Niamh**
-- Imported Tile asset
-- Added to Niamh Scene
-- Made Tile Prefab
+### 06/11/2023
 
-**15/11/2023 - Mark**
-- Repaired prefab + Readded eyes
-- Fixed NPC Prefab (missing animator)
+| **Declan** |
+| :--- |
+| Fixed bug where player can flip infinitely |
+| Fixed interaction bug |
 
-**15/11/2023 - Niamh**
-- Imported Table asset
-- Added to Niamh Scene
-- Made Table Prefab
+| **James** |
+| :--- |
+| Created a timer for orders |
+| Added TMPro |
 
-**15/11/2023 - Declan**
-- fixed interaction bug
-- fixed flipping bug
-- fixed clipping bug
+### 07/11/2023
 
-**16/11/2023 - James**
-- Changed prototype scene to have textured walls and floor
+| **Declan** |
+| :--- |
+| Added prefabs to prototype scene |
+| Bug fixes |
 
-**16/11/2023 - Niamh**
-- Imported Door asset
-- Added to Niamh Scene
-- Made Door Prefab
+| **Mark** |
+| :--- |
+| Imported character model and textures V2 |
+| Created prefabs |
 
-**16/11/2023 - Declan**
-- Fixed floor tile bug
-- created prototype .exe build
+### 08/11/2023
+
+| **Niamh** |
+| :--- |
+| Added HexWall to scene (prefab)|
+| Created Environment folder within Prefabs folder |
+
+### 09/11/2023
+
+| **James** |
+| :--- |
+| Coffee order and money interaction |
+
+### 10/11/2023
+
+| **James** |
+| :--- |
+| Clamped camera rotation in prototype scene (5, 80) |
+| Camera speed from 300 to 250 |
+| Made a slider that slowly goes from green to red for the NPCs patients |
+
+### 11/11/2023
+
+| **James** |
+| :--- |
+| Added textures for patience slider |
+| Added money icon |
+| Added 2D Sprite Package |
+
+### 13/11/2023
+
+| **Declan**
+| :--- |
+| Minor bug fixes |
+| Completed tray functionality for prototype |
+| Table bug fix |
+| Coffee tray bug fix |
+
+| **James** |
+| :--- |
+| Rescaled NPC UI from 0.03 to 0.015 |
+| Changed money to be 5 + a tip of 1/4 the current delivery time |
+
+| **Niamh** |
+| :--- |
+| Added plane of glass to Hex Wall |
+| Added second Wall Variant |
+
+### 14/11/2023
+
+| **Mark** |
+| :--- |
+| Imported concept NPC with animation |
+| Added " to Mark Scene |
+| Made NPC Prefab |
+| Added NPC to Prototype Scene |
+
+| **Niamh** |
+| :--- |
+| Imported Tile asset |
+| Added to Niamh Scene |
+| Made Tile Prefab |
+
+### 15/11/2023
+
+| **Declan** |
+| :--- |
+| Fixed interaction bug |
+| Fixed flipping bug |
+| Fixed clipping bug |
+
+| **Mark** |
+| :--- |
+| Repaired prefab + Readded eyes |
+| Fixed NPC Prefab (missing animator) |
+
+| **Niamh** |
+| :--- |
+| Imported Table asset |
+| Added to Niamh Scene |
+| Made Table Prefab |
+
+### 16/11/2023
+
+| **Declan** |
+| :--- |
+| Fixed floor tile bug |
+| Created prototype .exe build |
+
+| **James** |
+| :--- |
+| Changed prototype scene to have textured walls and floor |
+
+| **Niamh** |
+| :--- |
+| Imported Door asset |
+| Added to Niamh Scene |
+| Made Door Prefab |
+
+## Post Prototype 
 
 **25/11/2023 - Declan**
 - Fixed wall bug
@@ -258,6 +360,8 @@
 **14/12/20023 - Declan**
 - Created showcase build 
 - Added reset button
+
+## Alpha Preparation
 
 **03/02/2024 - Mark**
 - Added Prototype hierarchy to Mark Scene
@@ -374,4 +478,4 @@
 **14/02/2024 - Niamh**
 - Fixed Storage Unit plaque textures
 
-# Post Alpha
+## Post Alpha/ Beta Preparation
