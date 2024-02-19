@@ -364,7 +364,7 @@
 - Added new chairs to prototype scene
 
 **13/02/2024 - James**
-Added Day Timer
+- Added Day Timer
 
 **13/02/2024 - Niamh**
 - Imported milk jug, coffee hopper, coffee cups, plaques and storage units into Niamh Scene
@@ -373,3 +373,5 @@ Added Day Timer
 
 **14/02/2024 - Niamh**
 - Fixed Storage Unit plaque textures
+
+#Post Alpha
