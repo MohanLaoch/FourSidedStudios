@@ -479,3 +479,8 @@
 - Fixed Storage Unit plaque textures
 
 ## Post Alpha/ Beta Preparation
+
+**20/02/2024 - Mark**
+- Imported Serg.io Coffee Skin
+- Imported CoffeeBot game logo
+- added Serg.io coffee skin to mark scene
