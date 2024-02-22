@@ -530,7 +530,7 @@
 | :--- |
 | • Added Day Timer |
 
-| **** |
+| **Mark** |
 | :--- |
 | • Imported menu buttons (restart, resume, back) |
 | • Implemented UI buttons to prototype scene + start menu + upgrades |
