@@ -29,7 +29,7 @@
 
 | **Mark** |
 | :--- |
-| Built small display room in Mark Scene | 
+| Built a small display room in Mark Scene | 
 
 ### 30/09/2023 
 
@@ -314,52 +314,79 @@
 
 ## Post Prototype 
 
-**25/11/2023 - Declan**
-- Fixed wall bug
-- Added player acceleration
+### 25/11/2023 
 
-**28/11/2023 - Niamh**
-- Added Table asset to Prototype scene
+| **Declan** |
+| :--- |
+| Fixed wall bug |
+| Added player acceleration |
 
-**28/11/2023 - Mark**
-- Added 4 new NPCs (4 texture variations + Smooth animations)
-- Prefab NPCs
+### 28/11/2023
 
-**28/11/2023 - James**
-- Can store items and empty storage
+| **James** |
+| :--- |
+| Can store items and empty storage |
 
-**03/12/2023 - James**
-- Added see through cut out to walls
+| **Mark** |
+| :--- |
+| Added 4 New NPCs (4 texture variations & smooth animations) |
+| Prefab NPCs |
 
-**03/12/2023 - Declan**
-- Fixed table collider issue
-- Fixed cutout issue
+| **Niamh** |
+| :--- |
+| Added Table asset to Prototype scene |
 
-**11/12/2023 - Mark**
-- Updated Animated NPC
+### 03/12/2023
 
-**11/12/2023 - Declan**
-- improved NPC interaction
-- added animation triggers for NPC
+| **Declan** |
+| :--- |
+| Fixed table collider issue |
+| Fixed cutout issue |
 
-**12/12/2023 - Declan**
-- minor tweaks to interaction
-- added flip reset
+| **James** |
+| :--- |
+| Added see through cut out to walls |
 
-**13/12/2023 - Declan**
-- fixed flipping issue
-- fixed interaction issue
-- fixed interaction with coffee tray bug
-- added upgrades menu 
-- created showcase build
+### 11/12/2023
 
-**14/12/20023 - James**
-- Player can now empty storage with F key
-- Storage shows what is currently in it, with UI above
+| **Declan** |
+| :--- |
+| Improved NPC interaction |
+| Added animation triggers for NPC |
 
-**14/12/20023 - Declan**
-- Created showcase build 
-- Added reset button
+| **Mark** |
+| :--- |
+| Updated Animated NPC |
+
+### 12/12/2023
+
+| **Declan** |
+| :--- |
+| Minor tweaks to interaction |
+| Added flip reset |
+
+### 13/12/2023
+
+| **Declan** |
+| :--- |
+| Fixed player flipping issue |
+| Fixed interaction issue |
+| Fixed interaction with coffee tray bug |
+| Added upgrades menu |
+| Created showcase build |
+
+### 14/12/2023
+
+| **Declan** |
+| :--- |
+| Created showcase build |
+| Added reset button |
+
+| **James** |
+| :--- |
+| Player can now empty storage with F key |
+| Storage shows what is currently in it, with UI above |
+
 
 ## Alpha Preparation
 
