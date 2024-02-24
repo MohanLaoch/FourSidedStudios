@@ -564,3 +564,9 @@
 **21/02/2024 - Mark**
 - Created Lighting scene
 - Imported skybox
+
+### 24/02/2024
+
+| **Declan** |
+| :--- |
+| • Created state machine functionality |
