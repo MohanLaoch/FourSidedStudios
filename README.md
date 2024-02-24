@@ -4,8 +4,8 @@
 
 | **Name** | **Student Number** | **Role** |
 | --- | --- | --- |
-| Declan Cooke | C20465442 | Programmer/ Level Designer |
-| James Mohan | C20305011 | Programmer/ Sound Designer |
+| Declan Cooke | C20465442 | Programmer/ Sound Designer |
+| James Mohan | C20305011 | Programmer/ Level Designer |
 | Mark Lambe | C20349251 | Artist/ Sound Designer |
 | Niamh Homan | C20388086 | Artist/ Environmental Designer |
 
