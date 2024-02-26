@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class NpcStateManager : MonoBehaviour
 {
+    public FurnitureManager furnitureManager;
+    public Player player;
+    
 
     NpcBaseState currentState;
     public NpcWanderState wanderState = new NpcWanderState();
@@ -17,6 +20,10 @@ public class NpcStateManager : MonoBehaviour
         currentState.EnterState(this);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        currentState.OnCollisionEnter(this, collision);
+    }
     void Update()
     {
         currentState.UpdateState(this); 

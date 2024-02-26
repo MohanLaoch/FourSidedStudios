@@ -10,7 +10,6 @@ public class InteractableTest : MonoBehaviour
     public Transform CounterObj;
     public Transform HoldArea;
     public Animator NPCAnim;
-    public NPCFlailTest flail;
 
     private void Awake()
     {
@@ -29,10 +28,7 @@ public class InteractableTest : MonoBehaviour
 
 
         if (gameObject.CompareTag("NPC"))
-        {
-            GetComponent<NavMeshAgent>().enabled = false;
-            GetComponent<NpcWander>().enabled = false;
-
+        {           
             transform.parent = HoldArea.transform;
             rb.transform.position = HoldArea.transform.position;
 
@@ -60,11 +56,7 @@ public class InteractableTest : MonoBehaviour
 
     public void Drop()
     {
-        if (gameObject.CompareTag("NPC")) 
-        {
-            StartCoroutine(GetComponentInChildren<NPCFlailTest>().NPCFlailing());
-        }
-        else if(gameObject.CompareTag("Storage"))
+        if(gameObject.CompareTag("Storage"))
         {
             Store();
             return;

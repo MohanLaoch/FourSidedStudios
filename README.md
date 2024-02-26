@@ -575,6 +575,8 @@
 | :--- |
 | • Created state machine functionality |
 
-| **** |
+### 26/02/2024
+
+| **Declan** |
 | :--- |
-| • |
+| • Implemented multiple behaviours within the states|

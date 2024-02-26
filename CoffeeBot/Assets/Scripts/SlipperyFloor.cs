@@ -19,8 +19,7 @@ public class SlipperyFloor : MonoBehaviour
             Npc.GetComponent<Rigidbody>().AddForce(Vector3.up * FlipForce, ForceMode.Impulse);
             Npc.GetComponent<Rigidbody>().AddForce(Vector3.left * FlipForce, ForceMode.Impulse);
             Npc.GetComponent<Rigidbody>().AddTorque(FlipDir * FlipForceRot, ForceMode.Impulse);
-            Npc.GetComponent<NavMeshAgent>().enabled = false;
-            Npc.GetComponent<NpcWander>().enabled = false;
+            
         }
         else if (other.CompareTag("Mop"))
         {

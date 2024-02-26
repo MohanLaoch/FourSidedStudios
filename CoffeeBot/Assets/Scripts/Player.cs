@@ -59,7 +59,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         playerInputActions.Player.Flip.performed += Flip;
         playerInputActions.Player.ArmRaise.performed += ArmRaise;
-
+        
 
     }
 
@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
 
     private void TestingInputSystem_OnInteractAction(object sender, System.EventArgs e)
     {
-        float interactDistance = 1.5f;
+        float interactDistance = 1f;
 
         Vector3 moveDir = transform.TransformDirection(Vector3.forward);
 

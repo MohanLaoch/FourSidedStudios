@@ -11,7 +11,7 @@ public class SceneInfo : ScriptableObject {
     public float playerRotSpeed;
     public float playerAcceleration;
 
-
+   
     public void Reset()
     {
         money = 0;
