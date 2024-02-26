@@ -581,6 +581,7 @@
 | :--- |
 | • Created new JamesScene |
 | • Created folders for old scenes|
+| • Added ability to switch between two cameras in JamesScene |
 
 | **Mark** |
 | :--- |
