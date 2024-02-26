@@ -581,6 +581,8 @@
 | :--- |
 | • Imported Hoover and Inmate Serg.io skins|
 | • Added " to make scene|
+| • Bloom experimentation in Mark Scene|
+| • Edit>Project Settings>Graphics>Set to URPUniversalRenderPipeline|
 
 | **** |
 | :--- |
