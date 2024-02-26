@@ -9,6 +9,9 @@
 | Mark Lambe | C20349251 | Artist/ Sound Designer |
 | Niamh Homan | C20388086 | Artist/ Environmental Designer |
 
+### External Links
+[**LinkedIn**](https://www.linkedin.com/company/102602052/)
+
 
 # Commit Log
 
@@ -552,21 +555,26 @@
 
 ## Post Alpha/ Beta Preparation
 
-| **** |
+### 20/02/2024
+| **Mark** |
 | :--- |
-| • |
+| • Imported Serg.io Coffee Skin |
+| • Imported CoffeeBot game logo |
+| • Added Serg.io coffee skin to Mark Scene |
 
-**20/02/2024 - Mark**
-- Imported Serg.io Coffee Skin
-- Imported CoffeeBot game logo
-- added Serg.io coffee skin to mark scene
+### 21/02/2024
 
-**21/02/2024 - Mark**
-- Created Lighting scene
-- Imported skybox
+| **Mark** |
+| :--- |
+| • Created Lighting scene |
+| • Imported skybox |
 
 ### 24/02/2024
 
 | **Declan** |
 | :--- |
 | • Created state machine functionality |
+
+| **** |
+| :--- |
+| • |
