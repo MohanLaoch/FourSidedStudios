@@ -579,4 +579,4 @@
 
 | **Declan** |
 | :--- |
-| • Implemented multiple behaviours within the states|
+| • Implemented multiple behaviours within the states.|

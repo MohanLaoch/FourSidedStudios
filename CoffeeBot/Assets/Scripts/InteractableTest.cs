@@ -29,6 +29,7 @@ public class InteractableTest : MonoBehaviour
 
         if (gameObject.CompareTag("NPC"))
         {           
+            
             transform.parent = HoldArea.transform;
             rb.transform.position = HoldArea.transform.position;
 
