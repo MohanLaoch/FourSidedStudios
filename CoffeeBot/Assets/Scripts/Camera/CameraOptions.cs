@@ -1,0 +1,62 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using Cinemachine;
+
+public class CameraOptions : MonoBehaviour
+{
+    [SerializeField]
+    private InputAction action;
+
+    public CinemachineVirtualCamera followCamera;
+
+    bool locked = true;
+
+    [Range (80, 180)]
+    public int speed = 120; 
+
+    void Start()
+    {
+        //Set Cursor to not be visible
+        Cursor.visible = false;
+
+        action.performed += ctx => LockVerticalAxis();
+
+        followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxValue = 40;
+        followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MinValue = 40;
+    }
+
+    private void OnEnable()
+    {
+        action.Enable();
+    }
+
+    private void OnDisable()
+    {
+        action.Disable();
+    }
+
+    private void LockVerticalAxis()
+    {
+        if (locked)
+        {
+            followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxValue = 80;
+            followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MinValue = 15;
+            locked = false;
+        }
+        else
+        {
+            followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxValue = followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.Value;
+            followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MinValue = followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.Value;
+            locked = true;
+        }
+        return; //this might not need to be here
+    }
+
+    void Update()
+    {
+        followCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = speed;
+        followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = speed;
+    }
+}
