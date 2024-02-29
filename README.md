@@ -579,19 +579,21 @@
 
 | **Declan** |
 | :--- |
-| • Implemented multiple behaviours within the states. |
+| • Implemented multiple behaviours within the states |
 
 ### 27/02/2024
 
 | **Niamh** |
 | :--- |
-| • Added CornerTable to Prototype Scene. |
+| • Added CornerTable to Prototype Scene |
 
 ### 29/02/2024
 
 | **James** |
 | :--- |
-| • Adjusted Follow Player Camera. |
-| • Added ability to adjust Follow Player Camera. |
-| • Cleaned Up Overview Camera. |
+| • Adjusted Follow Player Camera |
+| • Added ability to adjust Follow Player Camera |
+| • Cleaned Up Overview Camera |
+| • Added New Cameras to Main Scene |
+
 
