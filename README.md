@@ -595,5 +595,6 @@
 | • Added ability to adjust Follow Player Camera |
 | • Cleaned Up Overview Camera |
 | • Added New Cameras to Main Scene |
+| • Added Folder Asset Pack |
 
 
