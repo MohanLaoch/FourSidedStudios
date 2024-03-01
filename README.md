@@ -10,9 +10,9 @@
 | Niamh Homan | C20388086 | Artist/ Environmental Designer |
 
 ### External Links
-[**itch.io**](https://sparky570.itch.io/coffeebot)
-[**Instagram**](https://www.instagram.com/4sidedstudios/?hl=en)
-[**LinkedIn**](https://www.linkedin.com/company/102602052/)
+- [**itch.io**](https://sparky570.itch.io/coffeebot)
+- [**Instagram**](https://www.instagram.com/4sidedstudios/?hl=en)
+- [**LinkedIn**](https://www.linkedin.com/company/102602052/)
 
 
 # Commit Log
