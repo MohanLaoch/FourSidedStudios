@@ -596,5 +596,6 @@
 | • Cleaned Up Overview Camera |
 | • Added New Cameras to Main Scene |
 | • Added Folder Asset Pack |
+| • Added ability to change camera sensitivity |
 
 

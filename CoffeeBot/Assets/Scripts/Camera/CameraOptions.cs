@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using Cinemachine;
 
@@ -13,8 +14,13 @@ public class CameraOptions : MonoBehaviour
 
     bool locked = true;
 
-    [Range (80, 180)]
-    public int speed = 120; 
+    [Header("Slider")]
+
+    
+    public int speed = 120;
+
+    public Slider senseSlider;
+
 
     void Start()
     {
@@ -25,6 +31,16 @@ public class CameraOptions : MonoBehaviour
 
         followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxValue = 40;
         followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MinValue = 40;
+
+        SetSlider();
+    }
+
+    void SetSlider()
+    {
+        senseSlider.maxValue = 200;
+        senseSlider.minValue = 10;
+
+        senseSlider.value = speed;
     }
 
     private void OnEnable()
@@ -56,7 +72,9 @@ public class CameraOptions : MonoBehaviour
 
     void Update()
     {
-        followCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = speed;
-        followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = speed;
+
+        followCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = senseSlider.value;
+        followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = senseSlider.value;
+
     }
 }
