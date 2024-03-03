@@ -600,4 +600,13 @@
 | • Added Folder Asset Pack |
 | • Added ability to change camera sensitivity |
 
+### 03/03/2024
+
+| **Declan** |
+| :--- |
+| • Added chair finding system for npc AI |
+| • Added injury counter for npc to decide when to leave|
+
+
+
 

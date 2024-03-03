@@ -178,10 +178,12 @@ GameObject:
   - component: {fileID: 286990893382252229}
   - component: {fileID: 4756489566482906250}
   - component: {fileID: 1437074558504528663}
-  - component: {fileID: 6737968774852822350}
+  - component: {fileID: 3698851715169338536}
+  - component: {fileID: 419460400}
+  - component: {fileID: 419460406}
   m_Layer: 7
   m_Name: ChairModel 1
-  m_TagString: Untagged
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,7 +204,7 @@ Transform:
   - {fileID: 4670925933356533327}
   - {fileID: 4335809494043178429}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!54 &286990893382252229
 Rigidbody:
@@ -249,8 +251,21 @@ MonoBehaviour:
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
   NPCAnim: {fileID: 0}
-  flail: {fileID: 0}
---- !u!208 &6737968774852822350
+--- !u!114 &3698851715169338536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5517048392627613696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f5d7e4e26ae2347b39c80c81fd5c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTaken: 0
+  isSittable: 0
+--- !u!208 &419460400
 NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -260,12 +275,25 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.41, y: 0.94, z: 0.41}
+  m_Extents: {x: 0.5, y: 1.06, z: 0.5}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!65 &419460406
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5517048392627613696}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9128796, y: 0.1432004, z: 0.86984223}
+  m_Center: {x: -0.008457601, y: 0.46405113, z: 0.0042735934}
 --- !u!1001 &178631939
 PrefabInstance:
   m_ObjectHideFlags: 0

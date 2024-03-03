@@ -25,7 +25,10 @@ public class InteractableTest : MonoBehaviour
 
     public void Interact()
     {
-
+        if(gameObject.CompareTag("Chair"))
+        {
+            GetComponent<ChairTest>().isSittable = false;
+        }
 
         if (gameObject.CompareTag("NPC"))
         {           
@@ -63,6 +66,10 @@ public class InteractableTest : MonoBehaviour
             return;
         }
 
+        if (gameObject.CompareTag("Chair"))
+        {
+            GetComponent<ChairTest>().isSittable = true;
+        }
 
         transform.parent = null;
         rb.constraints = RigidbodyConstraints.None;

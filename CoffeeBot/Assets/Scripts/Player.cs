@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
 
     private void TestingInputSystem_OnInteractAction(object sender, System.EventArgs e)
     {
-        float interactDistance = 1f;
+        float interactDistance = 1.5f;
 
         Vector3 moveDir = transform.TransformDirection(Vector3.forward);
 

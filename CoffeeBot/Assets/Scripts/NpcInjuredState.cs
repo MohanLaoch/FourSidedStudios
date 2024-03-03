@@ -13,7 +13,8 @@ public class NpcInjuredState : NpcBaseState
 
     private bool hasLimit = true;
     public float timerLimit;
-    
+
+    public int InjuryCounter = 0;
     public LayerMask layermask;
     public Animator Anim;
     public Transform NpcTransform;
@@ -21,6 +22,7 @@ public class NpcInjuredState : NpcBaseState
     //public Player player;
     public override void EnterState(NpcStateManager npc)
     {
+        InjuryCounter++;
         NpcTransform = npc.GetComponent<Transform>();
         npc.GetComponent<NavMeshAgent>().enabled = false;
         Anim = npc.GetComponentInChildren<Animator>();
@@ -74,9 +76,20 @@ public class NpcInjuredState : NpcBaseState
 
 
             npc.GetComponent<NavMeshAgent>().enabled = true;
-            npc.SwitchState(npc.leavingState);
+            if (InjuryCounter >= 3)
+            {
+                npc.SwitchState(npc.leavingState);
+            }
+            else
+            {
+                npc.SwitchState(npc.wanderState);
+
+            }
+            
 
         }
+
+      
         
             
         
