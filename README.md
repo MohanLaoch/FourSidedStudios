@@ -606,6 +606,7 @@
 | :--- |
 | • Added chair finding system for npc AI |
 | • Added injury counter for npc to decide when to leave|
+| • Added placeholder skin selection screen|
 
 
 

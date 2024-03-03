@@ -13,6 +13,11 @@ public class SceneController : MonoBehaviour
         sceneInfo.Reset();
     }
 
+    public void SkinSelection()
+    {
+        SceneManager.LoadScene("SkinSelectionScreen");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
