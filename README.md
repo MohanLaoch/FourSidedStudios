@@ -613,8 +613,9 @@
 | **James** |
 | :--- |
 | • New Order Script |
+| • Organized Scripts into Folders |
 
 | **Declan** |
 | :--- |
-| • Organized Scripts |
+| • Organized Scripts into Folders |
 | • Added AI to main scene |

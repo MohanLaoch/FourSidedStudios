@@ -37,8 +37,6 @@ public class OrderCoffee : MonoBehaviour
 
         Order();
 
-        moneyTracker.StartTimer();
-
     }
 
     private void Order()
@@ -85,6 +83,8 @@ public class OrderCoffee : MonoBehaviour
         string randomResponse = orderResponses[randomIndex];
 
         responseText.text = randomResponse;
+
+        // tell the npc to leave
 
     }
 
