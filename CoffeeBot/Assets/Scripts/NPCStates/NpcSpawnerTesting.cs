@@ -8,6 +8,6 @@ public class NpcSpawnerTesting : MonoBehaviour
     public Transform Spawnpoint;
 public void Spawn()
     {
-        Instantiate(NPC, Spawnpoint);
+        Instantiate(NPC, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
     }
 }

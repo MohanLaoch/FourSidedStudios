@@ -43,7 +43,7 @@ public class ChairTest : MonoBehaviour
 
     public IEnumerator ChairCheck()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10f);
         isTaken = true;
     }
     void Start()
