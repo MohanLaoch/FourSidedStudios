@@ -32,6 +32,7 @@ public class MoneyTracker : MonoBehaviour
     void Start()
     {
         money = sceneInfo.money;
+
         // set the timer to maxTime, and the value of the slider to currentTime
 
         currentTime = maxTime;

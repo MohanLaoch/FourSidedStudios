@@ -608,6 +608,12 @@
 | • Added injury counter for npc to decide when to leave|
 | • Added placeholder skin selection screen|
 
+### 04/03/2024
+
+| **James** |
+| :--- |
+| • New Order Script |
+
 
 
 
