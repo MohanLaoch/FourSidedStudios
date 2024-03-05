@@ -619,3 +619,9 @@
 | :--- |
 | • Organized Scripts into Folders |
 | • Added AI to main scene |
+
+### 05/03/2024
+
+| **James** |
+| :--- |
+| • Added new Order Script to NPC |

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -418,7 +418,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 5
+  m_CameraDistance: 5.999998
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -646,7 +646,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3293066056719402981, guid: f79bddfcf297aec4f8c63d88fe857e43, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3293066057255982721, guid: f79bddfcf297aec4f8c63d88fe857e43, type: 3}
       insertIndex: -1
@@ -5674,7 +5675,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh65174
+  m_Name: pb_Mesh34470
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -8838,6 +8839,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8637d8e244176d2419924aa9ce5cfe56, type: 3}
+--- !u!114 &672070127 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1381915702, guid: f79bddfcf297aec4f8c63d88fe857e43, type: 3}
+  m_PrefabInstance: {fileID: 40513111}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &677913759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 90082780381895707, guid: 8637d8e244176d2419924aa9ce5cfe56, type: 3}
@@ -10630,7 +10642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912223781}
   m_LocalRotation: {x: 0.34202015, y: -0, z: -0, w: 0.9396927}
-  m_LocalPosition: {x: 4.67, y: 4.410938, z: -2.3102224}
+  m_LocalPosition: {x: 4.67, y: 5.0537243, z: -3.0762653}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13783,7 +13795,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109840628}
   m_LocalRotation: {x: 0.34202015, y: -0, z: -0, w: 0.9396927}
-  m_LocalPosition: {x: 4.67, y: 4.410938, z: -2.3102224}
+  m_LocalPosition: {x: 4.67, y: 5.0537243, z: -3.0762653}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15030,7 +15042,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh65992
+  m_Name: pb_Mesh35292
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -16285,7 +16297,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh65796
+  m_Name: pb_Mesh35110
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -18165,6 +18177,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 90082780381895707, guid: 8637d8e244176d2419924aa9ce5cfe56, type: 3}
   m_PrefabInstance: {fileID: 2056832719}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1418400186 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 54534535, guid: f79bddfcf297aec4f8c63d88fe857e43, type: 3}
+  m_PrefabInstance: {fileID: 40513111}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1423116715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19685,7 +19702,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh65750
+  m_Name: pb_Mesh35064
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -22793,7 +22810,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh65538
+  m_Name: pb_Mesh34842
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -23156,7 +23173,7 @@ MonoBehaviour:
   m_VerticalAxis:
     Value: 40
     m_SpeedMode: 0
-    m_MaxSpeed: 106.1487
+    m_MaxSpeed: 120
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
@@ -23180,7 +23197,7 @@ MonoBehaviour:
   m_HorizontalAxis:
     Value: 0
     m_SpeedMode: 0
-    m_MaxSpeed: 106.1487
+    m_MaxSpeed: 120
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -23224,7 +23241,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 5
+  m_CameraDistance: 5.999998
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -23640,7 +23657,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh65840
+  m_Name: pb_Mesh35154
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -24091,7 +24108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003155569}
   m_LocalRotation: {x: 0.57357645, y: -0, z: -0, w: 0.81915206}
-  m_LocalPosition: {x: 4.67, y: 12.895464, z: -0.19010049}
+  m_LocalPosition: {x: 4.67, y: 13.8351555, z: -0.5321199}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25029,6 +25046,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66468a8920be86c40b8345bb518e88c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2119418534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119418524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795b21420ae645f478495ab57f65c2ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  moneyTracker: {fileID: 2119418533}
+  coffeeOrders:
+  - CoffeeCup
+  acceptedCoffeeTag: 
+  orderResponses:
+  - I love COFFEE!
+  - GIMMIE DAT!
+  - YUP BRO!
+  - Alri bro ;)
+  responseText: {fileID: 672070127}
+  responseBubble: {fileID: 1418400186}
+  timerBubble: {fileID: 126390672}
 --- !u!1 &2120295902
 GameObject:
   m_ObjectHideFlags: 0
