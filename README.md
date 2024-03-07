@@ -641,6 +641,7 @@
 | • Added the 3 above animations to animator "NPC2.2"|
 | • Imported npc clothes textures|
 | • Created npc clothes materials|
+| • Materials error|
 
 | ** |
 | :--- |
