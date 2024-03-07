@@ -639,6 +639,7 @@
 | • Imported clothed npc |
 | • Added animator to clothed npc|
 | • Added the 3 above animations to animator "NPC2.2"|
+| • Imported npc clothes textures|
 
 | ** |
 | :--- |
