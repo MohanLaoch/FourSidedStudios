@@ -631,3 +631,4 @@
 | **Declan** |
 | :--- |
 | • Fixed Npc leaving bug|
+| • Fixed Npc pickup bug|

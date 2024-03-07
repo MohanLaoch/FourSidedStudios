@@ -77,14 +77,13 @@ public class Player : MonoBehaviour
 
     private void TestingInputSystem_OnInteractAction(object sender, System.EventArgs e)
     {
-        float interactDistance = 1.5f;
+        float interactDistance = 1.2f;
 
         Vector3 moveDir = transform.TransformDirection(Vector3.forward);
 
         Debug.DrawRay(RayZone.transform.position, moveDir, Color.green);
         if (Physics.Raycast(RayZone.transform.position, moveDir, out RaycastHit raycastHit, interactDistance, interactablesLayerMask))
         {
-            Debug.Log(raycastHit.transform);
 
 
             if (raycastHit.transform.TryGetComponent(out InteractableTest interactableTest) && Holding == false)

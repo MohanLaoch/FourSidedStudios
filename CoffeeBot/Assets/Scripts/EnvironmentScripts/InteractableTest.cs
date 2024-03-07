@@ -11,6 +11,8 @@ public class InteractableTest : MonoBehaviour
     public Transform HoldArea;
     public Animator NPCAnim;
 
+    private NpcStateManager npcStateManager;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -25,14 +27,18 @@ public class InteractableTest : MonoBehaviour
 
     public void Interact()
     {
+        
         if(gameObject.CompareTag("Chair"))
         {
             GetComponent<ChairTest>().isSittable = false;
         }
 
         if (gameObject.CompareTag("NPC"))
-        {           
-            
+        {
+            npcStateManager = gameObject.GetComponent<NpcStateManager>();
+            npcStateManager.SwitchState(npcStateManager.injuredState);
+            rb.transform.rotation = Quaternion.Euler(rb.rotation.x - 90f, rb.rotation.y, rb.rotation.z + 90f);
+
             transform.parent = HoldArea.transform;
             rb.transform.position = HoldArea.transform.position;
 
@@ -41,7 +47,6 @@ public class InteractableTest : MonoBehaviour
             NPCAnim.SetBool("Fallen", true);
             //trigger flail here 
             Debug.Log("helpme");
-            rb.transform.rotation = Quaternion.Euler(rb.rotation.x - 90f, rb.rotation.y, rb.rotation.z + 90f);
         }
         else
         {

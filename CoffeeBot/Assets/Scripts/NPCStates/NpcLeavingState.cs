@@ -24,8 +24,13 @@ public class NpcLeavingState : NpcBaseState
 
     public override void OnCollisionEnter(NpcStateManager npc, Collision collision)
     {
-        
-        if(collision.gameObject.CompareTag("Door"))
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            npc.SwitchState(npc.injuredState);
+        }
+
+        if (collision.gameObject.CompareTag("Door"))
         {
             //object.Destroy(this.gameObject);
             npc.hasLeft = true;

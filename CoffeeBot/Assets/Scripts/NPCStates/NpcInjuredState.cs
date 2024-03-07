@@ -18,8 +18,10 @@ public class NpcInjuredState : NpcBaseState
     public LayerMask layermask;
     public Animator Anim;
     public Transform NpcTransform;
+    public Rigidbody Npcrb;
+    public InteractableTest interactableTest;
     
-    //public Player player;
+    public Player player;
     public override void EnterState(NpcStateManager npc)
     {
         InjuryCounter++;
@@ -45,13 +47,17 @@ public class NpcInjuredState : NpcBaseState
     public void NPCFlailing(NpcStateManager npc)
     {
         NpcTransform = npc.GetComponent<Transform>();
+        Npcrb = npc.GetComponent<Rigidbody>();
         Anim.SetBool("Fallen", true);
-        Debug.Log(currentTime);
-         /*if (player.Holding == true)
-         {
-             yield return null;
-         }
-         else*/
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        interactableTest = npc.gameObject.GetComponent<InteractableTest>();
+        if(player.Holding == true)
+        {
+            Npcrb.transform.rotation = interactableTest.rb.transform.rotation;
+
+        }
+       
+
 
         if (timerActive)
         {
