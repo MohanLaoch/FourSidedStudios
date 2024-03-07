@@ -28,6 +28,7 @@ public class NpcLeavingState : NpcBaseState
         if(collision.gameObject.CompareTag("Door"))
         {
             //object.Destroy(this.gameObject);
+            npc.hasLeft = true;
             Debug.Log("die");
         }
     }

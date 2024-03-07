@@ -625,3 +625,9 @@
 | **James** |
 | :--- |
 | • Added new Order Script to NPC |
+
+### 07/03/2024
+
+| **Declan** |
+| :--- |
+| • Fixed Npc leaving bug|

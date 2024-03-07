@@ -6,6 +6,7 @@ public class NpcStateManager : MonoBehaviour
 {
     public FurnitureManager furnitureManager;
     public Player player;
+    public bool hasLeft = false;
     
 
     NpcBaseState currentState;

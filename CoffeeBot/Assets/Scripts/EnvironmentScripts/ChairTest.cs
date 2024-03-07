@@ -8,7 +8,6 @@ public class ChairTest : MonoBehaviour
     public bool isTaken = false;
     public bool isSittable;
     private NpcStateManager npcStateManager;
-    // Start is called before the first frame update
 
     public void OnTriggerStay(Collider other)
     {
