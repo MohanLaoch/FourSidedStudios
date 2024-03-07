@@ -632,3 +632,14 @@
 | :--- |
 | • Fixed Npc leaving bug|
 | • Fixed Npc pickup bug|
+
+| **Mark** |
+| :--- |
+| • Imported NPC4 (featuring additional animations (sit down, get up, sitting)) |
+| • Imported clothed npc |
+| • Added animator to clothed npc|
+| • Added the 3 above animations to animator "NPC2.2"|
+
+| ** |
+| :--- |
+| • |
