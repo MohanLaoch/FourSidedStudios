@@ -650,6 +650,7 @@
 | • Resolved NPC clothed errors (imported v2 swapping unwrap modifier to go under the skin)|
 | • Applied materials + changing materials to shader graphs > 3dsmaterial|
 | • created emission material for LEDS|
+| • gold material experimentation|
 
 | ** |
 | :--- |
