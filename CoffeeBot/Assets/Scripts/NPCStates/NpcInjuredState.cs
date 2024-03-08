@@ -20,10 +20,12 @@ public class NpcInjuredState : NpcBaseState
     public Transform NpcTransform;
     public Rigidbody Npcrb;
     public InteractableTest interactableTest;
-    
+    public SlipperyFloor slipperyFloor;
     public Player player;
     public override void EnterState(NpcStateManager npc)
     {
+       
+        
         InjuryCounter++;
         NpcTransform = npc.GetComponent<Transform>();
         npc.GetComponent<NavMeshAgent>().enabled = false;

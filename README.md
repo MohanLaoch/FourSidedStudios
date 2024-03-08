@@ -652,6 +652,6 @@
 | • created emission material for LEDS|
 | • gold material experimentation|
 
-| ** |
+| *Declan* |
 | :--- |
-| • |
+| • small ai tweaks|
