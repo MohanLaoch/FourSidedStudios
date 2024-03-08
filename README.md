@@ -643,6 +643,14 @@
 | • Created npc clothes materials|
 | • Materials error|
 
+### 08/03/2024
+
+| **Mark** |
+| :--- |
+| • Resolved NPC clothed errors (imported v2 swapping unwrap modifier to go under the skin)|
+| • Applied materials + changing materials to shader graphs > 3dsmaterial|
+| • created emission material for LEDS|
+
 | ** |
 | :--- |
 | • |
