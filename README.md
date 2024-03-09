@@ -655,3 +655,11 @@
 | *Declan* |
 | :--- |
 | • small ai tweaks|
+
+### 09/03/2024
+
+| **Mark** |
+| :--- |
+| • Imported Gold serg.io model + textures|
+| • Added Gold serg.io to mark scene|
+| • Created folders in mark scene hierchy|
