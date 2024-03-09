@@ -24,7 +24,7 @@ public class ChairTest : MonoBehaviour
         if (isSittable && other.CompareTag("NPC"))
         {
             
-            Debug.Log("testing");
+            
             npcStateManager = other.GetComponent<NpcStateManager>();
             StartCoroutine(ChairCheck());
             

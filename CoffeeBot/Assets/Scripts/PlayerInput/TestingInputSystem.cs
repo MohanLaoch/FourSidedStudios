@@ -11,6 +11,7 @@ public class TestingInputSystem : MonoBehaviour
     public float FlipForceRot = 5f;
 
     public event EventHandler OnInteractAction;
+    public event EventHandler OnThrowAction;
     public PlayerInput playerInput;
     private PlayerInputActions playerInputActions;
 
@@ -36,7 +37,8 @@ public class TestingInputSystem : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
-        playerInputActions.Player.Interact.performed += Interact_performed;       
+        playerInputActions.Player.Interact.performed += Interact_performed;
+        
     }
 
 
@@ -64,10 +66,27 @@ public class TestingInputSystem : MonoBehaviour
 
     public void Interact_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
+     
         OnInteractAction?.Invoke(this, EventArgs.Empty);
         
-
+        switch (obj.phase)
+        {
+         
+            case InputActionPhase.Performed:
+                Debug.Log(obj.interaction + " - Performed");
+                break;
+            case InputActionPhase.Started:
+                Debug.Log(obj.interaction + " - Started");
+                break;
+            case InputActionPhase.Canceled:
+                Debug.Log(obj.interaction + " - Canceled");
+                break;
+                
+            
+        }
     }
+
+    
  
    
 }
