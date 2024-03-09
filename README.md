@@ -665,6 +665,7 @@
 | • Created UnlockCoffee Script|
 | • Organised recipes for Coffee|
 | • Updated Storage Script with suitable changes for the new UnlockCoffe Script|
+| • Updated Storage system in main scene with new changes|
 
 
 | **Mark** |

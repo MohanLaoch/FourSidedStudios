@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -418,7 +418,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 5.999998
+  m_CameraDistance: 5.000006
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -2190,20 +2190,11 @@ MonoBehaviour:
   - 
   - 
   - 
-  recipies:
-  - CoffeeBoxMilkBoxCupBox
-  - CoffeeBoxCupBoxMilkBox
-  - MilkBoxCoffeeBoxCupBox
-  - MilkBoxCupBoxCoffeeBox
-  - CupBoxMilkBoxCoffeeBox
-  - CupBoxCoffeeBoxMilkBox
-  recipieResults:
-  - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
-  - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
-  - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
-  - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
-  - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
-  - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
+  americano: {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
+  cappuccino: {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
+  latte: {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
+  recipes: []
+  recipeResults: []
   secondsToWait: 1
   capacityRemoveAmount: 1
 --- !u!65 &143513329
@@ -7256,16 +7247,24 @@ MonoBehaviour:
   fillCapacity: 1
   itemName: 
   acceptedItems:
-  - CoffeeBox
-  - CupBox
-  - MilkBox
+  - CoffeeBeans
+  - CocoPowder
+  - Ice
+  - Milk
+  - TeaBags
+  - Water
+  - Null
   storageText: {fileID: 1486374533}
   buttonText: {fileID: 649613547}
   storageImage: {fileID: 1453268519}
   acceptedItemSprites:
   - {fileID: 21300000, guid: b219a7f89da1d0e4cad33c498d976191, type: 3}
   - {fileID: 21300000, guid: 49c78c05cba9a2a44916aab60b9a440f, type: 3}
+  - {fileID: 21300000, guid: 49c78c05cba9a2a44916aab60b9a440f, type: 3}
   - {fileID: 21300000, guid: 15cf14f7dce6ae44fb5415f03f5110fe, type: 3}
+  - {fileID: 21300000, guid: 49c78c05cba9a2a44916aab60b9a440f, type: 3}
+  - {fileID: 21300000, guid: 49c78c05cba9a2a44916aab60b9a440f, type: 3}
+  - {fileID: 21300000, guid: 49c78c05cba9a2a44916aab60b9a440f, type: 3}
   currrentSprite: {fileID: 0}
   nullSprite: {fileID: 21300000, guid: 2ec97e71825376e44b5ab83364cddb0e, type: 3}
   atStorage: 0
@@ -8720,7 +8719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9169328361245774315, guid: 4c47073255887ae45ba9155de60a6a55, type: 3}
       propertyPath: m_TagString
-      value: MilkBox
+      value: Milk
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -8765,16 +8764,24 @@ MonoBehaviour:
   fillCapacity: 1
   itemName: 
   acceptedItems:
-  - CoffeeBox
-  - CupBox
-  - MilkBox
+  - CoffeeBeans
+  - CocoPowder
+  - Ice
+  - Milk
+  - TeaBags
+  - Water
+  - Null
   storageText: {fileID: 1560086370}
   buttonText: {fileID: 1487448750}
   storageImage: {fileID: 1035626391}
   acceptedItemSprites:
   - {fileID: 21300000, guid: b219a7f89da1d0e4cad33c498d976191, type: 3}
   - {fileID: 21300000, guid: 49c78c05cba9a2a44916aab60b9a440f, type: 3}
+  - {fileID: 21300000, guid: 49c78c05cba9a2a44916aab60b9a440f, type: 3}
   - {fileID: 21300000, guid: 15cf14f7dce6ae44fb5415f03f5110fe, type: 3}
+  - {fileID: 21300000, guid: 49c78c05cba9a2a44916aab60b9a440f, type: 3}
+  - {fileID: 21300000, guid: 49c78c05cba9a2a44916aab60b9a440f, type: 3}
+  - {fileID: 21300000, guid: 49c78c05cba9a2a44916aab60b9a440f, type: 3}
   currrentSprite: {fileID: 0}
   nullSprite: {fileID: 21300000, guid: 2ec97e71825376e44b5ab83364cddb0e, type: 3}
   atStorage: 0
@@ -9253,16 +9260,24 @@ MonoBehaviour:
   fillCapacity: 1
   itemName: 
   acceptedItems:
-  - CoffeeBox
-  - CupBox
-  - MilkBox
+  - CoffeeBeans
+  - CocoPowder
+  - Ice
+  - Milk
+  - TeaBags
+  - Water
+  - Null
   storageText: {fileID: 269543695}
   buttonText: {fileID: 1754315558}
   storageImage: {fileID: 1311672178}
   acceptedItemSprites:
   - {fileID: 21300000, guid: b219a7f89da1d0e4cad33c498d976191, type: 3}
   - {fileID: 21300000, guid: 49c78c05cba9a2a44916aab60b9a440f, type: 3}
+  - {fileID: 21300000, guid: 49c78c05cba9a2a44916aab60b9a440f, type: 3}
   - {fileID: 21300000, guid: 15cf14f7dce6ae44fb5415f03f5110fe, type: 3}
+  - {fileID: 21300000, guid: 49c78c05cba9a2a44916aab60b9a440f, type: 3}
+  - {fileID: 21300000, guid: 49c78c05cba9a2a44916aab60b9a440f, type: 3}
+  - {fileID: 21300000, guid: 49c78c05cba9a2a44916aab60b9a440f, type: 3}
   currrentSprite: {fileID: 0}
   nullSprite: {fileID: 21300000, guid: 2ec97e71825376e44b5ab83364cddb0e, type: 3}
   atStorage: 0
@@ -10351,7 +10366,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912223781}
   m_LocalRotation: {x: 0.34202015, y: -0, z: -0, w: 0.9396927}
-  m_LocalPosition: {x: 4.67, y: 5.0537243, z: -3.0762653}
+  m_LocalPosition: {x: 4.67, y: 4.4109416, z: -2.3102272}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13494,7 +13509,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109840628}
   m_LocalRotation: {x: 0.34202015, y: -0, z: -0, w: 0.9396927}
-  m_LocalPosition: {x: 4.67, y: 5.0537243, z: -3.0762653}
+  m_LocalPosition: {x: 4.67, y: 4.4109416, z: -2.3102272}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23036,7 +23051,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 5.999998
+  m_CameraDistance: 5.000006
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -23768,7 +23783,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003155569}
   m_LocalRotation: {x: 0.57357645, y: -0, z: -0, w: 0.81915206}
-  m_LocalPosition: {x: 4.67, y: 13.8351555, z: -0.5321199}
+  m_LocalPosition: {x: 4.67, y: 12.89547, z: -0.19010244}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23838,7 +23853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4443390818867508377, guid: 6736df27cdbe5a148a9a76b2359443af, type: 3}
       propertyPath: m_TagString
-      value: CoffeeBox
+      value: CoffeeBeans
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
