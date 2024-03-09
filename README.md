@@ -610,15 +610,16 @@
 
 ### 04/03/2024
 
+| **Declan** |
+| :--- |
+| • Organized Scripts into Folders |
+| • Added AI to main scene |
+
 | **James** |
 | :--- |
 | • New Order Script |
 | • Organized Scripts into Folders |
 
-| **Declan** |
-| :--- |
-| • Organized Scripts into Folders |
-| • Added AI to main scene |
 
 ### 05/03/2024
 
@@ -645,6 +646,10 @@
 
 ### 08/03/2024
 
+| *Declan* |
+| :--- |
+| • Small ai tweaks|
+
 | **Mark** |
 | :--- |
 | • Resolved NPC clothed errors (imported v2 swapping unwrap modifier to go under the skin)|
@@ -652,11 +657,15 @@
 | • created emission material for LEDS|
 | • gold material experimentation|
 
-| *Declan* |
-| :--- |
-| • small ai tweaks|
 
 ### 09/03/2024
+
+| **James** |
+| :--- |
+| • Created UnlockCoffee Script|
+| • Organised recipes for Coffee|
+| • Updated Storage Script with suitable changes for the new UnlockCoffe Script|
+
 
 | **Mark** |
 | :--- |

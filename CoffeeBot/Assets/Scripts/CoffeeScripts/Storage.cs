@@ -160,7 +160,7 @@ public class Storage : MonoBehaviour
  * WHEN ADDING A NEW ACCEPTED ITEM PLEASE CREATE A TAG WITH THE EXACT SAME NAME!!!
  * ACCEPTED ITEMS AND TAGS SHOULD BE WRITTEN AS FOLLOWS:
  * 
- * If the item is a box of coffee, its tag should be - CoffeeBox
+ * If the item is a box of coffee beans, its tag should be - CoffeeBeans
  */
 
 

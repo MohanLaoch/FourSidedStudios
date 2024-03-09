@@ -13,10 +13,17 @@ public class CraftCoffee : MonoBehaviour
 
     public List<string> storedItems = new List<string>();
 
-    [Header("Recipie Crafting")]
+    [Header("StartingCoffee")]
 
-    public List<string> recipies = new List<string>();
-    public List<GameObject> recipieResults = new List<GameObject>();
+    public GameObject americano;
+    public GameObject cappuccino;
+    public GameObject latte;
+
+    [HideInInspector]
+    public List<string> recipes = new List<string>();
+    [HideInInspector]
+    public List<GameObject> recipeResults = new List<GameObject>();
+    private int amount = 6;
 
 
     [Header("Ability to Craft")]
@@ -26,6 +33,48 @@ public class CraftCoffee : MonoBehaviour
     [SerializeField] private int capacityRemoveAmount = 1;
 
     private bool canCraft = true;
+
+    private void Awake()
+    {
+        // Americano
+
+        recipes.Add("WaterCoffeeBeansNull");
+        recipes.Add("WaterNullCoffeeBeans");
+        recipes.Add("CoffeeBeansWaterNull");
+        recipes.Add("CoffeeBeansNullWater");
+        recipes.Add("NullWaterCoffeeBeans");
+        recipes.Add("NullWaterCoffeeBeans");
+
+        for (int i = amount; i == amount; i++)
+        {
+            recipeResults.Add(americano);
+        }
+
+        //Cappuccino
+
+        recipes.Add("MilkMilkCoffeeBeans");
+        recipes.Add("MilkCoffeeBeansMilk");
+        recipes.Add("CoffeeBeansMilkMilk");
+
+        for (int i = 3; i == 3; i++)
+        {
+            recipeResults.Add(cappuccino);
+        }
+
+        //Latte
+
+        recipes.Add("MilkCoffeeBeansNull");
+        recipes.Add("MilkNullCoffeeBeans");
+        recipes.Add("CoffeeBeansMilkNull");
+        recipes.Add("CoffeeBeansNullMilk");
+        recipes.Add("NullMilkCoffeeBeans");
+        recipes.Add("NullCoffeeBeansMilk");
+
+        for (int i = amount; i == amount; i++)
+        {
+            recipeResults.Add(latte);
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -66,22 +115,22 @@ public class CraftCoffee : MonoBehaviour
             }
             else
             {
-                currentRecipeString += "null";
+                currentRecipeString += "Null";
             }
         }
 
         // check all recipies 
-        for (int i = 0; i < recipies.Count; i++)
+        for (int i = 0; i < recipes.Count; i++)
         {
             // if the current recipe equals a craftable recipie, craft that recipe
-            if (recipies[i] == currentRecipeString)
+            if (recipes[i] == currentRecipeString)
             {
                 int currentRecipe = i;
 
                 Vector3 spawnPos = this.transform.position;
 
                 //spawn the coffee
-                GameObject newCoffee = Instantiate(recipieResults[i], spawnPos, Quaternion.identity);
+                GameObject newCoffee = Instantiate(recipeResults[i], spawnPos, Quaternion.identity);
 
                 EmptyCapacity();
             }
@@ -114,6 +163,6 @@ public class CraftCoffee : MonoBehaviour
 
 /*
  * A RECEPIE SHOULD BE WRITTEN LIKE THIS:
- * if you want to craft a coffee which needs, CupBox, CoffeeBox and MilkBox
- * the recepie should be written as CupBox, CoffeeBox, and MilkBox
+ * if you want to craft a Latte which needs, Milk, CoffeeBeans and Null
+ * the recepie should be written as MilkCoffeeBeansNull
  */
