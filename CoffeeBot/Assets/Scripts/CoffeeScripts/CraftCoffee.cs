@@ -15,8 +15,8 @@ public class CraftCoffee : MonoBehaviour
 
     [Header("Recipie Crafting")]
 
-    public string[] recipies;
-    public GameObject[] recipieResults;
+    public List<string> recipies = new List<string>();
+    public List<GameObject> recipieResults = new List<GameObject>();
 
 
     [Header("Ability to Craft")]
@@ -71,7 +71,7 @@ public class CraftCoffee : MonoBehaviour
         }
 
         // check all recipies 
-        for (int i = 0; i < recipies.Length; i++)
+        for (int i = 0; i < recipies.Count; i++)
         {
             // if the current recipe equals a craftable recipie, craft that recipe
             if (recipies[i] == currentRecipeString)
