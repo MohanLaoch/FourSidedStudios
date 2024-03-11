@@ -690,3 +690,11 @@
 | • Prevented ingredients from going into negative |
 | • Updated tutorial storage unit |
 | • Added spawn code for new unlocked coffee |
+
+| **Mark** |
+| :--- |
+| • Imported Sugar Rush Kid (SRK)|
+| • Added the above to mark scene|
+| • created materials|
+| • added eyes to SRK + clothed npc|
+| • created srk animator|
