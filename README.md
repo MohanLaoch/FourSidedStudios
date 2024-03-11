@@ -689,3 +689,4 @@
 | • Added new icons to storage system |
 | • Prevented ingredients from going into negative |
 | • Updated tutorial storage unit |
+| • Added spawn code for new unlocked coffee |

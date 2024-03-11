@@ -13,9 +13,15 @@ public class UnlockCoffee : MonoBehaviour
     public GameObject ice;
     public GameObject teaBags;
 
-    private bool hasCocoPowder;
-    private bool hasIce;
-    private bool hasTeaBags;
+    public Transform cocoPowderSpawn;
+    public Transform iceSpawn;
+    public Transform teaBagsSpawn;
+
+
+    [HideInInspector]
+    public bool hasCocoPowder;
+    public bool hasIce;
+    public bool hasTeaBags;
 
     private int amount = 6;
 
@@ -59,7 +65,7 @@ public class UnlockCoffee : MonoBehaviour
 
         if (!hasTeaBags)
         {
-            // add the teabags to the storage area
+            Instantiate(teaBags, new Vector3(teaBagsSpawn.position.x, teaBagsSpawn.position.y, teaBagsSpawn.position.z), Quaternion.identity);
             hasTeaBags = true;
         }
 
@@ -83,7 +89,7 @@ public class UnlockCoffee : MonoBehaviour
 
         if (!hasCocoPowder)
         {
-            // add the cocopowder to the storage area
+            Instantiate(cocoPowder, new Vector3(cocoPowderSpawn.position.x, cocoPowderSpawn.position.y, cocoPowderSpawn.position.z), Quaternion.identity);
             hasCocoPowder = true;
         }
 
@@ -106,7 +112,7 @@ public class UnlockCoffee : MonoBehaviour
 
         if (!hasIce)
         {
-            // add the ice to the storage area
+            Instantiate(ice, new Vector3(iceSpawn.position.x, iceSpawn.position.y, iceSpawn.position.z), Quaternion.identity);
             hasIce = true;
         }
 
@@ -129,7 +135,7 @@ public class UnlockCoffee : MonoBehaviour
 
         if (!hasIce)
         {
-            // add the ice to the storage area
+            Instantiate(ice, new Vector3(iceSpawn.position.x, iceSpawn.position.y, iceSpawn.position.z), Quaternion.identity);
             hasIce = true;
         }
 
@@ -152,7 +158,7 @@ public class UnlockCoffee : MonoBehaviour
 
         if (!hasCocoPowder)
         {
-            // add the cocopowder to the storage area
+            Instantiate(cocoPowder, new Vector3(cocoPowderSpawn.position.x, cocoPowderSpawn.position.y, cocoPowderSpawn.position.z), Quaternion.identity);
             hasCocoPowder = true;
         }
 
@@ -175,7 +181,7 @@ public class UnlockCoffee : MonoBehaviour
 
         if (!hasTeaBags)
         {
-            // add the teabags to the storage area
+            Instantiate(teaBags, new Vector3(teaBagsSpawn.position.x, teaBagsSpawn.position.y, teaBagsSpawn.position.z), Quaternion.identity);
             hasTeaBags = true;
         }
 
