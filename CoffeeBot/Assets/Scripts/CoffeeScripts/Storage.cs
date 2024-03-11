@@ -49,6 +49,7 @@ public class Storage : MonoBehaviour
         // if the storage is at or below 0 it'll make storedItem null
         if (currentCapacity <= 0)
         {
+            currentCapacity = 0;
             itemName = null;
             storageImage.sprite = nullSprite;
         }
@@ -154,6 +155,7 @@ public class Storage : MonoBehaviour
         itemName = null;
         storageImage.sprite = nullSprite;
         buttonText.text = "E".ToString();
+
     }
 }
 /*

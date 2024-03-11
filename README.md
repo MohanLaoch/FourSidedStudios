@@ -620,7 +620,6 @@
 | • New Order Script |
 | • Organized Scripts into Folders |
 
-
 ### 05/03/2024
 
 | **James** |
@@ -678,6 +677,14 @@
 
 
 ### 11/03/2024
+
 | **Declan** |
 | :--- |
 | • Added throwing mechanic + UI element|
+
+
+| **James** |
+| :--- |
+| • Added new ingredients to storage area |
+| • Added new icons to storage system |
+| • Prevented ingredients from going into negative |
