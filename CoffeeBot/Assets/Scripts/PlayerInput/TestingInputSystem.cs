@@ -71,15 +71,9 @@ public class TestingInputSystem : MonoBehaviour
 
     public void Interact_performed(InputAction.CallbackContext obj)
     {
-     
-        switch(obj.phase)
-        {
-            case InputActionPhase.Started:
-            Debug.Log(obj.interaction + " - Started");
-            break;
-        }
         
-       // OnInteractAction?.Invoke(this, EventArgs.Empty);
+        
+       OnInteractAction?.Invoke(this, EventArgs.Empty);
         
         switch (obj.phase)
         {
@@ -89,9 +83,9 @@ public class TestingInputSystem : MonoBehaviour
                 break;
             case InputActionPhase.Started:
                 Debug.Log(obj.interaction + " - Started");
-                break;
+                break;        
             case InputActionPhase.Canceled:
-                Debug.Log(obj.interaction + " - Canceled");
+                Debug.Log(obj.interaction + " - Canceled");                
                 break;
                 
             

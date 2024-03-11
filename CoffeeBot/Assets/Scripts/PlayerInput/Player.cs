@@ -49,6 +49,12 @@ public class Player : MonoBehaviour
     public Storage storage2;
     public Storage storage3;
 
+    public ThrowBar throwBar;
+    
+    public float ThrowForce = 1f;
+    public float MaxThrowForce = 100f;
+    public float ThrowChargeSpeed = 2f;
+    private GameObject ObjectHeld;
     private void Awake()
     {
         Time.timeScale = 1;
@@ -59,7 +65,12 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         playerInputActions.Player.Flip.performed += Flip;
         playerInputActions.Player.ArmRaise.performed += ArmRaise;
-        
+        playerInputActions.Player.Throw.started += Throw;
+        playerInputActions.Player.Throw.canceled += Throw;
+
+
+
+
 
     }
 
@@ -73,6 +84,9 @@ public class Player : MonoBehaviour
         PlayerMovement = AudioManager.instance.CreateInstance(FMODEvents.instance.Drive);
 
         Daytext.text = "Day:" + sceneInfo.dayCount.ToString("0");
+
+        
+       
     }
 
     private void TestingInputSystem_OnInteractAction(object sender, System.EventArgs e)
@@ -93,6 +107,8 @@ public class Player : MonoBehaviour
                     return;
                 }
                 Holding = true;
+                ObjectHeld = interactableTest.gameObject;
+                
                 interactableTest.Interact();
                 Grabbing.setParameterByNameWithLabel("Parameter 2", "Grab");
                 UpdateGrabSound();
@@ -135,7 +151,7 @@ public class Player : MonoBehaviour
 
         HandleMovement();
         UpdateMovementSound();
-
+        
         MaxSpeed = sceneInfo.playerSpeed;
         Acceleration = sceneInfo.playerAcceleration;
         RotSpeed = sceneInfo.playerRotSpeed;
@@ -244,6 +260,37 @@ public class Player : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.Flip, this.transform.position);
         }
 
+    }
+
+    public void Throw(InputAction.CallbackContext context)
+    {
+        Vector3 ThrowDir = transform.TransformDirection(Vector3.forward);
+        if (context.started && Holding)
+        {
+
+            ThrowForce += ThrowChargeSpeed;
+            throwBar.SetThrow(ThrowForce);
+            Debug.Log(ThrowForce);
+                     
+
+            if(ThrowForce >= MaxThrowForce)
+            {
+                ThrowForce = MaxThrowForce;
+            }
+        }
+
+        if(context.canceled && context.duration > 1f && Holding)
+        {
+            Debug.Log("Like rynn in a nuzlocke, you are throwing");
+            ObjectHeld.GetComponent<InteractableTest>().Drop();
+            ObjectHeld.GetComponent<Rigidbody>().AddForce(ThrowDir * ThrowForce, ForceMode.Impulse);
+            ObjectHeld.GetComponent<Rigidbody>().AddForce(Vector3.up * (ThrowForce / 2), ForceMode.Impulse);
+
+            
+            ThrowForce = 1f;
+            Holding = false;
+            
+        }
     }
 
 

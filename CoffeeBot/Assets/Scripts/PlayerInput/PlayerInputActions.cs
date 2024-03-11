@@ -60,7 +60,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""id"": ""56deff7d-426a-4f4f-acaa-4b8765dd96b6"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Tap,Hold"",
+                    ""interactions"": ""Tap"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -89,6 +89,15 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Throw"",
+                    ""type"": ""Value"",
+                    ""id"": ""075ef56d-0d69-488f-a6be-b426448437df"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Hold(duration=1,pressPoint=1)"",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -212,6 +221,229 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Empty"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a2cf2de3-964e-47c9-a4b7-b1fcbdab7dff"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throw"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Player1"",
+            ""id"": ""ce2d4e8d-540b-47cd-a9ab-6c23f51f7254"",
+            ""actions"": [
+                {
+                    ""name"": ""Flip"",
+                    ""type"": ""Button"",
+                    ""id"": ""2b341630-f425-4cef-a80a-ca486a403829"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""Value"",
+                    ""id"": ""ee8dd3ac-634b-4b59-b19e-de7db04ff3a6"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Rotate"",
+                    ""type"": ""Value"",
+                    ""id"": ""7a9dbd95-4261-4147-85f1-998f309c8206"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""33131a81-9533-4fbe-a747-10386df49f75"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Tap"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ArmRaise"",
+                    ""type"": ""Button"",
+                    ""id"": ""1e063fa4-f6b5-4ca2-9309-5efc88233da1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Store"",
+                    ""type"": ""Button"",
+                    ""id"": ""9387c2a7-31b7-4c7d-aa80-c9b0c2ab2780"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Empty"",
+                    ""type"": ""Button"",
+                    ""id"": ""88abd95f-3351-47f5-aaf3-162d9a354cb2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Throw"",
+                    ""type"": ""Button"",
+                    ""id"": ""6554f7c4-6b08-40dc-9de1-8a50c47feb74"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold(duration=1,pressPoint=1)"",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""d33b6e26-bb0f-4f64-af20-e67028d9b69f"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Flip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""5fecc7f1-9a6d-4bb5-b3f5-a4380d0c0e5c"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Negative"",
+                    ""id"": ""c333ebd0-67c1-414a-8a33-6c7c4151852f"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Positive"",
+                    ""id"": ""dda1961c-9e5d-4f63-8635-60d6f0684edf"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""3d7e7319-46c2-4e29-b8ed-c76032ca0e10"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Negative"",
+                    ""id"": ""8e671b8e-346a-4689-ac53-1bddaed9c9e2"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Positive"",
+                    ""id"": ""77e1a67f-141e-46cc-8e0d-6ecf8a824fdf"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b06e4a88-df1a-464b-b71c-fa566c933968"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""21a4a7db-1ac2-4856-b820-a7370627de24"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ArmRaise"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e5455a01-2563-4754-9407-6bf91926505d"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Store"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b96638ee-e283-47f7-ab5c-6fdb69726db9"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Empty"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f3345dfb-ce0e-4fb1-bd08-1807260c1522"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throw"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -255,6 +487,17 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Player_ArmRaise = m_Player.FindAction("ArmRaise", throwIfNotFound: true);
         m_Player_Store = m_Player.FindAction("Store", throwIfNotFound: true);
         m_Player_Empty = m_Player.FindAction("Empty", throwIfNotFound: true);
+        m_Player_Throw = m_Player.FindAction("Throw", throwIfNotFound: true);
+        // Player1
+        m_Player1 = asset.FindActionMap("Player1", throwIfNotFound: true);
+        m_Player1_Flip = m_Player1.FindAction("Flip", throwIfNotFound: true);
+        m_Player1_Movement = m_Player1.FindAction("Movement", throwIfNotFound: true);
+        m_Player1_Rotate = m_Player1.FindAction("Rotate", throwIfNotFound: true);
+        m_Player1_Interact = m_Player1.FindAction("Interact", throwIfNotFound: true);
+        m_Player1_ArmRaise = m_Player1.FindAction("ArmRaise", throwIfNotFound: true);
+        m_Player1_Store = m_Player1.FindAction("Store", throwIfNotFound: true);
+        m_Player1_Empty = m_Player1.FindAction("Empty", throwIfNotFound: true);
+        m_Player1_Throw = m_Player1.FindAction("Throw", throwIfNotFound: true);
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
         m_Menu_Escape = m_Menu.FindAction("Escape", throwIfNotFound: true);
@@ -324,6 +567,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_ArmRaise;
     private readonly InputAction m_Player_Store;
     private readonly InputAction m_Player_Empty;
+    private readonly InputAction m_Player_Throw;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -335,6 +579,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @ArmRaise => m_Wrapper.m_Player_ArmRaise;
         public InputAction @Store => m_Wrapper.m_Player_Store;
         public InputAction @Empty => m_Wrapper.m_Player_Empty;
+        public InputAction @Throw => m_Wrapper.m_Player_Throw;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -365,6 +610,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Empty.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmpty;
                 @Empty.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmpty;
                 @Empty.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmpty;
+                @Throw.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
+                @Throw.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
+                @Throw.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -390,10 +638,102 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Empty.started += instance.OnEmpty;
                 @Empty.performed += instance.OnEmpty;
                 @Empty.canceled += instance.OnEmpty;
+                @Throw.started += instance.OnThrow;
+                @Throw.performed += instance.OnThrow;
+                @Throw.canceled += instance.OnThrow;
             }
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // Player1
+    private readonly InputActionMap m_Player1;
+    private IPlayer1Actions m_Player1ActionsCallbackInterface;
+    private readonly InputAction m_Player1_Flip;
+    private readonly InputAction m_Player1_Movement;
+    private readonly InputAction m_Player1_Rotate;
+    private readonly InputAction m_Player1_Interact;
+    private readonly InputAction m_Player1_ArmRaise;
+    private readonly InputAction m_Player1_Store;
+    private readonly InputAction m_Player1_Empty;
+    private readonly InputAction m_Player1_Throw;
+    public struct Player1Actions
+    {
+        private @PlayerInputActions m_Wrapper;
+        public Player1Actions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Flip => m_Wrapper.m_Player1_Flip;
+        public InputAction @Movement => m_Wrapper.m_Player1_Movement;
+        public InputAction @Rotate => m_Wrapper.m_Player1_Rotate;
+        public InputAction @Interact => m_Wrapper.m_Player1_Interact;
+        public InputAction @ArmRaise => m_Wrapper.m_Player1_ArmRaise;
+        public InputAction @Store => m_Wrapper.m_Player1_Store;
+        public InputAction @Empty => m_Wrapper.m_Player1_Empty;
+        public InputAction @Throw => m_Wrapper.m_Player1_Throw;
+        public InputActionMap Get() { return m_Wrapper.m_Player1; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(Player1Actions set) { return set.Get(); }
+        public void SetCallbacks(IPlayer1Actions instance)
+        {
+            if (m_Wrapper.m_Player1ActionsCallbackInterface != null)
+            {
+                @Flip.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnFlip;
+                @Flip.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnFlip;
+                @Flip.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnFlip;
+                @Movement.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMovement;
+                @Movement.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMovement;
+                @Movement.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMovement;
+                @Rotate.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnRotate;
+                @Rotate.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnRotate;
+                @Rotate.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnRotate;
+                @Interact.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnInteract;
+                @ArmRaise.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnArmRaise;
+                @ArmRaise.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnArmRaise;
+                @ArmRaise.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnArmRaise;
+                @Store.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnStore;
+                @Store.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnStore;
+                @Store.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnStore;
+                @Empty.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnEmpty;
+                @Empty.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnEmpty;
+                @Empty.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnEmpty;
+                @Throw.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnThrow;
+                @Throw.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnThrow;
+                @Throw.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnThrow;
+            }
+            m_Wrapper.m_Player1ActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Flip.started += instance.OnFlip;
+                @Flip.performed += instance.OnFlip;
+                @Flip.canceled += instance.OnFlip;
+                @Movement.started += instance.OnMovement;
+                @Movement.performed += instance.OnMovement;
+                @Movement.canceled += instance.OnMovement;
+                @Rotate.started += instance.OnRotate;
+                @Rotate.performed += instance.OnRotate;
+                @Rotate.canceled += instance.OnRotate;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
+                @ArmRaise.started += instance.OnArmRaise;
+                @ArmRaise.performed += instance.OnArmRaise;
+                @ArmRaise.canceled += instance.OnArmRaise;
+                @Store.started += instance.OnStore;
+                @Store.performed += instance.OnStore;
+                @Store.canceled += instance.OnStore;
+                @Empty.started += instance.OnEmpty;
+                @Empty.performed += instance.OnEmpty;
+                @Empty.canceled += instance.OnEmpty;
+                @Throw.started += instance.OnThrow;
+                @Throw.performed += instance.OnThrow;
+                @Throw.canceled += instance.OnThrow;
+            }
+        }
+    }
+    public Player1Actions @Player1 => new Player1Actions(this);
 
     // Menu
     private readonly InputActionMap m_Menu;
@@ -436,6 +776,18 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnArmRaise(InputAction.CallbackContext context);
         void OnStore(InputAction.CallbackContext context);
         void OnEmpty(InputAction.CallbackContext context);
+        void OnThrow(InputAction.CallbackContext context);
+    }
+    public interface IPlayer1Actions
+    {
+        void OnFlip(InputAction.CallbackContext context);
+        void OnMovement(InputAction.CallbackContext context);
+        void OnRotate(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
+        void OnArmRaise(InputAction.CallbackContext context);
+        void OnStore(InputAction.CallbackContext context);
+        void OnEmpty(InputAction.CallbackContext context);
+        void OnThrow(InputAction.CallbackContext context);
     }
     public interface IMenuActions
     {
