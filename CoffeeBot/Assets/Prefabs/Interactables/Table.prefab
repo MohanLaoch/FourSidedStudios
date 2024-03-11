@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 4892935917054380668}
   m_Layer: 7
   m_Name: Table
-  m_TagString: Untagged
+  m_TagString: Table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -278,6 +278,7 @@ MonoBehaviour:
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
   NPCAnim: {fileID: 0}
+  isMoving: 0
 --- !u!208 &4892935917054380668
 NavMeshObstacle:
   m_ObjectHideFlags: 0

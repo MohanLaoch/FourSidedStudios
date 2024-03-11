@@ -9,6 +9,7 @@ public class NpcSittingState : NpcBaseState
     public Animator NpcAnim;
     private GameObject currentChair;
     bool isSitting = false;
+    
     public override void EnterState(NpcStateManager npc)
     {
         
@@ -75,11 +76,11 @@ public class NpcSittingState : NpcBaseState
         {
             npc.SwitchState(npc.injuredState);
         }
-        if(collision.gameObject.CompareTag("NPC"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Interactables") && collision.gameObject.GetComponent<InteractableTest>().isMoving == true)
         {
-            
+            npc.SwitchState(npc.injuredState);
         }
-
+    
    
     }
 }

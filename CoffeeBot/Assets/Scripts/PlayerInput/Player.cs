@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
     public MoneyTracker moneytracker;
 
     public bool Holding;
+    public bool HoldingNPC = false;
     public bool isMoving = false;
 
     public Vector3 boxSize;
@@ -54,7 +55,7 @@ public class Player : MonoBehaviour
     public float ThrowForce = 1f;
     public float MaxThrowForce = 10f;
     public float ThrowChargeSpeed = 1f;
-    private GameObject ObjectHeld;
+    public GameObject ObjectHeld;
 
     private WaitForEndOfFrame waitForEndOfFrame;
     private void Awake()
@@ -108,7 +109,12 @@ public class Player : MonoBehaviour
                 {
                     return;
                 }
+                if (interactableTest.CompareTag("NPC"))
+                {
+                    HoldingNPC = true;
+                }
                 Holding = true;
+                
                 ObjectHeld = interactableTest.gameObject;
                 
                 interactableTest.Interact();
@@ -139,6 +145,7 @@ public class Player : MonoBehaviour
                 UpdateGrabSound();
                 //AudioManager.instance.PlayOneShot(FMODEvents.instance.dropSound, this.transform.position);
                 Holding = false;
+                HoldingNPC = false;
 
             }
             

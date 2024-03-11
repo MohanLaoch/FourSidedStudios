@@ -12,7 +12,7 @@ public class InteractableTest : MonoBehaviour
     public Animator NPCAnim;
 
     private NpcStateManager npcStateManager;
-
+    public bool isMoving = false;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -24,7 +24,25 @@ public class InteractableTest : MonoBehaviour
     {
         
     }
+    public void Update()
+    {
+        if(gameObject.CompareTag("Chair") || gameObject.CompareTag("Table"))
+        {
+            if (rb.velocity.magnitude > 0.1 && GetComponent<NavMeshObstacle>() == true)
+            {
+                isMoving = true;
+                GetComponent<NavMeshObstacle>().enabled = false;
 
+            }
+            else
+            {
+                isMoving = false;
+                GetComponent<NavMeshObstacle>().enabled = true;
+
+            }
+        }
+       
+    }
     public void Interact()
     {
         

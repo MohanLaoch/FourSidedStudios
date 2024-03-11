@@ -70,5 +70,11 @@ public class NpcWanderState : NpcBaseState
         {
             npc.SwitchState(npc.injuredState);
         }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Interactables") && collision.gameObject.GetComponent<InteractableTest>().isMoving == true)
+        {
+            Debug.Log("boomtown");
+            npc.SwitchState(npc.injuredState);
+        }
     }
 }

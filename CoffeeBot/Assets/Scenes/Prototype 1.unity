@@ -5327,6 +5327,7 @@ MonoBehaviour:
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
   NPCAnim: {fileID: 0}
+  isMoving: 0
 --- !u!4 &472568936 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 90082780381895707, guid: 8637d8e244176d2419924aa9ce5cfe56, type: 3}
@@ -7374,6 +7375,7 @@ MonoBehaviour:
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
   NPCAnim: {fileID: 0}
+  isMoving: 0
 --- !u!1001 &610709037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8975,6 +8977,7 @@ MonoBehaviour:
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
   NPCAnim: {fileID: 0}
+  isMoving: 0
 --- !u!1 &732900819
 GameObject:
   m_ObjectHideFlags: 0
@@ -9471,6 +9474,7 @@ MonoBehaviour:
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
   NPCAnim: {fileID: 0}
+  isMoving: 0
 --- !u!4 &763635492 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 90082780381895707, guid: 8637d8e244176d2419924aa9ce5cfe56, type: 3}
@@ -25576,6 +25580,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
+      propertyPath: Speed
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 5832073143232699492, guid: cdef39fb5fdc82d41b5b83785ce44111, type: 3}
       propertyPath: Daytext
       value: 

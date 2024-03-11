@@ -22,9 +22,10 @@ public class NpcInjuredState : NpcBaseState
     public InteractableTest interactableTest;
     public SlipperyFloor slipperyFloor;
     public Player player;
+    
     public override void EnterState(NpcStateManager npc)
     {
-       
+        
         
         InjuryCounter++;
         NpcTransform = npc.GetComponent<Transform>();
@@ -56,7 +57,6 @@ public class NpcInjuredState : NpcBaseState
         if(player.Holding == true)
         {
             Npcrb.transform.rotation = interactableTest.rb.transform.rotation;
-
         }
        
 
@@ -71,12 +71,11 @@ public class NpcInjuredState : NpcBaseState
             currentTime = timerLimit;
             
         }
-        if (currentTime <= 0 && npc.player.Holding == true)
+        if (currentTime <= 0 && npc.player.Holding == true && player.HoldingNPC == true)
         {
             currentTime = maxTime;
         }
-
-        if (currentTime <= 0 && npc.player.Holding == false)
+       else if (currentTime <= 0 && npc.player.HoldingNPC == false)
         {
             NpcTransform.rotation = Quaternion.Euler(0, 0, 0);
             NpcTransform.position = new Vector3(NpcTransform.position.x, 2f, NpcTransform.position.z);

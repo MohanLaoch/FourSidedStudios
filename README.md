@@ -681,6 +681,8 @@
 | **Declan** |
 | :--- |
 | • Added throwing mechanic + UI element|
+| • Fixed holding bug|
+| • Fixed collision bug|
 
 
 | **James** |
