@@ -11,7 +11,7 @@ public class TestingInputSystem : MonoBehaviour
     public float FlipForceRot = 5f;
 
     public event EventHandler OnInteractAction;
-    public event EventHandler OnThrowAction;
+    
     public PlayerInput playerInput;
     private PlayerInputActions playerInputActions;
 
@@ -37,10 +37,15 @@ public class TestingInputSystem : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
+        playerInputActions.Player.Interact.started += Interact_started;
         playerInputActions.Player.Interact.performed += Interact_performed;
         
     }
 
+    private void Interact_started(InputAction.CallbackContext obj)
+    {
+        
+    }
 
     public float GetMovementFloat()
     {
@@ -52,7 +57,7 @@ public class TestingInputSystem : MonoBehaviour
     public float GetRotFloat()
     {
         float RotDirection = playerInputActions.Player.Rotate.ReadValue<float>();
-
+       
         return RotDirection;
     }
 
@@ -64,10 +69,17 @@ public class TestingInputSystem : MonoBehaviour
 
    
 
-    public void Interact_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    public void Interact_performed(InputAction.CallbackContext obj)
     {
      
-        OnInteractAction?.Invoke(this, EventArgs.Empty);
+        switch(obj.phase)
+        {
+            case InputActionPhase.Started:
+            Debug.Log(obj.interaction + " - Started");
+            break;
+        }
+        
+       // OnInteractAction?.Invoke(this, EventArgs.Empty);
         
         switch (obj.phase)
         {
