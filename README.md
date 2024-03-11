@@ -688,3 +688,4 @@
 | • Added new ingredients to storage area |
 | • Added new icons to storage system |
 | • Prevented ingredients from going into negative |
+| • Updated tutorial storage unit |
