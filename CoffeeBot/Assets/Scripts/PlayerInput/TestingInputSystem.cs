@@ -16,7 +16,12 @@ public class TestingInputSystem : MonoBehaviour
     private PlayerInputActions playerInputActions;
 
 
+    public ThrowBar throwBar;
 
+    public float ThrowForce = 1f;
+    public float MaxThrowForce = 100f;
+    public float ThrowChargeSpeed = 2f;
+    private GameObject ObjectHeld;
 
     [SerializeField] private LayerMask interactablesLayerMask;
 
@@ -39,7 +44,8 @@ public class TestingInputSystem : MonoBehaviour
         playerInputActions.Player.Enable();
         playerInputActions.Player.Interact.started += Interact_started;
         playerInputActions.Player.Interact.performed += Interact_performed;
-        
+    
+
     }
 
     private void Interact_started(InputAction.CallbackContext obj)
@@ -91,6 +97,8 @@ public class TestingInputSystem : MonoBehaviour
             
         }
     }
+
+    
 
     
  

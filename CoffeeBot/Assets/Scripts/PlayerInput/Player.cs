@@ -52,9 +52,11 @@ public class Player : MonoBehaviour
     public ThrowBar throwBar;
     
     public float ThrowForce = 1f;
-    public float MaxThrowForce = 100f;
-    public float ThrowChargeSpeed = 2f;
+    public float MaxThrowForce = 10f;
+    public float ThrowChargeSpeed = 1f;
     private GameObject ObjectHeld;
+
+    private WaitForEndOfFrame waitForEndOfFrame;
     private void Awake()
     {
         Time.timeScale = 1;
@@ -69,7 +71,7 @@ public class Player : MonoBehaviour
         playerInputActions.Player.Throw.canceled += Throw;
 
 
-
+        waitForEndOfFrame = new WaitForEndOfFrame();
 
 
     }
@@ -254,7 +256,7 @@ public class Player : MonoBehaviour
         Vector3 FlipDir = transform.TransformDirection(Vector3.forward);
         if (context.performed && IsGrounded())
         {
-            Debug.Log("ermwhattheflip" + context.phase);
+            
             rb.AddForce(Vector3.up * FlipForce, ForceMode.Impulse);
             rb.AddTorque(FlipDir * FlipForceRot, ForceMode.Impulse);
             AudioManager.instance.PlayOneShot(FMODEvents.instance.Flip, this.transform.position);
@@ -267,31 +269,47 @@ public class Player : MonoBehaviour
         Vector3 ThrowDir = transform.TransformDirection(Vector3.forward);
         if (context.started && Holding)
         {
-
-            ThrowForce += ThrowChargeSpeed;
-            throwBar.SetThrow(ThrowForce);
-            Debug.Log(ThrowForce);
-                     
-
-            if(ThrowForce >= MaxThrowForce)
-            {
-                ThrowForce = MaxThrowForce;
-            }
+            Debug.Log("start");
+            StartCoroutine(HoldButtonRoutine());
         }
 
-        if(context.canceled && context.duration > 1f && Holding)
+        if(context.canceled && Holding)
         {
+            
             Debug.Log("Like rynn in a nuzlocke, you are throwing");
             ObjectHeld.GetComponent<InteractableTest>().Drop();
             ObjectHeld.GetComponent<Rigidbody>().AddForce(ThrowDir * ThrowForce, ForceMode.Impulse);
             ObjectHeld.GetComponent<Rigidbody>().AddForce(Vector3.up * (ThrowForce / 2), ForceMode.Impulse);
 
             
-            ThrowForce = 1f;
+            ThrowForce = 0f;
             Holding = false;
+            throwBar.SetThrow(ThrowForce);
             
         }
+        IEnumerator HoldButtonRoutine()
+        {
+            yield return new WaitUntil(context.ReadValueAsButton);
+            while (context.ReadValueAsButton())
+            {
+                ThrowForce += ThrowChargeSpeed * Time.fixedDeltaTime;
+                throwBar.SetThrow(ThrowForce);
+                yield return waitForEndOfFrame;
+            }
+
+            if (ThrowForce >= MaxThrowForce)
+            {
+                ThrowForce = MaxThrowForce;
+            }
+
+
+        }
     }
+
+    
+
+
+
 
 
 
