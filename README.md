@@ -700,3 +700,11 @@
 | • created materials|
 | • added eyes to SRK + clothed npc|
 | • created srk animator|
+
+### 12/03/2024
+
+| **James** |
+| :--- |
+| • Added Unlock Coffee UI |
+| • Tested systems working together - they just need polish and the order to be added |
+| • Created new script with full list of what an NPC can currently order |

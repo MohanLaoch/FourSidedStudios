@@ -7,12 +7,14 @@ public class UnlockCoffee : MonoBehaviour
     // Player starts off being able to make an Americano, a Cappuccino, and a Latte
 
     public CraftCoffee craftCoffee;
-    public OrderCoffee orderCoffee;
+    public AvaliableOrders avaliableOrders;
 
+    [Header("Storage Boxes")]
     public GameObject cocoPowder;
     public GameObject ice;
     public GameObject teaBags;
 
+    [Header("Spawn Areas")]
     public Transform cocoPowderSpawn;
     public Transform iceSpawn;
     public Transform teaBagsSpawn;
@@ -20,32 +22,24 @@ public class UnlockCoffee : MonoBehaviour
 
     [HideInInspector]
     public bool hasCocoPowder;
+    [HideInInspector]
     public bool hasIce;
+    [HideInInspector]
     public bool hasTeaBags;
 
     private int amount = 6;
 
-    [Header("Chai Latte")]
+    [Header("Coffee Prefabs")]
 
     public GameObject chaiLatte;
 
-    [Header("Hot Chocolate")]
-
     public GameObject hotChocolate;
-
-    [Header("Iced Coffee")]
 
     public GameObject icedCoffee;
 
-    [Header("Iced Latte")]
-
     public GameObject icedLatte;
 
-    [Header("Mocha")]
-
     public GameObject mocha;
-
-    [Header("Tea")]
 
     public GameObject tea;
 
@@ -69,7 +63,7 @@ public class UnlockCoffee : MonoBehaviour
             hasTeaBags = true;
         }
 
-        orderCoffee.coffeeOrders.Add("ChaiLatte");
+        avaliableOrders.coffeeOrders.Add("ChaiLatte");
             
     }
 
@@ -93,7 +87,7 @@ public class UnlockCoffee : MonoBehaviour
             hasCocoPowder = true;
         }
 
-        orderCoffee.coffeeOrders.Add("HotChocolate");
+        avaliableOrders.coffeeOrders.Add("HotChocolate");
     }
 
     public void UnlockIcedCoffee()
@@ -116,7 +110,7 @@ public class UnlockCoffee : MonoBehaviour
             hasIce = true;
         }
 
-        orderCoffee.coffeeOrders.Add("IcedCoffee");
+        avaliableOrders.coffeeOrders.Add("IcedCoffee");
     }
 
     public void UnlockIcedLatte()
@@ -139,7 +133,7 @@ public class UnlockCoffee : MonoBehaviour
             hasIce = true;
         }
 
-        orderCoffee.coffeeOrders.Add("IcedLatte");
+        avaliableOrders.coffeeOrders.Add("IcedLatte");
     }
 
     public void UnlockMocha()
@@ -162,10 +156,10 @@ public class UnlockCoffee : MonoBehaviour
             hasCocoPowder = true;
         }
 
-        orderCoffee.coffeeOrders.Add("Mocha");
+        avaliableOrders.coffeeOrders.Add("Mocha");
     }
 
-    public void Tea()
+    public void UnlockTea()
     {
         craftCoffee.recipes.Add("MilkWaterTeaBags");
         craftCoffee.recipes.Add("MilkTeaBagsWater");
@@ -185,7 +179,7 @@ public class UnlockCoffee : MonoBehaviour
             hasTeaBags = true;
         }
 
-        orderCoffee.coffeeOrders.Add("Tea");
+        avaliableOrders.coffeeOrders.Add("Tea");
     }
 }
 

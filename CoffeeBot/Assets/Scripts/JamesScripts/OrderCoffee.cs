@@ -8,12 +8,11 @@ public class OrderCoffee : MonoBehaviour
 {
     [Header("Script References")]
 
+    public AvaliableOrders avaliableOrders;
     public Player player;
     public MoneyTracker moneyTracker;
 
     [Header("Coffee")]
-
-    public List<string> coffeeOrders = new List<string>();
 
     public string acceptedCoffeeTag;
 
@@ -31,6 +30,7 @@ public class OrderCoffee : MonoBehaviour
     {
         // assign player script
         player = GameObject.Find("CoffeeBotAnimated3").GetComponent<Player>();
+        avaliableOrders = GameObject.Find("UnlockCoffee").GetComponent<AvaliableOrders>();
 
         responseBubble.SetActive(false);
         timerBubble.SetActive(true);
@@ -44,9 +44,9 @@ public class OrderCoffee : MonoBehaviour
         acceptedCoffeeTag = null;
 
         // choose a random string from coffeeOrders
-        int randomIndex = Random.Range(0, coffeeOrders.Count);
+        int randomIndex = Random.Range(0, avaliableOrders.coffeeOrders.Count);
 
-        acceptedCoffeeTag = coffeeOrders[randomIndex];
+        acceptedCoffeeTag = avaliableOrders.coffeeOrders[randomIndex];
 
         // start the timer
         moneyTracker.StartTimer();
