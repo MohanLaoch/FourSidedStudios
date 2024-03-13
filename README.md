@@ -708,3 +708,7 @@
 | • Added Unlock Coffee UI |
 | • Tested systems working together - they just need polish and the order to be added |
 | • Created new script with full list of what an NPC can currently order |
+
+| **Niamh** |
+| :--- |
+| • Added MenuBoard to NiamhScene |
