@@ -11,6 +11,7 @@ public class OrderCoffee : MonoBehaviour
     public AvaliableOrders avaliableOrders;
     public Player player;
     public MoneyTracker moneyTracker;
+    
 
     [Header("Coffee")]
 
@@ -61,8 +62,7 @@ public class OrderCoffee : MonoBehaviour
 
             Destroy(other.gameObject);
 
-            other.GetComponent<NpcStateManager>().SwitchState(other.GetComponent<NpcStateManager>().leavingState);
-
+            
             //reset itemholding bool here
             player.Holding = false;
         }
@@ -85,7 +85,7 @@ public class OrderCoffee : MonoBehaviour
         string randomResponse = orderResponses[randomIndex];
 
         responseText.text = randomResponse;
-
+        GetComponent<NpcStateManager>().SwitchState(GetComponent<NpcStateManager>().leavingState);
         
     }
 

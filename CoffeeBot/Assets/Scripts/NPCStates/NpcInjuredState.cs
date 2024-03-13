@@ -52,6 +52,8 @@ public class NpcInjuredState : NpcBaseState
         NpcTransform = npc.GetComponent<Transform>();
         Npcrb = npc.GetComponent<Rigidbody>();
         Anim.SetBool("Fallen", true);
+        Anim.SetBool("IsSitting", false);
+
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         interactableTest = npc.gameObject.GetComponent<InteractableTest>();
 
