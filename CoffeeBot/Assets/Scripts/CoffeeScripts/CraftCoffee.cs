@@ -19,11 +19,10 @@ public class CraftCoffee : MonoBehaviour
     public GameObject cappuccino;
     public GameObject latte;
 
-    [HideInInspector]
+    
     public List<string> recipes = new List<string>();
-    [HideInInspector]
+    
     public List<GameObject> recipeResults = new List<GameObject>();
-    private int amount = 6;
 
 
     [Header("Ability to Craft")]
@@ -34,7 +33,7 @@ public class CraftCoffee : MonoBehaviour
 
     private bool canCraft = true;
 
-    private void Awake()
+    private void Start()
     {
         // Americano
 
@@ -45,10 +44,12 @@ public class CraftCoffee : MonoBehaviour
         recipes.Add("NullWaterCoffeeBeans");
         recipes.Add("NullWaterCoffeeBeans");
 
-        for (int i = amount; i == amount; i++)
-        {
-            recipeResults.Add(americano);
-        }
+        recipeResults.Add(americano);
+        recipeResults.Add(americano);
+        recipeResults.Add(americano);
+        recipeResults.Add(americano);
+        recipeResults.Add(americano);
+        recipeResults.Add(americano);
 
         //Cappuccino
 
@@ -56,10 +57,9 @@ public class CraftCoffee : MonoBehaviour
         recipes.Add("MilkCoffeeBeansMilk");
         recipes.Add("CoffeeBeansMilkMilk");
 
-        for (int i = 3; i == 3; i++)
-        {
-            recipeResults.Add(cappuccino);
-        }
+        recipeResults.Add(cappuccino);
+        recipeResults.Add(cappuccino);
+        recipeResults.Add(cappuccino);
 
         //Latte
 
@@ -70,10 +70,12 @@ public class CraftCoffee : MonoBehaviour
         recipes.Add("NullMilkCoffeeBeans");
         recipes.Add("NullCoffeeBeansMilk");
 
-        for (int i = amount; i == amount; i++)
-        {
-            recipeResults.Add(latte);
-        }
+        recipeResults.Add(latte);
+        recipeResults.Add(latte);
+        recipeResults.Add(latte);
+        recipeResults.Add(latte);
+        recipeResults.Add(latte);
+        recipeResults.Add(latte);
     }
 
     // Update is called once per frame
@@ -83,15 +85,15 @@ public class CraftCoffee : MonoBehaviour
         storedItems[1] = storageB.itemName;
         storedItems[2] = storageC.itemName;
 
-        CheckForCreatedRecipies();
+        
     }
 
-    void CheckForCreatedRecipies()
+    public void CheckForCreatedRecipies()
     {
         if (canCraft)
         {
             StartCoroutine(CreateCoffee());
-            
+
         }
         else
             return;
@@ -139,7 +141,7 @@ public class CraftCoffee : MonoBehaviour
         yield return new WaitForSeconds(secondsToWait);
 
         canCraft = true;
-        
+
 
     }
 

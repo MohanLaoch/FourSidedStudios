@@ -58,8 +58,11 @@ public class OrderCoffee : MonoBehaviour
         if (other.gameObject.tag == acceptedCoffeeTag)
         {
             CompleteOrder();
+
             Destroy(other.gameObject);
+
             other.GetComponent<NpcStateManager>().SwitchState(other.GetComponent<NpcStateManager>().leavingState);
+
             //reset itemholding bool here
             player.Holding = false;
         }

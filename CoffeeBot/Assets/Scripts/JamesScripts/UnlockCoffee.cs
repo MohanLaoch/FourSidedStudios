@@ -27,8 +27,6 @@ public class UnlockCoffee : MonoBehaviour
     [HideInInspector]
     public bool hasTeaBags;
 
-    private int amount = 6;
-
     [Header("Coffee Prefabs")]
 
     public GameObject chaiLatte;
@@ -52,10 +50,12 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipes.Add("NullMilkTeaBags");
         craftCoffee.recipes.Add("NullTeaBagsMilk");
 
-        for (int i = amount; i == amount; i++ )
-        {
-            craftCoffee.recipeResults.Add(chaiLatte);
-        }
+        craftCoffee.recipeResults.Add(chaiLatte);
+        craftCoffee.recipeResults.Add(chaiLatte);
+        craftCoffee.recipeResults.Add(chaiLatte);
+        craftCoffee.recipeResults.Add(chaiLatte);
+        craftCoffee.recipeResults.Add(chaiLatte);
+        craftCoffee.recipeResults.Add(chaiLatte);
 
         if (!hasTeaBags)
         {
@@ -76,10 +76,12 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipes.Add("NullMilkCocoPowder");
         craftCoffee.recipes.Add("NullCocoPowderMilk");
 
-        for (int i = amount; i == amount; i++)
-        {
-            craftCoffee.recipeResults.Add(hotChocolate);
-        }
+        craftCoffee.recipeResults.Add(hotChocolate);
+        craftCoffee.recipeResults.Add(hotChocolate);
+        craftCoffee.recipeResults.Add(hotChocolate);
+        craftCoffee.recipeResults.Add(hotChocolate);
+        craftCoffee.recipeResults.Add(hotChocolate);
+        craftCoffee.recipeResults.Add(hotChocolate);
 
         if (!hasCocoPowder)
         {
@@ -99,10 +101,12 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipes.Add("WaterIceCoffeeBeans");
         craftCoffee.recipes.Add("WaterCoffeeBeansIce");
 
-        for (int i = amount; i == amount; i++)
-        {
-            craftCoffee.recipeResults.Add(icedCoffee);
-        }
+        craftCoffee.recipeResults.Add(icedCoffee);
+        craftCoffee.recipeResults.Add(icedCoffee);
+        craftCoffee.recipeResults.Add(icedCoffee);
+        craftCoffee.recipeResults.Add(icedCoffee);
+        craftCoffee.recipeResults.Add(icedCoffee);
+        craftCoffee.recipeResults.Add(icedCoffee);
 
         if (!hasIce)
         {
@@ -122,10 +126,12 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipes.Add("IceMilkCoffeeBeans");
         craftCoffee.recipes.Add("IceCoffeeBeansMilk");
 
-        for (int i = amount; i == amount; i++)
-        {
-            craftCoffee.recipeResults.Add(icedLatte);
-        }
+        craftCoffee.recipeResults.Add(icedLatte);
+        craftCoffee.recipeResults.Add(icedLatte);
+        craftCoffee.recipeResults.Add(icedLatte);
+        craftCoffee.recipeResults.Add(icedLatte);
+        craftCoffee.recipeResults.Add(icedLatte);
+        craftCoffee.recipeResults.Add(icedLatte);
 
         if (!hasIce)
         {
@@ -145,10 +151,12 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipes.Add("CocoPowderMilkCoffeeBeans");
         craftCoffee.recipes.Add("CocoPowderCoffeeBeansMilk");
 
-        for (int i = amount; i == amount; i++)
-        {
-            craftCoffee.recipeResults.Add(mocha);
-        }
+        craftCoffee.recipeResults.Add(mocha);
+        craftCoffee.recipeResults.Add(mocha);
+        craftCoffee.recipeResults.Add(mocha);
+        craftCoffee.recipeResults.Add(mocha);
+        craftCoffee.recipeResults.Add(mocha);
+        craftCoffee.recipeResults.Add(mocha);
 
         if (!hasCocoPowder)
         {
@@ -168,10 +176,12 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipes.Add("TeaBagsMilkWater");
         craftCoffee.recipes.Add("TeaBagsWaterMilk");
 
-        for (int i = amount; i == amount; i++)
-        {
-            craftCoffee.recipeResults.Add(tea);
-        }
+        craftCoffee.recipeResults.Add(tea);
+        craftCoffee.recipeResults.Add(tea);
+        craftCoffee.recipeResults.Add(tea);
+        craftCoffee.recipeResults.Add(tea);
+        craftCoffee.recipeResults.Add(tea);
+        craftCoffee.recipeResults.Add(tea);
 
         if (!hasTeaBags)
         {
