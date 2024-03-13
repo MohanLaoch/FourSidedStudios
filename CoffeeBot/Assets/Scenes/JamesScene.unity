@@ -9202,9 +9202,9 @@ MonoBehaviour:
   - 
   - 
   - 
-  americano: {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
-  cappuccino: {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
-  latte: {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
+  americano: {fileID: 8262267694540606119, guid: 4d86ecfd39e42974cbe44b2aec4e05e3, type: 3}
+  cappuccino: {fileID: 8262267694540606119, guid: c89095a134a2d404ebe32c66a2271073, type: 3}
+  latte: {fileID: 8262267694540606119, guid: 1d8540f4b7ee48344addf3a7fd929a43, type: 3}
   recipes: []
   recipeResults: []
   secondsToWait: 1
@@ -13214,7 +13214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &959374563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17075,7 +17075,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 6
+  m_CameraDistance: 5
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -22871,7 +22871,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 6
+  m_CameraDistance: 5
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -23583,6 +23583,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC: {fileID: 1443035840}
   Spawnpoint: {fileID: 1823759775}
+  NpcSpawnTime: 10
+  NpcCount: 1
 --- !u!4 &1823759775
 Transform:
   m_ObjectHideFlags: 0
@@ -25741,7 +25743,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956189806}
   m_LocalRotation: {x: 0.34202015, y: -0, z: -0, w: 0.9396927}
-  m_LocalPosition: {x: 4.67, y: 5.0537252, z: -3.0762668}
+  m_LocalPosition: {x: 4.67, y: 4.410938, z: -2.3102224}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25851,7 +25853,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956472122}
   m_LocalRotation: {x: 0.34202015, y: -0, z: -0, w: 0.9396927}
-  m_LocalPosition: {x: 4.67, y: 5.0537252, z: -3.0762668}
+  m_LocalPosition: {x: 4.67, y: 4.410938, z: -2.3102224}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26223,7 +26225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008799416}
   m_LocalRotation: {x: 0.57357645, y: -0, z: -0, w: 0.81915206}
-  m_LocalPosition: {x: 4.67, y: 13.835157, z: -0.5321206}
+  m_LocalPosition: {x: 4.67, y: 12.895464, z: -0.19010049}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
