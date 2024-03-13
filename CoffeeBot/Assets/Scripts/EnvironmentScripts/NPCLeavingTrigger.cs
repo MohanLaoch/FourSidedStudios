@@ -14,6 +14,15 @@ public class NPCLeavingTrigger : MonoBehaviour
         if(other.CompareTag("NPC") &&  other.GetComponent<NpcStateManager>().hasLeft == true)
         {
             Destroy(other.gameObject);
+            
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("NPC") && other.GetComponent<NpcStateManager>().hasLeft == true)
+        {
+            FindObjectOfType<NpcSpawnerTesting>().NpcCount--;
         }
     }
 }
