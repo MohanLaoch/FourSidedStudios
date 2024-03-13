@@ -31,7 +31,7 @@ public class SlipperyFloor : MonoBehaviour
             npcStateManager.SwitchState(npcStateManager.injuredState);
             hasSlipped = true;
 
-    Debug.Log("slippy");
+    
 
         }
         else if (other.CompareTag("Mop"))
