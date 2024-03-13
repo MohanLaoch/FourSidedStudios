@@ -46,6 +46,11 @@ public class NpcSittingState : NpcBaseState
             {
                 isSitting = true;
                 NpcAnim.SetBool("IsWalking", false);
+                NpcAnim.SetBool("IsSitting", true);
+
+                //npc.GetComponent<BoxCollider>().enabled = false;
+                //npc.GetComponent<Rigidbody>().transform.position = new Vector3(currentChair.transform.position.x, npc.transform.position.y, currentChair.transform.position.z);
+               // npc.GetComponent<Rigidbody>().rotation = currentChair.transform.rotation;
             }
             else if(currentChair.GetComponent<ChairTest>().isTaken == true && isSitting == false)
             {
@@ -59,8 +64,9 @@ public class NpcSittingState : NpcBaseState
         else
         {
             NpcAnim.SetBool("IsWalking", true);
+            NpcAnim.SetBool("IsSitting", false);
             //navMeshAgent.isStopped = false;
-            
+
 
         }
     }

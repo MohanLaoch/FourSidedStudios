@@ -54,6 +54,7 @@ public class NpcInjuredState : NpcBaseState
         Anim.SetBool("Fallen", true);
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         interactableTest = npc.gameObject.GetComponent<InteractableTest>();
+
         if(player.Holding == true)
         {
             Npcrb.transform.rotation = interactableTest.rb.transform.rotation;
@@ -68,8 +69,7 @@ public class NpcInjuredState : NpcBaseState
 
         if (hasLimit && ((countDown && currentTime <= timerLimit) || (!countDown && currentTime >= timerLimit)))
         {
-            currentTime = timerLimit;
-            
+            currentTime = timerLimit;           
         }
         if (currentTime <= 0 && npc.player.Holding == true && player.HoldingNPC == true)
         {
@@ -77,10 +77,10 @@ public class NpcInjuredState : NpcBaseState
         }
        else if (currentTime <= 0 && npc.player.HoldingNPC == false)
         {
+            Anim.SetBool("Fallen", false);
             NpcTransform.rotation = Quaternion.Euler(0, 0, 0);
             NpcTransform.position = new Vector3(NpcTransform.position.x, 2f, NpcTransform.position.z);
-            Anim.SetBool("Fallen", false);
-
+            
 
             npc.GetComponent<NavMeshAgent>().enabled = true;
             if (InjuryCounter >= 3)

@@ -58,9 +58,8 @@ public class OrderCoffee : MonoBehaviour
         if (other.gameObject.tag == acceptedCoffeeTag)
         {
             CompleteOrder();
-
             Destroy(other.gameObject);
-
+            other.GetComponent<NpcStateManager>().SwitchState(other.GetComponent<NpcStateManager>().leavingState);
             //reset itemholding bool here
             player.Holding = false;
         }
@@ -84,8 +83,7 @@ public class OrderCoffee : MonoBehaviour
 
         responseText.text = randomResponse;
 
-        // tell the npc to leave
-
+        
     }
 
     /* randomly order from a list of coffeeOrders - choose a random string, which will give us it's int 

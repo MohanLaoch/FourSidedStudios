@@ -81,21 +81,7 @@ public class TestingInputSystem : MonoBehaviour
         
        OnInteractAction?.Invoke(this, EventArgs.Empty);
         
-        switch (obj.phase)
-        {
-         
-            case InputActionPhase.Performed:
-                Debug.Log(obj.interaction + " - Performed");
-                break;
-            case InputActionPhase.Started:
-                Debug.Log(obj.interaction + " - Started");
-                break;        
-            case InputActionPhase.Canceled:
-                Debug.Log(obj.interaction + " - Canceled");                
-                break;
-                
-            
-        }
+
     }
 
     
