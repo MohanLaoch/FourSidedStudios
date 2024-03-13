@@ -86,7 +86,9 @@ public class OrderCoffee : MonoBehaviour
 
         responseText.text = randomResponse;
         GetComponent<NpcStateManager>().SwitchState(GetComponent<NpcStateManager>().leavingState);
-        
+        GetComponent<NpcStateManager>().isLeaving = true;
+
+
     }
 
     /* randomly order from a list of coffeeOrders - choose a random string, which will give us it's int 

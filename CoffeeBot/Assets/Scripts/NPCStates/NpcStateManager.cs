@@ -7,7 +7,7 @@ public class NpcStateManager : MonoBehaviour
     public FurnitureManager furnitureManager;
     public Player player;
     public bool hasLeft = false;
-    
+    public bool isLeaving = false;
 
     NpcBaseState currentState;
     public NpcWanderState wanderState = new NpcWanderState();

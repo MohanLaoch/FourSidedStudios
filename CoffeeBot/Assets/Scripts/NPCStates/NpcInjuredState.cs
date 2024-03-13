@@ -82,10 +82,12 @@ public class NpcInjuredState : NpcBaseState
             Anim.SetBool("Fallen", false);
             NpcTransform.rotation = Quaternion.Euler(0, 0, 0);
             NpcTransform.position = new Vector3(NpcTransform.position.x, 2f, NpcTransform.position.z);
-            
-
             npc.GetComponent<NavMeshAgent>().enabled = true;
-            if (InjuryCounter >= 3)
+            if (npc.GetComponent<NpcStateManager>().isLeaving)
+            {
+                npc.SwitchState(npc.leavingState);
+            }           
+            else if (InjuryCounter >= 3)
             {
                 npc.SwitchState(npc.leavingState);
             }
