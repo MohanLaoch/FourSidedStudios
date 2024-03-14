@@ -29,7 +29,8 @@ public class CraftCoffee : MonoBehaviour
 
     public int secondsToWait = 1;
 
-    [SerializeField] private int capacityRemoveAmount = 1;
+    [SerializeField] 
+    private int capacityRemoveAmount = 1;
 
     private bool canCraft = true;
 
