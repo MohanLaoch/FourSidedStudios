@@ -746,3 +746,4 @@
 | • Added HotChocolate model to NiamhScene |
 | • Added IcedCoffee model to NiamhScene |
 | • Added IcedLatte model to NiamhScene |
+| • Added Mocha model to NiamhScene |
