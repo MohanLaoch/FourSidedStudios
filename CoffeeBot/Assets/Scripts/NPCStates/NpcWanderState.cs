@@ -23,7 +23,7 @@ public class NpcWanderState : NpcBaseState
 
     public override void UpdateState(NpcStateManager npc)
     {
-        Debug.Log("wandering");
+        
         timer += Time.deltaTime;
 
         if (timer >= wanderTimer)

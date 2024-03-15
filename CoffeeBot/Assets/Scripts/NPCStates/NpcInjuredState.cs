@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class NpcInjuredState : NpcBaseState
 {
-    public float maxTime = 5;
+    public float maxTime = 8;
     public float currentTime;
     private bool countDown = true;
     private bool timerActive = true;
@@ -77,16 +77,19 @@ public class NpcInjuredState : NpcBaseState
         {
             currentTime = maxTime;
         }
-       else if (currentTime <= 0 && npc.player.HoldingNPC == false)
+        if (currentTime <= 3 && npc.player.HoldingNPC == false)
         {
             Anim.SetBool("Fallen", false);
             NpcTransform.rotation = Quaternion.Euler(0, 0, 0);
             NpcTransform.position = new Vector3(NpcTransform.position.x, 2f, NpcTransform.position.z);
+        }
+        if(currentTime <= 0 && npc.player.HoldingNPC == false)
+        {
             npc.GetComponent<NavMeshAgent>().enabled = true;
             if (npc.GetComponent<NpcStateManager>().isLeaving)
             {
                 npc.SwitchState(npc.leavingState);
-            }           
+            }
             else if (InjuryCounter >= 3)
             {
                 npc.SwitchState(npc.leavingState);
@@ -96,6 +99,10 @@ public class NpcInjuredState : NpcBaseState
                 npc.SwitchState(npc.wanderState);
 
             }
+        }
+            
+            
+            
             
 
         }
@@ -105,5 +112,5 @@ public class NpcInjuredState : NpcBaseState
             
         
 
-    }
+    
 }

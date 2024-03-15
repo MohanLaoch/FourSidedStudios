@@ -16,7 +16,7 @@ public class NpcLeavingState : NpcBaseState
     public override void UpdateState(NpcStateManager npc)
     {
         NpcAnim.SetBool("IsWalking", true);
-        NpcAnim.SetBool("IsSitting", true);
+        NpcAnim.SetBool("IsSitting", false);
 
         NavMeshAgent navMeshAgent = npc.GetComponent<NavMeshAgent>();
         Vector3 newTarget = npc.furnitureManager.door.transform.position;

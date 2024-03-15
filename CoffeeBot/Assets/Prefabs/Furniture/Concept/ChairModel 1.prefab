@@ -205,7 +205,7 @@ Transform:
   - {fileID: 4670925933356533327}
   - {fileID: 4335809494043178429}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!54 &286990893382252229
 Rigidbody:
@@ -252,6 +252,7 @@ MonoBehaviour:
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
   NPCAnim: {fileID: 0}
+  isMoving: 0
 --- !u!114 &3698851715169338536
 MonoBehaviour:
   m_ObjectHideFlags: 0
