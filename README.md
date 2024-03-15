@@ -745,3 +745,4 @@
 | • Added ChaiLatte model to NiamhScene |
 | • Added HotChocolate model to NiamhScene |
 | • Added IcedCoffee model to NiamhScene |
+| • Added IcedLatte model to NiamhScene |
