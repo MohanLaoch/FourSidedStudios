@@ -28,7 +28,7 @@ public class InteractableTest : MonoBehaviour
     {
         if(gameObject.CompareTag("Chair") || gameObject.CompareTag("Table"))
         {
-            if (rb.velocity.magnitude > 0.1 && GetComponent<NavMeshObstacle>() == true)
+            if (rb.velocity.magnitude > 0.5 && GetComponent<NavMeshObstacle>() == true)
             {
                 isMoving = true;
                 GetComponent<NavMeshObstacle>().enabled = false;

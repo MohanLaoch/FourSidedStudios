@@ -7,7 +7,7 @@ public class ChairTest : MonoBehaviour
     
     public bool isTaken = false;
     public bool isSittable;
-    private NpcStateManager npcStateManager;
+    
 
     public void OnTriggerStay(Collider other)
     {
@@ -22,12 +22,8 @@ public class ChairTest : MonoBehaviour
 
 
         if (isSittable && other.CompareTag("NPC"))
-        {
-            
-            
-            npcStateManager = other.GetComponent<NpcStateManager>();
-            StartCoroutine(ChairCheck());
-            
+        {                       
+            StartCoroutine(ChairCheck());           
         }
 
     }
@@ -42,7 +38,7 @@ public class ChairTest : MonoBehaviour
 
     public IEnumerator ChairCheck()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(5f);
         isTaken = true;
     }
     void Start()
