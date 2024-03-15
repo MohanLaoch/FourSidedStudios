@@ -748,3 +748,4 @@
 | • Added IcedLatte model to NiamhScene |
 | • Added Mocha model to NiamhScene |
 | • Added TeaCup model to NiamhScene |
+| • Fixed liquid in IcedCoffee model |
