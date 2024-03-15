@@ -735,3 +735,11 @@
 | :--- |
 | • Set up Npc animations |
 | • Worked on npc sitting |
+
+15/03/2023
+
+| **Niamh** |
+| :--- |
+| • Added Americano model to NiamhScene |
+| • Added Cappucino model to NiamhScene |
+| • Added ChaiLatte model to NiamhScene |
