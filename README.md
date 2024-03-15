@@ -743,3 +743,4 @@
 | • Added Americano model to NiamhScene |
 | • Added Cappucino model to NiamhScene |
 | • Added ChaiLatte model to NiamhScene |
+| • Added HotChocolate model to NiamhScene |
