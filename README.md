@@ -729,3 +729,9 @@
 | **James** |
 | :--- |
 | • Created and tested Spill script |
+
+
+| **Declan** |
+| :--- |
+| • Set up Npc animations |
+| • Worked on npc sitting |
