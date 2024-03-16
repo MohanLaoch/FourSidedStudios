@@ -15,7 +15,7 @@ public class NpcSpawnerTesting : MonoBehaviour
 
     public void Update()
     {
-        
+
     }
     public IEnumerator SpawnNPC()
     {
@@ -23,8 +23,7 @@ public class NpcSpawnerTesting : MonoBehaviour
         {
             yield return new WaitForSeconds(NpcSpawnTime);
             Instantiate(NPC, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
-            NpcCount++;
-            Debug.Log(NpcCount);
+            NpcCount++;            
         }
        
     }

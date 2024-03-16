@@ -10,7 +10,12 @@ public class NpcSittingState : NpcBaseState
     private GameObject currentChair;
 
     bool isSitting;
+
+
+    public float FlipForce = 0.5f;
+    public float FlipForceRot = 0.5f;
     
+
     public override void EnterState(NpcStateManager npc)
     {
         isSitting = false;
@@ -110,9 +115,21 @@ public class NpcSittingState : NpcBaseState
             npc.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 
         }
+        if (collision.gameObject.CompareTag("SlipperyFloor"))
+        {
+            npc.GetComponent<NavMeshAgent>().enabled = false;
+            
+            Vector3 FlipDir = npc.transform.TransformDirection(Vector3.forward);
+
+            npc.GetComponent<Rigidbody>().AddForce(Vector3.up * FlipForce, ForceMode.Impulse);
+            npc.GetComponent<Rigidbody>().AddForce(Vector3.left * FlipForce, ForceMode.Impulse);
+            npc.GetComponent<Rigidbody>().AddTorque(FlipDir * FlipForceRot, ForceMode.Impulse);
+            npc.SwitchState(npc.injuredState);
 
 
-    }
+        }
+
+    } 
 
     public void SetAllCollidersStatus(bool active)
     {
