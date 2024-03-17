@@ -6,7 +6,7 @@ public class RandomiseNPC : MonoBehaviour
 {
     [Header("Body Textures")]
 
-    Renderer meshRenderer;
+    public Renderer meshRenderer;
 
     public Material[] bodyTextures;
 
@@ -15,7 +15,9 @@ public class RandomiseNPC : MonoBehaviour
     public GameObject[] headObjects;
     public GameObject[] torsoObjects;
     public GameObject[] legObjects;
-    public GameObject[] feetObjects;
+    public GameObject[] rFeetObjects;
+    public GameObject[] lFeetObjects;
+
 
     public void Awake()
     {
@@ -64,11 +66,15 @@ public class RandomiseNPC : MonoBehaviour
 
     public void AddFeetObject()
     {
-        int randomIndex = Random.Range(0, feetObjects.Length);
+        int randomIndex = Random.Range(0, rFeetObjects.Length);
 
-        GameObject feet = feetObjects[randomIndex];
+        GameObject rFeet = rFeetObjects[randomIndex];
+        GameObject lFeet = rFeetObjects[randomIndex];
 
-        feet.gameObject.SetActive(true);
+
+        rFeet.gameObject.SetActive(true);
+        lFeet.gameObject.SetActive(true);
+
     }
 
 }
