@@ -736,7 +736,7 @@
 | • Set up Npc animations |
 | • Worked on npc sitting |
 
-15/03/2023
+15/03/2024
 
 | **Niamh** |
 | :--- |
@@ -750,7 +750,7 @@
 | • Added TeaCup model to NiamhScene |
 | • Fixed liquid in IcedCoffee model |
 
-16/03/2023
+16/03/2024
 
 | **Declan** |
 | • Fixed slippery floor bug |
@@ -759,3 +759,9 @@
 | **James** |
 | :--- |
 | • Added Scripts and Colliders to coffee prefabs |
+
+17/03/2024
+
+| **James** |
+| :--- |
+| • Added random clothes script |
