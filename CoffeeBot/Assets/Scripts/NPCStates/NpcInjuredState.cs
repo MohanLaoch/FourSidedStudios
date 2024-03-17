@@ -80,6 +80,9 @@ public class NpcInjuredState : NpcBaseState
         if (currentTime <= 3 && npc.player.HoldingNPC == false)
         {
             Anim.SetBool("Fallen", false);
+            Anim.SetBool("IsWalking", false);
+
+
             NpcTransform.rotation = Quaternion.Euler(0, 0, 0);
             NpcTransform.position = new Vector3(NpcTransform.position.x, NpcTransform.position.y, NpcTransform.position.z);
         }
