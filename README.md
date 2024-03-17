@@ -765,3 +765,9 @@
 | **James** |
 | :--- |
 | • Added random clothes script |
+| • Set up Order Script and Avaliable Orders with coffee image - need to ge images and add UI to NPC |
+| • Added Scripts and Colliders to Latte prefab |
+
+| **Niamh** |
+| :--- |
+| • Added LatteCup model to NiamhScene |
