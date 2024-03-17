@@ -12,6 +12,7 @@ public class DayTimer : MonoBehaviour
     public TextMeshProUGUI timerText;
 
     public GameObject upgradesMenu;
+    public GameObject endOfDayMenu;
 
     [Header("Settings")]
     public float maxTime = 180;
@@ -27,8 +28,7 @@ public class DayTimer : MonoBehaviour
 
     private void Start()
     {
-        StartFirstDay();
-        
+        StartFirstDay();       
     }
 
     private void Update()
@@ -63,7 +63,7 @@ public class DayTimer : MonoBehaviour
 
     private void StartFirstDay()
     {
-        upgradesMenu.SetActive(false);
+        endOfDayMenu.SetActive(false);
         timerActive = true;
         currentTime = maxTime;
 
@@ -95,7 +95,8 @@ public class DayTimer : MonoBehaviour
     private void FinishDay()
     {
         timerActive = false;
-        pauseMenu.ActivateUpgradesMenu();
+        //pauseMenu.ActivateUpgradesMenu();
+        pauseMenu.ActivateEndOfDayMenu();
         
 
     }

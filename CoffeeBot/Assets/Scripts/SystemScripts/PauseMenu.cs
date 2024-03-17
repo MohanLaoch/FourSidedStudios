@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private InputAction menu;
     [SerializeField] private GameObject pauseUI;
     [SerializeField] private GameObject upgradeUI;
-
+    [SerializeField] private GameObject endOfDayUI;
 
 
     [SerializeField] private bool isPaused;
@@ -80,6 +80,29 @@ public class PauseMenu : MonoBehaviour
         playerInputActions.Player.Disable();
         playerInputActions.Player.Flip.Disable();
     }
+
+    public void ActivateEndOfDayMenu()
+    {
+        Time.timeScale = 0;
+        //Audiolistener.pause = true;
+        endOfDayUI.SetActive(true);
+        Cursor.visible = true;
+        playerInputActions.Player.Disable();
+        playerInputActions.Player.Flip.Disable();
+    }
+    public void DeactivateEndOfDayMenu()
+    {
+        Time.timeScale = 1;
+        //Audiolistener.pause = false;
+        endOfDayUI.SetActive(false);
+        isPaused = false;
+        Cursor.visible = false;
+        playerInputActions.Player.Enable();
+        playerInputActions.Player.Flip.Enable();
+
+
+    }
+
 
 
 

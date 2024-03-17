@@ -10,8 +10,11 @@ public class SceneInfo : ScriptableObject {
     public float playerSpeed;
     public float playerRotSpeed;
     public float playerAcceleration;
+    public int ElectricityBills = 10;
+    public int WaterBills = 10;
 
-   
+
+
     public void Reset()
     {
         money = 0;
@@ -19,6 +22,8 @@ public class SceneInfo : ScriptableObject {
         playerSpeed = 200;
         playerRotSpeed = 200;
         playerAcceleration = 10;
+        ElectricityBills = 10;
+        WaterBills = 10;
     }
 }
 
