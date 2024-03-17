@@ -765,3 +765,7 @@
 | **James** |
 | :--- |
 | • Added random clothes script |
+
+| **Niamh** |
+| :--- |
+| • Added LatteCup model to NiamhScene |
