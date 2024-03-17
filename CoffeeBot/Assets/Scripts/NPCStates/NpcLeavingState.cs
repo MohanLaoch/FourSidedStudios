@@ -30,6 +30,8 @@ public class NpcLeavingState : NpcBaseState
         if (collision.gameObject.CompareTag("Player"))
         {
             npc.SwitchState(npc.injuredState);
+            npc.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+
         }
 
         if (collision.gameObject.CompareTag("Door"))
