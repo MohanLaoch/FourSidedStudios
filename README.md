@@ -755,3 +755,7 @@
 | **Declan** |
 | • Fixed slippery floor bug |
 | • fixed npc spawning bug |
+
+| **James** |
+| :--- |
+| • Added Scripts and Colliders to coffee prefabs |

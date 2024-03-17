@@ -9,9 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 919008233970051616}
-  m_Layer: 0
+  - component: {fileID: -1243989232900469671}
+  - component: {fileID: -8144752319327183112}
+  - component: {fileID: 6708689627434839318}
+  - component: {fileID: 3765799105768580486}
+  - component: {fileID: 8550228780658840967}
+  m_Layer: 7
   m_Name: HotChocolate_model
-  m_TagString: Untagged
+  m_TagString: HotChocolate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,8 +36,81 @@ Transform:
   - {fileID: 5154351100033006390}
   - {fileID: 2511434504873258437}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &-1243989232900469671
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543574025478205594}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &-8144752319327183112
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543574025478205594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.49568698, y: 0.91445285, z: 0.5866078}
+  m_Center: {x: 0.09714902, y: 0.45842558, z: 0.00800551}
+--- !u!65 &6708689627434839318
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543574025478205594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.57951695, y: 0.82279444, z: 0.6141754}
+  m_Center: {x: 0.096112005, y: 0.5361174, z: 0.012037565}
+--- !u!114 &3765799105768580486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543574025478205594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c0170f940027940baaa86e7ce8a6c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  CounterObj: {fileID: 0}
+  HoldArea: {fileID: 0}
+  NPCAnim: {fileID: 0}
+  isMoving: 0
+--- !u!114 &8550228780658840967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543574025478205594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1d20beb2fcd6140a0eae1df785296d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spiltCoffee: {fileID: 4727198754583222914, guid: e644cfd52072e9c499a3611ead12cc2f, type: 3}
+  layerNumber: 9
 --- !u!1 &6454045768414183331
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,7 +122,7 @@ GameObject:
   - component: {fileID: 2511434504873258437}
   - component: {fileID: 2496472953471778479}
   - component: {fileID: 4864595502725600393}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HotChocolateLiquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +205,7 @@ GameObject:
   - component: {fileID: 5154351100033006390}
   - component: {fileID: 9206907991413239630}
   - component: {fileID: 6562748838654890050}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HotChocolate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
