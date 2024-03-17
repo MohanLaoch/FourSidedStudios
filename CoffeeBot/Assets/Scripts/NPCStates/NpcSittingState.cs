@@ -13,8 +13,8 @@ public class NpcSittingState : NpcBaseState
     bool isSitting;
 
 
-    public float FlipForce = 0.5f;
-    public float FlipForceRot = 0.5f;
+    public float FlipForce = 1f;
+    public float FlipForceRot = 1f;
     
 
     public override void EnterState(NpcStateManager npc)
@@ -74,6 +74,7 @@ public class NpcSittingState : NpcBaseState
             {
                 navMeshAgent.enabled = true;
                 currentChair = npc.furnitureManager.chairs[Random.Range(1, 12)];
+                ChairSit = currentChair.transform.Find("SittingPoint");
                 Vector3 newTarget = currentChair.transform.position;               
                 navMeshAgent.SetDestination(newTarget);
                 //if chair is taken, find new chair

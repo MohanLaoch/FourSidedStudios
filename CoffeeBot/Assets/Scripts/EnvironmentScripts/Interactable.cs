@@ -10,14 +10,14 @@ public class Interactable : MonoBehaviour
     public Transform CounterObj;
     public Transform HoldArea;
     public Animator NPCAnim;
-
+    
     private NpcStateManager npcStateManager;
     public bool isMoving = false;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         HoldArea = GameObject.Find("HoldArea").GetComponent<Transform>();
-
+        
     }
 
     public void Start()
@@ -53,18 +53,24 @@ public class Interactable : MonoBehaviour
 
         if (gameObject.CompareTag("NPC"))
         {
+            //rb.transform.rotation = Quaternion.Euler(rb.rotation.x, rb.rotation.y + 90f, rb.rotation.z - 90f);
+            gameObject.GetComponent<NavMeshAgent>().enabled = false;
             npcStateManager = gameObject.GetComponent<NpcStateManager>();
             npcStateManager.SwitchState(npcStateManager.injuredState);
-            rb.transform.rotation = Quaternion.Euler(rb.rotation.x - 90f, rb.rotation.y, rb.rotation.z + 90f);
-
-            transform.parent = HoldArea.transform;
-            rb.transform.position = HoldArea.transform.position;
-
             rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+
+            
+
+            rb.transform.parent = HoldArea.transform;
+            
+            //rb.transform.position = HoldArea.transform.position;
+             // gameObject.transform.position = HoldArea.transform.position;
+           
+           //gameObject.transform.SetPositionAndRotation(HoldArea.transform.position, Quaternion.identity);
 
             NPCAnim.SetBool("Fallen", true);
             //trigger flail here 
-            Debug.Log("helpme");
+       
         }
         else
         {

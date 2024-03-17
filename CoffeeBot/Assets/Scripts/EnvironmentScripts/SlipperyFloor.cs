@@ -20,15 +20,15 @@ public class SlipperyFloor : MonoBehaviour
         NpcRB = npc.GetComponentInParent<Rigidbody>();
         npcStateManager = npc.GetComponent<NpcStateManager>();
         Vector3 FlipDir = transform.TransformDirection(Vector3.forward);
-        /*  if (npc.gameObject.CompareTag("NPC"))
+          if (npc.gameObject.CompareTag("NPC"))
           {                     
               NpcRB.AddForce(Vector3.up * FlipForce, ForceMode.Impulse);
               NpcRB.AddForce(Vector3.left * FlipForce, ForceMode.Impulse);
               NpcRB.AddTorque(FlipDir * FlipForceRot, ForceMode.Impulse);
-              npcStateManager.SwitchState(npcStateManager.injuredState);
+              
 
               hasSlipped = true;    
-          }*/
+          }
         if (npc.CompareTag("Mop"))
         {
             Destroy(gameObject);

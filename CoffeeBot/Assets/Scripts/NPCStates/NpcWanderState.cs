@@ -13,8 +13,8 @@ public class NpcWanderState : NpcBaseState
     private float timer;
     public Animator NpcAnim;
 
-    public float FlipForce = 0.5f;
-    public float FlipForceRot = 0.5f;
+    public float FlipForce = 1f;
+    public float FlipForceRot = 1f;
 
     public override void EnterState(NpcStateManager npc)
     {

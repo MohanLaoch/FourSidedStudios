@@ -7,7 +7,8 @@ using UnityEngine.AI;
 public class NpcLeavingState : NpcBaseState
 {
     public Animator NpcAnim;
-
+    public float FlipForce = 1f;
+    public float FlipForceRot = 1f;
     public override void EnterState(NpcStateManager npc)
     {
         NpcAnim = npc.GetComponentInChildren<Animator>();
@@ -39,6 +40,18 @@ public class NpcLeavingState : NpcBaseState
             //object.Destroy(this.gameObject);
             npc.hasLeft = true;
             Debug.Log("die");
+        }
+        if (collision.gameObject.CompareTag("SlipperyFloor"))
+        {
+            Debug.Log("slipped");
+            npc.GetComponent<NavMeshAgent>().enabled = false;
+
+            Vector3 FlipDir = npc.transform.TransformDirection(Vector3.forward);
+
+            npc.GetComponent<Rigidbody>().AddForce(Vector3.up * FlipForce, ForceMode.Impulse);
+            npc.GetComponent<Rigidbody>().AddForce(Vector3.left * FlipForce, ForceMode.Impulse);
+            npc.GetComponent<Rigidbody>().AddTorque(FlipDir * FlipForceRot, ForceMode.Impulse);
+            npc.SwitchState(npc.injuredState);
         }
     }
 }
