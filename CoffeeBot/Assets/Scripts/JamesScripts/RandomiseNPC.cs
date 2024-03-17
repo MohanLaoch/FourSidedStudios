@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RandomiseNPC : MonoBehaviour
 {
+    public GameObject[] allClothes;
+
     [Header("Body Textures")]
 
     public Renderer meshRenderer;
@@ -21,6 +23,11 @@ public class RandomiseNPC : MonoBehaviour
 
     public void Awake()
     {
+        foreach (GameObject clothes in allClothes)
+        {
+            clothes.SetActive(false);
+        }
+
         AssignBodyTexture();
         AddHeadObject();
         AddTorsoObject();
@@ -69,7 +76,7 @@ public class RandomiseNPC : MonoBehaviour
         int randomIndex = Random.Range(0, rFeetObjects.Length);
 
         GameObject rFeet = rFeetObjects[randomIndex];
-        GameObject lFeet = rFeetObjects[randomIndex];
+        GameObject lFeet = lFeetObjects[randomIndex];
 
 
         rFeet.gameObject.SetActive(true);
