@@ -771,3 +771,9 @@
 | **Niamh** |
 | :--- |
 | • Added LatteCup model to NiamhScene |
+
+| **Declan** |
+| :--- |
+| • Added finished Npc to main scene|
+| • fixed animation + pickup bugs|
+| • Started working on end of day menu|
