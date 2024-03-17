@@ -30,16 +30,22 @@ public class UnlockCoffee : MonoBehaviour
     [Header("Coffee Prefabs")]
 
     public GameObject chaiLatte;
+    public Sprite chaiLatteSprite;
 
     public GameObject hotChocolate;
+    public Sprite hotChocolateSprite;
 
     public GameObject icedCoffee;
+    public Sprite icedCoffeeSprite;
 
     public GameObject icedLatte;
+    public Sprite icedLatteSprite;
 
     public GameObject mocha;
+    public Sprite mochaSprite;
 
     public GameObject tea;
+    public Sprite teaSprite;
 
     public void UnlockChaiLatte()
     {
@@ -64,6 +70,7 @@ public class UnlockCoffee : MonoBehaviour
         }
 
         avaliableOrders.coffeeOrders.Add("ChaiLatte");
+        avaliableOrders.orderIcons.Add(chaiLatteSprite);
             
     }
 
@@ -90,6 +97,7 @@ public class UnlockCoffee : MonoBehaviour
         }
 
         avaliableOrders.coffeeOrders.Add("HotChocolate");
+        avaliableOrders.orderIcons.Add(hotChocolateSprite);
     }
 
     public void UnlockIcedCoffee()
@@ -115,6 +123,7 @@ public class UnlockCoffee : MonoBehaviour
         }
 
         avaliableOrders.coffeeOrders.Add("IcedCoffee");
+        avaliableOrders.orderIcons.Add(icedCoffeeSprite);
     }
 
     public void UnlockIcedLatte()
@@ -140,6 +149,7 @@ public class UnlockCoffee : MonoBehaviour
         }
 
         avaliableOrders.coffeeOrders.Add("IcedLatte");
+        avaliableOrders.orderIcons.Add(icedLatteSprite);
     }
 
     public void UnlockMocha()
@@ -165,6 +175,8 @@ public class UnlockCoffee : MonoBehaviour
         }
 
         avaliableOrders.coffeeOrders.Add("Mocha");
+        avaliableOrders.orderIcons.Add(mochaSprite);
+
     }
 
     public void UnlockTea()
@@ -190,6 +202,7 @@ public class UnlockCoffee : MonoBehaviour
         }
 
         avaliableOrders.coffeeOrders.Add("Tea");
+        avaliableOrders.orderIcons.Add(teaSprite);
     }
 }
 
