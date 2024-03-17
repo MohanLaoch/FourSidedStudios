@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-public class InteractableTest : MonoBehaviour
+public class Interactable : MonoBehaviour
 {
     public Rigidbody rb;
     public Transform CounterObj;

@@ -8,6 +8,7 @@ public class NpcSittingState : NpcBaseState
 {
     public Animator NpcAnim;
     private GameObject currentChair;
+    private Transform ChairSit;
 
     bool isSitting;
 
@@ -24,12 +25,12 @@ public class NpcSittingState : NpcBaseState
         NpcAnim.SetBool("IsWalking", true);
         
         NavMeshAgent navMeshAgent = npc.GetComponent<NavMeshAgent>();
-        currentChair = npc.furnitureManager.chairs[Random.Range(1, 12)];
+        currentChair = npc.furnitureManager.chairs[Random.Range(1, 12)]; 
         Vector3 newTarget = currentChair.transform.position;
         navMeshAgent.enabled = true;
         navMeshAgent.SetDestination(newTarget);
-
-
+        ChairSit = currentChair.transform.Find("SittingPoint");
+        Debug.Log(ChairSit);
 
     }
 
@@ -62,7 +63,7 @@ public class NpcSittingState : NpcBaseState
 
 
 
-                npc.transform.position = new Vector3(currentChair.transform.position.x, npc.transform.position.y, currentChair.transform.localPosition.z);
+                npc.transform.position = new Vector3(ChairSit.position.x, npc.transform.position.y, ChairSit.position.z);
                 npc.transform.rotation = currentChair.transform.rotation;
                 
                 currentChair.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
@@ -106,7 +107,7 @@ public class NpcSittingState : NpcBaseState
 
 
         }
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Interactables") && collision.gameObject.GetComponent<InteractableTest>().isMoving)
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Interactables") && collision.gameObject.GetComponent<Interactable>().isMoving)
         {
             npc.transform.parent = null;
             npc.SwitchState(npc.injuredState);

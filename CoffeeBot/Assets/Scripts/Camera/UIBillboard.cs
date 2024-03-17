@@ -9,5 +9,6 @@ public class UIBillboard : MonoBehaviour
     private void LateUpdate()
     {
         transform.LookAt(transform.position + camera.forward);
+        
     }
 }

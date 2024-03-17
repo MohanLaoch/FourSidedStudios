@@ -103,21 +103,21 @@ public class Player : MonoBehaviour
         {
 
 
-            if (raycastHit.transform.TryGetComponent(out InteractableTest interactableTest) && Holding == false)
+            if (raycastHit.transform.TryGetComponent(out Interactable interactable) && Holding == false)
             {
-                if(interactableTest.CompareTag("Storage"))
+                if(interactable.CompareTag("Storage"))
                 {
                     return;
                 }
-                if (interactableTest.CompareTag("NPC"))
+                if (interactable.CompareTag("NPC"))
                 {
                     HoldingNPC = true;
                 }
                 Holding = true;
                 
-                ObjectHeld = interactableTest.gameObject;
+                ObjectHeld = interactable.gameObject;
                 
-                interactableTest.Interact();
+                interactable.Interact();
                 Grabbing.setParameterByNameWithLabel("Parameter 2", "Grab");
                 UpdateGrabSound();
                 //AudioManager.instance.PlayOneShot(FMODEvents.instance.grabSound, this.transform.position);
@@ -126,21 +126,21 @@ public class Player : MonoBehaviour
             else if(storage.atStorage)
             {
                 Debug.Log("storing1");
-                interactableTest.Store();                              
+                interactable.Store();                              
             }
             else if (storage2.atStorage)
             {
                 Debug.Log("storing2");
-                interactableTest.Store();
+                interactable.Store();
             }
             else if (storage3.atStorage)
             {
                 Debug.Log("storing3");
-                interactableTest.Store();
+                interactable.Store();
             }
             else
             {
-                interactableTest.Drop();
+                interactable.Drop();
                 Grabbing.setParameterByNameWithLabel("Parameter 2", "Drop");
                 UpdateGrabSound();
                 //AudioManager.instance.PlayOneShot(FMODEvents.instance.dropSound, this.transform.position);
@@ -284,7 +284,7 @@ public class Player : MonoBehaviour
         {
             
             Debug.Log("Like rynn in a nuzlocke, you are throwing");
-            ObjectHeld.GetComponent<InteractableTest>().Drop();
+            ObjectHeld.GetComponent<Interactable>().Drop();
             ObjectHeld.GetComponent<Rigidbody>().AddForce(ThrowDir * ThrowForce, ForceMode.Impulse);
             ObjectHeld.GetComponent<Rigidbody>().AddForce(Vector3.up * (ThrowForce / 2), ForceMode.Impulse);
 

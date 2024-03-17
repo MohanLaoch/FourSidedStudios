@@ -19,7 +19,7 @@ public class NpcInjuredState : NpcBaseState
     public Animator Anim;
     public Transform NpcTransform;
     public Rigidbody Npcrb;
-    public InteractableTest interactableTest;
+    public Interactable interactable;
     public SlipperyFloor slipperyFloor;
     public Player player;
     
@@ -55,11 +55,11 @@ public class NpcInjuredState : NpcBaseState
         Anim.SetBool("IsSitting", false);
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        interactableTest = npc.gameObject.GetComponent<InteractableTest>();
+        interactable = npc.gameObject.GetComponent<Interactable>();
 
         if(player.Holding == true)
         {
-            Npcrb.transform.rotation = interactableTest.rb.transform.rotation;
+            Npcrb.transform.rotation = interactable.rb.transform.rotation;
         }
        
 
@@ -81,7 +81,7 @@ public class NpcInjuredState : NpcBaseState
         {
             Anim.SetBool("Fallen", false);
             NpcTransform.rotation = Quaternion.Euler(0, 0, 0);
-            NpcTransform.position = new Vector3(NpcTransform.position.x, 2f, NpcTransform.position.z);
+            NpcTransform.position = new Vector3(NpcTransform.position.x, NpcTransform.position.y, NpcTransform.position.z);
         }
         if(currentTime <= 0 && npc.player.HoldingNPC == false)
         {
