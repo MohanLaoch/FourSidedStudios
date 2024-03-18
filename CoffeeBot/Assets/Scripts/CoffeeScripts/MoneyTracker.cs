@@ -23,13 +23,12 @@ public class MoneyTracker : MonoBehaviour
     public float currentTime;
     private bool countDown = true;
 
-    private bool hasLimit = true;
     public float timerLimit;
 
     private bool timerActive = true;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         money = sceneInfo.money;
 
@@ -61,14 +60,7 @@ public class MoneyTracker : MonoBehaviour
             currentTime = countDown ? currentTime -= Time.deltaTime : currentTime += Time.deltaTime;
         }
 
-       // if the timer has limit and is above or below that limit set the timer text
-
-        if (hasLimit && ((countDown && currentTime <= timerLimit) || (!countDown && currentTime >= timerLimit)))
-        { 
-            currentTime = timerLimit;
-            SetTimerText();
-            enabled = false;
-        }
+       
       
         SetTimerText();
         //moneyText.text = ": " + money.ToString("0");
@@ -111,6 +103,6 @@ public class MoneyTracker : MonoBehaviour
         money += moneyGiven + (currentTime / tipDivide);
         moneyText.text = ": " + money.ToString("0");
         sceneInfo.money = money;
-        StartTimer();
+        //StartTimer();
     }
 }
