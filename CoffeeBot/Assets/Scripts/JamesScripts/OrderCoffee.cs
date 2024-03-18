@@ -17,7 +17,7 @@ public class OrderCoffee : MonoBehaviour
 
     public string acceptedCoffeeTag;
 
-    //public Image coffeeImage;
+    public Image coffeeImage;
 
     [Header("UI")]
     [TextArea(2, 5)]
@@ -51,7 +51,7 @@ public class OrderCoffee : MonoBehaviour
 
         acceptedCoffeeTag = avaliableOrders.coffeeOrders[randomIndex];
 
-        //coffeeImage.sprite = avaliableOrders.orderIcons[randomIndex];
+        coffeeImage.sprite = avaliableOrders.orderIcons[randomIndex];
 
         // start the timer
         moneyTracker.StartTimer();
@@ -77,7 +77,7 @@ public class OrderCoffee : MonoBehaviour
 
     private void CompleteOrder()
     {
-        //coffeeImage.gameObject.SetActive(false);
+        coffeeImage.gameObject.SetActive(false);
 
         // go to the moneyTracker script and give money
         moneyTracker.CompleteOrder();

@@ -736,7 +736,7 @@
 | • Set up Npc animations |
 | • Worked on npc sitting |
 
-15/03/2024
+### 15/03/2024
 
 | **Niamh** |
 | :--- |
@@ -750,7 +750,7 @@
 | • Added TeaCup model to NiamhScene |
 | • Fixed liquid in IcedCoffee model |
 
-16/03/2024
+### 16/03/2024
 
 | **Declan** |
 | • Fixed slippery floor bug |
@@ -760,7 +760,7 @@
 | :--- |
 | • Added Scripts and Colliders to coffee prefabs |
 
-17/03/2024
+### 17/03/2024
 
 | **James** |
 | :--- |
@@ -772,8 +772,15 @@
 | :--- |
 | • Added LatteCup model to NiamhScene |
 
+### 18/03/2024
+
 | **Declan** |
 | :--- |
 | • Added finished Npc to main scene|
 | • fixed animation + pickup bugs|
 | • Started working on end of day menu|
+
+| **James** |
+| :--- |
+| • UI Image on NPC |
+| • Fixed Spill Bug |

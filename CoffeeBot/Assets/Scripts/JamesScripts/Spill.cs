@@ -9,6 +9,11 @@ public class Spill : MonoBehaviour
     [SerializeField]
     private int layerNumber = 9; // Ground is currently 9
 
+    private void Awake()
+    {
+        spiltCoffee = GameObject.Find("SlipperyFloor");
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == layerNumber)
