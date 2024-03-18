@@ -777,8 +777,10 @@
 | **Declan** |
 | :--- |
 | • Added finished Npc to main scene|
-| • fixed animation + pickup bugs|
-| • Started working on end of day menu|
+| • Fixed animation + pickup bugs|
+| • Finished working on end of day menu|
+| • Skin change implementation|
+| • Fixed storage bug|
 
 | **James** |
 | :--- |
