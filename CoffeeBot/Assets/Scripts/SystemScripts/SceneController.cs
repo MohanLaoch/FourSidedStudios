@@ -26,8 +26,30 @@ public class SceneController : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene("Prototype 1");
-        Time.timeScale = 1;
+        Time.timeScale = 1;        
+    }
 
-        
+    public void SetSkin1()
+    {
+        sceneInfo.SkinCounter = 1;
+    }
+
+    public void SetSkin2()
+    {
+        sceneInfo.SkinCounter = 2;
+    }
+
+    public void SetSkin3()
+    {
+        sceneInfo.SkinCounter = 3;
+    }
+
+    public void SetSkin4()
+    {
+        sceneInfo.SkinCounter = 4;
+    }
+    public void SetSkin5()
+    {
+        sceneInfo.SkinCounter = 5;
     }
 }

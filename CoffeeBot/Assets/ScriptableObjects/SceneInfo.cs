@@ -14,6 +14,8 @@ public class SceneInfo : ScriptableObject {
     public int WaterBills = 10;
     public int TotalInjuryCounter;
 
+    public int SkinCounter = 1;
+
 
     public void Reset()
     {
@@ -24,7 +26,11 @@ public class SceneInfo : ScriptableObject {
         playerAcceleration = 10;
         ElectricityBills = 10;
         WaterBills = 10;
+
     }
+
+    
+
 }
 
 

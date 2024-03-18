@@ -58,6 +58,15 @@ public class Player : MonoBehaviour
     public GameObject ObjectHeld;
 
     private WaitForEndOfFrame waitForEndOfFrame;
+
+    public GameObject Skin1;
+    public GameObject Skin2;
+    public GameObject Skin3;
+    public GameObject Skin4;
+    public GameObject Skin5;
+
+
+
     private void Awake()
     {
         Time.timeScale = 1;
@@ -73,6 +82,28 @@ public class Player : MonoBehaviour
 
 
         waitForEndOfFrame = new WaitForEndOfFrame();
+
+        switch (sceneInfo.SkinCounter)
+        {
+            case 1:
+                 Skin1.SetActive(true);
+                 break;
+            case 2:
+                Skin2.SetActive(true);
+                break;
+            case 3:
+                Skin3.SetActive(true);
+                break;
+            case 4:
+                Skin4.SetActive(true);
+                break;
+            case 5:
+                Skin5.SetActive(true);
+                break;
+
+        }
+
+
 
 
     }

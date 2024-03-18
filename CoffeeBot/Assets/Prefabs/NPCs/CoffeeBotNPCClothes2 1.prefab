@@ -9500,7 +9500,7 @@ Transform:
   - {fileID: 8329352312845288095}
   - {fileID: 2981963034500822469}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &7617953996999605009
 Animator:
@@ -9570,7 +9570,7 @@ MonoBehaviour:
     m_NumColorKeys: 4
     m_NumAlphaKeys: 2
   sliderFill: {fileID: 1202229740}
-  maxTime: 30
+  maxTime: 60
   currentTime: 0
   timerLimit: 0
 --- !u!65 &7311876698218171434
@@ -9602,6 +9602,7 @@ MonoBehaviour:
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
   NPCAnim: {fileID: 7617953996999605009}
+  storage: {fileID: 0}
   isMoving: 0
 --- !u!54 &7311876698218171432
 Rigidbody:
