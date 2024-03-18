@@ -36,7 +36,7 @@ public class OrderCoffee : MonoBehaviour
     private void Awake()
     {
         // assign player script
-        player = GameObject.Find("CoffeeBotAnimated3").GetComponent<Player>();
+        player = GameObject.Find("Sergio").GetComponent<Player>();
         avaliableOrders = GameObject.Find("UnlockCoffee").GetComponent<AvaliableOrders>();
 
         responseBubble.SetActive(false);
