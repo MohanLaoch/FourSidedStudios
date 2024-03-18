@@ -15,7 +15,7 @@ public class NpcSittingState : NpcBaseState
 
     public float FlipForce = 1f;
     public float FlipForceRot = 1f;
-    
+    private CoffeeOrder coffeeOrder;
 
     public override void EnterState(NpcStateManager npc)
     {
@@ -31,6 +31,8 @@ public class NpcSittingState : NpcBaseState
         navMeshAgent.SetDestination(newTarget);
         ChairSit = currentChair.transform.Find("SittingPoint");
         Debug.Log(ChairSit);
+
+        
 
     }
 
@@ -83,7 +85,7 @@ public class NpcSittingState : NpcBaseState
         }
         else
         {
-            NpcAnim.SetBool("IsWalking", true);
+            //NpcAnim.SetBool("IsWalking", true);
             NpcAnim.SetBool("IsSitting", false);
             //navMeshAgent.enabled = true;
 
@@ -92,7 +94,7 @@ public class NpcSittingState : NpcBaseState
 
     public override void OnCollisionEnter(NpcStateManager npc, Collision collision)
     {
-        
+        coffeeOrder = GameObject.FindGameObjectWithTag("NPC").GetComponent<CoffeeOrder>();
         /*if (collision.gameObject.layer == LayerMask.NameToLayer("Floor"))
         {
             npc.SwitchState(npc.injuredState);
@@ -105,7 +107,6 @@ public class NpcSittingState : NpcBaseState
             currentChair.GetComponent<BoxCollider>().enabled = true;        
             currentChair.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             npc.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-
 
         }
         if (collision.gameObject.layer == LayerMask.NameToLayer("Interactables") && collision.gameObject.GetComponent<Interactable>().isMoving)
@@ -127,9 +128,8 @@ public class NpcSittingState : NpcBaseState
             npc.GetComponent<Rigidbody>().AddForce(Vector3.left * FlipForce, ForceMode.Impulse);
             npc.GetComponent<Rigidbody>().AddTorque(FlipDir * FlipForceRot, ForceMode.Impulse);
             npc.SwitchState(npc.injuredState);
-
-
         }
+
 
     } 
 

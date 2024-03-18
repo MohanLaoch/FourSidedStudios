@@ -12,12 +12,12 @@ public class Interactable : MonoBehaviour
     public Animator NPCAnim;
     
     private NpcStateManager npcStateManager;
+    public Storage storage;
     public bool isMoving = false;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         HoldArea = GameObject.Find("HoldArea").GetComponent<Transform>();
-        
     }
 
     public void Start()
@@ -45,10 +45,20 @@ public class Interactable : MonoBehaviour
     }
     public void Interact()
     {
+
+     
         
         if(gameObject.CompareTag("Chair"))
         {
             GetComponent<ChairTest>().isSittable = false;
+        }
+
+        if (gameObject.CompareTag("CoffeeBeans") || gameObject.CompareTag("Milk") || gameObject.CompareTag("CocoPowder") || gameObject.CompareTag("Water") || gameObject.CompareTag("Ice") || gameObject.CompareTag("TeaBags"))
+        {
+            transform.parent = HoldArea.transform;
+            rb.position = HoldArea.transform.position;
+            rb.constraints = RigidbodyConstraints.FreezeAll;
+            rb.mass = 0;
         }
 
         if (gameObject.CompareTag("NPC"))
@@ -78,10 +88,10 @@ public class Interactable : MonoBehaviour
             rb.position = HoldArea.transform.position;
             rb.constraints = RigidbodyConstraints.FreezeAll;
             rb.mass = 0;
-
         }
+ 
 
-  
+
 
     }
 
@@ -112,7 +122,6 @@ public class Interactable : MonoBehaviour
     {
         if(gameObject.CompareTag("Storage"))
         {           
-            Debug.Log("HUSBANDISMYBELOVED");
             GetComponent<Storage>().husband = true;
         }
     }

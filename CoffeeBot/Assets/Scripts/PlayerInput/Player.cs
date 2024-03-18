@@ -105,52 +105,67 @@ public class Player : MonoBehaviour
 
             if (raycastHit.transform.TryGetComponent(out Interactable interactable) && Holding == false)
             {
-                if(interactable.CompareTag("Storage"))
-                {
-                    return;
-                }
-                if (interactable.CompareTag("NPC"))
-                {
-                    HoldingNPC = true;
-                }
-                Holding = true;
-                
-                ObjectHeld = interactable.gameObject;
-                
-                interactable.Interact();
-                Grabbing.setParameterByNameWithLabel("Parameter 2", "Grab");
-                UpdateGrabSound();
-                //AudioManager.instance.PlayOneShot(FMODEvents.instance.grabSound, this.transform.position);
-                //setparameterbynamewithlabel("Parameter2, "grab");
-            }
-            else if(storage.atStorage)
-            {
-                Debug.Log("storing1");
-                interactable.Store();                              
-            }
-            else if (storage2.atStorage)
-            {
-                Debug.Log("storing2");
-                interactable.Store();
-            }
-            else if (storage3.atStorage)
-            {
-                Debug.Log("storing3");
-                interactable.Store();
-            }
-            else
-            {
-                interactable.Drop();
-                Grabbing.setParameterByNameWithLabel("Parameter 2", "Drop");
-                UpdateGrabSound();
-                //AudioManager.instance.PlayOneShot(FMODEvents.instance.dropSound, this.transform.position);
-                Holding = false;
-                HoldingNPC = false;
+                              
+                    if (interactable.CompareTag("Storage"))
+                    {
+                        return;
+                    }
+                    if (interactable.CompareTag("NPC"))
+                    {
+                        HoldingNPC = true;
+                    }
+                    Holding = true;
 
+                    ObjectHeld = interactable.gameObject;
+
+                    interactable.Interact();
+                    Grabbing.setParameterByNameWithLabel("Parameter 2", "Grab");
+                    UpdateGrabSound();
+                    //AudioManager.instance.PlayOneShot(FMODEvents.instance.grabSound, this.transform.position);
+                    //setparameterbynamewithlabel("Parameter2, "grab");
             }
             
+                else if (storage.atStorage && Holding == true)
+                {
+                    Debug.Log("storing1");
+                    interactable.Store();
+                }
+                else if (storage2.atStorage && Holding == true)
+                {
+                    Debug.Log("storing2");
+                    interactable.Store();
+                }
+                else if (storage3.atStorage && Holding == true)
+                {
+                    Debug.Log("storing3");
+                    interactable.Store();
+                }
+
+                else if (storage.atStorage && Holding == false)
+                {
+                    interactable.Interact();
+                }
+                else if (storage2.atStorage && Holding == false)
+                {
+                    interactable.Interact();
+                }
+                else if (storage3.atStorage && Holding == false)
+                {
+                    interactable.Interact();
+                }
+                else if (Holding)
+                {
+                    interactable.Drop();
+                    Grabbing.setParameterByNameWithLabel("Parameter 2", "Drop");
+                    UpdateGrabSound();
+                    //AudioManager.instance.PlayOneShot(FMODEvents.instance.dropSound, this.transform.position);
+                    Holding = false;
+                    HoldingNPC = false;
+
+                }
 
 
+            
         }
     }
 

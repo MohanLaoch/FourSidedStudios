@@ -72,6 +72,15 @@ public class Storage : MonoBehaviour
             {
                 EmptyStorage();
             }
+
+            /*if(interacts with storage crate)
+            {
+                Interact normally 
+            }*/
+
+
+
+
         }
 
         storageText.text = /*itemName + " " + */ currentCapacity.ToString();

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 using TMPro;
 
 public class OrderCoffee : MonoBehaviour
@@ -97,7 +98,11 @@ public class OrderCoffee : MonoBehaviour
 
         responseText.text = randomResponse;
         GetComponent<NpcStateManager>().SwitchState(GetComponent<NpcStateManager>().leavingState);
+        GetComponent<NavMeshAgent>().enabled = true;
         GetComponent<NpcStateManager>().isLeaving = true;
+        GetComponent<Animator>().SetBool("isWalking", true);
+        GetComponent<Animator>().SetBool("isSitting", false);
+
 
 
     }
