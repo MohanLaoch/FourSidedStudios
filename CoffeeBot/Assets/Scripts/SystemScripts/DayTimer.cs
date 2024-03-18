@@ -10,6 +10,12 @@ public class DayTimer : MonoBehaviour
 
     [Header("UI Elements")]
     public TextMeshProUGUI timerText;
+    public TextMeshProUGUI creditsText;
+    public TextMeshProUGUI billsText;
+    public TextMeshProUGUI billsText2;
+    public TextMeshProUGUI totalEarnedText;
+
+
 
     public GameObject upgradesMenu;
     public GameObject endOfDayMenu;
@@ -95,9 +101,15 @@ public class DayTimer : MonoBehaviour
     private void FinishDay()
     {
         timerActive = false;
-        //pauseMenu.ActivateUpgradesMenu();
         pauseMenu.ActivateEndOfDayMenu();
-        
+        creditsText.text = "Credits earned: " + sceneInfo.money.ToString();
+        sceneInfo.money -= sceneInfo.WaterBills;
+        sceneInfo.money -= sceneInfo.ElectricityBills;
+
+        billsText.text = "Water bills: " + sceneInfo.WaterBills.ToString();
+        billsText2.text = "Electricity bills: " + sceneInfo.ElectricityBills.ToString();
+        totalEarnedText.text = "Total earned: " + sceneInfo.money.ToString();
+
 
     }
 
