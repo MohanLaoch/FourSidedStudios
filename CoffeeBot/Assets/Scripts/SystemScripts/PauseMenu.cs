@@ -20,9 +20,12 @@ public class PauseMenu : MonoBehaviour
     public SceneInfo sceneInfo;
 
     public bool isNextScene = true;
+
+
+    public NpcInjuredState npcInjuredState;
     private void Awake()
     {
-        playerInputActions = new PlayerInputActions();
+       playerInputActions = new PlayerInputActions();
        
     }
 
@@ -156,10 +159,24 @@ public class PauseMenu : MonoBehaviour
         sceneInfo.dayCount++;
         
   
-        if (sceneInfo.dayCount >= 5)
+        if (sceneInfo.dayCount >= 5 && sceneInfo.money <= 20)
         {
-            SceneManager.LoadScene("EndScene");
+            SceneManager.LoadScene("BadEnding");
             DeactivateMenu();
+            DeactivateUpgradesMenu();
+            Cursor.visible = true;
+            sceneInfo.Reset();
+        }
+        if (sceneInfo.dayCount >= 5 && sceneInfo.money > 20)
+        {
+            SceneManager.LoadScene("GoodEnding");
+            DeactivateUpgradesMenu();
+            Cursor.visible = true;
+            sceneInfo.Reset();
+        }
+        if(sceneInfo.dayCount >= 5)
+        {
+            SceneManager.LoadScene("Prison Ending");
             DeactivateUpgradesMenu();
             Cursor.visible = true;
             sceneInfo.Reset();

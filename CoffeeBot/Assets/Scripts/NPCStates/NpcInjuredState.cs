@@ -15,6 +15,7 @@ public class NpcInjuredState : NpcBaseState
     public float timerLimit;
 
     public int InjuryCounter = 0;
+    public static int TotalInjuryCounter = 0;
     public LayerMask layermask;
     public Animator Anim;
     public Transform NpcTransform;
@@ -28,6 +29,7 @@ public class NpcInjuredState : NpcBaseState
         
         
         InjuryCounter++;
+        TotalInjuryCounter++;
         NpcTransform = npc.GetComponent<Transform>();
         npc.GetComponent<NavMeshAgent>().enabled = false;
         Anim = npc.GetComponentInChildren<Animator>();
