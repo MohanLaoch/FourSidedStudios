@@ -23,7 +23,6 @@ public class MoneyTracker : MonoBehaviour
     public float currentTime;
     private bool countDown = true;
 
-    private bool hasLimit = true;
     public float timerLimit;
 
     private bool timerActive = true;
@@ -63,12 +62,12 @@ public class MoneyTracker : MonoBehaviour
 
        // if the timer has limit and is above or below that limit set the timer text
 
-        if (hasLimit && ((countDown && currentTime <= timerLimit) || (!countDown && currentTime >= timerLimit)))
+        /*if (hasLimit && ((countDown && currentTime <= timerLimit) || (!countDown && currentTime >= timerLimit)))
         { 
             currentTime = timerLimit;
             SetTimerText();
             enabled = false;
-        }
+        }*/
       
         SetTimerText();
         //moneyText.text = ": " + money.ToString("0");

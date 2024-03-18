@@ -20,6 +20,9 @@ public class OrderCoffee : MonoBehaviour
     public Image coffeeImage;
 
     [Header("UI")]
+
+    public TextMeshProUGUI coffeeText;
+
     [TextArea(2, 5)]
     public string[] orderResponses;
 
@@ -50,6 +53,8 @@ public class OrderCoffee : MonoBehaviour
         int randomIndex = Random.Range(0, avaliableOrders.coffeeOrders.Count);
 
         acceptedCoffeeTag = avaliableOrders.coffeeOrders[randomIndex];
+
+        coffeeText.text = acceptedCoffeeTag;
 
         coffeeImage.sprite = avaliableOrders.orderIcons[randomIndex];
 

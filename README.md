@@ -784,6 +784,9 @@
 | :--- |
 | • UI Image on NPC |
 | • Fixed Spill Bug |
+| • Added Text and New Icons to NPC UI |
+| • Changed Camera Defaults |
+| • Temporarily have removed Wall Cut Out 
 
 | **Niamh** |
 | :--- |
