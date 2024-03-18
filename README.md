@@ -784,3 +784,7 @@
 | :--- |
 | • UI Image on NPC |
 | • Fixed Spill Bug |
+
+| **Niamh** |
+| :--- |
+| • Created new lighting scene and imported new skybox to project |
