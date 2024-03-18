@@ -12,7 +12,7 @@ public class SceneInfo : ScriptableObject {
     public float playerAcceleration;
     public int ElectricityBills = 10;
     public int WaterBills = 10;
-
+    public int TotalInjuryCounter;
 
 
     public void Reset()

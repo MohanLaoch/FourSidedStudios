@@ -22,7 +22,7 @@ public class PauseMenu : MonoBehaviour
     public bool isNextScene = true;
 
 
-    public NpcInjuredState npcInjuredState;
+    public TotalInjuryCounter totalInjuryCounter;
     private void Awake()
     {
        playerInputActions = new PlayerInputActions();
@@ -174,9 +174,9 @@ public class PauseMenu : MonoBehaviour
             Cursor.visible = true;
             sceneInfo.Reset();
         }
-        if(sceneInfo.dayCount >= 5)
+        if (sceneInfo.dayCount >= 5 && totalInjuryCounter.totalInjuryCounter >= 10)
         {
-            SceneManager.LoadScene("Prison Ending");
+            SceneManager.LoadScene("PrisonEnding");
             DeactivateUpgradesMenu();
             Cursor.visible = true;
             sceneInfo.Reset();

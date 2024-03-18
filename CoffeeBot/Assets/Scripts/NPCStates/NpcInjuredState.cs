@@ -15,7 +15,8 @@ public class NpcInjuredState : NpcBaseState
     public float timerLimit;
 
     public int InjuryCounter = 0;
-    public static int TotalInjuryCounter = 0;
+    
+    
     public LayerMask layermask;
     public Animator Anim;
     public Transform NpcTransform;
@@ -23,25 +24,25 @@ public class NpcInjuredState : NpcBaseState
     public Interactable interactable;
     public SlipperyFloor slipperyFloor;
     public Player player;
-    
+    public TotalInjuryCounter totalInjuryCounter;
+
     public override void EnterState(NpcStateManager npc)
     {
-        
-        
+        totalInjuryCounter = GameObject.Find("InjuryManager").GetComponent<TotalInjuryCounter>();
         InjuryCounter++;
-        TotalInjuryCounter++;
+        totalInjuryCounter.totalInjuryCounter++;
+        Debug.Log(totalInjuryCounter.totalInjuryCounter);
         NpcTransform = npc.GetComponent<Transform>();
         npc.GetComponent<NavMeshAgent>().enabled = false;
         Anim = npc.GetComponentInChildren<Animator>();
         npc.GetComponent<Rigidbody>().AddForce(Vector3.forward * 0.5f, ForceMode.Impulse);
-        currentTime = maxTime;
-
-        
+        currentTime = maxTime;        
     }
 
     public override void UpdateState(NpcStateManager npc)
     {
         NPCFlailing(npc);
+
     }
 
     public override void OnCollisionEnter(NpcStateManager npc, Collision collision)
@@ -110,10 +111,10 @@ public class NpcInjuredState : NpcBaseState
             
             
 
-        }
+    }
 
       
-        
+
             
         
 

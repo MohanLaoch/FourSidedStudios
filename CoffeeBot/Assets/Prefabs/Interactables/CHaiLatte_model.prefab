@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7043546657152500939}
   - component: {fileID: 3292663627737663827}
   m_Layer: 7
-  m_Name: ChaiLatte_model
+  m_Name: CHaiLatte_model
   m_TagString: ChaiLatte
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,13 +30,13 @@ Transform:
   m_GameObject: {fileID: 714728091722790835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.75, y: -1.694, z: -5.9856}
-  m_LocalScale: {x: 0.12682115, y: 0.12682115, z: 0.12682115}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3319913150980311405}
   - {fileID: 4790144968952688870}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &6818478845853548876
 Rigidbody:
@@ -78,8 +78,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3887248, y: 0.32377502, z: 0.50009924}
-  m_Center: {x: 0.0496657, y: 0.21012633, z: -0.054481216}
+  m_Size: {x: 0.3887248, y: 0.19018626, z: 0.50009924}
+  m_Center: {x: 0.049665704, y: 0.27692068, z: -0.05448121}
 --- !u!114 &7043546657152500939
 MonoBehaviour:
   m_ObjectHideFlags: 0
