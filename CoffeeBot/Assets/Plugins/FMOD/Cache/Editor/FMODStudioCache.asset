@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638431875311521699
+  lastModified: 638427369359638355
   FileSizes:
   - Name: Desktop
     Value: 2076
@@ -35,38 +35,11 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 638431875758610028
+  lastModified: 638427369417840129
   FileSizes:
   - Name: Desktop
     Value: 5449120
   Exists: 1
---- !u!114 &-2573857750702769528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Serg.io/PlayerFlip
-  m_EditorClassIdentifier: 
-  Path: event:/Serg.io/PlayerFlip
-  Guid:
-    Data1: 852315113
-    Data2: 1186605323
-    Data3: -1817779551
-    Data4: 181311104
-  Banks:
-  - {fileID: 3373333903977561061}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 874
 --- !u!114 &-2088761595059324106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,14 +122,12 @@ MonoBehaviour:
   - {fileID: 5089757307834482330}
   - {fileID: 4764089716858289380}
   - {fileID: 5619812738720315303}
-  - {fileID: 7734850746520850967}
-  - {fileID: -2573857750702769528}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6782609054513851589}
   StringsBanks:
   - {fileID: 6128693005037801278}
-  cacheTime: 638431875759087650
+  cacheTime: 638427369445820944
   cacheVersion: 131609
 --- !u!114 &3373333903977561061
 MonoBehaviour:
@@ -173,34 +144,10 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Serg.io.bank
   Name: Serg.io
   StudioPath: bank:/Serg.io
-  lastModified: 638431875759087650
+  lastModified: 638427369445820944
   FileSizes:
   - Name: Desktop
-    Value: 2294688
-  Exists: 1
---- !u!114 &3874366676899690893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/PlayerMove/PitchChange
-  m_EditorClassIdentifier: 
-  Name: PitchChange
-  StudioPath: 
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 3416683468
-    data2: 2445142201
-  Type: 0
-  IsGlobal: 0
-  Labels: []
+    Value: 2245088
   Exists: 1
 --- !u!114 &4042138696903299727
 MonoBehaviour:
@@ -325,7 +272,7 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/NPC.bank
   Name: NPC
   StudioPath: bank:/NPC
-  lastModified: 638427385042951299
+  lastModified: 638427369418366331
   FileSizes:
   - Name: Desktop
     Value: 95872
@@ -428,10 +375,10 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638431875311551683
+  lastModified: 638427369359653897
   FileSizes:
   - Name: Desktop
-    Value: 1622
+    Value: 1480
   Exists: 1
 --- !u!114 &7078618584812175710
 MonoBehaviour:
@@ -486,34 +433,6 @@ MonoBehaviour:
   - NotStrained
   - Strained
   Exists: 1
---- !u!114 &7734850746520850967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Serg.io/PlayerMove
-  m_EditorClassIdentifier: 
-  Path: event:/Serg.io/PlayerMove
-  Guid:
-    Data1: 1832409504
-    Data2: 1122824177
-    Data3: -2092996736
-    Data4: -1171653887
-  Banks:
-  - {fileID: 3373333903977561061}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 3874366676899690893}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3850
 --- !u!114 &8171041791409982730
 MonoBehaviour:
   m_ObjectHideFlags: 0
