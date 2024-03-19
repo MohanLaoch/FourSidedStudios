@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4639780085624061230}
   m_Layer: 7
   m_Name: IcedCoffeeCup
-  m_TagString: Untagged
+  m_TagString: Iced Coffee
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,7 +203,7 @@ Transform:
   - {fileID: 532277000516395622}
   - {fileID: 2806010954260941030}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &3102256993683939250
 Rigidbody:
@@ -263,6 +263,7 @@ MonoBehaviour:
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
   NPCAnim: {fileID: 0}
+  storage: {fileID: 0}
   isMoving: 0
 --- !u!114 &3908277247626132755
 MonoBehaviour:

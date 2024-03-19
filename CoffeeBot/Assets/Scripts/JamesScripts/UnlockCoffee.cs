@@ -69,7 +69,7 @@ public class UnlockCoffee : MonoBehaviour
             hasTeaBags = true;
         }
 
-        avaliableOrders.coffeeOrders.Add("ChaiLatte");
+        avaliableOrders.coffeeOrders.Add("Chai Latte");
         avaliableOrders.orderIcons.Add(chaiLatteSprite);
             
     }
@@ -96,7 +96,7 @@ public class UnlockCoffee : MonoBehaviour
             hasCocoPowder = true;
         }
 
-        avaliableOrders.coffeeOrders.Add("HotChocolate");
+        avaliableOrders.coffeeOrders.Add("Hot Chocolate");
         avaliableOrders.orderIcons.Add(hotChocolateSprite);
     }
 
@@ -122,7 +122,7 @@ public class UnlockCoffee : MonoBehaviour
             hasIce = true;
         }
 
-        avaliableOrders.coffeeOrders.Add("IcedCoffee");
+        avaliableOrders.coffeeOrders.Add("Iced Coffee");
         avaliableOrders.orderIcons.Add(icedCoffeeSprite);
     }
 
@@ -148,7 +148,7 @@ public class UnlockCoffee : MonoBehaviour
             hasIce = true;
         }
 
-        avaliableOrders.coffeeOrders.Add("IcedLatte");
+        avaliableOrders.coffeeOrders.Add("Iced Latte");
         avaliableOrders.orderIcons.Add(icedLatteSprite);
     }
 

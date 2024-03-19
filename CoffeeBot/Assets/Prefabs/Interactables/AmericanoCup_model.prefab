@@ -362,7 +362,7 @@ Transform:
   m_GameObject: {fileID: 6549190867720557355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.7856588, y: -1.71, z: -6.1614976}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 2.2, y: 2.2, z: 2.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 353441402408287599}
@@ -370,7 +370,7 @@ Transform:
   - {fileID: 7500353703262216006}
   - {fileID: 8520675930259682120}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &8154353351988115116
 Rigidbody:
@@ -430,6 +430,7 @@ MonoBehaviour:
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
   NPCAnim: {fileID: 0}
+  storage: {fileID: 0}
   isMoving: 0
 --- !u!114 &800612004020746464
 MonoBehaviour:

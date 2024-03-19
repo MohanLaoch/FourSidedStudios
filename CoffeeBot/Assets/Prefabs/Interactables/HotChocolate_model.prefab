@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8550228780658840967}
   m_Layer: 7
   m_Name: HotChocolate_model
-  m_TagString: HotChocolate
+  m_TagString: Hot Chocolate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 543574025478205594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.7581, y: -1.7109, z: -5.9052}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5154351100033006390}
@@ -96,6 +96,7 @@ MonoBehaviour:
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
   NPCAnim: {fileID: 0}
+  storage: {fileID: 0}
   isMoving: 0
 --- !u!114 &8550228780658840967
 MonoBehaviour:
