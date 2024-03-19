@@ -142,11 +142,16 @@ public class PauseMenu : MonoBehaviour
         DeactivateMenu();
 
         sceneInfo.isNextScene = isNextScene;
-        sceneInfo.Reset();
+        sceneInfo.Reset();      
+    }
 
+    public void ResetTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+        Time.timeScale = 1;
+        DeactivateMenu();
         
-
-
+        sceneInfo.Reset();
     }
 
     public void NextDay()
