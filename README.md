@@ -826,4 +826,5 @@
 | • imported imported and assigned ui buttons|
 | • imported character selected buttons|
 | • added the above to skin select scene|
+| • imported unlock coffee ui button|
 
