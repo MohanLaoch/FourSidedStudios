@@ -645,7 +645,7 @@
 
 ### 08/03/2024
 
-| *Declan* |
+| **Declan** |
 | :--- |
 | • Small ai tweaks|
 
@@ -671,7 +671,7 @@
 | :--- |
 | • Imported Gold serg.io model + textures|
 | • Added Gold serg.io to mark scene|
-| • Created folders in mark scene hierchy|
+| • Created folders in mark scene hierarchy |
 | • Imported new store room boxes (ice, tea, water, cocopowder)|
 | • Imported new ice, tea, water, cocopowder ui counter|
 
@@ -753,6 +753,7 @@
 ### 16/03/2024
 
 | **Declan** |
+| :--- |
 | • Fixed slippery floor bug |
 | • fixed npc spawning bug |
 
