@@ -12,6 +12,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseUI;
     [SerializeField] private GameObject upgradeUI;
     [SerializeField] private GameObject endOfDayUI;
+    [SerializeField] private GameObject unlockCoffeeUI;
+
 
 
     [SerializeField] private bool isPaused;
@@ -59,6 +61,7 @@ public class PauseMenu : MonoBehaviour
         {
             DeactivateMenu();
             DeactivateUpgradesMenu();
+            DeactivateUnlockCoffeeMenu();
         }
     }
 
@@ -102,8 +105,17 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = false;
         playerInputActions.Player.Enable();
         playerInputActions.Player.Flip.Enable();
+    }
 
-
+    public void DeactivateUnlockCoffeeMenu()
+    {
+        Time.timeScale = 1;
+        //Audiolistener.pause = false;
+        unlockCoffeeUI.SetActive(false);
+        isPaused = false;
+        Cursor.visible = false;
+        playerInputActions.Player.Enable();
+        playerInputActions.Player.Flip.Enable();
     }
 
 
@@ -164,7 +176,7 @@ public class PauseMenu : MonoBehaviour
         sceneInfo.dayCount++;
         
   
-        if (sceneInfo.dayCount >= 5 && sceneInfo.money <= 20)
+        if (sceneInfo.dayCount >= 5 && sceneInfo.money <= 200)
         {
             SceneManager.LoadScene("BadEnding");
             DeactivateMenu();
@@ -172,20 +184,20 @@ public class PauseMenu : MonoBehaviour
             Cursor.visible = true;
             sceneInfo.Reset();
         }
-        if (sceneInfo.dayCount >= 5 && sceneInfo.money > 20)
+        if (sceneInfo.dayCount >= 5 && sceneInfo.money > 200)
         {
             SceneManager.LoadScene("GoodEnding");
             DeactivateUpgradesMenu();
             Cursor.visible = true;
             sceneInfo.Reset();
         }
-        if (sceneInfo.dayCount >= 5 && totalInjuryCounter.totalInjuryCounter >= 10)
-        {
+       else if (sceneInfo.dayCount >= 5 && totalInjuryCounter.totalInjuryCounter >= 10)
+       {
             SceneManager.LoadScene("PrisonEnding");
             DeactivateUpgradesMenu();
             Cursor.visible = true;
             sceneInfo.Reset();
-        }
+       }
     }
 
 
