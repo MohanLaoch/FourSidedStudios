@@ -30,7 +30,7 @@ public class OrderCoffee : MonoBehaviour
     public TextMeshProUGUI responseText;
     public GameObject responseBubble;
 
-    public GameObject timerBubble;
+    public Slider timerBubble;
 
 
     private void Awake()
@@ -40,7 +40,7 @@ public class OrderCoffee : MonoBehaviour
         avaliableOrders = GameObject.Find("UnlockCoffee").GetComponent<AvaliableOrders>();
 
         responseBubble.SetActive(false);
-        timerBubble.SetActive(true);
+        timerBubble.gameObject.SetActive(true);
 
         Order();
 
@@ -85,11 +85,8 @@ public class OrderCoffee : MonoBehaviour
     {
         coffeeImage.gameObject.SetActive(false);
 
-        // go to the moneyTracker script and give money
-        moneyTracker.CompleteOrder();
-
         // respond to getting coffee
-        timerBubble.SetActive(false);
+        timerBubble.gameObject.SetActive(false);
         responseBubble.SetActive(true);
 
         int randomIndex = Random.Range(0, orderResponses.Length);
@@ -103,7 +100,8 @@ public class OrderCoffee : MonoBehaviour
         GetComponent<Animator>().SetBool("isWalking", true);
         GetComponent<Animator>().SetBool("isSitting", false);
 
-
+        // go to the moneyTracker script and give money
+        moneyTracker.CompleteOrder();
 
     }
 

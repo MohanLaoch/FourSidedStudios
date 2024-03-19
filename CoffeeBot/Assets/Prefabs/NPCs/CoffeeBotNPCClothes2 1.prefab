@@ -9500,7 +9500,7 @@ Transform:
   - {fileID: 8329352312845288095}
   - {fileID: 2981963034500822469}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &7617953996999605009
 Animator:
@@ -9641,7 +9641,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7311876698218171426}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.32
   m_Speed: 2
@@ -9704,13 +9704,16 @@ MonoBehaviour:
   coffeeImage: {fileID: 83895503}
   coffeeText: {fileID: 8598563822240521350}
   orderResponses:
-  - I love COFFEE!
-  - GIMMIE DAT!
-  - YUP BRO!
-  - Alri bro ;)
-  responseText: {fileID: 0}
-  responseBubble: {fileID: 0}
-  timerBubble: {fileID: 0}
+  - Yeah man!
+  - ...
+  - Gimme Dat!
+  - Thanks!
+  - Oh! I forgot that's what I ordered.
+  - Have a nice day.
+  - Enjoy your coffee too! Ooops.
+  responseText: {fileID: 860131033}
+  responseBubble: {fileID: 820012701}
+  timerBubble: {fileID: 440079153}
 --- !u!114 &7311876698218171412
 MonoBehaviour:
   m_ObjectHideFlags: 0
