@@ -828,4 +828,4 @@
 | • added the above to skin select scene|
 | • imported unlock coffee ui button|
 | • imported play again ui button|
-
+| • imported character select idle|
