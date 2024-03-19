@@ -800,4 +800,6 @@
 | **Niamh** |
 | :--- |
 | • Added SingleDoor to NiamhScene and created prefab |
+| • Added skybox to Prototype 1 Scene |
+
 
