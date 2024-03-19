@@ -824,4 +824,6 @@
 | • added the above to prototype 1 + Mark Scene|
 | • imported endings art|
 | • imported imported and assigned ui buttons|
+| • imported character selected buttons|
+| • added the above to skin select scene|
 
