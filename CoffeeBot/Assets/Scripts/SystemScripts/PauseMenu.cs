@@ -22,7 +22,7 @@ public class PauseMenu : MonoBehaviour
     public SceneInfo sceneInfo;
 
     public bool isNextScene = true;
-
+    public bool isPrisoner = false;
 
     public TotalInjuryCounter totalInjuryCounter;
     private void Awake()
@@ -33,7 +33,10 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        
+        if(totalInjuryCounter.totalInjuryCounter >= 10)
+        {
+            isPrisoner = true;
+        }
     }
 
     private void OnEnable()
@@ -176,7 +179,7 @@ public class PauseMenu : MonoBehaviour
         sceneInfo.dayCount++;
         
   
-        if (sceneInfo.dayCount >= 5 && sceneInfo.money <= 200)
+        if (sceneInfo.dayCount >= 5 && sceneInfo.money <= 200 && isPrisoner == false)
         {
             SceneManager.LoadScene("BadEnding");
             DeactivateMenu();
@@ -184,15 +187,16 @@ public class PauseMenu : MonoBehaviour
             Cursor.visible = true;
             sceneInfo.Reset();
         }
-        if (sceneInfo.dayCount >= 5 && sceneInfo.money > 200)
+        if (sceneInfo.dayCount >= 5 && sceneInfo.money > 200 && isPrisoner == false)
         {
             SceneManager.LoadScene("GoodEnding");
             DeactivateUpgradesMenu();
             Cursor.visible = true;
             sceneInfo.Reset();
         }
-       else if (sceneInfo.dayCount >= 5 && totalInjuryCounter.totalInjuryCounter >= 10)
+       else if (sceneInfo.dayCount >= 5 && isPrisoner == true)
        {
+ 
             SceneManager.LoadScene("PrisonEnding");
             DeactivateUpgradesMenu();
             Cursor.visible = true;
