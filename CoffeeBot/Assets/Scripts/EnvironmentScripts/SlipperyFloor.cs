@@ -17,7 +17,7 @@ public class SlipperyFloor : MonoBehaviour
     }
     private void OnTriggerEnter(Collider npc)
     {
-        NpcRB = npc.GetComponentInParent<Rigidbody>();
+        NpcRB = npc.GetComponent<Rigidbody>();
         npcStateManager = npc.GetComponent<NpcStateManager>();
         Vector3 FlipDir = transform.TransformDirection(Vector3.forward);
           if (npc.gameObject.CompareTag("NPC"))
