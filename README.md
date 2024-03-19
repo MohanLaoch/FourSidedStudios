@@ -822,4 +822,6 @@
 | • Imported shelf model|
 | • created and added material to the above|
 | • added the above to prototype 1 + Mark Scene|
+| • imported endings art|
+| • imported imported and assigned ui buttons|
 
