@@ -9851,9 +9851,11 @@ MonoBehaviour:
   pauseUI: {fileID: 996289406}
   upgradeUI: {fileID: 0}
   endOfDayUI: {fileID: 0}
+  unlockCoffeeUI: {fileID: 0}
   isPaused: 0
   sceneInfo: {fileID: 0}
   isNextScene: 1
+  isPrisoner: 0
   totalInjuryCounter: {fileID: 0}
 --- !u!4 &788972176
 Transform:
@@ -36357,6 +36359,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1553618392, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1642389129339958234, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
       propertyPath: m_RootOrder
       value: 2
