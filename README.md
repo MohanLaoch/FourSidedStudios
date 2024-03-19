@@ -726,15 +726,15 @@
 
 ### 14/03/2024
 
-| **James** |
-| :--- |
-| • Created and tested Spill script |
-
-
 | **Declan** |
 | :--- |
 | • Set up Npc animations |
 | • Worked on npc sitting |
+
+| **James** |
+| :--- |
+| • Created and tested Spill script |
+
 
 ### 15/03/2024
 
