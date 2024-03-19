@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CraftCoffee : MonoBehaviour
 {
+
+    [SerializeField]
+    private InputAction action;
 
     [Header("Storage Units")]
 
@@ -34,7 +38,7 @@ public class CraftCoffee : MonoBehaviour
 
     private bool canCraft = true;
 
-    private void Start()
+    private void Awake()
     {
         // Americano
 
@@ -77,6 +81,22 @@ public class CraftCoffee : MonoBehaviour
         recipeResults.Add(latte);
         recipeResults.Add(latte);
         recipeResults.Add(latte);
+    }
+
+    private void Start()
+    {
+        action.performed += ctx => CheckForCreatedRecipies();
+
+    }
+
+    private void OnEnable()
+    {
+        action.Enable();
+    }
+
+    private void OnDisable()
+    {
+        action.Disable();
     }
 
     // Update is called once per frame
