@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30321336, g: 0.12815265, b: 0.34266487, a: 1}
+  m_IndirectSpecularColor: {r: 0.30322725, g: 0.12813418, b: 0.342678, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2677,7 +2677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5741020048260922060, guid: 49d1f76f763226149b2bde7a701dfadd, type: 3}
       propertyPath: action.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Keyboard>/r
+      value: <Keyboard>/c
       objectReference: {fileID: 0}
     - target: {fileID: 5741020048260922060, guid: 49d1f76f763226149b2bde7a701dfadd, type: 3}
       propertyPath: action.m_SingletonActionBindings.Array.data[0].m_Action
@@ -4891,9 +4891,11 @@ MonoBehaviour:
   pauseUI: {fileID: 146307153}
   upgradeUI: {fileID: 0}
   endOfDayUI: {fileID: 0}
+  unlockCoffeeUI: {fileID: 0}
   isPaused: 0
   sceneInfo: {fileID: 11400000, guid: 4a278d09038d67347a83391bb02cbcee, type: 2}
   isNextScene: 0
+  isPrisoner: 0
   totalInjuryCounter: {fileID: 0}
 --- !u!4 &1347141499
 Transform:
