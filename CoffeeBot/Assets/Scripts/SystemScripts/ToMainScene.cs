@@ -10,7 +10,7 @@ public class ToMainScene : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "CoffeeCup")
+        if (other.gameObject.tag == "Latte" || other.gameObject.tag == "Cappuccino")
         {
             SceneManager.LoadScene(sceneName);
             sceneInfo.Reset();

@@ -52,6 +52,7 @@ public class Storage : MonoBehaviour
             currentCapacity = 0;
             itemName = null;
             storageImage.sprite = nullSprite;
+            buttonText.text = "E".ToString();
         }
 
         // if the storge goes above current capacity bring it back down to the current (so no item overflow)
