@@ -810,6 +810,13 @@
 
 ###19/03/2024
 
+| **James** |
+| :--- |
+| • Updated Coffee Prefabs |
+| • Expanded Level and Updated positions of counter and radio |
+| • Changed Crafting from UI Button to Key Press R |
+
+
 | **Mark** |
 | :--- |
 | • Imported shelf model|
