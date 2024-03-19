@@ -795,6 +795,12 @@
 | :--- |
 | • Created new lighting scene and imported new skybox to project |
 
+| **Mark** |
+| :--- |
+| • imported coffee orders ui|
+| • imported menu buttons|
+| • imported gigaserg.io|
+
 ###19/03/2024
 
 | **Niamh** |
@@ -802,4 +808,11 @@
 | • Added SingleDoor to NiamhScene and created prefab |
 | • Added skybox to Prototype 1 Scene |
 
+###19/03/2024
+
+| **Mark** |
+| :--- |
+| • Imported shelf model|
+| • created and added material to the above|
+| • added the above to prototype 1 + Mark Scene|
 
