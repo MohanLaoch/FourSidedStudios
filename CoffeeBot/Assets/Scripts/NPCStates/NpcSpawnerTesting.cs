@@ -10,6 +10,7 @@ public class NpcSpawnerTesting : MonoBehaviour
     public int NpcCount = 1;
     public void Start()
     {
+        Instantiate(NPC, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
         StartCoroutine(SpawnNPC());
     }
 

@@ -333,8 +333,8 @@ public class Player : MonoBehaviour
             ObjectHeld.GetComponent<Interactable>().Drop();
             ObjectHeld.GetComponent<Rigidbody>().AddForce(ThrowDir * ThrowForce, ForceMode.Impulse);
             ObjectHeld.GetComponent<Rigidbody>().AddForce(Vector3.up * (ThrowForce / 2), ForceMode.Impulse);
+            ObjectHeld.GetComponent<Rigidbody>().AddTorque(transform.TransformDirection(Vector3.forward) * FlipForceRot, ForceMode.Impulse);
 
-            
             ThrowForce = 0f;
             Holding = false;
             throwBar.SetThrow(ThrowForce);
