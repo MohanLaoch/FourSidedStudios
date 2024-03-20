@@ -810,12 +810,22 @@
 
 ###19/03/2024
 
+| **Declan** |
+| :--- |
+| • Fixed NPC spawning bugs |
+| • Tweaked NPC spawn frequency depending on days |
+| • Hooked up endings |
+| • Added money and injury conditions for endings |
+| • Built the game for Beta |
+
 | **James** |
 | :--- |
 | • Updated Coffee Prefabs |
 | • Expanded Level and Updated positions of counter and radio |
-| • Changed Crafting from UI Button to Key Press R |
-
+| • Changed Crafting from UI Button to Key Press C |
+| • Added ability to unlock all coffee in pause menu |
+| • Updated Tutorial with new recipes |
+| • Added frames and cleaned up storage area |
 
 | **Mark** |
 | :--- |
@@ -830,3 +840,5 @@
 | • imported play again ui button|
 | • imported character select idle|
 | • PostProcessing|
+
+## Post Beta
