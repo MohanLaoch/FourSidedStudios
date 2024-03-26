@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class CraftCoffee : MonoBehaviour
 {
-
     [SerializeField]
     private InputAction action;
 
@@ -24,8 +24,10 @@ public class CraftCoffee : MonoBehaviour
     public GameObject latte;
 
     
+    [HideInInspector]
     public List<string> recipes = new List<string>();
-    
+
+    [HideInInspector]
     public List<GameObject> recipeResults = new List<GameObject>();
 
 
@@ -37,6 +39,17 @@ public class CraftCoffee : MonoBehaviour
     private int capacityRemoveAmount = 1;
 
     private bool canCraft = true;
+
+    [Header("About to be Crafted")]
+    public Image coffeeCraftImage;
+
+    public Sprite americanoSprite;
+    public Sprite cappuccinoSprite;
+    public Sprite latteSprite;
+    public Sprite nullSprite;
+
+    [HideInInspector]
+    public List<Sprite> recipeImages = new List<Sprite>();
 
     private void Awake()
     {
@@ -56,6 +69,13 @@ public class CraftCoffee : MonoBehaviour
         recipeResults.Add(americano);
         recipeResults.Add(americano);
 
+        recipeImages.Add(americanoSprite);
+        recipeImages.Add(americanoSprite);
+        recipeImages.Add(americanoSprite);
+        recipeImages.Add(americanoSprite);
+        recipeImages.Add(americanoSprite);
+        recipeImages.Add(americanoSprite);
+
         //Cappuccino
 
         recipes.Add("MilkMilkCoffeeBeans");
@@ -65,6 +85,10 @@ public class CraftCoffee : MonoBehaviour
         recipeResults.Add(cappuccino);
         recipeResults.Add(cappuccino);
         recipeResults.Add(cappuccino);
+
+        recipeImages.Add(cappuccinoSprite);
+        recipeImages.Add(cappuccinoSprite);
+        recipeImages.Add(cappuccinoSprite);
 
         //Latte
 
@@ -81,6 +105,13 @@ public class CraftCoffee : MonoBehaviour
         recipeResults.Add(latte);
         recipeResults.Add(latte);
         recipeResults.Add(latte);
+
+        recipeImages.Add(latteSprite);
+        recipeImages.Add(latteSprite);
+        recipeImages.Add(latteSprite);
+        recipeImages.Add(latteSprite);
+        recipeImages.Add(latteSprite);
+        recipeImages.Add(latteSprite);
     }
 
     private void Start()
@@ -106,7 +137,7 @@ public class CraftCoffee : MonoBehaviour
         storedItems[1] = storageB.itemName;
         storedItems[2] = storageC.itemName;
 
-        
+        UpdateCoffeeImage();
     }
 
     public void CheckForCreatedRecipies()
@@ -124,6 +155,7 @@ public class CraftCoffee : MonoBehaviour
     {
         canCraft = false;
 
+        
         // make the currentRecipeString blank
         string currentRecipeString = "";
 
@@ -139,16 +171,17 @@ public class CraftCoffee : MonoBehaviour
             else
             {
                 currentRecipeString += "Null";
+                coffeeCraftImage.sprite = nullSprite;
             }
         }
+
 
         // check all recipies 
         for (int i = 0; i < recipes.Count; i++)
         {
             // if the current recipe equals a craftable recipie, craft that recipe
             if (recipes[i] == currentRecipeString)
-            {
-                int currentRecipe = i;
+            {               
 
                 Vector3 spawnPos = this.transform.position;
 
@@ -164,6 +197,39 @@ public class CraftCoffee : MonoBehaviour
         canCraft = true;
 
 
+    }
+
+    public void UpdateCoffeeImage()
+    {
+        // make the currentRecipeString blank
+        string currentRecipeString = "";
+
+        // for every stored item...
+        foreach (string storedItem in storedItems)
+        {
+
+            // if there is a stored item, add the name to the current recipe
+            if (storedItem != null)
+            {
+                currentRecipeString += storedItem;
+            }
+            else
+            {
+                currentRecipeString += "Null";
+                coffeeCraftImage.sprite = nullSprite;
+            }
+        }
+
+        // check all recipies 
+        for (int i = 0; i < recipes.Count; i++)
+        {
+            // if the current recipe equals a craftable recipe, show the sprite of the recipe
+            if (recipes[i] == currentRecipeString)
+            {
+
+                coffeeCraftImage.sprite = recipeImages[i];
+            }
+        }
     }
 
     void EmptyCapacity()
