@@ -13,11 +13,12 @@ public class RecipeBoard : MonoBehaviour
 
     public Image recipeBoardImage;
 
-    public bool can;
-    
+    private bool can;
+    private bool inCollider;
 
     private void Awake()
     {
+        inCollider = false;
         recipeBoardUI.SetActive(false);
 
     }
@@ -40,25 +41,27 @@ public class RecipeBoard : MonoBehaviour
 
     public void TurnOnRecipeBoard()
     {
-        
-
-        if (can)
-        {          
-            recipeBoardImage.gameObject.SetActive(true);
-            action.Enable();
-        }
-        else if (!can)
+        if (inCollider)
         {
-            
-            recipeBoardImage.gameObject.SetActive(false);
-            action.Disable();
-            
-        }
-        
+            if (can)
+            {
+                recipeBoardImage.gameObject.SetActive(true);
+                can = false;
+
+            }
+            else if (!can)
+            {
+                recipeBoardImage.gameObject.SetActive(false);
+                can = true;
+
+            }
+        }        
     }
 
     public void OnTriggerEnter(Collider other)
     {
+        inCollider = true;
+
         if (other.gameObject.tag == "Player")
         {
             recipeBoardUI.SetActive(true);
@@ -69,6 +72,8 @@ public class RecipeBoard : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
+        inCollider = false;
+
         if (other.gameObject.tag == "Player")
         {
             can = false;
