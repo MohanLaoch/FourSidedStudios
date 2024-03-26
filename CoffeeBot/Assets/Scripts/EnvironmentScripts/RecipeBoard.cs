@@ -13,7 +13,8 @@ public class RecipeBoard : MonoBehaviour
 
     public Image recipeBoardImage;
 
-    private bool can;
+    public bool can;
+    
 
     private void Awake()
     {
@@ -39,15 +40,19 @@ public class RecipeBoard : MonoBehaviour
 
     public void TurnOnRecipeBoard()
     {
+        
+
         if (can)
-        {
+        {          
             recipeBoardImage.gameObject.SetActive(true);
-            can = false;
+            action.Enable();
         }
         else if (!can)
         {
+            
             recipeBoardImage.gameObject.SetActive(false);
-            can = true;
+            action.Disable();
+            
         }
         
     }
@@ -58,6 +63,7 @@ public class RecipeBoard : MonoBehaviour
         {
             recipeBoardUI.SetActive(true);
             can = true;
+           
         }
     }
 
@@ -68,6 +74,7 @@ public class RecipeBoard : MonoBehaviour
             can = false;
             recipeBoardUI.SetActive(false);
             recipeBoardImage.gameObject.SetActive(false);
+            
         }
         
     }
