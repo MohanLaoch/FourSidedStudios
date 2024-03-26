@@ -63,6 +63,13 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipeResults.Add(chaiLatte);
         craftCoffee.recipeResults.Add(chaiLatte);
 
+        craftCoffee.recipeImages.Add(chaiLatteSprite);
+        craftCoffee.recipeImages.Add(chaiLatteSprite);
+        craftCoffee.recipeImages.Add(chaiLatteSprite);
+        craftCoffee.recipeImages.Add(chaiLatteSprite);
+        craftCoffee.recipeImages.Add(chaiLatteSprite);
+        craftCoffee.recipeImages.Add(chaiLatteSprite);
+
         if (!hasTeaBags)
         {
             Instantiate(teaBags, new Vector3(teaBagsSpawn.position.x, teaBagsSpawn.position.y, teaBagsSpawn.position.z), Quaternion.identity);
@@ -90,6 +97,13 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipeResults.Add(hotChocolate);
         craftCoffee.recipeResults.Add(hotChocolate);
 
+        craftCoffee.recipeImages.Add(hotChocolateSprite);
+        craftCoffee.recipeImages.Add(hotChocolateSprite);
+        craftCoffee.recipeImages.Add(hotChocolateSprite);
+        craftCoffee.recipeImages.Add(hotChocolateSprite);
+        craftCoffee.recipeImages.Add(hotChocolateSprite);
+        craftCoffee.recipeImages.Add(hotChocolateSprite);
+
         if (!hasCocoPowder)
         {
             Instantiate(cocoPowder, new Vector3(cocoPowderSpawn.position.x, cocoPowderSpawn.position.y, cocoPowderSpawn.position.z), Quaternion.identity);
@@ -115,6 +129,13 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipeResults.Add(icedCoffee);
         craftCoffee.recipeResults.Add(icedCoffee);
         craftCoffee.recipeResults.Add(icedCoffee);
+
+        craftCoffee.recipeImages.Add(icedCoffeeSprite);
+        craftCoffee.recipeImages.Add(icedCoffeeSprite);
+        craftCoffee.recipeImages.Add(icedCoffeeSprite);
+        craftCoffee.recipeImages.Add(icedCoffeeSprite);
+        craftCoffee.recipeImages.Add(icedCoffeeSprite);
+        craftCoffee.recipeImages.Add(icedCoffeeSprite);
 
         if (!hasIce)
         {
@@ -142,6 +163,13 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipeResults.Add(icedLatte);
         craftCoffee.recipeResults.Add(icedLatte);
 
+        craftCoffee.recipeImages.Add(icedLatteSprite);
+        craftCoffee.recipeImages.Add(icedLatteSprite);
+        craftCoffee.recipeImages.Add(icedLatteSprite);
+        craftCoffee.recipeImages.Add(icedLatteSprite);
+        craftCoffee.recipeImages.Add(icedLatteSprite);
+        craftCoffee.recipeImages.Add(icedLatteSprite);
+
         if (!hasIce)
         {
             Instantiate(ice, new Vector3(iceSpawn.position.x, iceSpawn.position.y, iceSpawn.position.z), Quaternion.identity);
@@ -167,6 +195,13 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipeResults.Add(mocha);
         craftCoffee.recipeResults.Add(mocha);
         craftCoffee.recipeResults.Add(mocha);
+
+        craftCoffee.recipeImages.Add(mochaSprite);
+        craftCoffee.recipeImages.Add(mochaSprite);
+        craftCoffee.recipeImages.Add(mochaSprite);
+        craftCoffee.recipeImages.Add(mochaSprite);
+        craftCoffee.recipeImages.Add(mochaSprite);
+        craftCoffee.recipeImages.Add(mochaSprite);
 
         if (!hasCocoPowder)
         {
@@ -194,6 +229,13 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipeResults.Add(tea);
         craftCoffee.recipeResults.Add(tea);
         craftCoffee.recipeResults.Add(tea);
+
+        craftCoffee.recipeImages.Add(teaSprite);
+        craftCoffee.recipeImages.Add(teaSprite);
+        craftCoffee.recipeImages.Add(teaSprite);
+        craftCoffee.recipeImages.Add(teaSprite);
+        craftCoffee.recipeImages.Add(teaSprite);
+        craftCoffee.recipeImages.Add(teaSprite);
 
         if (!hasTeaBags)
         {
