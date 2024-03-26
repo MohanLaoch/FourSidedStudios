@@ -30,7 +30,7 @@ public class MoneyTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        money = sceneInfo.money;
+        //money = sceneInfo.money;
 
         // set the timer to maxTime, and the value of the slider to currentTime
 
@@ -45,13 +45,13 @@ public class MoneyTracker : MonoBehaviour
 
         // set the money text
 
-        moneyText.text = ": " + money.ToString("0");
+        moneyText.text = ": " + sceneInfo.money.ToString("0");
     }
 
     // Update is called once per frame
     void Update()
     {
-        money = sceneInfo.money;
+       // money = sceneInfo.money;
 
         // if the timer is active, countdown
 
@@ -107,9 +107,9 @@ public class MoneyTracker : MonoBehaviour
         // stop the timer & give the player money and a tip & set the new money text & start the timer again
 
         StopTimer();
-        money += moneyGiven + (currentTime / tipDivide);
-        moneyText.text = ": " + money.ToString("0");
-        sceneInfo.money = money;
+        sceneInfo.money += moneyGiven + (currentTime / tipDivide);
+        moneyText.text = ": " + sceneInfo.money.ToString("0");
+        //sceneInfo.money = money;
         StartTimer();
     }
 }
