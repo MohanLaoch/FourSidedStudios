@@ -840,3 +840,11 @@
 | • Added skybox to Prototype 1 Scene |
 
 ## Post Beta
+
+### 26/03/2024
+
+| **James** |
+| :--- |
+| • Added an indicator above crafting area to show what will be crafted |
+| • Added ability to "zoom" into billboard with a UI element on the main canvas |
+| • Interact indicators will only now show up if you are close to the interactables (the storage units and recipe board) |
