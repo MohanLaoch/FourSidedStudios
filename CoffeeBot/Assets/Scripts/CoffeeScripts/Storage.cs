@@ -22,6 +22,7 @@ public class Storage : MonoBehaviour
     public List<string> acceptedItems = new List<string>();
 
     [Header("UI Components")]
+    public GameObject indicatorText;
     public TextMeshProUGUI storageText;
     public TextMeshProUGUI buttonText;
     public Image storageImage;
@@ -69,6 +70,9 @@ public class Storage : MonoBehaviour
         // for emptying the storage
         if (atStorage)
         {
+            indicatorText.SetActive(true);
+
+
             if (Input.GetKeyDown(KeyCode.F))
             {
                 EmptyStorage();
@@ -79,9 +83,10 @@ public class Storage : MonoBehaviour
                 Interact normally 
             }*/
 
-
-
-
+        }
+        else if (!atStorage)
+        {
+            indicatorText.SetActive(false);
         }
 
         storageText.text = /*itemName + " " + */ currentCapacity.ToString();
