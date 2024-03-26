@@ -30,6 +30,7 @@ public class MoneyTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        moneyText = GameObject.Find("MoneyText").GetComponent<TextMeshProUGUI>();
         //money = sceneInfo.money;
 
         // set the timer to maxTime, and the value of the slider to currentTime

@@ -17,6 +17,7 @@ public class NpcStateManager : MonoBehaviour
     public NpcInjuredState injuredState = new NpcInjuredState();
     void Start()
     {
+        player = FindObjectOfType<Player>();
         currentState = sittingState;
 
         currentState.EnterState(this);
