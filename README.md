@@ -848,3 +848,10 @@
 | • Added an indicator above crafting area to show what will be crafted |
 | • Added ability to "zoom" into billboard with a UI element on the main canvas |
 | • Interact indicators will only now show up if you are close to the interactables (the storage units and recipe board) |
+
+| **Declan** |
+| :--- |
+| • Fixed credits earned after order bug|
+| • implemented player slipping on surface as well as npc|
+| • Fixed npc spawning bug|
+| • edited control scheme|
