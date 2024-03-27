@@ -9500,7 +9500,7 @@ Transform:
   - {fileID: 8329352312845288095}
   - {fileID: 2981963034500822469}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &7617953996999605009
 Animator:
@@ -9573,6 +9573,7 @@ MonoBehaviour:
   maxTime: 60
   currentTime: 0
   timerLimit: 0
+  upset: 0
 --- !u!65 &7311876698218171434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9703,18 +9704,20 @@ MonoBehaviour:
   acceptedCoffeeTag: 
   coffeeImage: {fileID: 83895503}
   coffeeText: {fileID: 8598563822240521350}
-  orderResponses:
-  - Yeah man!
-  - ...
-  - Gimme Dat!
-  - Thanks!
-  - Oh! I forgot that's what I ordered.
-  - Have a nice day.
-  - Enjoy your coffee too! Ooops.
-  - I didn't order a Yappuccino
   responseText: {fileID: 860131033}
   responseBubble: {fileID: 820012701}
+  responseBubbleImage: {fileID: 820012703}
   timerBubble: {fileID: 440079153}
+  positiveResponses:
+  - Delicious!
+  - Enjoy your coffee too! Oops.
+  - Thanks!
+  negativeResponses:
+  - ...
+  - I've been waiting for ages!
+  - I didn't order a yappuccino.
+  positiveBubble: {fileID: 21300000, guid: bdab35be3f8d6a34e8c52e4a75e6f7e1, type: 3}
+  negativeBubble: {fileID: 21300000, guid: cf6dcdc7d7cc0d540a6dc61fbd042cf9, type: 3}
 --- !u!114 &7311876698218171412
 MonoBehaviour:
   m_ObjectHideFlags: 0

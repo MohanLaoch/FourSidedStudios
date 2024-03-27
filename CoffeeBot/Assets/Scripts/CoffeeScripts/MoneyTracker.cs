@@ -27,6 +27,9 @@ public class MoneyTracker : MonoBehaviour
 
     private bool timerActive = true;
 
+    [HideInInspector]
+    public bool upset = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +62,11 @@ public class MoneyTracker : MonoBehaviour
         if (timerActive)
         {
             currentTime = countDown ? currentTime -= Time.deltaTime : currentTime += Time.deltaTime;
+        }
+
+        if (currentTime <= 0)
+        {
+            upset = true;
         }
 
        // if the timer has limit and is above or below that limit set the timer text

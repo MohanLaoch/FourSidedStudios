@@ -24,13 +24,19 @@ public class OrderCoffee : MonoBehaviour
 
     public TextMeshProUGUI coffeeText;
 
-    [TextArea(2, 5)]
-    public string[] orderResponses;
-
     public TextMeshProUGUI responseText;
     public GameObject responseBubble;
+    public Image responseBubbleImage;
 
     public Slider timerBubble;
+
+    [Header("Responses")]
+
+    public string[] positiveResponses;
+    public string[] negativeResponses;
+
+    public Sprite positiveBubble;
+    public Sprite negativeBubble;
 
 
     private void Awake()
@@ -83,17 +89,36 @@ public class OrderCoffee : MonoBehaviour
 
     private void CompleteOrder()
     {
+        acceptedCoffeeTag = "";
+
         coffeeImage.gameObject.SetActive(false);
 
         // respond to getting coffee
         timerBubble.gameObject.SetActive(false);
         responseBubble.SetActive(true);
 
-        int randomIndex = Random.Range(0, orderResponses.Length);
+        if (!moneyTracker.upset)
+        {
+            responseBubbleImage.sprite = positiveBubble;
 
-        string randomResponse = orderResponses[randomIndex];
+            int randomIndex = Random.Range(0, positiveResponses.Length);
 
-        responseText.text = randomResponse;
+            string randomResponse = positiveResponses[randomIndex];
+
+            responseText.text = randomResponse;
+        }
+        else if (moneyTracker.upset)
+        {
+            responseBubbleImage.sprite = negativeBubble;
+
+            int randomIndex = Random.Range(0, negativeResponses.Length);
+
+            string randomResponse = negativeResponses[randomIndex];
+
+            responseText.text = randomResponse;
+        }
+
+
         GetComponent<NpcStateManager>().SwitchState(GetComponent<NpcStateManager>().leavingState);
         GetComponent<NavMeshAgent>().enabled = true;
         GetComponent<NpcStateManager>().isLeaving = true;

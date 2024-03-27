@@ -11,7 +11,7 @@ public class Storage : MonoBehaviour
 
     [Header("Storage Stats")]
     public int currentCapacity = 0;
-    public int totalCurrentCapacity = 0;
+    public int totalCapacity = 0;
     public int maxCapacity = 10;
 
     [SerializeField] private int fillCapacity = 1;
@@ -51,20 +51,21 @@ public class Storage : MonoBehaviour
         if (currentCapacity <= 0)
         {
             currentCapacity = 0;
+            totalCapacity = 0;
             itemName = null;
             storageImage.sprite = nullSprite;
             buttonText.text = "E".ToString();
         }
 
         // if the storge goes above current capacity bring it back down to the current (so no item overflow)
-        if (currentCapacity > totalCurrentCapacity)
+        if (currentCapacity > totalCapacity)
         {
-            currentCapacity = totalCurrentCapacity;
+            currentCapacity = totalCapacity;
         }
 
-        if (totalCurrentCapacity > maxCapacity)
+        if (totalCapacity > maxCapacity)
         {
-            totalCurrentCapacity = maxCapacity;
+            totalCapacity = maxCapacity;
         }
 
         // for emptying the storage
@@ -159,7 +160,7 @@ public class Storage : MonoBehaviour
     {
         husband = false;
         currentCapacity += fillCapacity;
-        totalCurrentCapacity += fillCapacity;
+        totalCapacity += fillCapacity;
 
     }
 
@@ -167,6 +168,7 @@ public class Storage : MonoBehaviour
     public void EmptyStorage()
     {
         currentCapacity = 0;
+        totalCapacity = 0;
         itemName = null;
         storageImage.sprite = nullSprite;
         buttonText.text = "E".ToString();

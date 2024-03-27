@@ -237,6 +237,12 @@ public class CraftCoffee : MonoBehaviour
         storageA.currentCapacity -= capacityRemoveAmount;
         storageB.currentCapacity -= capacityRemoveAmount;
         storageC.currentCapacity -= capacityRemoveAmount;
+
+        storageA.totalCapacity -= capacityRemoveAmount;
+        storageB.totalCapacity -= capacityRemoveAmount;
+        storageC.totalCapacity -= capacityRemoveAmount;
+
+        // wait until storage fix to test the above - 27/03/2024
     }
 
 }

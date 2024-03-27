@@ -858,6 +858,13 @@
 
 ### 27/03/2024
 
+| **James** |
+| :--- |
+| • NPCs will now respond differently if the order is delivered late |
+| • NPCs can no longer accept multiple coffees |
+| • Added barista to main scene |
+| • Fixed storage capacity bug |
+
 | **Mark** |
 | :--- |
 | • Imported UI (generic slider, menu buttons (tutorial, accessibility), speach bubble (red, green), mouse click icon (right, left buttons), NotRecipe Icons,|
