@@ -12214,6 +12214,7 @@ MonoBehaviour:
   - CoffeeBox
   - CupBox
   - MilkBox
+  indicatorText: {fileID: 0}
   storageText: {fileID: 757531363}
   buttonText: {fileID: 0}
   storageImage: {fileID: 0}
@@ -37909,6 +37910,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 609731058}
     m_Modifications:
+    - target: {fileID: 1449017626277795274, guid: 4c47073255887ae45ba9155de60a6a55, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5920a39ff4aa9154a995d1b0a74221e2, type: 2}
     - target: {fileID: 8391383943165266769, guid: 4c47073255887ae45ba9155de60a6a55, type: 3}
       propertyPath: m_RootOrder
       value: -1

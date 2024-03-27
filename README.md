@@ -855,3 +855,11 @@
 | • implemented player slipping on surface as well as npc|
 | • Fixed npc spawning bug|
 | • edited control scheme|
+
+### 27/03/2024
+
+| **Mark** |
+| :--- |
+| • Imported UI (generic slider, menu buttons (tutorial, accessibility), speach bubble (red, green), mouse click icon (right, left buttons), NotRecipe Icons,|
+| • Imported tutorial recipe board texture and icons|
+| • added tutorial recipe board texture and icons to tutorial scene| 
