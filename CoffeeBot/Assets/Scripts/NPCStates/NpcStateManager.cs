@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class NpcStateManager : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class NpcStateManager : MonoBehaviour
     public bool isLeaving = false;
     
 
-    NpcBaseState currentState;
+    public NpcBaseState currentState;
     public NpcWanderState wanderState = new NpcWanderState();
     public NpcLeavingState leavingState = new NpcLeavingState();   
     public NpcSittingState sittingState = new NpcSittingState();
@@ -19,6 +20,11 @@ public class NpcStateManager : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
         currentState = sittingState;
+
+        if(gameObject.GetComponent<NavMeshAgent>().height < 1.5f)
+        {
+            currentState = wanderState;
+        }
 
         currentState.EnterState(this);
     }

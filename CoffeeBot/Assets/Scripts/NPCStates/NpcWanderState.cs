@@ -21,8 +21,15 @@ public class NpcWanderState : NpcBaseState
         NpcAnim = npc.GetComponentInChildren<Animator>();
         agent = npc.GetComponent<NavMeshAgent>();
         timer = wanderTimer;
+        agent.enabled = true;
         agent.isStopped = false;
 
+        if(agent.height < 1.5f)
+        {
+            wanderRadius = 10f;
+            wanderTimer = 1f;
+        }
+        
     }
 
     public override void UpdateState(NpcStateManager npc)

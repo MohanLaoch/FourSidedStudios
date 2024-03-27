@@ -5,13 +5,15 @@ using UnityEngine;
 public class NpcSpawnerTesting : MonoBehaviour
 {
     public GameObject NPC;
+    public GameObject SRK;
     public Transform Spawnpoint;
     public int NpcSpawnTime = 10;
     public int NpcCount = 1;
-
+    public int SRKChance;
     public SceneInfo sceneInfo;
     public void Start()
     {
+        SRKChance = Random.Range(1, 10);
         Instantiate(NPC, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
         StartCoroutine(SpawnNPC());
     }
@@ -42,10 +44,26 @@ public class NpcSpawnerTesting : MonoBehaviour
         while(NpcCount < 10)
         {
             yield return new WaitForSeconds(NpcSpawnTime);
-            Instantiate(NPC, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
-            NpcCount++;            
+            SRKChance = Random.Range(1, 7);
+            if(SRKChance < 6)
+            {
+                Instantiate(SRK, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
+            }
+            else if(SRKChance >= 6)
+            {
+                SpawnSRK();
+                SRKChance = Random.Range(1, 7);
+            }
+
+            NpcCount++;
+            
         }
        
+    }
+
+    public void SpawnSRK()
+    {
+        Instantiate(SRK, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
     }
 
 
