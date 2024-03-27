@@ -863,3 +863,5 @@
 | • Imported UI (generic slider, menu buttons (tutorial, accessibility), speach bubble (red, green), mouse click icon (right, left buttons), NotRecipe Icons,|
 | • Imported tutorial recipe board texture and icons|
 | • added tutorial recipe board texture and icons to tutorial scene| 
+| • New font (OCRAEXT)|
+| • Imported price box|
