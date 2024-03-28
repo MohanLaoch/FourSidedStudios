@@ -875,6 +875,10 @@
 
 ### 28/03/2024
 
+| **James** |
+| :--- |
+| • Implemented Splash Screen and Custom Cursor |
+
 | **Mark** |
 | :--- |
 | • Imported 4 Sided Studios splash screen|
