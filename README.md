@@ -872,3 +872,11 @@
 | • added tutorial recipe board texture and icons to tutorial scene| 
 | • New font (OCRAEXT)|
 | • Imported price box|
+
+### 28/03/2024
+
+| **Mark** |
+| :--- |
+| • Imported 4 Sided Studios splash screen|
+| • Imported cursor sprite|
+| • Imported throw bar  + throw bar double sided|
