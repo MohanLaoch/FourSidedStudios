@@ -49,6 +49,7 @@ public class Player : MonoBehaviour
     public Storage storage;
     public Storage storage2;
     public Storage storage3;
+    public Interactable interactable;
 
     public ThrowBar throwBar;
     
@@ -79,6 +80,8 @@ public class Player : MonoBehaviour
         playerInputActions.Player.ArmRaise.performed += ArmRaise;
         playerInputActions.Player.Throw.started += Throw;
         playerInputActions.Player.Throw.canceled += Throw;
+        playerInputActions.Player.Storing.performed += Storing;
+
 
 
         waitForEndOfFrame = new WaitForEndOfFrame();
@@ -156,7 +159,7 @@ public class Player : MonoBehaviour
                     //setparameterbynamewithlabel("Parameter2, "grab");
             }
             
-                else if (storage.atStorage && Holding == true)
+               /* else if (storage.atStorage && Holding == true)
                 {
                     Debug.Log("storing1");
                     interactable.Store();
@@ -170,9 +173,9 @@ public class Player : MonoBehaviour
                 {
                     Debug.Log("storing3");
                     interactable.Store();
-                }
+                }*/
 
-                else if (storage.atStorage && Holding == false)
+                /*else if (storage.atStorage && Holding == false)
                 {
                     interactable.Interact();
                 }
@@ -183,7 +186,7 @@ public class Player : MonoBehaviour
                 else if (storage3.atStorage && Holding == false)
                 {
                     interactable.Interact();
-                }
+                }*/
                 else if (Holding)
                 {
                     interactable.Drop();
@@ -315,6 +318,25 @@ public class Player : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.Flip, this.transform.position);
         }
 
+    }
+
+    public void Storing(InputAction.CallbackContext context)
+    {
+        if (Holding && storage.atStorage)
+        {
+            storage.gameObject.GetComponent<Interactable>().Store();
+            return;
+        }
+        else if (Holding && storage2.atStorage)
+        {
+            storage2.gameObject.GetComponent<Interactable>().Store();
+            return;
+        }
+        else if (Holding && storage3.atStorage)
+        {
+            storage3.gameObject.GetComponent<Interactable>().Store();
+            return;
+        }
     }
 
     public void Throw(InputAction.CallbackContext context)

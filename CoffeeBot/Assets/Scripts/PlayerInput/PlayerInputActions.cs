@@ -73,7 +73,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Store"",
+                    ""name"": ""Storing"",
                     ""type"": ""Button"",
                     ""id"": ""461f5561-1840-4e50-b747-6c1dcc083333"",
                     ""expectedControlType"": ""Button"",
@@ -203,11 +203,11 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""79b3c18d-90d0-4db0-a061-dbb8e7252e20"",
-                    ""path"": ""<Keyboard>/r"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Store"",
+                    ""action"": ""Storing"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -485,7 +485,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Player_Rotate = m_Player.FindAction("Rotate", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_ArmRaise = m_Player.FindAction("ArmRaise", throwIfNotFound: true);
-        m_Player_Store = m_Player.FindAction("Store", throwIfNotFound: true);
+        m_Player_Storing = m_Player.FindAction("Storing", throwIfNotFound: true);
         m_Player_Empty = m_Player.FindAction("Empty", throwIfNotFound: true);
         m_Player_Throw = m_Player.FindAction("Throw", throwIfNotFound: true);
         // Player1
@@ -565,7 +565,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Rotate;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_ArmRaise;
-    private readonly InputAction m_Player_Store;
+    private readonly InputAction m_Player_Storing;
     private readonly InputAction m_Player_Empty;
     private readonly InputAction m_Player_Throw;
     public struct PlayerActions
@@ -577,7 +577,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @Rotate => m_Wrapper.m_Player_Rotate;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @ArmRaise => m_Wrapper.m_Player_ArmRaise;
-        public InputAction @Store => m_Wrapper.m_Player_Store;
+        public InputAction @Storing => m_Wrapper.m_Player_Storing;
         public InputAction @Empty => m_Wrapper.m_Player_Empty;
         public InputAction @Throw => m_Wrapper.m_Player_Throw;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -604,9 +604,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @ArmRaise.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnArmRaise;
                 @ArmRaise.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnArmRaise;
                 @ArmRaise.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnArmRaise;
-                @Store.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStore;
-                @Store.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStore;
-                @Store.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStore;
+                @Storing.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStoring;
+                @Storing.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStoring;
+                @Storing.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStoring;
                 @Empty.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmpty;
                 @Empty.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmpty;
                 @Empty.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmpty;
@@ -632,9 +632,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @ArmRaise.started += instance.OnArmRaise;
                 @ArmRaise.performed += instance.OnArmRaise;
                 @ArmRaise.canceled += instance.OnArmRaise;
-                @Store.started += instance.OnStore;
-                @Store.performed += instance.OnStore;
-                @Store.canceled += instance.OnStore;
+                @Storing.started += instance.OnStoring;
+                @Storing.performed += instance.OnStoring;
+                @Storing.canceled += instance.OnStoring;
                 @Empty.started += instance.OnEmpty;
                 @Empty.performed += instance.OnEmpty;
                 @Empty.canceled += instance.OnEmpty;
@@ -774,7 +774,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnRotate(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnArmRaise(InputAction.CallbackContext context);
-        void OnStore(InputAction.CallbackContext context);
+        void OnStoring(InputAction.CallbackContext context);
         void OnEmpty(InputAction.CallbackContext context);
         void OnThrow(InputAction.CallbackContext context);
     }
