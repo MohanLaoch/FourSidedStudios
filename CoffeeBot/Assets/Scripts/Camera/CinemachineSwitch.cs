@@ -17,6 +17,8 @@ public class CinemachineSwitch : MonoBehaviour
 
     private bool followCamera = true;
 
+    public Camera camera;
+
     private void OnEnable()
     {
         action.Enable();
@@ -39,11 +41,13 @@ public class CinemachineSwitch : MonoBehaviour
         {
             vcam1.Priority = 0;
             vcam2.Priority = 1;
+            camera.orthographic = true;
         }
         else
         {
             vcam1.Priority = 1;
             vcam2.Priority = 0;
+            camera.orthographic = false;
         }
         followCamera = !followCamera;
     }

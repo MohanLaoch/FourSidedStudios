@@ -241,7 +241,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 8.659429
+  m_CameraDistance: 8.522712
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -3464,7 +3464,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 5.829715
+  m_CameraDistance: 6.090908
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -3728,6 +3728,7 @@ MonoBehaviour:
     m_Flags: 0
   vcam1: {fileID: 2055847431}
   vcam2: {fileID: 1842350853}
+  camera: {fileID: 1227607213}
 --- !u!114 &1227607210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3859,7 +3860,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227607207}
   m_LocalRotation: {x: 0.34202015, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: -4.75, y: 5.916173, z: -7.123507}
+  m_LocalPosition: {x: -4.75, y: 5.828293, z: -7.018776}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6400,8 +6401,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 0
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 1621021846}
-  m_Follow: {fileID: 1621021846}
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -6448,9 +6449,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e3bab8882521484b9abdbb1a5b7a02c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultDistance: 5
-  minimumDistance: 2
-  maximumDistance: 6
+  defaultDistance: 9
+  minimumDistance: 9
+  maximumDistance: 9
   smoothing: 4
   zoomSensitivity: 2
 --- !u!114 &1842350856
@@ -7059,7 +7060,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055847430}
   m_LocalRotation: {x: 0.34202015, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: -4.75, y: 5.916173, z: -7.123507}
+  m_LocalPosition: {x: -4.75, y: 5.828293, z: -7.018776}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7687,7 +7688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCapacity: 0
-  totalCurrentCapacity: 0
+  totalCapacity: 0
   maxCapacity: 1
   fillCapacity: 1
   itemName: 
@@ -16419,7 +16420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCapacity: 0
-  totalCurrentCapacity: 0
+  totalCapacity: 0
   maxCapacity: 1
   fillCapacity: 1
   itemName: 
@@ -16846,7 +16847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCapacity: 0
-  totalCurrentCapacity: 0
+  totalCapacity: 0
   maxCapacity: 1
   fillCapacity: 1
   itemName: 
