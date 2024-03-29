@@ -891,3 +891,7 @@
 | :--- |
 | • Added Whitebox for walls and environment outside |
 | • Changed overview camera to orthographic camera |
+
+| **Niamh** |
+| :--- |
+| • Added BaristaCounter to Prototype scene |
