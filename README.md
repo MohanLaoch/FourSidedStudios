@@ -884,3 +884,10 @@
 | • Imported 4 Sided Studios splash screen|
 | • Imported cursor sprite|
 | • Imported throw bar  + throw bar double sided|
+
+### 29/03/2024
+
+| **James** |
+| :--- |
+| • Added Whitebox for walls and environment outside |
+| • Changed overview camera to orthographic camera |
