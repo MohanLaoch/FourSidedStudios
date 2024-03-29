@@ -1,5 +1,5 @@
 {
-    "name": "Camera",
+    "name": "CameraControls",
     "maps": [
         {
             "name": "Camera",
@@ -40,6 +40,17 @@
                     "name": "",
                     "id": "993aa4a8-64af-487f-a1d4-705232ce724c",
                     "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "65ec2222-f6e4-4631-b5b2-aca958d8cefb",
+                    "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
