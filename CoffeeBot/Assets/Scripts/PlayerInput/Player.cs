@@ -53,9 +53,9 @@ public class Player : MonoBehaviour
 
     public ThrowBar throwBar;
     
-    public float ThrowForce = 1f;
+    public float ThrowForce = 2f;
     public float MaxThrowForce = 10f;
-    public float ThrowChargeSpeed = 1f;
+    public float ThrowChargeSpeed = 5f;
     public GameObject ObjectHeld;
 
     private WaitForEndOfFrame waitForEndOfFrame;
