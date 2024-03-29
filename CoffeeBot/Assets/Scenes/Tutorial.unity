@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30321336, g: 0.12815265, b: 0.34266487, a: 1}
+  m_IndirectSpecularColor: {r: 0.30322725, g: 0.12813418, b: 0.342678, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2551,14 +2551,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5741020048260922060, guid: 49d1f76f763226149b2bde7a701dfadd, type: 3}
       propertyPath: action.m_SingletonActionBindings.Array.data[0].m_Id
-      value: 282e23c4-c7bf-4dfa-b209-a144ec160159
+      value: d42cc8f3-89d5-402f-aeda-17ffbb00a205
+      objectReference: {fileID: 0}
+    - target: {fileID: 5741020048260922060, guid: 49d1f76f763226149b2bde7a701dfadd, type: 3}
+      propertyPath: action.m_SingletonActionBindings.Array.data[1].m_Id
+      value: d42cc8f3-89d5-402f-aeda-17ffbb00a205
       objectReference: {fileID: 0}
     - target: {fileID: 5741020048260922060, guid: 49d1f76f763226149b2bde7a701dfadd, type: 3}
       propertyPath: action.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Keyboard>/c
+      value: <Keyboard>/r
+      objectReference: {fileID: 0}
+    - target: {fileID: 5741020048260922060, guid: 49d1f76f763226149b2bde7a701dfadd, type: 3}
+      propertyPath: action.m_SingletonActionBindings.Array.data[1].m_Path
+      value: <Keyboard>/r
       objectReference: {fileID: 0}
     - target: {fileID: 5741020048260922060, guid: 49d1f76f763226149b2bde7a701dfadd, type: 3}
       propertyPath: action.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Action
+      objectReference: {fileID: 0}
+    - target: {fileID: 5741020048260922060, guid: 49d1f76f763226149b2bde7a701dfadd, type: 3}
+      propertyPath: action.m_SingletonActionBindings.Array.data[1].m_Action
       value: Action
       objectReference: {fileID: 0}
     - target: {fileID: 5741020048260922067, guid: 49d1f76f763226149b2bde7a701dfadd, type: 3}
