@@ -31,6 +31,8 @@ public class CraftCoffee : MonoBehaviour
     [HideInInspector]
     public List<GameObject> recipeResults = new List<GameObject>();
 
+    public List<string> falseRecipes = new List<string>();
+
 
     [Header("Ability to Craft")]
 
@@ -229,6 +231,17 @@ public class CraftCoffee : MonoBehaviour
 
             }
             
+        }
+
+        for (int i = 0; i < falseRecipes.Count; i++)
+        {
+            if (falseRecipes[i] == currentRecipeString)
+            {
+
+                coffeeCraftImage.sprite = nullSprite;
+                coffeeCraftText.text = "?".ToString();
+
+            }
         }
     }
 

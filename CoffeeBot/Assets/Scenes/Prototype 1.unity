@@ -6466,6 +6466,25 @@ MonoBehaviour:
   latte: {fileID: 827744618556922879, guid: bca3cffff7cbd5746b475f5a285e5184, type: 3}
   recipes: []
   recipeResults: []
+  falseRecipes:
+  - CoffeeBeansMilkWater
+  - CoffeeBeansWaterMilk
+  - MilkCoffeeBeansWater
+  - MilkWaterCoffeeBeans
+  - WaterCoffeeBeansMilk
+  - WaterMilkCoffeeBeans
+  - CoffeeBeansMilkTeaBags
+  - CoffeeBeansTeaBagsMilk
+  - MilkCoffeeBeansTeaBags
+  - TeaBagsCoffeeBeansMilk
+  - TeaBagsMilkCoffeeBeans
+  - MilkTeaBagsCoffeeBeans
+  - TeaBagsMilkCocoPowder
+  - TeaBagsCocoPowderMilk
+  - MilkTeaBagsCocoPowder
+  - MilkCocoPowderTeaBags
+  - CocoPowderTeaBagsMilk
+  - CocoPowderMilkTeaBags
   secondsToWait: 1
   capacityRemoveAmount: 1
   coffeeCraftImage: {fileID: 77958925}
@@ -6547,7 +6566,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143513327}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.6076007, y: 2.5025, z: 5.5255203}
+  m_LocalPosition: {x: 7.68768, y: 2.5025, z: 5.6656604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18002,15 +18021,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461809246}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.693801, y: 1.0774342, z: 8.280187}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -3.2994893, y: 1.1686242, z: 9.809594}
   m_LocalScale: {x: 0.49602, y: 0.075192, z: 0.4540259}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1979181701}
   m_Father: {fileID: 0}
   m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &461809252
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34499,7 +34518,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912223781}
   m_LocalRotation: {x: 0.34202015, y: -0, z: -0, w: 0.9396927}
-  m_LocalPosition: {x: 7, y: 6.9850864, z: -5.331398}
+  m_LocalPosition: {x: 7, y: 5.699513, z: -3.7993112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43365,7 +43384,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109840628}
   m_LocalRotation: {x: 0.34202015, y: -0, z: -0, w: 0.9396927}
-  m_LocalPosition: {x: 7, y: 6.9850864, z: -5.331398}
+  m_LocalPosition: {x: 7, y: 5.699513, z: -3.7993112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -67841,7 +67860,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 8.999997
+  m_CameraDistance: 7
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
