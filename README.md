@@ -895,3 +895,12 @@
 | **Niamh** |
 | :--- |
 | • Added BaristaCounter to Prototype scene |
+
+### 30/03/2024
+
+| **James** |
+| :--- |
+| • Updated font on Interaction Indicators, NPC dialogue, and Coffee Context Text |
+| • Added context text for what coffee will be crafted |
+| • Added R interact indicator for coffee craft |
+| • Optimised code for recipes |
