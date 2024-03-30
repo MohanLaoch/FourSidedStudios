@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using TMPro;
 
 public class CraftCoffee : MonoBehaviour
 {
@@ -42,6 +43,10 @@ public class CraftCoffee : MonoBehaviour
 
     [Header("About to be Crafted")]
     public Image coffeeCraftImage;
+    public TMP_Text coffeeCraftText;
+
+    [HideInInspector]
+    public List<string> recipeNames = new List<string>();
 
     public Sprite americanoSprite;
     public Sprite cappuccinoSprite;
@@ -62,19 +67,14 @@ public class CraftCoffee : MonoBehaviour
         recipes.Add("NullWaterCoffeeBeans");
         recipes.Add("NullWaterCoffeeBeans");
 
-        recipeResults.Add(americano);
-        recipeResults.Add(americano);
-        recipeResults.Add(americano);
-        recipeResults.Add(americano);
-        recipeResults.Add(americano);
-        recipeResults.Add(americano);
+        for (int i = 0; i < 6; i++)
+        {
+            recipeResults.Add(americano);
 
-        recipeImages.Add(americanoSprite);
-        recipeImages.Add(americanoSprite);
-        recipeImages.Add(americanoSprite);
-        recipeImages.Add(americanoSprite);
-        recipeImages.Add(americanoSprite);
-        recipeImages.Add(americanoSprite);
+            recipeImages.Add(americanoSprite);
+
+            recipeNames.Add("Americano");
+        }
 
         //Cappuccino
 
@@ -82,13 +82,14 @@ public class CraftCoffee : MonoBehaviour
         recipes.Add("MilkCoffeeBeansMilk");
         recipes.Add("CoffeeBeansMilkMilk");
 
-        recipeResults.Add(cappuccino);
-        recipeResults.Add(cappuccino);
-        recipeResults.Add(cappuccino);
+        for (int i = 0; i < 3; i++)
+        {
+            recipeResults.Add(cappuccino);
 
-        recipeImages.Add(cappuccinoSprite);
-        recipeImages.Add(cappuccinoSprite);
-        recipeImages.Add(cappuccinoSprite);
+            recipeImages.Add(cappuccinoSprite);
+
+            recipeNames.Add("Cappuccino");
+        }
 
         //Latte
 
@@ -99,19 +100,14 @@ public class CraftCoffee : MonoBehaviour
         recipes.Add("NullMilkCoffeeBeans");
         recipes.Add("NullCoffeeBeansMilk");
 
-        recipeResults.Add(latte);
-        recipeResults.Add(latte);
-        recipeResults.Add(latte);
-        recipeResults.Add(latte);
-        recipeResults.Add(latte);
-        recipeResults.Add(latte);
+        for (int i = 0; i < 6; i++)
+        {
+            recipeResults.Add(latte);
 
-        recipeImages.Add(latteSprite);
-        recipeImages.Add(latteSprite);
-        recipeImages.Add(latteSprite);
-        recipeImages.Add(latteSprite);
-        recipeImages.Add(latteSprite);
-        recipeImages.Add(latteSprite);
+            recipeImages.Add(latteSprite);
+
+            recipeNames.Add("Latte");
+        }
     }
 
     private void Start()
@@ -155,7 +151,6 @@ public class CraftCoffee : MonoBehaviour
     {
         canCraft = false;
 
-        
         // make the currentRecipeString blank
         string currentRecipeString = "";
 
@@ -172,6 +167,7 @@ public class CraftCoffee : MonoBehaviour
             {
                 currentRecipeString += "Null";
                 coffeeCraftImage.sprite = nullSprite;
+                coffeeCraftText.text = "?".ToString();
             }
         }
 
@@ -217,6 +213,7 @@ public class CraftCoffee : MonoBehaviour
             {
                 currentRecipeString += "Null";
                 coffeeCraftImage.sprite = nullSprite;
+                coffeeCraftText.text = "?".ToString();
             }
         }
 
@@ -228,7 +225,10 @@ public class CraftCoffee : MonoBehaviour
             {
 
                 coffeeCraftImage.sprite = recipeImages[i];
+                coffeeCraftText.text = recipeNames[i];
+
             }
+            
         }
     }
 
@@ -242,7 +242,6 @@ public class CraftCoffee : MonoBehaviour
         storageB.totalCapacity -= capacityRemoveAmount;
         storageC.totalCapacity -= capacityRemoveAmount;
 
-        // wait until storage fix to test the above - 27/03/2024
     }
 
 }

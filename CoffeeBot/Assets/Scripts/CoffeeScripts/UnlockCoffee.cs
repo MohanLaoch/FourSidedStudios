@@ -56,19 +56,14 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipes.Add("NullMilkTeaBags");
         craftCoffee.recipes.Add("NullTeaBagsMilk");
 
-        craftCoffee.recipeResults.Add(chaiLatte);
-        craftCoffee.recipeResults.Add(chaiLatte);
-        craftCoffee.recipeResults.Add(chaiLatte);
-        craftCoffee.recipeResults.Add(chaiLatte);
-        craftCoffee.recipeResults.Add(chaiLatte);
-        craftCoffee.recipeResults.Add(chaiLatte);
+        for (int i = 0; i < 6; i++)
+        {
+            craftCoffee.recipeResults.Add(chaiLatte);
 
-        craftCoffee.recipeImages.Add(chaiLatteSprite);
-        craftCoffee.recipeImages.Add(chaiLatteSprite);
-        craftCoffee.recipeImages.Add(chaiLatteSprite);
-        craftCoffee.recipeImages.Add(chaiLatteSprite);
-        craftCoffee.recipeImages.Add(chaiLatteSprite);
-        craftCoffee.recipeImages.Add(chaiLatteSprite);
+            craftCoffee.recipeImages.Add(chaiLatteSprite);
+
+            craftCoffee.recipeNames.Add("Chai Latte");
+        }
 
         if (!hasTeaBags)
         {
@@ -90,19 +85,14 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipes.Add("NullMilkCocoPowder");
         craftCoffee.recipes.Add("NullCocoPowderMilk");
 
-        craftCoffee.recipeResults.Add(hotChocolate);
-        craftCoffee.recipeResults.Add(hotChocolate);
-        craftCoffee.recipeResults.Add(hotChocolate);
-        craftCoffee.recipeResults.Add(hotChocolate);
-        craftCoffee.recipeResults.Add(hotChocolate);
-        craftCoffee.recipeResults.Add(hotChocolate);
+        for (int i = 0;  i < 6; i++)
+        {
+            craftCoffee.recipeResults.Add(hotChocolate);
 
-        craftCoffee.recipeImages.Add(hotChocolateSprite);
-        craftCoffee.recipeImages.Add(hotChocolateSprite);
-        craftCoffee.recipeImages.Add(hotChocolateSprite);
-        craftCoffee.recipeImages.Add(hotChocolateSprite);
-        craftCoffee.recipeImages.Add(hotChocolateSprite);
-        craftCoffee.recipeImages.Add(hotChocolateSprite);
+            craftCoffee.recipeImages.Add(hotChocolateSprite);
+
+            craftCoffee.recipeNames.Add("Hot Chocolate");
+        }
 
         if (!hasCocoPowder)
         {
@@ -123,19 +113,14 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipes.Add("WaterIceCoffeeBeans");
         craftCoffee.recipes.Add("WaterCoffeeBeansIce");
 
-        craftCoffee.recipeResults.Add(icedCoffee);
-        craftCoffee.recipeResults.Add(icedCoffee);
-        craftCoffee.recipeResults.Add(icedCoffee);
-        craftCoffee.recipeResults.Add(icedCoffee);
-        craftCoffee.recipeResults.Add(icedCoffee);
-        craftCoffee.recipeResults.Add(icedCoffee);
+        for (int i = 0; i < 6; i++)
+        {
+            craftCoffee.recipeResults.Add(icedCoffee);
 
-        craftCoffee.recipeImages.Add(icedCoffeeSprite);
-        craftCoffee.recipeImages.Add(icedCoffeeSprite);
-        craftCoffee.recipeImages.Add(icedCoffeeSprite);
-        craftCoffee.recipeImages.Add(icedCoffeeSprite);
-        craftCoffee.recipeImages.Add(icedCoffeeSprite);
-        craftCoffee.recipeImages.Add(icedCoffeeSprite);
+            craftCoffee.recipeImages.Add(icedCoffeeSprite);
+
+            craftCoffee.recipeNames.Add("Iced Coffee");
+        }
 
         if (!hasIce)
         {
@@ -156,19 +141,14 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipes.Add("IceMilkCoffeeBeans");
         craftCoffee.recipes.Add("IceCoffeeBeansMilk");
 
-        craftCoffee.recipeResults.Add(icedLatte);
-        craftCoffee.recipeResults.Add(icedLatte);
-        craftCoffee.recipeResults.Add(icedLatte);
-        craftCoffee.recipeResults.Add(icedLatte);
-        craftCoffee.recipeResults.Add(icedLatte);
-        craftCoffee.recipeResults.Add(icedLatte);
+        for (int i = 0; i < 6; i++)
+        {
+            craftCoffee.recipeResults.Add(icedLatte);
 
-        craftCoffee.recipeImages.Add(icedLatteSprite);
-        craftCoffee.recipeImages.Add(icedLatteSprite);
-        craftCoffee.recipeImages.Add(icedLatteSprite);
-        craftCoffee.recipeImages.Add(icedLatteSprite);
-        craftCoffee.recipeImages.Add(icedLatteSprite);
-        craftCoffee.recipeImages.Add(icedLatteSprite);
+            craftCoffee.recipeImages.Add(icedLatteSprite);
+
+            craftCoffee.recipeNames.Add("Iced Latte");
+        }
 
         if (!hasIce)
         {
@@ -189,19 +169,14 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipes.Add("CocoPowderMilkCoffeeBeans");
         craftCoffee.recipes.Add("CocoPowderCoffeeBeansMilk");
 
-        craftCoffee.recipeResults.Add(mocha);
-        craftCoffee.recipeResults.Add(mocha);
-        craftCoffee.recipeResults.Add(mocha);
-        craftCoffee.recipeResults.Add(mocha);
-        craftCoffee.recipeResults.Add(mocha);
-        craftCoffee.recipeResults.Add(mocha);
+        for (int i = 0; i < 6; i++)
+        {
+            craftCoffee.recipeResults.Add(mocha);
 
-        craftCoffee.recipeImages.Add(mochaSprite);
-        craftCoffee.recipeImages.Add(mochaSprite);
-        craftCoffee.recipeImages.Add(mochaSprite);
-        craftCoffee.recipeImages.Add(mochaSprite);
-        craftCoffee.recipeImages.Add(mochaSprite);
-        craftCoffee.recipeImages.Add(mochaSprite);
+            craftCoffee.recipeImages.Add(mochaSprite);
+
+            craftCoffee.recipeNames.Add("Mocha");
+        }
 
         if (!hasCocoPowder)
         {
@@ -223,19 +198,14 @@ public class UnlockCoffee : MonoBehaviour
         craftCoffee.recipes.Add("TeaBagsMilkWater");
         craftCoffee.recipes.Add("TeaBagsWaterMilk");
 
-        craftCoffee.recipeResults.Add(tea);
-        craftCoffee.recipeResults.Add(tea);
-        craftCoffee.recipeResults.Add(tea);
-        craftCoffee.recipeResults.Add(tea);
-        craftCoffee.recipeResults.Add(tea);
-        craftCoffee.recipeResults.Add(tea);
+        for (int i = 0; i < 6; i++)
+        {
+            craftCoffee.recipeResults.Add(tea);
 
-        craftCoffee.recipeImages.Add(teaSprite);
-        craftCoffee.recipeImages.Add(teaSprite);
-        craftCoffee.recipeImages.Add(teaSprite);
-        craftCoffee.recipeImages.Add(teaSprite);
-        craftCoffee.recipeImages.Add(teaSprite);
-        craftCoffee.recipeImages.Add(teaSprite);
+            craftCoffee.recipeImages.Add(teaSprite);
+
+            craftCoffee.recipeNames.Add("Tea");
+        }
 
         if (!hasTeaBags)
         {
