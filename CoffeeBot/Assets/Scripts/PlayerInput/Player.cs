@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
     public Transform RayZone;
     public BoxCollider boxCollider;
     public MoneyTracker moneytracker;
+    public TextMeshProUGUI MoneyText;
 
     public bool Holding;
     public bool HoldingNPC = false;
@@ -481,8 +482,10 @@ public class Player : MonoBehaviour
         {
             sceneInfo.money -= 20;
             MaxSpeed += 20;
+            Acceleration += 20;
             sceneInfo.playerSpeed = MaxSpeed;
-            moneytracker.moneyText.text = ": " + moneytracker.money.ToString("0");
+            sceneInfo.playerAcceleration = Acceleration;
+            MoneyText.text = ": " + sceneInfo.money.ToString("0");
         }
         else
         {
@@ -498,7 +501,7 @@ public class Player : MonoBehaviour
             RotSpeed += 20;
             sceneInfo.playerRotSpeed = RotSpeed;
             //sceneInfo.money = moneytracker.money;
-            moneytracker.moneyText.text = ": " + moneytracker.money.ToString("0");
+            MoneyText.text = ": " + sceneInfo.money.ToString("0");
         }
         else
         {
@@ -507,21 +510,7 @@ public class Player : MonoBehaviour
         
     }
 
-    public void UpgradeAcceleration()
-     {
-        if (sceneInfo.money >= 20)
-        {
-            sceneInfo.money -= 20;
-            Acceleration += 20;
-            sceneInfo.playerAcceleration = Acceleration;
-            //sceneInfo.money = moneytracker.money;
-            moneytracker.moneyText.text = ": " + moneytracker.money.ToString("0");
-        }
-        else
-        {
-            Debug.Log("Notenoughcash");
-        }
-    }
+
 
     public void UpgradeMaxThrow()
     {
@@ -531,7 +520,7 @@ public class Player : MonoBehaviour
             MaxThrowForce += 20;
             sceneInfo.playerMaxThrowForce = MaxThrowForce;
             //sceneInfo.money = moneytracker.money;
-            moneytracker.moneyText.text = ": " + moneytracker.money.ToString("0");
+            MoneyText.text = ": " + sceneInfo.money.ToString("0");
         }
         else
         {
