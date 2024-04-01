@@ -907,6 +907,10 @@
 
 ### 01/04/2024
 
+| **James** |
+| :--- |
+| • Whiteboxed Tutorial for teaching arm raise, picking up and dropping, throwing, and crafting |
+
 | **Niamh** |
 | :--- |
 | • Textured the front part of the BaristaCounter in the PrototypeScene |
