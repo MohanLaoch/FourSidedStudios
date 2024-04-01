@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using TMPro;
 
 public class NPCLeavingTrigger : MonoBehaviour
 {
     public SceneInfo sceneInfo;
+    public TextMeshProUGUI moneyText;
     private void Awake()
     {
        
@@ -22,6 +24,7 @@ public class NPCLeavingTrigger : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             sceneInfo.money += 15;
+            moneyText.text = ": " + sceneInfo.money.ToString("0");
         }
     }
 

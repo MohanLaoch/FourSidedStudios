@@ -569,6 +569,15 @@ public class Player : MonoBehaviour
         
     }
 
+    public void UpgradeStorage()
+    {
+        if(sceneInfo.money >= 10)
+        {
+            sceneInfo.money -= 10;
+            sceneInfo.storageMax++;
+        }
+    }
+
 
 
 

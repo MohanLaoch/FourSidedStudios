@@ -15,7 +15,7 @@ public class SceneInfo : ScriptableObject {
     public int WaterBills = 10;
     public int TotalInjuryCounter;
     public bool DashUnlocked = false;
-
+    public int storageMax = 5;
     public int SkinCounter = 1;
 
 
@@ -28,6 +28,7 @@ public class SceneInfo : ScriptableObject {
         playerAcceleration = 10;
         playerMaxThrowForce = 10;
         DashUnlocked = false;
+        storageMax = 5;
         ElectricityBills = 10;
         WaterBills = 10;
 

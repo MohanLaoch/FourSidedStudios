@@ -12,7 +12,7 @@ public class Storage : MonoBehaviour
     [Header("Storage Stats")]
     public int currentCapacity = 0;
     public int totalCapacity = 0;
-    public int maxCapacity = 10;
+    public int maxCapacity = 5;
 
     [SerializeField] private int fillCapacity = 1;
 
@@ -39,6 +39,8 @@ public class Storage : MonoBehaviour
 
     public bool husband = false;
 
+    public SceneInfo sceneInfo;
+
     private void Awake()
     {
         playerInputActions = new PlayerInputActions();
@@ -47,6 +49,7 @@ public class Storage : MonoBehaviour
 
     private void Update()
     {
+        maxCapacity = sceneInfo.storageMax;
         // if the storage is at or below 0 it'll make storedItem null
         if (currentCapacity <= 0)
         {
