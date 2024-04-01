@@ -906,6 +906,12 @@
 | • Optimised code for recipes |
 
 ### 01/04/2024
+| **Declan** |
+| :--- |
+| • Added dash upgrade|
+| • Added throw force upgrade|
+| • Added max storage capacity upgrade|
+| • Added insta stock upgrade|
 
 | **James** |
 | :--- |
@@ -914,4 +920,5 @@
 | **Niamh** |
 | :--- |
 | • Textured the front part of the BaristaCounter in the PrototypeScene |
+
 
