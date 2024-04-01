@@ -560,10 +560,30 @@ public class Player : MonoBehaviour
 
     public void UnlockDash()
     {
-        if(sceneInfo.money >= 100)
+        if (sceneInfo.DashUnlocked)
+        {
+            return;
+        }
+        if (sceneInfo.money >= 100)
         {
             sceneInfo.money -= 100;
             sceneInfo.DashUnlocked = true;
+            MoneyText.text = ": " + sceneInfo.money.ToString("0");
+        }
+    
+        
+    }
+
+    public void UnlockInstaStock()
+    {
+        if (sceneInfo.instaStockUnlocked)
+        {
+            return;
+        }
+        if (sceneInfo.money >= 100)
+        {
+            sceneInfo.money -= 100;
+            sceneInfo.instaStockUnlocked = true;
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
         }
         
@@ -571,10 +591,12 @@ public class Player : MonoBehaviour
 
     public void UpgradeStorage()
     {
+
         if(sceneInfo.money >= 10)
         {
             sceneInfo.money -= 10;
             sceneInfo.storageMax++;
+            MoneyText.text = ": " + sceneInfo.money.ToString("0");
         }
     }
 

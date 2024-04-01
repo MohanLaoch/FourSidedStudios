@@ -49,6 +49,11 @@ public class Storage : MonoBehaviour
 
     private void Update()
     {
+        if(sceneInfo.instaStockUnlocked)
+        {
+          fillCapacity = maxCapacity;
+        }
+        
         maxCapacity = sceneInfo.storageMax;
         // if the storage is at or below 0 it'll make storedItem null
         if (currentCapacity <= 0)
