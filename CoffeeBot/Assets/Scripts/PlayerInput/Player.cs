@@ -477,12 +477,11 @@ public class Player : MonoBehaviour
 
      public void UpgradeSpeed()
      {
-        if(moneytracker.money >= 20)
+        if(sceneInfo.money >= 20)
         {
-            moneytracker.money -= 20;
+            sceneInfo.money -= 20;
             MaxSpeed += 20;
             sceneInfo.playerSpeed = MaxSpeed;
-            sceneInfo.money = moneytracker.money;
             moneytracker.moneyText.text = ": " + moneytracker.money.ToString("0");
         }
         else
@@ -493,12 +492,12 @@ public class Player : MonoBehaviour
 
     public void UpgradeHandling()
      {
-        if (moneytracker.money >= 20)
+        if (sceneInfo.money >= 20)
         {
-            moneytracker.money -= 20;
+            sceneInfo.money -= 20;
             RotSpeed += 20;
             sceneInfo.playerRotSpeed = RotSpeed;
-            sceneInfo.money = moneytracker.money;
+            //sceneInfo.money = moneytracker.money;
             moneytracker.moneyText.text = ": " + moneytracker.money.ToString("0");
         }
         else
@@ -510,12 +509,28 @@ public class Player : MonoBehaviour
 
     public void UpgradeAcceleration()
      {
-        if (moneytracker.money >= 20)
+        if (sceneInfo.money >= 20)
         {
-            moneytracker.money -= 20;
+            sceneInfo.money -= 20;
             Acceleration += 20;
             sceneInfo.playerAcceleration = Acceleration;
-            sceneInfo.money = moneytracker.money;
+            //sceneInfo.money = moneytracker.money;
+            moneytracker.moneyText.text = ": " + moneytracker.money.ToString("0");
+        }
+        else
+        {
+            Debug.Log("Notenoughcash");
+        }
+    }
+
+    public void UpgradeMaxThrow()
+    {
+        if(sceneInfo.money >= 20)
+        {
+            sceneInfo.money -= 20;
+            MaxThrowForce += 20;
+            sceneInfo.playerMaxThrowForce = MaxThrowForce;
+            //sceneInfo.money = moneytracker.money;
             moneytracker.moneyText.text = ": " + moneytracker.money.ToString("0");
         }
         else

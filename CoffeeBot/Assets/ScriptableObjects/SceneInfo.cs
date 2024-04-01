@@ -10,6 +10,7 @@ public class SceneInfo : ScriptableObject {
     public float playerSpeed;
     public float playerRotSpeed;
     public float playerAcceleration;
+    public float playerMaxThrowForce;
     public int ElectricityBills = 10;
     public int WaterBills = 10;
     public int TotalInjuryCounter;
@@ -24,6 +25,7 @@ public class SceneInfo : ScriptableObject {
         playerSpeed = 200;
         playerRotSpeed = 200;
         playerAcceleration = 10;
+        playerMaxThrowForce = 10;
         ElectricityBills = 10;
         WaterBills = 10;
 
