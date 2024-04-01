@@ -904,3 +904,10 @@
 | • Added context text for what coffee will be crafted |
 | • Added R interact indicator for coffee craft |
 | • Optimised code for recipes |
+
+### 01/04/2024
+
+| **Niamh** |
+| :--- |
+| • Textured the front part of the BaristaCounter in the PrototypeScene |
+
