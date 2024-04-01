@@ -27,11 +27,15 @@ public class Player : MonoBehaviour
     public Animator PlayerAnim;
     public float Speed = 5f;
     public float OgSpeed = 2f;
-    public float FlipForce = 5f;
+    public float DashForce = 15f;
     public float FlipForceRot = 5f;
     public float RotSpeed = 50f;
     public float MaxSpeed = 7f;
     public float Acceleration = 2f;
+    public float dashCooldownTime;
+    private float dashCooldownTimer;
+    private bool dashIsCooldown = false;
+
     public Rigidbody rb;
     public Transform RayZone;
     public BoxCollider boxCollider;
@@ -77,7 +81,7 @@ public class Player : MonoBehaviour
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
         rb = GetComponent<Rigidbody>();
-        playerInputActions.Player.Flip.performed += Flip;
+        playerInputActions.Player.Flip.performed += Dash;
         playerInputActions.Player.ArmRaise.performed += ArmRaise;
         playerInputActions.Player.Throw.started += Throw;
         playerInputActions.Player.Throw.canceled += Throw;
@@ -220,6 +224,11 @@ public class Player : MonoBehaviour
         MaxSpeed = sceneInfo.playerSpeed;
         Acceleration = sceneInfo.playerAcceleration;
         RotSpeed = sceneInfo.playerRotSpeed;
+
+        if(dashIsCooldown)
+        {
+            ApplyDashCooldown();
+        }
     }
 
 
@@ -309,20 +318,41 @@ public class Player : MonoBehaviour
         rb.MoveRotation(rb.rotation * Quaternion.Euler(rotationVelocity * Time.deltaTime));
     }
 
-    public void Flip(InputAction.CallbackContext context)
+    public void Dash(InputAction.CallbackContext context)
     {
-        if (Holding || isMoving)
+        if (sceneInfo.DashUnlocked)
+        {
+
+
+            if (isMoving || dashIsCooldown)
+            {
+                return;
+            }
+
+           
+            if (context.performed && IsGrounded())
+            {
+                dashIsCooldown = true;
+                dashCooldownTimer = dashCooldownTime;
+                rb.AddForce(transform.forward * DashForce, ForceMode.Impulse);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.Flip, this.transform.position);
+            }
+        }
+        else
         {
             return;
         }
 
-        Vector3 FlipDir = transform.TransformDirection(Vector3.forward);
-        if (context.performed && IsGrounded())
+    }
+
+    public void ApplyDashCooldown()
+    {
+        dashCooldownTimer -= Time.deltaTime;
+
+        if(dashCooldownTimer < 0.0f)
         {
-            
-            rb.AddForce(Vector3.up * FlipForce, ForceMode.Impulse);
-            rb.AddTorque(FlipDir * FlipForceRot, ForceMode.Impulse);
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.Flip, this.transform.position);
+            dashIsCooldown = false;
+            //play sound to indicate cooldown ended
         }
 
     }
@@ -526,6 +556,17 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Notenoughcash");
         }
+    }
+
+    public void UnlockDash()
+    {
+        if(sceneInfo.money >= 100)
+        {
+            sceneInfo.money -= 100;
+            sceneInfo.DashUnlocked = true;
+            MoneyText.text = ": " + sceneInfo.money.ToString("0");
+        }
+        
     }
 
 
