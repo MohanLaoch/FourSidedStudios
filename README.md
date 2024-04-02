@@ -921,4 +921,10 @@
 | :--- |
 | • Textured the front part of the BaristaCounter in the PrototypeScene |
 
+### 02/04.2024
+
+| **Niamh** |
+| :--- |
+| • Added and textured second part of the BaristaCounter in the PrototypeScene |
+
 
