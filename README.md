@@ -923,6 +923,10 @@
 
 ### 02/04.2024
 
+| **James** |
+| :--- |
+| • Added interaction indicator UI to storage boxes |
+
 | **Niamh** |
 | :--- |
 | • Added and textured second part of the BaristaCounter in the PrototypeScene |
