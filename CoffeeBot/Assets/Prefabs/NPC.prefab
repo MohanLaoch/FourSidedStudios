@@ -569,6 +569,7 @@ MonoBehaviour:
   maxTime: 30
   currentTime: 0
   timerLimit: 0
+  upset: 0
 --- !u!65 &3293066056719402987
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -598,6 +599,7 @@ MonoBehaviour:
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
   NPCAnim: {fileID: 7554220197215085693}
+  storage: {fileID: 0}
   isMoving: 0
 --- !u!54 &3293066056719402985
 Rigidbody:
@@ -679,6 +681,9 @@ MonoBehaviour:
   furnitureManager: {fileID: 0}
   player: {fileID: 0}
   hasLeft: 0
+  isLeaving: 0
+  gumballTime: 0
+  gumballMachine: {fileID: 1349414661649770058, guid: 3c2488537d7b5ed448dbc229930bdf34, type: 3}
 --- !u!114 &2119418534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -695,14 +700,16 @@ MonoBehaviour:
   player: {fileID: 0}
   moneyTracker: {fileID: 3293066056719402986}
   acceptedCoffeeTag: 
-  orderResponses:
-  - I love COFFEE!
-  - GIMMIE DAT!
-  - YUP BRO!
-  - Alri bro ;)
+  coffeeImage: {fileID: 0}
+  coffeeText: {fileID: 0}
   responseText: {fileID: 1381915702}
   responseBubble: {fileID: 54534535}
+  responseBubbleImage: {fileID: 0}
   timerBubble: {fileID: 3293066057855069400}
+  positiveResponses: []
+  negativeResponses: []
+  positiveBubble: {fileID: 0}
+  negativeBubble: {fileID: 0}
 --- !u!1 &3293066057103576083
 GameObject:
   m_ObjectHideFlags: 0

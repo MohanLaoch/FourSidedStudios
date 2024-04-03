@@ -14,7 +14,11 @@ public class NPCLeavingTrigger : MonoBehaviour
     }
     public void OnTriggerStay(Collider other)
     {
-        if(other.CompareTag("NPC") &&  other.GetComponent<NpcStateManager>().hasLeft == true)
+        if (other.CompareTag("Player"))
+        {
+            return;
+        }
+        if (other.CompareTag("NPC") &&  other.GetComponent<NpcStateManager>().hasLeft == true)
         {
             //Destroy(other.gameObject);
             other.gameObject.SetActive(false);
@@ -26,6 +30,7 @@ public class NPCLeavingTrigger : MonoBehaviour
             sceneInfo.money += 15;
             moneyText.text = ": " + sceneInfo.money.ToString("0");
         }
+    
     }
 
     public void OnTriggerEnter(Collider other)

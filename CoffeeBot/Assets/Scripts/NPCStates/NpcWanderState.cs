@@ -16,8 +16,11 @@ public class NpcWanderState : NpcBaseState
     public float FlipForce = 1f;
     public float FlipForceRot = 1f;
 
+    private GameObject gumballMachine;
+
     public override void EnterState(NpcStateManager npc)
     {
+        gumballMachine = GameObject.FindGameObjectWithTag("GumballMachine");
         NpcAnim = npc.GetComponentInChildren<Animator>();
         agent = npc.GetComponent<NavMeshAgent>();
         timer = wanderTimer;
@@ -35,6 +38,7 @@ public class NpcWanderState : NpcBaseState
     public override void UpdateState(NpcStateManager npc)
     {
         
+        
         timer += Time.deltaTime;
 
         if (timer >= wanderTimer)
@@ -42,6 +46,11 @@ public class NpcWanderState : NpcBaseState
             Vector3 newPos = RandomNavSphere(npc.transform.position, wanderRadius, -1);
             agent.SetDestination(newPos);
             timer = 0;
+        }
+        else if(agent.height < 1.5f && gumballMachine.GetComponent<GumballMachine>().GumballTime)
+        {
+            target = gumballMachine.transform;
+            agent.SetDestination(target.position);
         }
 
         if (agent.remainingDistance < 0.5)

@@ -73,6 +73,9 @@ public class Player : MonoBehaviour
 
     public bool Highlighted = false;
     private GameObject boxUI;
+
+    public GameObject GumballMachine;
+    public bool EPressed;
     private void Awake()
     {
         Time.timeScale = 1;
@@ -126,6 +129,11 @@ public class Player : MonoBehaviour
         PlayerMovement = AudioManager.instance.CreateInstance(FMODEvents.instance.Drive);
 
         Daytext.text = "Day:" + sceneInfo.dayCount.ToString("0");
+
+        if(sceneInfo.gumballMachineUnlocked)
+        {
+            GumballMachine.gameObject.SetActive(true);
+        }
 
         
        
@@ -216,6 +224,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        
         PlayerMovement.setParameterByName("PitchChange", Speed);
 
         HandleMovement();
@@ -247,7 +256,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            boxUI.SetActive(false);
+            //boxUI.SetActive(false);
         }
 
         if (dashIsCooldown)
@@ -384,6 +393,12 @@ public class Player : MonoBehaviour
 
     public void Storing(InputAction.CallbackContext context)
     {
+        if(context.performed && GumballMachine.GetComponent<GumballMachine>().AtMachine)
+        {
+            EPressed = true;
+        }
+
+
         if (Holding && storage.atStorage)
         {
             storage.gameObject.GetComponent<Interactable>().Store();
@@ -621,6 +636,17 @@ public class Player : MonoBehaviour
         {
             sceneInfo.money -= 10;
             sceneInfo.storageMax++;
+            MoneyText.text = ": " + sceneInfo.money.ToString("0");
+        }
+    }
+    public void UnlockGumballMachine()
+    {
+
+        if (sceneInfo.money >= 100)
+        {
+            sceneInfo.money -= 100;
+            sceneInfo.gumballMachineUnlocked = true;
+            GumballMachine.gameObject.SetActive(true);
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
         }
     }
