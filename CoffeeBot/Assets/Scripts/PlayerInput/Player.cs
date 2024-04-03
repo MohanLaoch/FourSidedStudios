@@ -233,14 +233,7 @@ public class Player : MonoBehaviour
                 boxUI = storageBox.gameObject.transform.GetChild(0).gameObject;
                 Highlighted = true;
 
-                if (Highlighted)
-                {
-                    boxUI.SetActive(true);
-                }
-                else
-                {
-                    boxUI.SetActive(false);
-                }
+               
             }
         }
         else
@@ -248,7 +241,14 @@ public class Player : MonoBehaviour
             Highlighted = false;
         }
 
-
+        if (Highlighted)
+        {
+            boxUI.SetActive(true);
+        }
+        else
+        {
+            boxUI.SetActive(false);
+        }
 
         if (dashIsCooldown)
         {
