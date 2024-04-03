@@ -7,6 +7,10 @@ public class GumballMachine : MonoBehaviour
     public bool GumballTime;
     public bool AtMachine;
     public Player player;
+
+    public float GumballTimer;
+    public float GumballCooldownTime;
+    public bool MachineIsCooldown;
     public void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
@@ -19,8 +23,42 @@ public class GumballMachine : MonoBehaviour
     {
         if(AtMachine && player.EPressed)
         {
-            GumballTime = true;
+            if(MachineIsCooldown)
+            {
+                player.EPressed = false;
+                return;
+            }
+            else
+            {
+                MachineIsCooldown = true;
+                GumballTimer = GumballCooldownTime;
+                
+            }
+         
             player.EPressed = false;
+        }
+
+        if(MachineIsCooldown)
+        {
+            ApplyMachineCooldown();
+            GumballTime = true;
+        }
+        else
+        {
+            GumballTime = false;
+        }
+
+
+    }
+
+    public void ApplyMachineCooldown()
+    {
+       GumballTimer -= Time.deltaTime;
+
+        if(GumballTimer < 0.0f)
+        {
+            MachineIsCooldown = false;
+            GumballTime = false;
         }
     }
 }
