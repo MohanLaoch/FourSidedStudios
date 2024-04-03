@@ -135,7 +135,7 @@ public class Player : MonoBehaviour
             GumballMachine.gameObject.SetActive(true);
         }
 
-        
+        boxUI = FindObjectOfType<StorageBox>().gameObject;
        
     }
 
@@ -256,7 +256,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            //boxUI.SetActive(false);
+            boxUI.SetActive(false);
         }
 
         if (dashIsCooldown)
