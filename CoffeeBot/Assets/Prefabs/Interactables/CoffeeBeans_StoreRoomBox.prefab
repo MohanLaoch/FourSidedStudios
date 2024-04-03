@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 8426859048062286196}
   - component: {fileID: 2595156039778822868}
   - component: {fileID: 8796605379891582355}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 2234088725167790949}
   - component: {fileID: 5153651903854375017}
   - component: {fileID: 7370486385217391118}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Mouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,6 +330,7 @@ GameObject:
   - component: {fileID: 2022317495}
   - component: {fileID: 2022317498}
   - component: {fileID: 2022317496}
+  - component: {fileID: 2414901641007048666}
   m_Layer: 7
   m_Name: CoffeeBeans_StoreRoomBox
   m_TagString: CoffeeBeans
@@ -349,12 +350,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3123005635952601381}
   - {fileID: 1091301661014930413}
   - {fileID: 9133148124265969402}
   - {fileID: 4162267441537349735}
-  - {fileID: 3123005635952601381}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2022317495
 Rigidbody:
@@ -403,6 +404,18 @@ MonoBehaviour:
   NPCAnim: {fileID: 0}
   storage: {fileID: 0}
   isMoving: 0
+--- !u!114 &2414901641007048666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4443390818867508377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6057123bb6b9f5c498638bd27c0cb0c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5449890139799371445
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,7 +429,7 @@ GameObject:
   - component: {fileID: 3650316406970381919}
   - component: {fileID: 5780118461807512125}
   - component: {fileID: 3266154071571178281}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: BoxUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}

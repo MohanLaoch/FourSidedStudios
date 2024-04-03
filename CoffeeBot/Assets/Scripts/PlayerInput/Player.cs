@@ -71,8 +71,8 @@ public class Player : MonoBehaviour
     public GameObject Skin4;
     public GameObject Skin5;
 
-
-
+    public bool Highlighted = false;
+    private GameObject boxUI;
     private void Awake()
     {
         Time.timeScale = 1;
@@ -225,7 +225,32 @@ public class Player : MonoBehaviour
         Acceleration = sceneInfo.playerAcceleration;
         RotSpeed = sceneInfo.playerRotSpeed;
 
-        if(dashIsCooldown)
+        Debug.DrawRay(RayZone.transform.position, transform.TransformDirection(Vector3.forward), Color.green);
+        if (Physics.Raycast(RayZone.transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit raycastHit, 1.2f, interactablesLayerMask))
+        {
+            if (raycastHit.transform.TryGetComponent(out StorageBox storageBox))
+            {
+                boxUI = storageBox.gameObject.transform.GetChild(0).gameObject;
+                Highlighted = true;
+
+                if (Highlighted)
+                {
+                    boxUI.SetActive(true);
+                }
+                else
+                {
+                    boxUI.SetActive(false);
+                }
+            }
+        }
+        else
+        {
+            Highlighted = false;
+        }
+
+
+
+        if (dashIsCooldown)
         {
             ApplyDashCooldown();
         }

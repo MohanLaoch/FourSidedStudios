@@ -530,6 +530,7 @@ GameObject:
   - component: {fileID: 1347799388}
   - component: {fileID: 972411649618509187}
   - component: {fileID: 405241711290505596}
+  - component: {fileID: 1021447099846347227}
   m_Layer: 7
   m_Name: Milk_StoreRoomBox
   m_TagString: Milk
@@ -549,10 +550,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1383124894901354728}
   - {fileID: 5598241433384048287}
   - {fileID: 4335438310043915144}
   - {fileID: 8887501845290654997}
-  - {fileID: 1383124894901354728}
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -603,3 +604,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.572917, y: 0.43861783, z: 0.5091332}
   m_Center: {x: -0.0088784695, y: 0.21990019, z: 0.81796986}
+--- !u!114 &1021447099846347227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9169328361245774315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6057123bb6b9f5c498638bd27c0cb0c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

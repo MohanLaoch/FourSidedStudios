@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2981539492325242231}
   - component: {fileID: 2981539492325242232}
   - component: {fileID: 2981539492325242233}
+  - component: {fileID: 1227546553047871744}
   m_Layer: 7
   m_Name: Water_StoreRoomBox
   m_TagString: Water
@@ -31,10 +32,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8529996216899030022}
   - {fileID: 2981539492779014355}
   - {fileID: 2981539492336272328}
   - {fileID: 2981539493268216196}
-  - {fileID: 8529996216899030022}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -85,6 +86,18 @@ MonoBehaviour:
   NPCAnim: {fileID: 0}
   storage: {fileID: 0}
   isMoving: 0
+--- !u!114 &1227546553047871744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2981539492325242234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6057123bb6b9f5c498638bd27c0cb0c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2981539492336272329
 GameObject:
   m_ObjectHideFlags: 0

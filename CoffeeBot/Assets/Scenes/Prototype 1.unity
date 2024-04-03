@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30321336, g: 0.12815265, b: 0.34266487, a: 1}
+  m_IndirectSpecularColor: {r: 0.30322725, g: 0.12813418, b: 0.342678, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -25089,7 +25089,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &622815206
 PrefabInstance:
@@ -69741,6 +69741,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3293066056719402986, guid: f79bddfcf297aec4f8c63d88fe857e43, type: 3}
     - target: {fileID: 24923722, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
+      propertyPath: MaxThrowForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 24923722, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
       propertyPath: ThrowChargeSpeed
       value: 3
       objectReference: {fileID: 0}
@@ -72953,9 +72957,17 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2174038029025765879, guid: 6736df27cdbe5a148a9a76b2359443af, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3650316406970381919, guid: 6736df27cdbe5a148a9a76b2359443af, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3954662695275605539, guid: 6736df27cdbe5a148a9a76b2359443af, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 3954662695275605539, guid: 6736df27cdbe5a148a9a76b2359443af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -73000,6 +73012,14 @@ PrefabInstance:
     - target: {fileID: 4443390818867508377, guid: 6736df27cdbe5a148a9a76b2359443af, type: 3}
       propertyPath: m_Name
       value: Beans_StoreRoomBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 5449890139799371445, guid: 6736df27cdbe5a148a9a76b2359443af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780118461807512125, guid: 6736df27cdbe5a148a9a76b2359443af, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
