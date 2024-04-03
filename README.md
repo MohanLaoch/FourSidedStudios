@@ -931,4 +931,9 @@
 | :--- |
 | • Added and textured second part of the BaristaCounter in the PrototypeScene |
 
-
+### 03/04/2024
+| **Declan** |
+| :--- |
+| • Added gumball machine upgrade|
+| • Added robomop upgrade|
+| • Added interaction indicator functionality|
