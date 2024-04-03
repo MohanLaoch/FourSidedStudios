@@ -7267,19 +7267,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1349414661649770058, guid: 3c2488537d7b5ed448dbc229930bdf34, type: 3}
   m_PrefabInstance: {fileID: 5647619563214906225}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &158358177
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 158358171}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5766077, y: 2, z: 1.74014}
-  m_Center: {x: -0.10383177, y: 0, z: -0.37006998}
 --- !u!4 &158358182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2405121401734479968, guid: 3c2488537d7b5ed448dbc229930bdf34, type: 3}
@@ -70354,6 +70341,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1867405403}
   m_CullTransparentMesh: 1
+--- !u!114 &1868200197 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 704336612376645776, guid: 3c2488537d7b5ed448dbc229930bdf34, type: 3}
+  m_PrefabInstance: {fileID: 5647619563214906225}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1873911222 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5177924494249241274, guid: 1526f2987ec62dd4395e1b792e5474f4, type: 3}
@@ -99679,16 +99677,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 24923722}
     - target: {fileID: 158358176, guid: 3c2488537d7b5ed448dbc229930bdf34, type: 3}
-      propertyPath: GumballCooldownTime
-      value: 10
+      propertyPath: TimerText
+      value: 
+      objectReference: {fileID: 1868200197}
+    - target: {fileID: 704336612376645776, guid: 3c2488537d7b5ed448dbc229930bdf34, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341082279562429472, guid: 3c2488537d7b5ed448dbc229930bdf34, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 912223784}
+    - target: {fileID: 1341082279562429472, guid: 3c2488537d7b5ed448dbc229930bdf34, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1349414661649770058, guid: 3c2488537d7b5ed448dbc229930bdf34, type: 3}
       propertyPath: m_Name
       value: GumballMachine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1349414661649770058, guid: 3c2488537d7b5ed448dbc229930bdf34, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2405121401734479968, guid: 3c2488537d7b5ed448dbc229930bdf34, type: 3}
       propertyPath: m_RootOrder

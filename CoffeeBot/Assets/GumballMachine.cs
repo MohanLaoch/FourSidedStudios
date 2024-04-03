@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GumballMachine : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class GumballMachine : MonoBehaviour
     public float GumballTimer;
     public float GumballCooldownTime;
     public bool MachineIsCooldown;
+
+    public TextMeshProUGUI TimerText;
     public void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
@@ -30,6 +33,7 @@ public class GumballMachine : MonoBehaviour
             }
             else
             {
+                
                 MachineIsCooldown = true;
                 GumballTimer = GumballCooldownTime;
                 
@@ -41,11 +45,14 @@ public class GumballMachine : MonoBehaviour
         if(MachineIsCooldown)
         {
             ApplyMachineCooldown();
+            TimerText.gameObject.SetActive(true);
+            TimerText.text = GumballTimer.ToString("0");
             GumballTime = true;
         }
         else
         {
             GumballTime = false;
+            TimerText.gameObject.SetActive(false);
         }
 
 
