@@ -47,7 +47,7 @@ public class NpcSpawnerTesting : MonoBehaviour
             SRKChance = Random.Range(1, 7);
             if(SRKChance < 6)
             {
-                Instantiate(SRK, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
+                Instantiate(NPC, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
                 
             }
             else if(SRKChance >= 6)

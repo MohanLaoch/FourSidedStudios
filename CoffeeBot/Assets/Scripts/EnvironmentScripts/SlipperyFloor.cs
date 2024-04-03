@@ -14,9 +14,10 @@ public class SlipperyFloor : MonoBehaviour
     public float PlayerFlipForce;
     public float PlayerFlipForceRot;
     public bool hasSlipped = false;
+    public GameObject roboMop;
     private void Start()
     {
-        
+       
     }
     private void OnTriggerEnter(Collider npc)
     {
@@ -35,7 +36,9 @@ public class SlipperyFloor : MonoBehaviour
           }
           if (npc.CompareTag("Mop"))
           {
+            
             Destroy(gameObject);
+            
           }
           if(npc.CompareTag("Player"))
           {
