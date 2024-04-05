@@ -665,7 +665,7 @@ public class Player : MonoBehaviour
         {
             sceneInfo.money -= 100;
             sceneInfo.roboMopUnlocked = true;
-            
+            MoneyText.text = ": " + sceneInfo.money.ToString("0");
         }
     }
 

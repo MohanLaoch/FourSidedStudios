@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UnlockCoffee : MonoBehaviour
 {
+    public SceneInfo sceneInfo;
     // Player starts off being able to make an Americano, a Cappuccino, and a Latte
 
     public CraftCoffee craftCoffee;
@@ -73,7 +74,8 @@ public class UnlockCoffee : MonoBehaviour
 
         avaliableOrders.coffeeOrders.Add("Chai Latte");
         avaliableOrders.orderIcons.Add(chaiLatteSprite);
-            
+
+        sceneInfo.ChaiLatteUnlocked = true;
     }
 
     public void UnlockHotChocolate()
@@ -102,6 +104,8 @@ public class UnlockCoffee : MonoBehaviour
 
         avaliableOrders.coffeeOrders.Add("Hot Chocolate");
         avaliableOrders.orderIcons.Add(hotChocolateSprite);
+
+        sceneInfo.HotChocolateUnlocked = true;
     }
 
     public void UnlockIcedCoffee()
@@ -130,6 +134,8 @@ public class UnlockCoffee : MonoBehaviour
 
         avaliableOrders.coffeeOrders.Add("Iced Coffee");
         avaliableOrders.orderIcons.Add(icedCoffeeSprite);
+
+        sceneInfo.IcedCoffeeUnlocked = true;
     }
 
     public void UnlockIcedLatte()
@@ -158,6 +164,8 @@ public class UnlockCoffee : MonoBehaviour
 
         avaliableOrders.coffeeOrders.Add("Iced Latte");
         avaliableOrders.orderIcons.Add(icedLatteSprite);
+
+        sceneInfo.IcedLatteUnlocked = true;
     }
 
     public void UnlockMocha()
@@ -187,6 +195,7 @@ public class UnlockCoffee : MonoBehaviour
         avaliableOrders.coffeeOrders.Add("Mocha");
         avaliableOrders.orderIcons.Add(mochaSprite);
 
+        sceneInfo.MochaUnlocked = true;
     }
 
     public void UnlockTea()
@@ -215,6 +224,8 @@ public class UnlockCoffee : MonoBehaviour
 
         avaliableOrders.coffeeOrders.Add("Tea");
         avaliableOrders.orderIcons.Add(teaSprite);
+
+        sceneInfo.TeaUnlocked = true;
     }
 }
 

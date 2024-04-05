@@ -21,6 +21,15 @@ public class SceneInfo : ScriptableObject {
     public int storageMax = 5;
     public int SkinCounter = 1;
 
+    [Header("Coffee Unlocks")]
+    public bool ChaiLatteUnlocked;
+    public bool HotChocolateUnlocked;
+    public bool IcedCoffeeUnlocked;
+    public bool IcedLatteUnlocked;
+    public bool MochaUnlocked;
+    public bool TeaUnlocked;
+
+
 
     public void Reset()
     {
@@ -37,6 +46,13 @@ public class SceneInfo : ScriptableObject {
         storageMax = 5;
         ElectricityBills = 10;
         WaterBills = 10;
+
+        ChaiLatteUnlocked = false;
+        HotChocolateUnlocked = false;
+        IcedCoffeeUnlocked = false;
+        IcedLatteUnlocked = false;
+        MochaUnlocked = false;
+        TeaUnlocked = false;
 
     }
 
