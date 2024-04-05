@@ -909,10 +909,10 @@
 
 | **Declan** |
 | :--- |
-| • Added dash upgrade|
-| • Added throw force upgrade|
-| • Added max storage capacity upgrade|
-| • Added insta stock upgrade|
+| • Added dash upgrade |
+| • Added throw force upgrade |
+| • Added max storage capacity upgrade |
+| • Added insta stock upgrade |
 
 | **James** |
 | :--- |
@@ -936,12 +936,19 @@
 
 | **Declan** |
 | :--- |
-| • Added gumball machine upgrade|
-| • Added robomop upgrade|
-| • Added interaction indicator functionality|
+| • Added gumball machine upgrade |
+| • Added robomop upgrade |
+| • Added interaction indicator functionality |
 
 ### 04/04/2024
 
 | **Mark** |
 | :--- |
-| • Imported ending screens *balling, criminal, bankrupt|
+| • Imported ending screens *balling, criminal, bankrupt |
+
+### 05/04/2024
+
+| **James** |
+| :--- |
+| • Added functionality to tutorial scene puzzles |
+| • "Idiot proofed" tutorial scene |
