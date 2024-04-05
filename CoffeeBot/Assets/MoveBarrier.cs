@@ -11,11 +11,11 @@ public class MoveBarrier : MonoBehaviour
     public string keyTag;
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == keyTag)
         {
-            barrier.transform.position = Vector3.Lerp(barrier.transform.position, end.position, Time.time);
+            barrier.transform.position = Vector3.Lerp(barrier.transform.position, end.position, Time.deltaTime);
 
         }
     }
