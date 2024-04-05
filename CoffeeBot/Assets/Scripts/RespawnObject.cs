@@ -10,7 +10,7 @@ public class RespawnObject : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Sergio");
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -20,5 +20,6 @@ public class RespawnObject : MonoBehaviour
         Instantiate(fallenObject, new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z), Quaternion.identity);
 
         fallenObject = null;
+
     }
 }
