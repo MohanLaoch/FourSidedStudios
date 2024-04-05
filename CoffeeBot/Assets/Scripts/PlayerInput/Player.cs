@@ -137,6 +137,12 @@ public class Player : MonoBehaviour
             GumballMachine.gameObject.SetActive(true);
         }
 
+        if(sceneInfo.roboMopUnlocked)
+        {
+            Mop.GetComponent<NavMeshAgent>().enabled = true;
+            Mop.GetComponent<Interactable>().enabled = false;
+        }
+
         boxUI = GameObject.Find("NullBox");
       
     }
@@ -658,8 +664,8 @@ public class Player : MonoBehaviour
         if (sceneInfo.money >= 100)
         {
             sceneInfo.money -= 100;
-            Mop.GetComponent<NavMeshAgent>().enabled = true;
-            Mop.GetComponent<Interactable>().enabled = false;
+            sceneInfo.roboMopUnlocked = true;
+            
         }
     }
 

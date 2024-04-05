@@ -35,10 +35,10 @@ public class RoboMop : MonoBehaviour
                 SlipperyFloor = GameObject.FindGameObjectWithTag("SlipperyFloor");
                 MopAgent.SetDestination(SlipperyFloor.transform.position);
             }
-            else
+            /*else
             {
                 MopAgent.SetDestination(startingPos);
-            }
+            }*/
 
 
             if (MopAgent.remainingDistance < 0.9f && SpillDetected)
