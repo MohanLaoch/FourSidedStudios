@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class MoveBarrier : MonoBehaviour
 {
-    public GameObject barrier;
-
-    public Transform end;
-
     public string keyTag;
 
+    public Animator barrierAnimator;
+
+    public string animationName;
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == keyTag)
         {
-            barrier.transform.position = Vector3.Lerp(barrier.transform.position, end.position, Time.deltaTime);
+            barrierAnimator.Play(animationName);
 
         }
     }
