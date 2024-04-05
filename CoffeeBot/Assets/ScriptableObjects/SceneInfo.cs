@@ -17,6 +17,7 @@ public class SceneInfo : ScriptableObject {
     public bool DashUnlocked = false;
     public bool instaStockUnlocked = false;
     public bool gumballMachineUnlocked = false;
+    public bool roboMopUnlocked = false;
     public int storageMax = 5;
     public int SkinCounter = 1;
 
@@ -32,6 +33,7 @@ public class SceneInfo : ScriptableObject {
         DashUnlocked = false;
         instaStockUnlocked = false;
         gumballMachineUnlocked = false;
+        roboMopUnlocked = false;
         storageMax = 5;
         ElectricityBills = 10;
         WaterBills = 10;

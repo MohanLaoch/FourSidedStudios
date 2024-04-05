@@ -23,6 +23,7 @@ public class Spill : MonoBehaviour
             Instantiate(spiltCoffee, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             Destroy(gameObject);
             mop.GetComponent<RoboMop>().SpillDetected = true;
+            Debug.Log(mop);
             //send signal to robomop!!
         }
     }

@@ -10,35 +10,47 @@ public class RoboMop : MonoBehaviour
     public Vector3 startingPos;
     void Start()
     {
+        
         MopAgent = GetComponent<NavMeshAgent>();
         startingPos = transform.position;
-        MopAgent.isStopped = true;
+
+
+
     }
 
     
     void Update()
     {
-        Debug.Log(MopAgent.remainingDistance);
-        if(SpillDetected)
+        if (MopAgent.enabled == false)
         {
-            MopAgent.isStopped = false;
-            SlipperyFloor = GameObject.FindGameObjectWithTag("SlipperyFloor");
-            MopAgent.SetDestination(SlipperyFloor.transform.position);
+            return;
         }
-        else
+        else 
         {
-            MopAgent.SetDestination(startingPos);
-        }
+            
+            Debug.Log(MopAgent.remainingDistance);
+            if (SpillDetected)
+            {
+                MopAgent.isStopped = false;
+                SlipperyFloor = GameObject.FindGameObjectWithTag("SlipperyFloor");
+                MopAgent.SetDestination(SlipperyFloor.transform.position);
+            }
+            else
+            {
+                MopAgent.SetDestination(startingPos);
+            }
 
 
-        if(MopAgent.remainingDistance < 0.9f && SpillDetected)
-        {
-            SpillDetected = false;
-            MopAgent.SetDestination(startingPos);
-        }
-        else if(MopAgent.remainingDistance < 0.9f && !SpillDetected)
-        {
-            MopAgent.isStopped = true;
+            if (MopAgent.remainingDistance < 0.9f && SpillDetected)
+            {
+                SpillDetected = false;
+                MopAgent.SetDestination(startingPos);
+            }
+            else if (MopAgent.remainingDistance < 0.9f && !SpillDetected)
+            {
+                MopAgent.isStopped = true;
+            }
+
         }
 
 

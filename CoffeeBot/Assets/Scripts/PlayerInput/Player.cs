@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using FMOD.Studio;
 using TMPro;
+using UnityEngine.AI;
 
 
 public class Player : MonoBehaviour
@@ -72,9 +73,10 @@ public class Player : MonoBehaviour
     public GameObject Skin5;
 
     public bool Highlighted = false;
-    private GameObject boxUI;
+    public GameObject boxUI;
 
     public GameObject GumballMachine;
+    public GameObject Mop;
     public bool EPressed;
     private void Awake()
     {
@@ -135,8 +137,8 @@ public class Player : MonoBehaviour
             GumballMachine.gameObject.SetActive(true);
         }
 
-        boxUI = FindObjectOfType<StorageBox>().gameObject;
-       
+        boxUI = GameObject.Find("NullBox");
+      
     }
 
     private void TestingInputSystem_OnInteractAction(object sender, System.EventArgs e)
@@ -651,7 +653,15 @@ public class Player : MonoBehaviour
         }
     }
 
-
+    public void UnlockRoboMop()
+    {
+        if (sceneInfo.money >= 100)
+        {
+            sceneInfo.money -= 100;
+            Mop.GetComponent<NavMeshAgent>().enabled = true;
+            Mop.GetComponent<Interactable>().enabled = false;
+        }
+    }
 
 
 
