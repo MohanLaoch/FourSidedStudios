@@ -952,3 +952,10 @@
 | :--- |
 | • Added functionality to tutorial scene puzzles |
 | • "Idiot proofed" tutorial scene |
+
+### 07/04/2024
+
+| **James** |
+| :--- |
+| • Upgrades menu has been expanded into three different sections |
+| • Added developer cheat script |
