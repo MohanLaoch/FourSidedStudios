@@ -12,7 +12,15 @@ public class CheatScript : MonoBehaviour
     // James' Cheat Variables
 
     [Header("James' Cheat Variables")]
-    public bool james;
+    public GameObject upgradesSelectionMenu;
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha0) && Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            upgradesSelectionMenu.SetActive(true);
+        }
+    }
 
     // Declan's Cheat Functions
 
@@ -23,8 +31,4 @@ public class CheatScript : MonoBehaviour
 
     // James' Cheat Functions
 
-    void James()
-    {
-
-    }
 }
