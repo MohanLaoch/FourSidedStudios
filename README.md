@@ -965,3 +965,4 @@
 | • Imported Main Menu Sprite|
 | • Imported New Upgrade buttons (Gumball machine, robomop, instastock, throw, dash, upgrade storage/storage capacity)|
 | • Imported generic button|
+| • Fixed Milk Store room box texture issue|
