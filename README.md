@@ -959,3 +959,9 @@
 | :--- |
 | • Upgrades menu has been expanded into three different sections |
 | • Added developer cheat script |
+
+| **Mark** |
+| :--- |
+| • Imported Main Menu Sprite|
+| • Imported New Upgrade buttons (Gumball machine, robomop, instastock, throw, dash, upgrade storage/storage capacity)|
+| • Imported generic button|
