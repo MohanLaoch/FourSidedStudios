@@ -608,6 +608,11 @@ public class Player : MonoBehaviour
 
     public void UnlockDash()
     {
+        if(sceneInfo.DashUnlocked)
+        {
+            return;
+        }
+
         if (sceneInfo.DashUnlocked)
         {
             return;
@@ -624,6 +629,12 @@ public class Player : MonoBehaviour
 
     public void UnlockInstaStock()
     {
+
+        if (sceneInfo.instaStockUnlocked)
+        {
+            return;
+        }
+
         if (sceneInfo.instaStockUnlocked)
         {
             return;
@@ -649,6 +660,10 @@ public class Player : MonoBehaviour
     }
     public void UnlockGumballMachine()
     {
+        if (sceneInfo.gumballMachineUnlocked)
+        {
+            return;
+        }
 
         if (sceneInfo.money >= 100)
         {
@@ -661,6 +676,11 @@ public class Player : MonoBehaviour
 
     public void UnlockRoboMop()
     {
+        if (sceneInfo.roboMopUnlocked)
+        {
+            return;
+        }
+
         if (sceneInfo.money >= 100)
         {
             sceneInfo.money -= 100;

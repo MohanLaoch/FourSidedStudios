@@ -56,34 +56,37 @@ public class UnlockCoffee : MonoBehaviour
     public void Start()
     {
       if(sceneInfo.ChaiLatteUnlocked)
-        {
+      {
             UnlockChaiLatte();
-        }
+      }
       if(sceneInfo.HotChocolateUnlocked)
-        {
+      {
             UnlockHotChocolate();
-        }
+      }
       if(sceneInfo.IcedCoffeeUnlocked)
-        {
+      {
             UnlockIcedCoffee();
-        }
+      }
       if(sceneInfo.IcedLatteUnlocked)
-        {
+      {
             UnlockIcedLatte();
-        }
+      }
       if(sceneInfo.MochaUnlocked)
-        {
+      {
             UnlockMocha();
-        }
+      }
       if(sceneInfo.TeaUnlocked)
-        {
+      {
             UnlockTea();
-        }
-
-
+      }
     }
     public void UnlockChaiLatte()
     {
+        if(sceneInfo.ChaiLatteUnlocked)
+        {
+            return;
+        }
+
         if(sceneInfo.money >= 15)
         {
             sceneInfo.money -= 15;
@@ -121,7 +124,12 @@ public class UnlockCoffee : MonoBehaviour
 
     public void UnlockHotChocolate()
     {
-        if(sceneInfo.money >= 15)
+        if (sceneInfo.HotChocolateUnlocked)
+        {
+            return;
+        }
+
+        if (sceneInfo.money >= 15)
         {
             sceneInfo.money -= 15;
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
@@ -158,7 +166,12 @@ public class UnlockCoffee : MonoBehaviour
 
     public void UnlockIcedCoffee()
     {
-        if(sceneInfo.money >= 15)
+        if (sceneInfo.IcedCoffeeUnlocked)
+        {
+            return;
+        }
+
+        if (sceneInfo.money >= 15)
         {
             sceneInfo.money -= 15;
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
@@ -195,6 +208,11 @@ public class UnlockCoffee : MonoBehaviour
 
     public void UnlockIcedLatte()
     {
+        if (sceneInfo.IcedLatteUnlocked)
+        {
+            return;
+        }
+
         if (sceneInfo.money >= 15)
         {
             sceneInfo.money -= 15;
@@ -231,6 +249,11 @@ public class UnlockCoffee : MonoBehaviour
 
     public void UnlockMocha()
     {
+        if (sceneInfo.MochaUnlocked)
+        {
+            return;
+        }
+
         if (sceneInfo.money >= 15)
         {
             sceneInfo.money -= 15;
@@ -267,6 +290,11 @@ public class UnlockCoffee : MonoBehaviour
 
     public void UnlockTea()
     {
+        if (sceneInfo.TeaUnlocked)
+        {
+            return;
+        }
+
         if (sceneInfo.money >= 15)
         {
             sceneInfo.money -= 15;
