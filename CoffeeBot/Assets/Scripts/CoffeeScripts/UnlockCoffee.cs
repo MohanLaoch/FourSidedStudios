@@ -52,6 +52,36 @@ public class UnlockCoffee : MonoBehaviour
     [Header("MoneyText")]
     public TextMeshProUGUI MoneyText;
 
+
+    public void Start()
+    {
+      if(sceneInfo.ChaiLatteUnlocked)
+        {
+            UnlockChaiLatte();
+        }
+      if(sceneInfo.HotChocolateUnlocked)
+        {
+            UnlockHotChocolate();
+        }
+      if(sceneInfo.IcedCoffeeUnlocked)
+        {
+            UnlockIcedCoffee();
+        }
+      if(sceneInfo.IcedLatteUnlocked)
+        {
+            UnlockIcedLatte();
+        }
+      if(sceneInfo.MochaUnlocked)
+        {
+            UnlockMocha();
+        }
+      if(sceneInfo.TeaUnlocked)
+        {
+            UnlockTea();
+        }
+
+
+    }
     public void UnlockChaiLatte()
     {
         if(sceneInfo.money >= 15)
