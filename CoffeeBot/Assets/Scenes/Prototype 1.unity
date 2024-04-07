@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30321336, g: 0.12815265, b: 0.34266487, a: 1}
+  m_IndirectSpecularColor: {r: 0.30322725, g: 0.12813418, b: 0.342678, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -73261,7 +73261,7 @@ MonoBehaviour:
   totalEarnedText: {fileID: 1663984973}
   upgradesMenu: {fileID: 360748610}
   endOfDayMenu: {fileID: 1095687351}
-  maxTime: 10
+  maxTime: 180
   currentTime: 0
   timerLimit: 0
   day: 1
@@ -110257,7 +110257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6308517545644333768, guid: 32c98b6b77db2fd4faf1e916b577bb15, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6308517545644333768, guid: 32c98b6b77db2fd4faf1e916b577bb15, type: 3}
       propertyPath: m_WalkableMask
