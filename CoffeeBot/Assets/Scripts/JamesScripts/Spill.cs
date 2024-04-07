@@ -18,12 +18,18 @@ public class Spill : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            return;
+        }
         if (other.gameObject.layer == layerNumber)
         {
+            mop.GetComponent<RoboMop>().SpillDetected = true;
+            mop.GetComponent<RoboMop>().SlipperyFloor = spiltCoffee;
             Instantiate(spiltCoffee, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             Destroy(gameObject);
-            mop.GetComponent<RoboMop>().SpillDetected = true;
-            Debug.Log(mop);
+            
+            Debug.Log(" SPILL DETECTED ");
             //send signal to robomop!!
         }
     }
