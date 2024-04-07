@@ -23,6 +23,7 @@ public class RoboMop : MonoBehaviour
     {
         if (SlipperyFloor == null)
         {
+            SlipperyFloor = null;
             MopAgent.SetDestination(startingPos);
             SpillDetected = false;
         }
@@ -34,7 +35,7 @@ public class RoboMop : MonoBehaviour
         else 
         {
             
-            Debug.Log(MopAgent.remainingDistance);
+
             if (SpillDetected)
             {
                 MopAgent.isStopped = false;
@@ -46,17 +47,26 @@ public class RoboMop : MonoBehaviour
                 MopAgent.SetDestination(startingPos);
             }
 
-
-            if (MopAgent.destination == SlipperyFloor.transform.position && SpillDetected)
+            if(MopAgent.destination == startingPos && MopAgent.remainingDistance < 0.9f)
             {
-                SpillDetected = false;
-
+                MopAgent.isStopped = true;
+            }
             
+            if(SpillDetected && SlipperyFloor != null)
+            {
+                SpillDetected = true;
+            }
+
+
+            /*if (MopAgent.destination == SlipperyFloor.transform.position && SlipperyFloor != null && SpillDetected)
+            {
+                SpillDetected = false;           
             }
             else if (MopAgent.remainingDistance < 0.9f && MopAgent.destination == startingPos)
             {
                 MopAgent.isStopped = true;
-            }
+            }*/
+
 
         }
 

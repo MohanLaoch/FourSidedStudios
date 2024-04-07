@@ -18,6 +18,10 @@ public class Spill : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            return;
+        }
         if (other.gameObject.layer == layerNumber)
         {
             mop.GetComponent<RoboMop>().SpillDetected = true;
