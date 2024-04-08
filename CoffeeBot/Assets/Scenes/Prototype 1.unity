@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30321336, g: 0.12815265, b: 0.34266487, a: 1}
+  m_IndirectSpecularColor: {r: 0.30322725, g: 0.12813418, b: 0.342678, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -61710,7 +61710,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: UpgradeStorage
+  m_text: InstaStock
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -103338,6 +103338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GumballMachine
       objectReference: {fileID: 0}
+    - target: {fileID: 1349414661649770058, guid: 3c2488537d7b5ed448dbc229930bdf34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2405121401734479968, guid: 3c2488537d7b5ed448dbc229930bdf34, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -112347,7 +112351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6308517545644333768, guid: 32c98b6b77db2fd4faf1e916b577bb15, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6308517545644333768, guid: 32c98b6b77db2fd4faf1e916b577bb15, type: 3}
       propertyPath: m_WalkableMask
