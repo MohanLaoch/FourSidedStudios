@@ -322,15 +322,11 @@ public class Player : MonoBehaviour
     }
     private void HandleMovement()
     {
-
-
         
         float Move = testingInputSystem.GetMovementFloat();
         float RotDirection = testingInputSystem.GetRotFloat();
 
-        
-
-       // rb.MovePosition(transform.position + (transform.forward * Move) * Speed * Time.fixedDeltaTime);
+        // rb.MovePosition(transform.position + (transform.forward * Move) * Speed * Time.fixedDeltaTime);
        
         if (Move != 0 && IsGrounded())
         {
@@ -459,13 +455,16 @@ public class Player : MonoBehaviour
             {
                 ThrowForce += ThrowChargeSpeed * Time.fixedDeltaTime;
                 throwBar.SetThrow(ThrowForce);
+
+                if (ThrowForce >= MaxThrowForce)
+                {
+                    ThrowForce = MaxThrowForce;
+                }
+
                 yield return waitForEndOfFrame;
             }
 
-            if (ThrowForce >= MaxThrowForce)
-            {
-                ThrowForce = MaxThrowForce;
-            }
+
 
 
         }

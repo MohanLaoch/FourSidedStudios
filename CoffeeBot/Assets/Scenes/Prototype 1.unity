@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30321336, g: 0.12815265, b: 0.34266487, a: 1}
+  m_IndirectSpecularColor: {r: 0.30322725, g: 0.12813418, b: 0.342678, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -76126,7 +76126,7 @@ PrefabInstance:
       objectReference: {fileID: 762203757}
     - target: {fileID: 24923722, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
       propertyPath: DashForce
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 24923722, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
       propertyPath: MoneyText
@@ -76158,7 +76158,7 @@ PrefabInstance:
       objectReference: {fileID: 158358171}
     - target: {fileID: 24923722, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
       propertyPath: ThrowChargeSpeed
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 24923722, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
       propertyPath: dashCooldownTime
@@ -76188,6 +76188,10 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 912223784}
+    - target: {fileID: 66035399, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
+      propertyPath: m_MaxValue
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1553618392, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
