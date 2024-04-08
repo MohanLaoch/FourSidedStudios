@@ -13,6 +13,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject upgradeUI;
     [SerializeField] private GameObject endOfDayUI;
     [SerializeField] private GameObject unlockCoffeeUI;
+    [SerializeField] private GameObject optionsUI;
+
 
 
 
@@ -76,9 +78,6 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = true;
         playerInputActions.Player.Disable();
         playerInputActions.Player.Flip.Disable();
-
-
-
     }
     public void ActivateUpgradesMenu()
     {
@@ -97,6 +96,7 @@ public class PauseMenu : MonoBehaviour
         endOfDayUI.SetActive(true);
         Cursor.visible = true;
         playerInputActions.Player.Disable();
+        playerInputActions.Menu.Disable();
         playerInputActions.Player.Flip.Disable();
     }
     public void DeactivateEndOfDayMenu()
@@ -129,6 +129,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         //Audiolistener.pause = false;
         pauseUI.SetActive(false);
+        optionsUI.SetActive(false);
         isPaused = false;
         Cursor.visible = false;
         playerInputActions.Player.Enable();

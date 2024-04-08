@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     public SceneInfo sceneInfo;
+
+    public void Awake()
+    {
+        Cursor.visible = true;
+    }
     public void StartGame()
     {
         Cursor.visible = true;
