@@ -966,3 +966,10 @@
 | • Imported New Upgrade buttons (Gumball machine, robomop, instastock, throw, dash, upgrade storage/storage capacity)|
 | • Imported generic button|
 | • Fixed Milk Store room box texture issue|
+
+### 08/04/2024
+
+| **Mark** |
+| :--- |
+| • Imported Robomop model|
+| • Setup robomop animator controller and animation (idle_float)|
