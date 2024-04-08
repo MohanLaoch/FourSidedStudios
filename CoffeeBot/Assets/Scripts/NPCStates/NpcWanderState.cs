@@ -72,7 +72,6 @@ public class NpcWanderState : NpcBaseState
         else
         {
             NpcAnim.SetBool("IsWalking", true);
-
         }
     }
 

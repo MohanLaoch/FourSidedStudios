@@ -82,10 +82,10 @@ public class UnlockCoffee : MonoBehaviour
     }
     public void UnlockChaiLatte()
     {
-        if(sceneInfo.ChaiLatteUnlocked)
+        /*if(sceneInfo.ChaiLatteUnlocked)
         {
             return;
-        }
+        }*/
 
         if(sceneInfo.money >= 15)
         {
@@ -124,10 +124,10 @@ public class UnlockCoffee : MonoBehaviour
 
     public void UnlockHotChocolate()
     {
-        if (sceneInfo.HotChocolateUnlocked)
+        /*if (sceneInfo.HotChocolateUnlocked)
         {
             return;
-        }
+        }*/
 
         if (sceneInfo.money >= 15)
         {
@@ -166,10 +166,10 @@ public class UnlockCoffee : MonoBehaviour
 
     public void UnlockIcedCoffee()
     {
-        if (sceneInfo.IcedCoffeeUnlocked)
+        /*if (sceneInfo.IcedCoffeeUnlocked)
         {
             return;
-        }
+        }*/
 
         if (sceneInfo.money >= 15)
         {
@@ -208,10 +208,10 @@ public class UnlockCoffee : MonoBehaviour
 
     public void UnlockIcedLatte()
     {
-        if (sceneInfo.IcedLatteUnlocked)
+        /*if (sceneInfo.IcedLatteUnlocked)
         {
             return;
-        }
+        }*/
 
         if (sceneInfo.money >= 15)
         {
@@ -249,10 +249,10 @@ public class UnlockCoffee : MonoBehaviour
 
     public void UnlockMocha()
     {
-        if (sceneInfo.MochaUnlocked)
+        /*if (sceneInfo.MochaUnlocked)
         {
             return;
-        }
+        }*/
 
         if (sceneInfo.money >= 15)
         {
@@ -290,10 +290,10 @@ public class UnlockCoffee : MonoBehaviour
 
     public void UnlockTea()
     {
-        if (sceneInfo.TeaUnlocked)
+        /*if (sceneInfo.TeaUnlocked)
         {
             return;
-        }
+        }*/
 
         if (sceneInfo.money >= 15)
         {
