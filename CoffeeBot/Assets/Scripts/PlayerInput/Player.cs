@@ -613,10 +613,6 @@ public class Player : MonoBehaviour
             return;
         }
 
-        if (sceneInfo.DashUnlocked)
-        {
-            return;
-        }
         if (sceneInfo.money >= 100)
         {
             sceneInfo.money -= 100;

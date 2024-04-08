@@ -2,14 +2,12 @@
 [LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20219 (137979), maxchannels=256, flags=0x00020000
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=8, nSamplesPerSec=48000, nAvgBytesPerSec=1536000, nBlockAlign=32, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x0000063F, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
-[LOG] DownMix::init                            : dspbuffersize: 1024  rate: 48000. output speaker mode: 7, input speaker mode 3
-[LOG] DownMix::init                            : done.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000019EEA1BDB48 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000220F3A47D98 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -23,4 +21,139 @@
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[ERR] assert                                   : assertion: 'gSystemInitCount == 0' failed
+[LOG] SystemI::createSound                     : filename = Assets/Fmod/CoffeeBotFmod/Build/Desktop/Serg.io.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000022152B37728, queue head = 00000220FEE7EAE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022152B37728
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Fmod/CoffeeBotFmod/Build/Desktop/Serg.io.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2280704
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13984
+[LOG] SystemI::createSound                     :     filename = Assets/Fmod/CoffeeBotFmod/Build/Desktop/Environment.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000022046BA6680
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000022152B37068, queue head = 00000220FEE7EAE8, queue count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets/Fmod/CoffeeBotFmod/Build/Desktop/Environment.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000022152B378D8, queue head = 00000220FEE7EAE8, queue count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='RadioMusic', format=5, channels=2, frequency=48000, lengthbytes=1952192, lengthpcm=6762161, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022152B37728
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022152B37068
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Fmod/CoffeeBotFmod/Build/Desktop/Environment.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5444512
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000022046BA6400
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='QuietCafe', format=5, channels=2, frequency=48000, lengthbytes=2040736, lengthpcm=7686144, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.817139.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022152B37068
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022152B378D8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Fmod/CoffeeBotFmod/Build/Desktop/Environment.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5444512
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000022046BA6540
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='QuietCafe', format=5, channels=2, frequency=48000, lengthbytes=2040736, lengthpcm=7686144, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.817139.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022152B378D8
+[LOG] SoundI::release                          : QuietCafe (0000022152B37068)
+[LOG] SoundI::release                          :     QuietCafe (0000021ED7000C08)
+[LOG] SoundI::release                          :     QuietCafe (0000022152B8BA48)
+[LOG] SoundI::release                          : RadioMusic (00000221341F45C8)
+[LOG] SoundI::release                          :     RadioMusic (0000021FE6A24FA8)
+[LOG] SoundI::release                          :     RadioMusic (00000221011A1218)
+[LOG] SystemI::createSound                     : filename = Assets/Fmod/CoffeeBotFmod/Build/Desktop/Serg.io.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021D95D93F38, queue head = 00000220FEE7EAE8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021D95D93F38
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Fmod/CoffeeBotFmod/Build/Desktop/Serg.io.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2280704
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13984
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002212CF3D8F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets/Fmod/CoffeeBotFmod/Build/Desktop/Environment.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000021D95D94B08, queue head = 00000220FEE7EAE8, queue count = 0
+[LOG] SystemI::createSound                     :     filename = Assets/Fmod/CoffeeBotFmod/Build/Desktop/Environment.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000021D95D94448, queue head = 00000220FEE7EAE8, queue count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='RadioMusic', format=5, channels=2, frequency=48000, lengthbytes=1952192, lengthpcm=6762161, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021D95D93F38
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021D95D94B08
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Fmod/CoffeeBotFmod/Build/Desktop/Environment.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5444512
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002212CF3D670
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='QuietCafe', format=5, channels=2, frequency=48000, lengthbytes=2040736, lengthpcm=7686144, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.817139.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021D95D94B08
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021D95D94448
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Fmod/CoffeeBotFmod/Build/Desktop/Environment.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5444512
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021F838B0CC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='QuietCafe', format=5, channels=2, frequency=48000, lengthbytes=2040736, lengthpcm=7686144, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.817139.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021D95D94448
+[LOG] SoundI::release                          : QuietCafe (0000021D95D94B08)
+[LOG] SoundI::release                          :     QuietCafe (0000021FE6B5A718)
+[LOG] SoundI::release                          :     QuietCafe (0000021FE6F06548)
+[LOG] SoundI::release                          : RadioMusic (0000022152B37728)
+[LOG] SoundI::release                          :     RadioMusic (0000021D95DA3B98)
+[LOG] SoundI::release                          :     RadioMusic (0000022152B8EB38)
+[LOG] SoundI::release                          : QuietCafe (0000021D95D94448)
+[LOG] SoundI::release                          :     QuietCafe (0000021FE6B59878)
+[LOG] SoundI::release                          :     QuietCafe (0000021FE6F066F8)
+[LOG] SoundI::release                          : QuietCafe (0000022152B378D8)
+[LOG] SoundI::release                          :     QuietCafe (0000021FE6B5AA58)
+[LOG] SoundI::release                          :     QuietCafe (0000022152B8E118)
+[LOG] SoundI::release                          : QuietCafe (00000221341F6FF8)
+[LOG] SoundI::release                          :     QuietCafe (0000021ED70027A8)
+[LOG] SoundI::release                          :     QuietCafe (00000221011A1C38)
+[LOG] SoundI::release                          : RadioMusic (0000021D95D93F38)
+[LOG] SoundI::release                          :     RadioMusic (0000021FE6B5A238)
+[LOG] SoundI::release                          :     RadioMusic (0000021FE6F06DB8)
+[LOG] SoundI::release                          :  (00000220F38A17D8)
+[LOG] SoundI::release                          :     EnterFrontDoorChime (0000021ED7001F88)
+[LOG] SoundI::release                          :  (00000220F38A14F8)
+[LOG] SoundI::release                          :     PickUpOrDown(Up) (0000021FE6A25E48)
+[LOG] SoundI::release                          :  (00000220F389DA08)
+[LOG] SoundI::release                          :     PickUpOrDown(Down) (0000021FE6A2A288)
+[LOG] SoundI::release                          :  (00000220F389EF98)
+[LOG] SoundI::release                          :     ArmDown1 (0000021FE6A25FE8)
+[LOG] SoundI::release                          :  (00000220F389DFC8)
+[LOG] SoundI::release                          :     ArmUp1 (0000021FE6A25CA8)
+[LOG] SoundI::release                          :  (00000220F389DCE8)
+[LOG] SoundI::release                          :     SergioDriving (0000021FE6A26188)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
