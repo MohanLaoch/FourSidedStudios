@@ -77,6 +77,8 @@ public class Player : MonoBehaviour
 
     public GameObject GumballMachine;
     public GameObject Mop;
+    public GameObject MopChild1;
+    public GameObject MopChild2;
     public bool EPressed;
     private void Awake()
     {
@@ -141,6 +143,9 @@ public class Player : MonoBehaviour
         {
             Mop.GetComponent<NavMeshAgent>().enabled = true;
             Mop.GetComponent<Interactable>().enabled = false;
+
+            MopChild1.gameObject.SetActive(false);
+            MopChild2.gameObject.SetActive(true);
         }
 
         boxUI = GameObject.Find("NullBox");
