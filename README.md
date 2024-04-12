@@ -981,3 +981,4 @@
 | • Imported gumball machine model|
 | • Imported decor model (bookshelf, walllight)|
 | • Created unity materials for the above|
+| • AddedGumballs to the machine|
