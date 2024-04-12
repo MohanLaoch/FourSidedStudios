@@ -973,3 +973,11 @@
 | :--- |
 | • Imported Robomop model|
 | • Setup robomop animator controller and animation (idle_float)|
+
+### 12/04/2024
+
+| **Mark** |
+| :--- |
+| • Imported gumball machine model|
+| • Imported decor model (bookshelf, walllight)|
+| • Created unity materials for the above|
