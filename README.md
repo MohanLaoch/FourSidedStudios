@@ -982,3 +982,12 @@
 | • Imported decor model (bookshelf, walllight)|
 | • Created unity materials for the above|
 | • AddedGumballs to the machine|
+
+### 13/04/2024
+
+| **Mark** |
+| :--- |
+| • Imported Lamp|
+| • Imported Carpet|
+| • Imported Dresser|
+| • Created materials for the above|
