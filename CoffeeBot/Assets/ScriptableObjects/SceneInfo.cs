@@ -31,7 +31,6 @@ public class SceneInfo : ScriptableObject, IDataPersistence
     public bool TeaUnlocked;
 
 
-
     public void LoadData(GameData data)
     {
         this.dayCount = data.dayCount;
@@ -41,6 +40,7 @@ public class SceneInfo : ScriptableObject, IDataPersistence
     {
         data.dayCount = this.dayCount;
         data.money = this.money;
+
     }
 
 

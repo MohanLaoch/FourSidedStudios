@@ -8,7 +8,7 @@ using TMPro;
 using UnityEngine.AI;
 
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDataPersistence
 {
     [SerializeField] private TestingInputSystem testingInputSystem;
 
@@ -234,7 +234,15 @@ public class Player : MonoBehaviour
             
         }
     }
+    public void LoadData(GameData data)
+    {
+        this.transform.position = data.playerPosition;
+    }
 
+    public void SaveData(ref GameData data)
+    {
+        data.playerPosition = transform.position;
+    }
     void Update()
     {
         

@@ -181,6 +181,7 @@ public class PauseMenu : MonoBehaviour
         
         
         
+        
   
         if (sceneInfo.dayCount >= 5 && sceneInfo.money <= 200 && isPrisoner == false)
         {
