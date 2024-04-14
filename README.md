@@ -991,3 +991,9 @@
 | • Imported Carpet|
 | • Imported Dresser|
 | • Created materials for the above|
+
+### 14/04/2024
+
+| **Mark** |
+| :--- |
+| • Setup Lamp lights in mark scene|
