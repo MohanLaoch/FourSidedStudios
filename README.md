@@ -998,3 +998,4 @@
 | :--- |
 | • Setup Lamp lights in mark scene|
 | • Unity effects experiment in mark scene|
+| • Effects injury sprites|
