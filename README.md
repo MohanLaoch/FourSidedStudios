@@ -1005,3 +1005,4 @@
 | **Niamh** |
 | :--- |
 | • Added StraightCouch to Prototype|
+| • Added ProperLCouch to Prototype|
