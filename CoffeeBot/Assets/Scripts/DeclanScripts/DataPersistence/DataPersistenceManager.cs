@@ -32,7 +32,7 @@ public class DataPersistenceManager : MonoBehaviour
         //to be removed once save and load buttons are set up
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
-        LoadGame();
+        //LoadGame();
 
     }
 
@@ -59,7 +59,7 @@ public class DataPersistenceManager : MonoBehaviour
             dataPersistenceObj.LoadData(gameData);
         }
 
-        Debug.Log("daycount: " + gameData.dayCount);
+
     }
 
     public void SaveGame()
@@ -70,7 +70,7 @@ public class DataPersistenceManager : MonoBehaviour
             dataPersistenceObj.SaveData(ref gameData);
         }
 
-        Debug.Log("saved day count:" + gameData.dayCount);
+      
         //save that data to a file using the data handler
         dataHandler.Save(gameData);
     }

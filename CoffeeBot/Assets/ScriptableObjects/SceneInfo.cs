@@ -3,11 +3,11 @@ using UnityEngine;
 
 
   [CreateAssetMenu(fileName = "SceneInfo", menuName = "Persistence")]
-public class SceneInfo : ScriptableObject, IDataPersistence 
+public class SceneInfo : ScriptableObject 
 {
     public bool isNextScene = true;
     public float money = 0;
-    public int dayCount = 1;
+    public int dayCount;
     public float playerSpeed;
     public float playerRotSpeed;
     public float playerAcceleration;
@@ -31,17 +31,6 @@ public class SceneInfo : ScriptableObject, IDataPersistence
     public bool TeaUnlocked;
 
 
-    public void LoadData(GameData data)
-    {
-        this.dayCount = data.dayCount;
-        this.money = data.money;
-    }
-    public void SaveData(ref GameData data)
-    {
-        data.dayCount = this.dayCount;
-        data.money = this.money;
-
-    }
 
 
     public void Reset()

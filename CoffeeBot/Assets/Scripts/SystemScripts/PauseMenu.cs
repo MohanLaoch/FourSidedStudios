@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 
-public class PauseMenu : MonoBehaviour
+public class PauseMenu : MonoBehaviour, IDataPersistence
 {
     [SerializeField] private PlayerInputActions playerInputActions;
     [SerializeField] private InputAction menu;
@@ -172,12 +172,14 @@ public class PauseMenu : MonoBehaviour
 
     public void NextDay()
     {
+        sceneInfo.dayCount++;
         SceneManager.LoadScene("Prototype 1");
         Time.timeScale = 1;
         DeactivateMenu();
         DeactivateUpgradesMenu();
 
-        sceneInfo.dayCount++;
+
+        
         
         
         
@@ -218,5 +220,15 @@ public class PauseMenu : MonoBehaviour
         
     }
 
+
+    public void LoadData(GameData data)
+    {
+        sceneInfo.dayCount = data.playerAttributesData.dayCount;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.playerAttributesData.dayCount = sceneInfo.dayCount;
+    }
 
 }

@@ -236,12 +236,28 @@ public class Player : MonoBehaviour, IDataPersistence
     }
     public void LoadData(GameData data)
     {
-        this.transform.position = data.playerPosition;
+        this.rb.position = data.playerPosition;
+
+        sceneInfo.money = data.playerAttributesData.money;
+        //sceneInfo.dayCount = data.playerAttributesData.dayCount;
+        sceneInfo.playerSpeed = data.playerAttributesData.playerSpeed;
+        sceneInfo.playerRotSpeed = data.playerAttributesData.playerRotSpeed;
+        sceneInfo.playerAcceleration = data.playerAttributesData.playerAcceleration;
+        sceneInfo.playerMaxThrowForce = data.playerAttributesData.playerMaxThrowForce;
     }
 
     public void SaveData(ref GameData data)
     {
-        data.playerPosition = transform.position;
+        data.playerPosition = rb.position;
+
+        data.playerAttributesData.money = sceneInfo.money;
+       // data.playerAttributesData.dayCount = sceneInfo.dayCount;
+        data.playerAttributesData.playerSpeed = sceneInfo.playerSpeed;
+        data.playerAttributesData.playerRotSpeed = sceneInfo.playerRotSpeed;
+        data.playerAttributesData.playerAcceleration = sceneInfo.playerAcceleration;
+        data.playerAttributesData.playerMaxThrowForce = sceneInfo.playerMaxThrowForce;
+
+
     }
     void Update()
     {
