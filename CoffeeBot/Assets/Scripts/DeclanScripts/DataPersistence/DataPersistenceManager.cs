@@ -9,6 +9,8 @@ public class DataPersistenceManager : MonoBehaviour
 
     [SerializeField] private string fileName;
 
+    [SerializeField] private bool useEncryption;
+
 
     private GameData gameData;
 
@@ -30,7 +32,7 @@ public class DataPersistenceManager : MonoBehaviour
     private void Start()
     {
         //to be removed once save and load buttons are set up
-        this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
+        this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, useEncryption);
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
         NewGame();
 
