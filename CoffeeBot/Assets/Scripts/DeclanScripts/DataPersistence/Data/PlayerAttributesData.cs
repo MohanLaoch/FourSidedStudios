@@ -18,6 +18,18 @@ public class AttributesData
 
     public float playerMaxThrowForce;
 
+    public int TotalInjuryCounter;
+
+    public bool DashUnlocked = false;
+
+    public bool instaStockUnlocked = false;
+
+    public bool gumballMachineUnlocked = false;
+
+    public bool roboMopUnlocked = false;
+
+    public int storageMax = 5;
+
     public AttributesData()
     {
         money = 0;
@@ -31,5 +43,17 @@ public class AttributesData
         playerAcceleration = 10;
 
         playerMaxThrowForce = 10;
+
+        TotalInjuryCounter = 0;
+
+        DashUnlocked = false;
+
+        instaStockUnlocked = false;
+
+        gumballMachineUnlocked = false;
+
+        roboMopUnlocked = false;
+  
+        storageMax = 5;
     }
 }

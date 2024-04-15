@@ -236,10 +236,10 @@ public class Player : MonoBehaviour, IDataPersistence
     }
     public void LoadData(GameData data)
     {
-        this.rb.position = data.playerPosition;
+        rb.position = data.playerPosition;
 
         sceneInfo.money = data.playerAttributesData.money;
-        //sceneInfo.dayCount = data.playerAttributesData.dayCount;
+       
         sceneInfo.playerSpeed = data.playerAttributesData.playerSpeed;
         sceneInfo.playerRotSpeed = data.playerAttributesData.playerRotSpeed;
         sceneInfo.playerAcceleration = data.playerAttributesData.playerAcceleration;
@@ -248,14 +248,22 @@ public class Player : MonoBehaviour, IDataPersistence
 
     public void SaveData(ref GameData data)
     {
-        data.playerPosition = rb.position;
 
+        data.playerPosition = rb.position;
         data.playerAttributesData.money = sceneInfo.money;
-       // data.playerAttributesData.dayCount = sceneInfo.dayCount;
+       
         data.playerAttributesData.playerSpeed = sceneInfo.playerSpeed;
         data.playerAttributesData.playerRotSpeed = sceneInfo.playerRotSpeed;
         data.playerAttributesData.playerAcceleration = sceneInfo.playerAcceleration;
         data.playerAttributesData.playerMaxThrowForce = sceneInfo.playerMaxThrowForce;
+
+        data.playerAttributesData.TotalInjuryCounter = sceneInfo.TotalInjuryCounter;
+        data.playerAttributesData.DashUnlocked = sceneInfo.DashUnlocked;
+        data.playerAttributesData.instaStockUnlocked = sceneInfo.instaStockUnlocked;
+        data.playerAttributesData.gumballMachineUnlocked = sceneInfo.gumballMachineUnlocked;
+        data.playerAttributesData.roboMopUnlocked = sceneInfo.roboMopUnlocked;
+        data.playerAttributesData.storageMax = sceneInfo.storageMax;
+
 
 
     }
