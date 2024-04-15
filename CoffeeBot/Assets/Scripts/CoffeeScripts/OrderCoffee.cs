@@ -30,6 +30,9 @@ public class OrderCoffee : MonoBehaviour
 
     public Slider timerBubble;
 
+    private GameObject viewportContent;
+    private GameObject orderText;
+
     [Header("Responses")]
 
     public string[] positiveResponses;
@@ -44,6 +47,7 @@ public class OrderCoffee : MonoBehaviour
         // assign player script
         player = GameObject.Find("Sergio").GetComponent<Player>();
         avaliableOrders = GameObject.Find("UnlockCoffee").GetComponent<AvaliableOrders>();
+        viewportContent = GameObject.Find("Content");
 
         responseBubble.SetActive(false);
         timerBubble.gameObject.SetActive(true);
@@ -64,6 +68,10 @@ public class OrderCoffee : MonoBehaviour
         coffeeText.text = acceptedCoffeeTag;
 
         coffeeImage.sprite = avaliableOrders.orderIcons[randomIndex];
+
+        orderText = avaliableOrders.orderListText[randomIndex];
+
+        Instantiate(orderText, viewportContent.transform); 
 
         // start the timer
         moneyTracker.StartTimer();
@@ -89,6 +97,7 @@ public class OrderCoffee : MonoBehaviour
 
     private void CompleteOrder()
     {
+
         acceptedCoffeeTag = "";
 
         coffeeImage.gameObject.SetActive(false);

@@ -8,4 +8,6 @@ public class AvaliableOrders : MonoBehaviour
     public List<string> coffeeOrders = new List<string>();
 
     public List<Sprite> orderIcons = new List<Sprite>();
+
+    public List<GameObject> orderListText = new List<GameObject>();
 }

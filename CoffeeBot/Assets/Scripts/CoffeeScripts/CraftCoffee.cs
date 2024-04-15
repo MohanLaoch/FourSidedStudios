@@ -29,7 +29,7 @@ public class CraftCoffee : MonoBehaviour
     public List<string> recipes = new List<string>();
 
     [HideInInspector]
-    public List<GameObject> recipeResults = new List<GameObject>();
+    public List<GameObject> recipeResults = new List<GameObject>();  
 
     public List<string> falseRecipes = new List<string>();
 
@@ -76,6 +76,7 @@ public class CraftCoffee : MonoBehaviour
             recipeImages.Add(americanoSprite);
 
             recipeNames.Add("Americano");
+
         }
 
         //Cappuccino
@@ -91,6 +92,7 @@ public class CraftCoffee : MonoBehaviour
             recipeImages.Add(cappuccinoSprite);
 
             recipeNames.Add("Cappuccino");
+
         }
 
         //Latte

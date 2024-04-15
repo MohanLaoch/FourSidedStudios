@@ -33,21 +33,27 @@ public class UnlockCoffee : MonoBehaviour
 
     public GameObject chaiLatte;
     public Sprite chaiLatteSprite;
+    public GameObject chaiLatteOT;
 
     public GameObject hotChocolate;
     public Sprite hotChocolateSprite;
+    public GameObject hotChocolateOT;
 
     public GameObject icedCoffee;
     public Sprite icedCoffeeSprite;
+    public GameObject icedCoffeeOT;
 
     public GameObject icedLatte;
     public Sprite icedLatteSprite;
+    public GameObject icedLatteeOT;
 
     public GameObject mocha;
     public Sprite mochaSprite;
+    public GameObject mochaOT;
 
     public GameObject tea;
     public Sprite teaSprite;
+    public GameObject teaOT;
 
     [Header("MoneyText")]
     public TextMeshProUGUI MoneyText;
