@@ -32,7 +32,7 @@ public class DataPersistenceManager : MonoBehaviour
         //to be removed once save and load buttons are set up
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
-        //LoadGame();
+        NewGame();
 
     }
 

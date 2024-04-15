@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DayTimer : MonoBehaviour
+public class DayTimer : MonoBehaviour, IDataPersistence
 {
     public PauseMenu pauseMenu;
     public SceneInfo sceneInfo;
@@ -31,6 +31,18 @@ public class DayTimer : MonoBehaviour
     private bool timerActive = true;
 
     public int day = 1;
+
+    public void LoadData(GameData data)
+    {
+        currentTime = data.playerAttributesData.currentTime;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.playerAttributesData.currentTime = currentTime;
+    }
+
+
 
     private void Start()
     {

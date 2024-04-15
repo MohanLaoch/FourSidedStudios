@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class AttributesData
 {
+    public float currentTime;
+
     public float money;
 
     public int dayCount;
@@ -30,8 +32,23 @@ public class AttributesData
 
     public int storageMax = 5;
 
+
+    public bool ChaiLatteUnlocked;
+
+    public bool HotChocolateUnlocked;
+
+    public bool IcedCoffeeUnlocked;
+
+    public bool IcedLatteUnlocked;
+
+    public bool MochaUnlocked;
+
+    public bool TeaUnlocked;
+
     public AttributesData()
     {
+        currentTime = 180f;
+
         money = 0;
 
         dayCount = 1;
@@ -55,5 +72,18 @@ public class AttributesData
         roboMopUnlocked = false;
   
         storageMax = 5;
+
+        ChaiLatteUnlocked = false;
+
+        HotChocolateUnlocked = false;
+
+        IcedCoffeeUnlocked = false;
+
+        IcedLatteUnlocked = false;
+
+        MochaUnlocked = false;
+
+        TeaUnlocked = false;
+
     }
 }

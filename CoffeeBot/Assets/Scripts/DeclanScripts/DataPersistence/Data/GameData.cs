@@ -9,10 +9,13 @@ public class GameData
 
     public AttributesData playerAttributesData;
 
+    public float currentTime;
+
     public GameData()
     {
         playerPosition = new Vector3(7, 1.2f, 1.5f);
         playerAttributesData = new AttributesData();
+        currentTime = 180f;
     }
     
 }

@@ -244,6 +244,20 @@ public class Player : MonoBehaviour, IDataPersistence
         sceneInfo.playerRotSpeed = data.playerAttributesData.playerRotSpeed;
         sceneInfo.playerAcceleration = data.playerAttributesData.playerAcceleration;
         sceneInfo.playerMaxThrowForce = data.playerAttributesData.playerMaxThrowForce;
+
+        sceneInfo.TotalInjuryCounter = data.playerAttributesData.TotalInjuryCounter;
+        sceneInfo.DashUnlocked = data.playerAttributesData.DashUnlocked;
+        sceneInfo.instaStockUnlocked = data.playerAttributesData.instaStockUnlocked;
+        sceneInfo.gumballMachineUnlocked = data.playerAttributesData.gumballMachineUnlocked;
+        sceneInfo.roboMopUnlocked = data.playerAttributesData.roboMopUnlocked;
+        sceneInfo.storageMax = data.playerAttributesData.storageMax;
+
+        sceneInfo.ChaiLatteUnlocked = data.playerAttributesData.ChaiLatteUnlocked;
+        sceneInfo.HotChocolateUnlocked = data.playerAttributesData.HotChocolateUnlocked;
+        sceneInfo.IcedCoffeeUnlocked = data.playerAttributesData.IcedCoffeeUnlocked;
+        sceneInfo.IcedLatteUnlocked = data.playerAttributesData.IcedLatteUnlocked;
+        sceneInfo.MochaUnlocked = data.playerAttributesData.MochaUnlocked;
+        sceneInfo.TeaUnlocked = data.playerAttributesData.TeaUnlocked;
     }
 
     public void SaveData(ref GameData data)
@@ -264,7 +278,12 @@ public class Player : MonoBehaviour, IDataPersistence
         data.playerAttributesData.roboMopUnlocked = sceneInfo.roboMopUnlocked;
         data.playerAttributesData.storageMax = sceneInfo.storageMax;
 
-
+        data.playerAttributesData.ChaiLatteUnlocked = sceneInfo.ChaiLatteUnlocked;
+        data.playerAttributesData.HotChocolateUnlocked = sceneInfo.HotChocolateUnlocked;
+        data.playerAttributesData.IcedCoffeeUnlocked = sceneInfo.IcedCoffeeUnlocked;
+        data.playerAttributesData.IcedLatteUnlocked = sceneInfo.IcedLatteUnlocked;
+        data.playerAttributesData.MochaUnlocked = sceneInfo.MochaUnlocked;
+        data.playerAttributesData.TeaUnlocked = sceneInfo.TeaUnlocked;
 
     }
     void Update()
