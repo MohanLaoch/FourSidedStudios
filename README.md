@@ -999,3 +999,9 @@
 | • Setup Lamp lights in mark scene|
 | • Unity effects experiment in mark scene|
 | • Effects injury sprites|
+
+##15/04/2024
+
+| **Niamh** |
+| :--- |
+| • Added StraightCouch to Prototype|
