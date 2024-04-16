@@ -5,9 +5,9 @@ namespace CamZoom
 {
     public class CameraZoom : MonoBehaviour
     {
-        [SerializeField] [Range(0f, 12f)] private float defaultDistance = 6f;
-        [SerializeField] [Range(0f, 12f)] private float minimumDistance = 1f;
-        [SerializeField] [Range(0f, 12f)] private float maximumDistance = 6f;
+        [SerializeField] [Range(0f, 12f)] private float defaultDistance = 8f;
+        [SerializeField] [Range(0f, 12f)] private float minimumDistance = 3f;
+        [SerializeField] [Range(0f, 12f)] private float maximumDistance = 10f;
 
         [SerializeField] [Range(0f, 20f)] private float smoothing = 4f;
         [SerializeField] [Range(0f, 20f)] private float zoomSensitivity = 1f;

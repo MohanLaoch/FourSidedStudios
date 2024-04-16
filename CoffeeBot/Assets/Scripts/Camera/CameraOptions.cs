@@ -63,8 +63,8 @@ public class CameraOptions : MonoBehaviour
         }
         else
         {
-            followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxValue = followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.Value;
-            followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MinValue = followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.Value;
+            followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxValue = 40;
+            followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MinValue = 40;
             locked = true;
         }
         return; //this might not need to be here
