@@ -41,6 +41,7 @@ public class OrderCoffee : MonoBehaviour
     public Sprite positiveBubble;
     public Sprite negativeBubble;
 
+    private GameObject orderGameObject;
 
     private void Awake()
     {
@@ -71,7 +72,7 @@ public class OrderCoffee : MonoBehaviour
 
         orderText = avaliableOrders.orderListText[randomIndex];
 
-        Instantiate(orderText, viewportContent.transform); 
+        orderGameObject = (GameObject)Instantiate(orderText, viewportContent.transform); 
 
         // start the timer
         moneyTracker.StartTimer();
@@ -97,6 +98,7 @@ public class OrderCoffee : MonoBehaviour
 
     private void CompleteOrder()
     {
+        Destroy(orderGameObject);
 
         acceptedCoffeeTag = "";
 
