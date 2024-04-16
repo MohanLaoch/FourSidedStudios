@@ -996,21 +996,25 @@
 
 | **Mark** |
 | :--- |
-| • Setup Lamp lights in mark scene|
-| • Unity effects experiment in mark scene|
-| • Effects injury sprites|
+| • Setup Lamp lights in mark scene |
+| • Unity effects experiment in mark scene |
+| • Effects injury sprites |
 
 ##15/04/2024
 
 | **Declan** |
 | :--- |
-| • Added save system|
-| • Added file encryption|
+| • Added save system |
+| • Added file encryption |
+
+| **James** |
+| :--- |
+| • Added Order List that updates with new customer orders |
 
 | **Niamh** |
 | :--- |
-| • Added StraightCouch to Prototype|
-| • Added ProperLCouch to Prototype|
+| • Added StraightCouch to Prototype |
+| • Added ProperLCouch to Prototype |
 
 | **Mark** |
 | :--- |
@@ -1019,8 +1023,12 @@
 | • Imported controls menu screen|
 | • created vfx for radio|
 
-##15/04/2024
+##16/04/2024
 
 | **Mark** |
 | :--- |
 | • Imported events log 2|
+
+| **James** |
+| • Adjusted UI scale to accomidate new UI additions |
+| • Completed orders are now removed from the order list |
