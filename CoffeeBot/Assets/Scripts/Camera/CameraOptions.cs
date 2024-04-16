@@ -26,6 +26,8 @@ public class CameraOptions : MonoBehaviour
     {
         //Set Cursor to not be visible
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Confined;
 
         action.performed += ctx => LockVerticalAxis();
 

@@ -24,7 +24,6 @@ namespace CamZoom
 
             currentTargetDistance = defaultDistance;
 
-            Cursor.visible = false;
         }
 
         private void Update()
