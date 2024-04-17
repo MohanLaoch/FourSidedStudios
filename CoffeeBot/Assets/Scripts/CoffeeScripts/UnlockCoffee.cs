@@ -31,29 +31,41 @@ public class UnlockCoffee : MonoBehaviour
 
     [Header("Coffee Prefabs")]
 
+    [Header("Chai Prefabs")]
     public GameObject chaiLatte;
     public Sprite chaiLatteSprite;
     public GameObject chaiLatteOT;
+    public GameObject[] chaiLatteRecipe;
 
+    [Header("Hot Chocolate Prefabs")]
     public GameObject hotChocolate;
     public Sprite hotChocolateSprite;
     public GameObject hotChocolateOT;
+    public GameObject[] hotChocolateRecipe;
 
+    [Header("Iced Coffee Prefabs")]
     public GameObject icedCoffee;
     public Sprite icedCoffeeSprite;
     public GameObject icedCoffeeOT;
+    public GameObject[] icedCoffeeRecipe;
 
+    [Header("Iced Latte Prefabs")]
     public GameObject icedLatte;
     public Sprite icedLatteSprite;
-    public GameObject icedLatteeOT;
+    public GameObject icedLatteOT;
+    public GameObject[] icedLatteRecipe;
 
+    [Header("Mocha Prefabs")]
     public GameObject mocha;
     public Sprite mochaSprite;
     public GameObject mochaOT;
+    public GameObject[] mochaRecipe;
 
+    [Header("Tea Prefabs")]
     public GameObject tea;
     public Sprite teaSprite;
     public GameObject teaOT;
+    public GameObject[] teaRecipe;
 
     [Header("MoneyText")]
     public TextMeshProUGUI MoneyText;
@@ -114,6 +126,11 @@ public class UnlockCoffee : MonoBehaviour
                 craftCoffee.recipeNames.Add("Chai Latte");
             }
 
+            foreach (GameObject i in chaiLatteRecipe)
+            {
+                i.SetActive(true);
+            }
+
             if (!hasTeaBags)
             {
                 Instantiate(teaBags, new Vector3(teaBagsSpawn.position.x, teaBagsSpawn.position.y, teaBagsSpawn.position.z), Quaternion.identity);
@@ -154,6 +171,11 @@ public class UnlockCoffee : MonoBehaviour
                 craftCoffee.recipeImages.Add(hotChocolateSprite);
 
                 craftCoffee.recipeNames.Add("Hot Chocolate");
+            }
+
+            foreach (GameObject i in hotChocolateRecipe)
+            {
+                i.SetActive(true);
             }
 
             if (!hasCocoPowder)
@@ -198,6 +220,11 @@ public class UnlockCoffee : MonoBehaviour
                 craftCoffee.recipeNames.Add("Iced Coffee");
             }
 
+            foreach (GameObject i in icedCoffeeRecipe)
+            {
+                i.SetActive(true);
+            }
+
             if (!hasIce)
             {
                 Instantiate(ice, new Vector3(iceSpawn.position.x, iceSpawn.position.y, iceSpawn.position.z), Quaternion.identity);
@@ -238,6 +265,11 @@ public class UnlockCoffee : MonoBehaviour
                 craftCoffee.recipeImages.Add(icedLatteSprite);
 
                 craftCoffee.recipeNames.Add("Iced Latte");
+            }
+
+            foreach (GameObject i in icedLatteRecipe)
+            {
+                i.SetActive(true);
             }
 
             if (!hasIce)
@@ -281,6 +313,11 @@ public class UnlockCoffee : MonoBehaviour
                 craftCoffee.recipeNames.Add("Mocha");
             }
 
+            foreach (GameObject i in mochaRecipe)
+            {
+                i.SetActive(true);
+            }
+
             if (!hasCocoPowder)
             {
                 Instantiate(cocoPowder, new Vector3(cocoPowderSpawn.position.x, cocoPowderSpawn.position.y, cocoPowderSpawn.position.z), Quaternion.identity);
@@ -320,6 +357,11 @@ public class UnlockCoffee : MonoBehaviour
                 craftCoffee.recipeImages.Add(teaSprite);
 
                 craftCoffee.recipeNames.Add("Tea");
+            }
+
+            foreach (GameObject i in teaRecipe)
+            {
+                i.SetActive(true);
             }
 
             if (!hasTeaBags)
