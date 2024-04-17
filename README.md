@@ -1038,4 +1038,5 @@
 | **Mark** |
 | :--- |
 | • Imported new recipe textures|
-| • Importet particle pack|
+| • Imported particle pack|
+| • Created vfx for put down and pick up|
