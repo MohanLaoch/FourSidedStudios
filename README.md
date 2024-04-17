@@ -1032,3 +1032,9 @@
 | **James** |
 | • Adjusted UI scale to accomidate new UI additions |
 | • Completed orders are now removed from the order list |
+
+##17/04/2024
+
+| **Mark** |
+| :--- |
+| • Imported new recipe textures|
