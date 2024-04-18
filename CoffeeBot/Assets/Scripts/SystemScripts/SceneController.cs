@@ -6,16 +6,24 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     public SceneInfo sceneInfo;
+    public DataPersistenceManager dataPersistenceManager;
 
     public void Awake()
     {
         Cursor.visible = true;
     }
-    public void StartGame()
+    public void StartTutorial()
     {
         Cursor.visible = true;
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadSceneAsync("Tutorial");
         sceneInfo.Reset();
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadSceneAsync("Prototype 1");
+        dataPersistenceManager.LoadGame();
+        //Time.timeScale = 1;
     }
 
     public void SkinSelection()
