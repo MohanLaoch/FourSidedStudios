@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using FMOD.Studio;
 using TMPro;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 
 public class Player : MonoBehaviour, IDataPersistence
@@ -236,10 +237,15 @@ public class Player : MonoBehaviour, IDataPersistence
     }
     public void LoadData(GameData data)
     {
-        rb.position = data.playerPosition;
+      
+        //rb.position = data.playerPosition;
+
+        //rb.position = data.tutorialPosition;
+
 
         sceneInfo.money = data.playerAttributesData.money;
-       
+        //moneytracker.currentTime = data.playerAttributesData.currentTime;
+
         sceneInfo.playerSpeed = data.playerAttributesData.playerSpeed;
         sceneInfo.playerRotSpeed = data.playerAttributesData.playerRotSpeed;
         sceneInfo.playerAcceleration = data.playerAttributesData.playerAcceleration;
@@ -260,12 +266,13 @@ public class Player : MonoBehaviour, IDataPersistence
         sceneInfo.TeaUnlocked = data.playerAttributesData.TeaUnlocked;
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
 
-        data.playerPosition = rb.position;
+        //data.playerPosition = rb.position;
         data.playerAttributesData.money = sceneInfo.money;
-       
+        //data.playerAttributesData.currentTime = moneytracker.currentTime;
+
         data.playerAttributesData.playerSpeed = sceneInfo.playerSpeed;
         data.playerAttributesData.playerRotSpeed = sceneInfo.playerRotSpeed;
         data.playerAttributesData.playerAcceleration = sceneInfo.playerAcceleration;

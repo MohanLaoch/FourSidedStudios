@@ -2,15 +2,55 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
 
 public class SceneController : MonoBehaviour
 {
     public SceneInfo sceneInfo;
-    public DataPersistenceManager dataPersistenceManager;
+
+    [Header("Menu Buttons")]
+
+    [SerializeField] private Button newGameButton;
+
+    [SerializeField] private Button continueGameButton;
+
+    public void OnNewGameClicked()
+    {
+        DataPersistenceManager.instance.NewGame();
+
+        SceneManager.LoadSceneAsync("Prototype 1");
+    }
+
+    public void OnContinueGameClicked()
+    {
+        DataPersistenceManager.instance.SaveGame();
+
+        SceneManager.LoadSceneAsync("Prototype 1");
+    }
+
+    public void OnSaveGameClicked()
+    {
+        DataPersistenceManager.instance.SaveGame();
+    }
+
+    public void OnLoadGameClicked()
+    {
+        DataPersistenceManager.instance.LoadGame();
+
+    }
 
     public void Awake()
     {
         Cursor.visible = true;
+    }
+
+    private void Start()
+    {
+        if(!DataPersistenceManager.instance.HasGameData())
+        {
+            continueGameButton.interactable = false;
+        }
     }
     public void StartTutorial()
     {
@@ -22,7 +62,7 @@ public class SceneController : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadSceneAsync("Prototype 1");
-        dataPersistenceManager.LoadGame();
+        
         //Time.timeScale = 1;
     }
 

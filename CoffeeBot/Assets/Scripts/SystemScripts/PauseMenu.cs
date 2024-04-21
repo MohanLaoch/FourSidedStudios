@@ -226,7 +226,7 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         sceneInfo.dayCount = data.playerAttributesData.dayCount;
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         data.playerAttributesData.dayCount = sceneInfo.dayCount;
     }

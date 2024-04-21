@@ -37,7 +37,7 @@ public class DayTimer : MonoBehaviour, IDataPersistence
         currentTime = data.playerAttributesData.currentTime;
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         data.playerAttributesData.currentTime = currentTime;
     }
