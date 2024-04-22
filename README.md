@@ -1060,3 +1060,4 @@
 | **Mark** |
 | :--- |
 | • Created splash vfx + prefabed|
+| • Imported npc working animation + added to npc animator|
