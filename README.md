@@ -1025,13 +1025,13 @@
 
 ##16/04/2024
 
-| **Mark** |
-| :--- |
-| • Imported events log 2|
-
 | **James** |
 | • Adjusted UI scale to accomidate new UI additions |
 | • Completed orders are now removed from the order list |
+
+| **Mark** |
+| :--- |
+| • Imported events log 2|
 
 ##17/04/2024
 
@@ -1045,7 +1045,7 @@
 
 | **Declan** |
 | :--- |
-| • added new buttons and menu setup for save system|
+| • Added new buttons and menu setup for save system|
 
 ##19/04/2024
 
@@ -1063,12 +1063,18 @@
 
 ##22/04/2024
 
-| **Niamh** |
+| **James** |
 | :--- |
-| • Added new TableLight to Prototype scene|
-| • Added SugarHolder to Prototype scene |
+| • Added Sliders for camera sensitivity |
+| • Added Slider for bot throw |
+| • Added Sliders for volume |
 
 | **Declan** |
 | :--- |
 | • Fixed Save system issues with main menu|
 | • Added VFX code implemenation|
+
+| **Niamh** |
+| :--- |
+| • Added new TableLight to Prototype scene|
+| • Added SugarHolder to Prototype scene |
