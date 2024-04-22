@@ -189,7 +189,13 @@ public class Player : MonoBehaviour, IDataPersistence
                     ObjectHeld = interactable.gameObject;
 
                     interactable.Interact();
+                    pickupEffect.gameObject.transform.SetParent(ObjectHeld.transform);
                     pickupEffect.Play();
+                    
+                   if(pickupEffect.isStopped)
+                   {
+                    pickupEffect.gameObject.transform.SetParent(this.transform);
+                   }
                     Grabbing.setParameterByNameWithLabel("Parameter 2", "Grab");
                     UpdateGrabSound();
                     //AudioManager.instance.PlayOneShot(FMODEvents.instance.grabSound, this.transform.position);
@@ -230,7 +236,12 @@ public class Player : MonoBehaviour, IDataPersistence
             else if (Holding)
             {
                 interactable.Drop();
+                dropEffect.transform.SetParent(ObjectHeld.transform);
                 dropEffect.Play();
+                if(dropEffect.isStopped)
+                {
+                  dropEffect.gameObject.transform.SetParent(this.transform);
+                }
                 Grabbing.setParameterByNameWithLabel("Parameter 2", "Drop");
                 UpdateGrabSound();
                 //AudioManager.instance.PlayOneShot(FMODEvents.instance.dropSound, this.transform.position);
