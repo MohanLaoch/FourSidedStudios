@@ -15,11 +15,12 @@ public class CameraOptions : MonoBehaviour
     bool locked = true;
 
     [Header("Slider")]
-
     
-    public int speed = 120;
+    public int hSense = 125;
+    public int vSense = 125;
 
-    public Slider senseSlider;
+    public Slider hSenseSlider;
+    public Slider vSenseSlider;
 
 
     void Start()
@@ -39,10 +40,14 @@ public class CameraOptions : MonoBehaviour
 
     void SetSlider()
     {
-        senseSlider.maxValue = 200;
-        senseSlider.minValue = 10;
+        hSenseSlider.maxValue = 250;
+        hSenseSlider.minValue = 50;
 
-        senseSlider.value = speed;
+        vSenseSlider.maxValue = 250;
+        vSenseSlider.minValue = 50;
+
+        hSenseSlider.value = hSense;
+        vSenseSlider.value = vSense;
     }
 
     private void OnEnable()
@@ -55,12 +60,12 @@ public class CameraOptions : MonoBehaviour
         action.Disable();
     }
 
-    private void LockVerticalAxis()
+    public void LockVerticalAxis()
     {
         if (locked)
         {
-            followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxValue = 80;
-            followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MinValue = 15;
+            followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxValue = 250;
+            followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MinValue = 50;
             locked = false;
         }
         else
@@ -75,8 +80,8 @@ public class CameraOptions : MonoBehaviour
     void Update()
     {
 
-        followCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = senseSlider.value;
-        followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = senseSlider.value;
+        followCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = hSenseSlider.value;
+        followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = vSenseSlider.value;
 
     }
 }
