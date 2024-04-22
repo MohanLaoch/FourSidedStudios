@@ -1067,3 +1067,8 @@
 | :--- |
 | • Added new TableLight to Prototype scene|
 | • Added SugarHolder to Prototype scene |
+
+| **Declan** |
+| :--- |
+| • Fixed Save system issues with main menu|
+| • Added VFX code implemenation|
