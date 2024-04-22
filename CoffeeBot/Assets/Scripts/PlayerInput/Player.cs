@@ -81,6 +81,8 @@ public class Player : MonoBehaviour, IDataPersistence
     public GameObject MopChild1;
     public GameObject MopChild2;
     public bool EPressed;
+
+    public Scene currentScene;
     private void Awake()
     {
         Time.timeScale = 1;
@@ -240,8 +242,14 @@ public class Player : MonoBehaviour, IDataPersistence
       
         rb.position = data.playerPosition;
 
-        //rb.position = data.tutorialPosition;
-
+        if (currentScene.name == "Tutorial")
+        {
+            rb.position = data.tutorialPosition;
+        }
+        else
+        {
+            rb.position = data.playerPosition;
+        }
 
         sceneInfo.money = data.playerAttributesData.money;
         //moneytracker.currentTime = data.playerAttributesData.currentTime;

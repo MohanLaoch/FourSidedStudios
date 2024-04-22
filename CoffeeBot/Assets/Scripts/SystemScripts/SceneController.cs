@@ -19,7 +19,7 @@ public class SceneController : MonoBehaviour
 
     public void OnNewGameClicked()
     {
-        SceneManager.LoadSceneAsync("Prototype 1");
+        SceneManager.LoadSceneAsync("SkinSelectionScreen");
         DataPersistenceManager.instance.NewGame();
         NewGamePressed = true;
         
