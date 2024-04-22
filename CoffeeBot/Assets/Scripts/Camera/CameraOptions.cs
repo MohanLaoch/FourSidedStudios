@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using Cinemachine;
 
-public class CameraOptions : MonoBehaviour
+public class CameraOptions : MonoBehaviour, IDataPersistence
 {
     [SerializeField]
     private InputAction action;
@@ -16,8 +16,8 @@ public class CameraOptions : MonoBehaviour
 
     [Header("Slider")]
     
-    public int hSense = 125;
-    public int vSense = 125;
+    public int hSense/* = 125*/;
+    public int vSense/* = 125*/;
 
     public Slider hSenseSlider;
     public Slider vSenseSlider;
@@ -84,4 +84,17 @@ public class CameraOptions : MonoBehaviour
         followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = vSenseSlider.value;
 
     }
+    public void SaveData(GameData data)
+    {
+        data.hSense = hSenseSlider.value;
+        data.vSense = vSenseSlider.value;
+    }
+
+    public void LoadData(GameData data)
+    {
+        hSenseSlider.value = data.hSense;
+        vSenseSlider.value = data.vSense;
+    }
+
+
 }

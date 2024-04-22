@@ -44,6 +44,10 @@ public class Player : MonoBehaviour, IDataPersistence
     public MoneyTracker moneytracker;
     public TextMeshProUGUI MoneyText;
 
+    public ParticleSystem pickupEffect;
+    public ParticleSystem dropEffect;
+
+
     public bool Holding;
     public bool HoldingNPC = false;
     public bool isMoving = false;
@@ -185,6 +189,7 @@ public class Player : MonoBehaviour, IDataPersistence
                     ObjectHeld = interactable.gameObject;
 
                     interactable.Interact();
+                    pickupEffect.Play();
                     Grabbing.setParameterByNameWithLabel("Parameter 2", "Grab");
                     UpdateGrabSound();
                     //AudioManager.instance.PlayOneShot(FMODEvents.instance.grabSound, this.transform.position);
@@ -225,6 +230,7 @@ public class Player : MonoBehaviour, IDataPersistence
             else if (Holding)
             {
                 interactable.Drop();
+                dropEffect.Play();
                 Grabbing.setParameterByNameWithLabel("Parameter 2", "Drop");
                 UpdateGrabSound();
                 //AudioManager.instance.PlayOneShot(FMODEvents.instance.dropSound, this.transform.position);

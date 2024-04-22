@@ -6,6 +6,7 @@ using TMPro;
 
 public class MoneyTracker : MonoBehaviour
 {
+    public ParticleSystem moneyEffect;
     public SceneInfo sceneInfo;
     public float money;
     public float moneyGiven = 5;
@@ -27,12 +28,17 @@ public class MoneyTracker : MonoBehaviour
 
     private bool timerActive = true;
 
+    
+
     [HideInInspector]
     public bool upset = false;
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
+        
         moneyText = GameObject.Find("MoneyText").GetComponent<TextMeshProUGUI>();
         //money = sceneInfo.money;
 
@@ -118,6 +124,8 @@ public class MoneyTracker : MonoBehaviour
         StopTimer();
         sceneInfo.money += moneyGiven + (currentTime / tipDivide);
         moneyText.text = ": " + sceneInfo.money.ToString("0");
+        //trigger money effect here
+        moneyEffect.Play();
         //sceneInfo.money = money;
         StartTimer();
     }

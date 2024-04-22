@@ -7,6 +7,8 @@ public class Spill : MonoBehaviour
     public GameObject spiltCoffee;
     private GameObject mop;
 
+    public ParticleSystem spillEffect;
+
     [SerializeField]
     private int layerNumber = 9; // Ground is currently 9
 
@@ -28,6 +30,7 @@ public class Spill : MonoBehaviour
             mop.GetComponent<RoboMop>().SlipperyFloor = spiltCoffee;
             Instantiate(spiltCoffee, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             Destroy(gameObject);
+            spillEffect.Play();
             
             Debug.Log(" SPILL DETECTED ");
             //send signal to robomop!!

@@ -30,6 +30,7 @@ public class NpcInjuredState : NpcBaseState
 
     public override void EnterState(NpcStateManager npc)
     {
+        npc.injureEffect.Play();
         totalInjuryCounter = GameObject.Find("InjuryManager").GetComponent<TotalInjuryCounter>();
         InjuryCounter++;
         totalInjuryCounter.totalInjuryCounter++;
