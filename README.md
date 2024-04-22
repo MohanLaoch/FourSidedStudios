@@ -1060,3 +1060,9 @@
 | **Mark** |
 | :--- |
 | • Created splash vfx + prefabed|
+
+##22/04/2024
+
+| **Niamh** |
+| :--- |
+| • Added new TableLight to Prototype scene|
