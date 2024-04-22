@@ -1054,3 +1054,9 @@
 | • Imported new continue button|
 | • Imported paused menu|
 | • prefab vfx + added to prototype 1|
+
+##19/04/2024
+
+| **Mark** |
+| :--- |
+| • Created splash vfx + prefabed|
