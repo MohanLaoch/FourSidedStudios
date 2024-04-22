@@ -1066,3 +1066,4 @@
 | **Niamh** |
 | :--- |
 | • Added new TableLight to Prototype scene|
+| • Added SugarHolder to Prototype scene |
