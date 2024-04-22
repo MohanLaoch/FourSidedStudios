@@ -238,7 +238,7 @@ public class Player : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
       
-        //rb.position = data.playerPosition;
+        rb.position = data.playerPosition;
 
         //rb.position = data.tutorialPosition;
 
@@ -269,7 +269,7 @@ public class Player : MonoBehaviour, IDataPersistence
     public void SaveData(GameData data)
     {
 
-        //data.playerPosition = rb.position;
+        data.playerPosition = rb.position;
         data.playerAttributesData.money = sceneInfo.money;
         //data.playerAttributesData.currentTime = moneytracker.currentTime;
 

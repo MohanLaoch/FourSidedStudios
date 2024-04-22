@@ -14,6 +14,7 @@ public class ToMainScene : MonoBehaviour
         {
             SceneManager.LoadScene(sceneName);
             sceneInfo.Reset();
+            DataPersistenceManager.instance.NewGame();
         }
     }
 }

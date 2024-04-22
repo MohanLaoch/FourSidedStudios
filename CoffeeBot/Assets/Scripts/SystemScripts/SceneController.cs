@@ -15,18 +15,23 @@ public class SceneController : MonoBehaviour
 
     [SerializeField] private Button continueGameButton;
 
+    public static bool NewGamePressed;
+
     public void OnNewGameClicked()
     {
-        DataPersistenceManager.instance.NewGame();
-
         SceneManager.LoadSceneAsync("Prototype 1");
+        DataPersistenceManager.instance.NewGame();
+        NewGamePressed = true;
+        
     }
 
     public void OnContinueGameClicked()
     {
+        
         DataPersistenceManager.instance.SaveGame();
 
         SceneManager.LoadSceneAsync("Prototype 1");
+        NewGamePressed = false;
     }
 
     public void OnSaveGameClicked()

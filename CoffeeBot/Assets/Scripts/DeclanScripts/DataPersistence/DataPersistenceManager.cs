@@ -58,6 +58,22 @@ public class DataPersistenceManager : MonoBehaviour
     {
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
         //LoadGame();
+        
+        if(SceneController.NewGamePressed)
+        {
+            NewGame();
+        }
+        else
+        {
+            LoadGame();
+        }
+        //if new game was clicked, call new game function here
+        //else if continue was clicked, load game.
+        /*if(scene.name == "StartMenu")
+        {
+          LoadGame();
+        }*/
+       
     }
 
 
