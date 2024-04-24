@@ -14,13 +14,13 @@ public class NpcSpawnerTesting : MonoBehaviour
     public void Start()
     {
         SRKChance = Random.Range(1, 10);
-        Instantiate(SRK, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
+        Instantiate(NPC, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
         StartCoroutine(SpawnNPC());
     }
 
     public void Update()
     {
-        switch(sceneInfo.dayCount)
+        /*switch(sceneInfo.dayCount)
         {
             case 1:
                 NpcSpawnTime = 40;
@@ -37,7 +37,7 @@ public class NpcSpawnerTesting : MonoBehaviour
             case 5:
                 NpcSpawnTime = 15;
                 break;
-        }
+        }*/
     }
     public IEnumerator SpawnNPC()
     {
@@ -47,7 +47,7 @@ public class NpcSpawnerTesting : MonoBehaviour
             SRKChance = Random.Range(1, 7);
             if(SRKChance < 6)
             {
-                Instantiate(SRK, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
+                Instantiate(NPC, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
                 
             }
             else if(SRKChance >= 6)

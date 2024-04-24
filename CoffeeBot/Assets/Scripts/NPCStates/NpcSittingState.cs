@@ -20,15 +20,23 @@ public class NpcSittingState : NpcBaseState
     public override void EnterState(NpcStateManager npc)
     {
         isSitting = false;
+        //assign the animator of the npc
         NpcAnim = npc.GetComponentInChildren<Animator>();
+
+        //assign the total chairs in the room to the list of gameObjects created
         npc.furnitureManager.SetChairs();
+
+        //trigger the animation of the Npc
         NpcAnim.SetBool("IsWalking", true);
         
+        //set up the nav mesh of the Npc, and assign it a chair to move towards
         NavMeshAgent navMeshAgent = npc.GetComponent<NavMeshAgent>();
         currentChair = npc.furnitureManager.chairs[Random.Range(1, 12)]; 
         Vector3 newTarget = currentChair.transform.position;
         navMeshAgent.enabled = true;
         navMeshAgent.SetDestination(newTarget);
+
+        //assign the transform of the center of the chair, for when the Npc sits down
         ChairSit = currentChair.transform.Find("SittingPoint");
         Debug.Log(ChairSit);
 
@@ -53,6 +61,7 @@ public class NpcSittingState : NpcBaseState
 
             if (currentChair.GetComponent<ChairTest>().isTaken == false)
             {
+                //if chair is available, sit down
                 navMeshAgent.enabled = false;
 
                 isSitting = true;
@@ -74,12 +83,12 @@ public class NpcSittingState : NpcBaseState
             }
             else if(currentChair.GetComponent<ChairTest>().isTaken == true && isSitting == false && navMeshAgent.enabled == true)
             {
+                //if chair is taken, find new chair
                 navMeshAgent.enabled = true;
                 currentChair = npc.furnitureManager.chairs[Random.Range(1, 12)];
                 ChairSit = currentChair.transform.Find("SittingPoint");
                 Vector3 newTarget = currentChair.transform.position;               
-                navMeshAgent.SetDestination(newTarget);
-                //if chair is taken, find new chair
+                navMeshAgent.SetDestination(newTarget);           
             }
             
         }
