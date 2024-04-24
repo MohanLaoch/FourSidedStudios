@@ -1084,3 +1084,4 @@
 | **Mark** |
 | :--- |
 | • Added pause menu graphic to main scene|
+| • Added options menu background|
