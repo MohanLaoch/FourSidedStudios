@@ -83,8 +83,8 @@ public class DayTimer : MonoBehaviour, IDataPersistence
     {
         endOfDayMenu.SetActive(false);
         timerActive = true;
-        currentTime = maxTime;
-
+        //currentTime = maxTime;
+        //need to edit this to assign current time to whatever the save data time left is 
     }
 
    /* public void StartNewDay()

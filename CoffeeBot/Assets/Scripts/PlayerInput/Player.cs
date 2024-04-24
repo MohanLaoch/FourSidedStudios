@@ -86,6 +86,8 @@ public class Player : MonoBehaviour, IDataPersistence
     public GameObject MopChild2;
     public bool EPressed;
 
+    public DayTimer dayTimer;
+
     public Scene currentScene;
     private void Awake()
     {
@@ -272,6 +274,7 @@ public class Player : MonoBehaviour, IDataPersistence
 
         sceneInfo.money = data.playerAttributesData.money;
         //moneytracker.currentTime = data.playerAttributesData.currentTime;
+       
 
         sceneInfo.playerSpeed = data.playerAttributesData.playerSpeed;
         sceneInfo.playerRotSpeed = data.playerAttributesData.playerRotSpeed;
@@ -299,6 +302,7 @@ public class Player : MonoBehaviour, IDataPersistence
         data.playerPosition = rb.position;
         data.playerAttributesData.money = sceneInfo.money;
         //data.playerAttributesData.currentTime = moneytracker.currentTime;
+       
 
         data.playerAttributesData.playerSpeed = sceneInfo.playerSpeed;
         data.playerAttributesData.playerRotSpeed = sceneInfo.playerRotSpeed;
