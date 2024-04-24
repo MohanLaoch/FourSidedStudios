@@ -1078,3 +1078,9 @@
 | :--- |
 | • Added new TableLight to Prototype scene|
 | • Added SugarHolder to Prototype scene |
+
+##24/04/2024
+
+| **Mark** |
+| :--- |
+| • Added pause menu graphic to main scene|
