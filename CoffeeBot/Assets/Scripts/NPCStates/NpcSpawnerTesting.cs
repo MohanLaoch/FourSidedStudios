@@ -14,7 +14,7 @@ public class NpcSpawnerTesting : MonoBehaviour
     public void Start()
     {
         SRKChance = Random.Range(1, 10);
-        Instantiate(NPC, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
+        Instantiate(SRK, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
         StartCoroutine(SpawnNPC());
     }
 
@@ -47,7 +47,7 @@ public class NpcSpawnerTesting : MonoBehaviour
             SRKChance = Random.Range(1, 7);
             if(SRKChance < 6)
             {
-                Instantiate(NPC, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
+                Instantiate(SRK, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
                 
             }
             else if(SRKChance >= 6)

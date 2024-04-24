@@ -25,11 +25,16 @@ public class NpcInjuredState : NpcBaseState
     public SlipperyFloor slipperyFloor;
     public Player player;
     public TotalInjuryCounter totalInjuryCounter;
-
+    public NavMeshAgent agent;
 
 
     public override void EnterState(NpcStateManager npc)
     {
+        agent = npc.GetComponent<NavMeshAgent>();
+        if (agent.height < 1.5)
+        {
+            Anim = npc.GetComponent<Animator>();
+        }
         npc.injureEffect.Play();
         totalInjuryCounter = GameObject.Find("InjuryManager").GetComponent<TotalInjuryCounter>();
         InjuryCounter++;
@@ -38,6 +43,8 @@ public class NpcInjuredState : NpcBaseState
         NpcTransform = npc.GetComponent<Transform>();
         npc.GetComponent<NavMeshAgent>().enabled = false;
         Anim = npc.GetComponentInChildren<Animator>();
+
+
         npc.GetComponent<Rigidbody>().AddForce(Vector3.forward * 0.5f, ForceMode.Impulse);
         currentTime = maxTime;        
     }

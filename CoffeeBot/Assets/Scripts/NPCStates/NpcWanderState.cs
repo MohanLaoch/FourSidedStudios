@@ -22,7 +22,6 @@ public class NpcWanderState : NpcBaseState
     public override void EnterState(NpcStateManager npc)
     {
         gumballMachine = GameObject.FindGameObjectWithTag("GumballMachine");
-        //SlipperyFloor = GameObject.FindGameObjectWithTag("SlipperyFloor");
         NpcAnim = npc.GetComponentInChildren<Animator>();
         agent = npc.GetComponent<NavMeshAgent>();
         timer = wanderTimer;
@@ -49,23 +48,19 @@ public class NpcWanderState : NpcBaseState
             agent.SetDestination(newPos);
             timer = 0;
         }
+
+        if(gumballMachine == null)
+        {
+            return;
+        }
         else if(agent.height < 1.5f && gumballMachine.GetComponent<GumballMachine>().GumballTime)
         {
             target = gumballMachine.transform;
             agent.SetDestination(target.position);
         }
-        /*else if (agent.height < 1.5f && SlipperyFloor.GetComponent<SlipperyFloor>().spilled)
-        {
-            SlipperyFloor = GameObject.FindGameObjectWithTag("SlipperyFloor");
-            target = SlipperyFloor.transform;
-            agent.SetDestination(target.position);
-        }*/
 
-        /*if (agent.CompareTag("Mop"))
-        {
-          return;
-        }*/
-        else if (agent.remainingDistance < 0.5)
+
+        if (agent.remainingDistance < 0.5)
         {
             NpcAnim.SetBool("IsWalking", false);
         }

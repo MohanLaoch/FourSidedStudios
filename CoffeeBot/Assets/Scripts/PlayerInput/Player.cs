@@ -533,6 +533,7 @@ public class Player : MonoBehaviour, IDataPersistence
 
             ThrowForce = 0f;
             Holding = false;
+            HoldingNPC = false;
             throwBar.SetThrow(ThrowForce);
             
         }
