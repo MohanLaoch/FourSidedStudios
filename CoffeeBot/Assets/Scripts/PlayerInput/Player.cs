@@ -189,12 +189,14 @@ public class Player : MonoBehaviour, IDataPersistence
                     ObjectHeld = interactable.gameObject;
 
                     interactable.Interact();
-                    pickupEffect.gameObject.transform.SetParent(ObjectHeld.transform);
+                    //pickupEffect.gameObject.transform.SetParent(ObjectHeld.transform);
+                    //pickupEffect.gameObject.transform.position = ObjectHeld.transform.position;
                     pickupEffect.Play();
                     
                    if(pickupEffect.isStopped)
                    {
-                    pickupEffect.gameObject.transform.SetParent(this.transform);
+                    //pickupEffect.gameObject.transform.SetParent(this.transform);
+                    
                    }
                     Grabbing.setParameterByNameWithLabel("Parameter 2", "Grab");
                     UpdateGrabSound();
@@ -240,7 +242,7 @@ public class Player : MonoBehaviour, IDataPersistence
                 dropEffect.Play();
                 if(dropEffect.isStopped)
                 {
-                  dropEffect.gameObject.transform.SetParent(this.transform);
+                  //dropEffect.gameObject.transform.SetParent(this.transform);
                 }
                 Grabbing.setParameterByNameWithLabel("Parameter 2", "Drop");
                 UpdateGrabSound();
@@ -522,6 +524,9 @@ public class Player : MonoBehaviour, IDataPersistence
             
             Debug.Log("Like rynn in a nuzlocke, you are throwing");
             ObjectHeld.GetComponent<Interactable>().Drop();
+            //pickupEffect.gameObject.transform.SetParent(this.transform);
+           // dropEffect.gameObject.transform.SetParent(this.transform);
+
             ObjectHeld.GetComponent<Rigidbody>().AddForce(ThrowDir * ThrowForce, ForceMode.Impulse);
             ObjectHeld.GetComponent<Rigidbody>().AddForce(Vector3.up * (ThrowForce / 2), ForceMode.Impulse);
             ObjectHeld.GetComponent<Rigidbody>().AddTorque(transform.TransformDirection(Vector3.forward) * FlipForceRot, ForceMode.Impulse);

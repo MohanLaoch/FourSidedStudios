@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class SceneController : MonoBehaviour
 {
     public SceneInfo sceneInfo;
+
 
     [Header("Menu Buttons")]
 
@@ -89,7 +91,7 @@ public class SceneController : MonoBehaviour
 
     public void SetSkin1()
     {
-        sceneInfo.SkinCounter = 1;
+        sceneInfo.SkinCounter = 1;        
     }
 
     public void SetSkin2()
@@ -110,4 +112,6 @@ public class SceneController : MonoBehaviour
     {
         sceneInfo.SkinCounter = 5;
     }
+
+
 }
