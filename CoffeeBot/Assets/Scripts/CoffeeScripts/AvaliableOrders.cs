@@ -10,4 +10,6 @@ public class AvaliableOrders : MonoBehaviour
     public List<Sprite> orderIcons = new List<Sprite>();
 
     public List<GameObject> orderListText = new List<GameObject>();
+
+    public List<int> orderCost = new List<int>();
 }

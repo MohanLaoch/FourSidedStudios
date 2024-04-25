@@ -20,6 +20,8 @@ public class OrderCoffee : MonoBehaviour
 
     public Image coffeeImage;
 
+    public int coffeeCost;
+
     [Header("UI")]
 
     public TextMeshProUGUI coffeeText;
@@ -69,6 +71,8 @@ public class OrderCoffee : MonoBehaviour
         coffeeText.text = acceptedCoffeeTag;
 
         coffeeImage.sprite = avaliableOrders.orderIcons[randomIndex];
+
+        coffeeCost = avaliableOrders.orderCost[randomIndex];
 
         orderText = avaliableOrders.orderListText[randomIndex];
 
@@ -137,6 +141,9 @@ public class OrderCoffee : MonoBehaviour
         GetComponent<Animator>().SetBool("isSitting", false);
 
         // go to the moneyTracker script and give money
+
+        moneyTracker.moneyGiven = coffeeCost;
+
         moneyTracker.CompleteOrder();
 
     }
