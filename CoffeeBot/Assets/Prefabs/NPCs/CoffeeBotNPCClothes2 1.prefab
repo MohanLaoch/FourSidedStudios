@@ -9414,6 +9414,7 @@ GameObject:
   - component: {fileID: 7940639652966323864}
   - component: {fileID: 7617953996999605009}
   - component: {fileID: 7311876698218171413}
+  - component: {fileID: 1447252108469245466}
   - component: {fileID: 7311876698218171434}
   - component: {fileID: 7311876698218171435}
   - component: {fileID: 7311876698218171432}
@@ -9577,7 +9578,7 @@ MonoBehaviour:
   currentTime: 0
   timerLimit: 0
   upset: 0
---- !u!65 &7311876698218171434
+--- !u!65 &1447252108469245466
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9587,6 +9588,19 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.53241587, y: 0.005530834, z: 0.46664238}
+  m_Center: {x: 0.012158155, y: 1.55, z: 0.017991543}
+--- !u!65 &7311876698218171434
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7311876698218171426}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.53241587, y: 0.005530834, z: 0.46664238}
   m_Center: {x: 0.012158155, y: 0, z: 0.017991543}

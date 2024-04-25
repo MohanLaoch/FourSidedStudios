@@ -22,6 +22,7 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
 
     [SerializeField]
     public SceneInfo sceneInfo;
+    public DayTimer dayTimer;
 
     public bool isNextScene = true;
     public bool isPrisoner = false;
@@ -173,11 +174,12 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
     public void NextDay()
     {
         sceneInfo.dayCount++;
+        DataPersistenceManager.instance.SaveGame();
         SceneManager.LoadScene("Prototype 1");
         Time.timeScale = 1;
         DeactivateMenu();
         DeactivateUpgradesMenu();
-
+        dayTimer.currentTime = 180f;
 
         
         

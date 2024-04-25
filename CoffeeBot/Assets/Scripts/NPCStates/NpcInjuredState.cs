@@ -35,7 +35,7 @@ public class NpcInjuredState : NpcBaseState
         {
             Anim = npc.GetComponent<Animator>();
         }
-        npc.injureEffect.Play();
+        //npc.injureEffect.Play();
         totalInjuryCounter = GameObject.Find("InjuryManager").GetComponent<TotalInjuryCounter>();
         InjuryCounter++;
         totalInjuryCounter.totalInjuryCounter++;
@@ -53,11 +53,15 @@ public class NpcInjuredState : NpcBaseState
     {
         NPCFlailing(npc);
 
+
     }
 
     public override void OnCollisionEnter(NpcStateManager npc, Collision collision)
     {
-
+       /* if(collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            npc.injureEffect.Play();
+        }*/
     }
 
     public void NPCFlailing(NpcStateManager npc)
