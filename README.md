@@ -1000,7 +1000,7 @@
 | • Unity effects experiment in mark scene |
 | • Effects injury sprites |
 
-##15/04/2024
+### 15/04/2024
 
 | **Declan** |
 | :--- |
@@ -1023,7 +1023,7 @@
 | • Imported controls menu screen|
 | • created vfx for radio|
 
-##16/04/2024
+### 16/04/2024
 
 | **James** |
 | • Adjusted UI scale to accomidate new UI additions |
@@ -1033,7 +1033,7 @@
 | :--- |
 | • Imported events log 2|
 
-##17/04/2024
+### 17/04/2024
 
 | **Mark** |
 | :--- |
@@ -1041,7 +1041,7 @@
 | • Imported particle pack|
 | • Created vfx for put down and pick up|
 
-##18/04/2024
+### 18/04/2024
 
 | **Declan** |
 | :--- |
@@ -1055,13 +1055,13 @@
 | • Imported paused menu|
 | • prefab vfx + added to prototype 1|
 
-##19/04/2024
+### 19/04/2024
 
 | **Mark** |
 | :--- |
 | • Created splash vfx + prefabed|
 
-##22/04/2024
+### 22/04/2024
 
 | **James** |
 | :--- |
@@ -1079,9 +1079,17 @@
 | • Added new TableLight to Prototype scene|
 | • Added SugarHolder to Prototype scene |
 
-##24/04/2024
+### 24/04/2024
 
 | **Mark** |
 | :--- |
 | • Added pause menu graphic to main scene|
 | • Added options menu background|
+
+### 25/04/2024
+
+| **James** |
+| :--- |
+| • Changed gumball machine for updated 3D model |
+| • Updated throw UI in tutorial |
+| • Coffees now give an individual base value of credits. These values can be changed in editor |
