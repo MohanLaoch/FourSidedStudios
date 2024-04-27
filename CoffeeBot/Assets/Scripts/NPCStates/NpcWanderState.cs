@@ -49,7 +49,17 @@ public class NpcWanderState : NpcBaseState
             timer = 0;
         }
 
-        if(gumballMachine == null)
+        if (agent.remainingDistance < 0.5)
+        {
+            NpcAnim.SetBool("IsWalking", false);
+        }
+        else
+        {
+            NpcAnim.SetBool("IsWalking", true);
+        }
+
+
+        if (gumballMachine == null)
         {
             return;
         }
@@ -60,14 +70,7 @@ public class NpcWanderState : NpcBaseState
         }
 
 
-        if (agent.remainingDistance < 0.5)
-        {
-            NpcAnim.SetBool("IsWalking", false);
-        }
-        else
-        {
-            NpcAnim.SetBool("IsWalking", true);
-        }
+
     }
 
     public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)

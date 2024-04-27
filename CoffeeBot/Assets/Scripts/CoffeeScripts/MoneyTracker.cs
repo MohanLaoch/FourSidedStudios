@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using FMOD.Studio;
 
 public class MoneyTracker : MonoBehaviour
 {
     public ParticleSystem moneyEffect;
+    private EventInstance moneySound;
     public SceneInfo sceneInfo;
     public float money;
     public float moneyGiven = 5;
@@ -38,7 +40,9 @@ public class MoneyTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        moneySound = AudioManager.instance.CreateInstance(FMODEvents.instance.NPCMoney);
+
+
         moneyText = GameObject.Find("MoneyText").GetComponent<TextMeshProUGUI>();
         //money = sceneInfo.money;
 
@@ -126,7 +130,21 @@ public class MoneyTracker : MonoBehaviour
         moneyText.text = ": " + sceneInfo.money.ToString("0");
         //trigger money effect here
         moneyEffect.Play();
+
+        //trigger money sound effect here
+        UpdateMoneySound();
         //sceneInfo.money = money;
         StartTimer();
+    }
+
+    public void UpdateMoneySound()
+    {
+        PLAYBACK_STATE playbackState;
+        moneySound.getPlaybackState(out playbackState);
+       
+        if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+        {
+            moneySound.start();
+        }
     }
 }

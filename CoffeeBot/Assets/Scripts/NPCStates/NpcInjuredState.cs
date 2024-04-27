@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
+using FMOD.Studio;
 
 public class NpcInjuredState : NpcBaseState
 {
@@ -15,8 +15,9 @@ public class NpcInjuredState : NpcBaseState
     public float timerLimit;
 
     public int InjuryCounter = 0;
-    
-    
+
+    private EventInstance fallingSound;
+
     public LayerMask layermask;
     public Animator Anim;
     public Transform NpcTransform;
@@ -30,19 +31,22 @@ public class NpcInjuredState : NpcBaseState
 
     public override void EnterState(NpcStateManager npc)
     {
+        fallingSound = AudioManager.instance.CreateInstance(FMODEvents.instance.NPCFalling);
+        UpdateNpcSound();
+        Anim = npc.GetComponent<Animator>();
         agent = npc.GetComponent<NavMeshAgent>();
-        if (agent.height < 1.5)
+        /*if (agent.height < 1.5)
         {
             Anim = npc.GetComponent<Animator>();
-        }
-        //npc.injureEffect.Play();
+        }*/
+        npc.injureEffect.Play();
         totalInjuryCounter = GameObject.Find("InjuryManager").GetComponent<TotalInjuryCounter>();
         InjuryCounter++;
         totalInjuryCounter.totalInjuryCounter++;
         Debug.Log(totalInjuryCounter.totalInjuryCounter);
         NpcTransform = npc.GetComponent<Transform>();
         npc.GetComponent<NavMeshAgent>().enabled = false;
-        Anim = npc.GetComponentInChildren<Animator>();
+        //Anim = npc.GetComponentInChildren<Animator>();
 
 
         npc.GetComponent<Rigidbody>().AddForce(Vector3.forward * 0.5f, ForceMode.Impulse);
@@ -52,8 +56,6 @@ public class NpcInjuredState : NpcBaseState
     public override void UpdateState(NpcStateManager npc)
     {
         NPCFlailing(npc);
-
-
     }
 
     public override void OnCollisionEnter(NpcStateManager npc, Collision collision)
@@ -66,6 +68,8 @@ public class NpcInjuredState : NpcBaseState
 
     public void NPCFlailing(NpcStateManager npc)
     {
+        Anim = npc.GetComponent<Animator>();
+
         NpcTransform = npc.GetComponent<Transform>();
         Npcrb = npc.GetComponent<Rigidbody>();
         Anim.SetBool("Fallen", true);
@@ -124,6 +128,23 @@ public class NpcInjuredState : NpcBaseState
             
             
             
+
+    }
+
+    public void UpdateNpcSound()
+    {
+        PLAYBACK_STATE playbackState;
+        fallingSound.getPlaybackState(out playbackState);
+        /*if (agent.height < 1.5)
+        {
+           // return;
+            //add srk injured sound here?
+        }*/
+        if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+        {
+            fallingSound.start();
+        }
+
 
     }
 
