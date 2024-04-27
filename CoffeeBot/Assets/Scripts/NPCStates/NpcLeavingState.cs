@@ -22,6 +22,7 @@ public class NpcLeavingState : NpcBaseState
         NavMeshAgent navMeshAgent = npc.GetComponent<NavMeshAgent>();
         Vector3 newTarget = npc.furnitureManager.door.transform.position;
         navMeshAgent.SetDestination(newTarget);
+        Debug.Log(newTarget);
 
     }
 

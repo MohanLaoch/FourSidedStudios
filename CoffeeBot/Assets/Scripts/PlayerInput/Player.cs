@@ -240,7 +240,7 @@ public class Player : MonoBehaviour, IDataPersistence
             else if (Holding)
             {
                 interactable.Drop();
-                dropEffect.transform.SetParent(ObjectHeld.transform);
+                //dropEffect.transform.SetParent(ObjectHeld.transform);
                 dropEffect.Play();
                 if(dropEffect.isStopped)
                 {
