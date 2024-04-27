@@ -173,13 +173,15 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
 
     public void NextDay()
     {
+        dayTimer.currentTime = 180f;
         sceneInfo.dayCount++;
         DataPersistenceManager.instance.SaveGame();
         SceneManager.LoadScene("Prototype 1");
+        
         Time.timeScale = 1;
         DeactivateMenu();
         DeactivateUpgradesMenu();
-        dayTimer.currentTime = 180f;
+        
 
         
         

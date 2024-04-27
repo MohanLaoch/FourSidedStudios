@@ -42,6 +42,10 @@ public class DayTimer : MonoBehaviour, IDataPersistence
         data.playerAttributesData.currentTime = currentTime;
     }
 
+    private void Awake()
+    {
+        
+    }
 
 
     private void Start()

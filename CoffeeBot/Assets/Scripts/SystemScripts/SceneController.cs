@@ -17,20 +17,21 @@ public class SceneController : MonoBehaviour
 
     [SerializeField] private Button continueGameButton;
 
-    public static bool NewGamePressed;
+    public static bool NewGamePressed = false;
 
     public void OnNewGameClicked()
     {
+        NewGamePressed = true;
         SceneManager.LoadSceneAsync("SkinSelectionScreen");
         DataPersistenceManager.instance.NewGame();
-        NewGamePressed = true;
+        DataPersistenceManager.instance.SaveGame();
         
     }
 
     public void OnContinueGameClicked()
     {
-        
-        DataPersistenceManager.instance.SaveGame();
+        DataPersistenceManager.instance.LoadGame();
+        //DataPersistenceManager.instance.SaveGame();
 
         SceneManager.LoadSceneAsync("Prototype 1");
         NewGamePressed = false;
@@ -53,8 +54,7 @@ public class SceneController : MonoBehaviour
     }
 
     private void Start()
-    {
-        
+    {       
         if(!DataPersistenceManager.instance.HasGameData())
         {
             continueGameButton.interactable = false;
