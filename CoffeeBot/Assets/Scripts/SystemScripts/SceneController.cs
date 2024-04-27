@@ -54,6 +54,7 @@ public class SceneController : MonoBehaviour
 
     private void Start()
     {
+        
         if(!DataPersistenceManager.instance.HasGameData())
         {
             continueGameButton.interactable = false;

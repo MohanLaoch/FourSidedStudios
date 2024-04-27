@@ -20,7 +20,7 @@ public class NpcSpawnerTesting : MonoBehaviour
 
     public void Update()
     {
-        /*switch(sceneInfo.dayCount)
+        switch(sceneInfo.dayCount)
         {
             case 1:
                 NpcSpawnTime = 40;
@@ -37,7 +37,7 @@ public class NpcSpawnerTesting : MonoBehaviour
             case 5:
                 NpcSpawnTime = 15;
                 break;
-        }*/
+        }
     }
     public IEnumerator SpawnNPC()
     {
