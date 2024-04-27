@@ -17,7 +17,7 @@ public class RespawnObject : MonoBehaviour
     {
         fallenObject = other.gameObject;
 
-        Instantiate(fallenObject, new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z), Quaternion.identity);
+        Instantiate(fallenObject, new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z - 2), Quaternion.identity);
 
         fallenObject = null;
 
