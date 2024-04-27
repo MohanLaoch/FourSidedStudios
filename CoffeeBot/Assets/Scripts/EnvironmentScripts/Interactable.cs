@@ -111,7 +111,6 @@ public class Interactable : MonoBehaviour
 
         transform.parent = null;
         rb.constraints = RigidbodyConstraints.None;
-        Debug.Log("dropping item");
         rb.mass = 1;
 
     }

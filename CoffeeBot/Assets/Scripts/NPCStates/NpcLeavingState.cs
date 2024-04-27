@@ -22,7 +22,7 @@ public class NpcLeavingState : NpcBaseState
         NavMeshAgent navMeshAgent = npc.GetComponent<NavMeshAgent>();
         Vector3 newTarget = npc.furnitureManager.door.transform.position;
         navMeshAgent.SetDestination(newTarget);
-        Debug.Log(newTarget);
+
 
     }
 
@@ -40,11 +40,11 @@ public class NpcLeavingState : NpcBaseState
         {
             //object.Destroy(this.gameObject);
             npc.hasLeft = true;
-            Debug.Log("die");
+
         }
         if (collision.gameObject.CompareTag("SlipperyFloor"))
         {
-            Debug.Log("slipped");
+
             npc.GetComponent<NavMeshAgent>().enabled = false;
 
             Vector3 FlipDir = npc.transform.TransformDirection(Vector3.forward);

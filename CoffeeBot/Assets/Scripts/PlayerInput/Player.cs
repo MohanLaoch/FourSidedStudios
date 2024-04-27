@@ -519,14 +519,12 @@ public class Player : MonoBehaviour, IDataPersistence
         Vector3 ThrowDir = transform.TransformDirection(Vector3.forward);
         if (context.started && Holding)
         {
-            Debug.Log("start");
             StartCoroutine(HoldButtonRoutine());
         }
 
         if(context.canceled && Holding)
         {
             
-            Debug.Log("Like rynn in a nuzlocke, you are throwing");
             ObjectHeld.GetComponent<Interactable>().Drop();
             //pickupEffect.gameObject.transform.SetParent(this.transform);
            // dropEffect.gameObject.transform.SetParent(this.transform);
@@ -602,7 +600,6 @@ public class Player : MonoBehaviour, IDataPersistence
 
         if (context.performed && !ArmsRaised)
         {
-            Debug.Log("Armraised" + context.phase);
             ArmsRaised = true;
             ArmRising();
 
@@ -664,7 +661,7 @@ public class Player : MonoBehaviour, IDataPersistence
         }
         else
         {
-            Debug.Log("Notenoughcash");
+
         }
      }
 
@@ -680,7 +677,7 @@ public class Player : MonoBehaviour, IDataPersistence
         }
         else
         {
-            Debug.Log("Notenoughcash");
+
         }
         
     }
@@ -699,7 +696,7 @@ public class Player : MonoBehaviour, IDataPersistence
         }
         else
         {
-            Debug.Log("Notenoughcash");
+   
         }
     }
 

@@ -32,7 +32,7 @@ public class Spill : MonoBehaviour
             Destroy(gameObject);
             spillEffect.Play();
             
-            Debug.Log(" SPILL DETECTED ");
+            
             //send signal to robomop!!
         }
     }

@@ -102,12 +102,11 @@ public class NpcWanderState : NpcBaseState
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Interactables") && collision.gameObject.GetComponent<Interactable>().isMoving == true)
         {
-            Debug.Log("boomtown");
+           
             npc.SwitchState(npc.injuredState);
         }
         if (collision.gameObject.CompareTag("SlipperyFloor"))
         {
-            Debug.Log("slipped");
             npc.GetComponent<NavMeshAgent>().enabled = false;
 
             Vector3 FlipDir = npc.transform.TransformDirection(Vector3.forward);

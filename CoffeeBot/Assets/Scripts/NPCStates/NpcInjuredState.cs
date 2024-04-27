@@ -43,7 +43,7 @@ public class NpcInjuredState : NpcBaseState
         totalInjuryCounter = GameObject.Find("InjuryManager").GetComponent<TotalInjuryCounter>();
         InjuryCounter++;
         totalInjuryCounter.totalInjuryCounter++;
-        Debug.Log(totalInjuryCounter.totalInjuryCounter);
+        //Debug.Log(totalInjuryCounter.totalInjuryCounter);
         NpcTransform = npc.GetComponent<Transform>();
         npc.GetComponent<NavMeshAgent>().enabled = false;
         //Anim = npc.GetComponentInChildren<Animator>();

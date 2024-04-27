@@ -38,7 +38,7 @@ public class NpcSittingState : NpcBaseState
 
         //assign the transform of the center of the chair, for when the Npc sits down
         ChairSit = currentChair.transform.Find("SittingPoint");
-        Debug.Log(ChairSit);
+        
 
         
 
