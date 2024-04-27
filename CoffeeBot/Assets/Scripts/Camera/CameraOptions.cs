@@ -64,8 +64,8 @@ public class CameraOptions : MonoBehaviour, IDataPersistence
     {
         if (locked)
         {
-            followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxValue = 250;
-            followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MinValue = 50;
+            followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxValue = 90;
+            followCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MinValue = 10;
             locked = false;
         }
         else
