@@ -47,6 +47,7 @@ public class DayTimer : MonoBehaviour, IDataPersistence
     private void Start()
     {
         StartFirstDay();       
+
     }
 
     private void Update()
@@ -83,8 +84,16 @@ public class DayTimer : MonoBehaviour, IDataPersistence
     {
         endOfDayMenu.SetActive(false);
         timerActive = true;
-        currentTime = maxTime;
-        //need to edit this to assign current time to whatever the save data time left is 
+
+        if (!DataPersistenceManager.instance.HasGameData())
+        {
+            currentTime = maxTime;
+        }
+        else
+        {
+            DataPersistenceManager.instance.LoadGame();
+        }
+
     }
 
    /* public void StartNewDay()
