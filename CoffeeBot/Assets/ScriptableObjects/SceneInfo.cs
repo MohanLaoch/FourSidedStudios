@@ -12,8 +12,8 @@ public class SceneInfo : ScriptableObject
     public float playerRotSpeed;
     public float playerAcceleration;
     public float playerMaxThrowForce;
-    public int ElectricityBills = 10;
-    public int WaterBills = 10;
+    public int ElectricityBills = 5;
+    public int WaterBills = 5;
     public int TotalInjuryCounter;
     public bool DashUnlocked = false;
     public bool instaStockUnlocked = false;
@@ -46,8 +46,8 @@ public class SceneInfo : ScriptableObject
         gumballMachineUnlocked = false;
         roboMopUnlocked = false;
         storageMax = 5;
-        ElectricityBills = 10;
-        WaterBills = 10;
+        ElectricityBills = 5;
+        WaterBills = 5 ;
 
         ChaiLatteUnlocked = false;
         HotChocolateUnlocked = false;

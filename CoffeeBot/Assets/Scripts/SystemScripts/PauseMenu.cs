@@ -189,7 +189,7 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         
         
   
-        if (sceneInfo.dayCount >= 5 && sceneInfo.money <= 200 && isPrisoner == false)
+        if (sceneInfo.dayCount >= 6 && sceneInfo.money <= 50 && isPrisoner == false)
         {
             SceneManager.LoadScene("BadEnding");
             DeactivateMenu();
@@ -197,14 +197,14 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
             Cursor.visible = true;
             sceneInfo.Reset();
         }
-        if (sceneInfo.dayCount >= 5 && sceneInfo.money > 200 && isPrisoner == false)
+        if (sceneInfo.dayCount >= 6 && sceneInfo.money > 50 && isPrisoner == false)
         {
             SceneManager.LoadScene("GoodEnding");
             DeactivateUpgradesMenu();
             Cursor.visible = true;
             sceneInfo.Reset();
         }
-       else if (sceneInfo.dayCount >= 5 && isPrisoner == true)
+       else if (sceneInfo.dayCount >= 6 && isPrisoner == true)
        {
  
             SceneManager.LoadScene("PrisonEnding");

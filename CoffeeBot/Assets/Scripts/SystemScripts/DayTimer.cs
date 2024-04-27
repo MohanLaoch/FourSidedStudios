@@ -119,7 +119,7 @@ public class DayTimer : MonoBehaviour, IDataPersistence
 
         float minutes = Mathf.FloorToInt (currentTime / 60);
         float seconds = Mathf.FloorToInt (currentTime % 60);
-        timerText.text = "Day: " + sceneInfo.dayCount.ToString("0") + " | Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+        timerText.text = "Day: " + sceneInfo.dayCount.ToString("0") + "/5" + " | Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
 
     }
 
@@ -127,13 +127,13 @@ public class DayTimer : MonoBehaviour, IDataPersistence
     {
         timerActive = false;
         pauseMenu.ActivateEndOfDayMenu();
-        creditsText.text = "Credits earned: " + sceneInfo.money.ToString();
+        creditsText.text = "Credits earned: " + sceneInfo.money.ToString("0");
         sceneInfo.money -= sceneInfo.WaterBills;
         sceneInfo.money -= sceneInfo.ElectricityBills;
 
-        billsText.text = "Water bills: " + sceneInfo.WaterBills.ToString();
-        billsText2.text = "Electricity bills: " + sceneInfo.ElectricityBills.ToString();
-        totalEarnedText.text = "Total earned: " + sceneInfo.money.ToString();
+        billsText.text = "Water bills: " + sceneInfo.WaterBills.ToString("0");
+        billsText2.text = "Electricity bills: " + sceneInfo.ElectricityBills.ToString("0");
+        totalEarnedText.text = "Total earned: " + sceneInfo.money.ToString("0");
 
 
     }

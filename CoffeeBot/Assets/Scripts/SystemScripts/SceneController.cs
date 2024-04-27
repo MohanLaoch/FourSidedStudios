@@ -87,6 +87,7 @@ public class SceneController : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene("Prototype 1");
+        sceneInfo.Reset();
         Time.timeScale = 1;        
     }
 
