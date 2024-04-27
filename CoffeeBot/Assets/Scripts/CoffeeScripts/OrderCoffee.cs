@@ -72,11 +72,11 @@ public class OrderCoffee : MonoBehaviour
 
         coffeeImage.sprite = avaliableOrders.orderIcons[randomIndex];
 
-        coffeeCost = avaliableOrders.orderCost[randomIndex];
-
         orderText = avaliableOrders.orderListText[randomIndex];
 
-        orderGameObject = (GameObject)Instantiate(orderText, viewportContent.transform); 
+        orderGameObject = (GameObject)Instantiate(orderText, viewportContent.transform);
+
+        coffeeCost = avaliableOrders.orderCost[randomIndex];
 
         // start the timer
         moneyTracker.StartTimer();
