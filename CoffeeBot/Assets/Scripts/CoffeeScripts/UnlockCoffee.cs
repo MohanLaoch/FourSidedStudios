@@ -146,6 +146,8 @@ public class UnlockCoffee : MonoBehaviour
             avaliableOrders.coffeeOrders.Add("Chai Latte");
             avaliableOrders.orderIcons.Add(chaiLatteSprite);
 
+            avaliableOrders.orderListText.Add(chaiLatteOT);
+
             avaliableOrders.orderCost.Add(chaiAmount);
 
             sceneInfo.ChaiLatteUnlocked = true;
@@ -194,6 +196,8 @@ public class UnlockCoffee : MonoBehaviour
 
             avaliableOrders.coffeeOrders.Add("Hot Chocolate");
             avaliableOrders.orderIcons.Add(hotChocolateSprite);
+
+            avaliableOrders.orderListText.Add(hotChocolateOT);
 
             avaliableOrders.orderCost.Add(hotChocolateAmount);
 
@@ -244,6 +248,8 @@ public class UnlockCoffee : MonoBehaviour
             avaliableOrders.coffeeOrders.Add("Iced Coffee");
             avaliableOrders.orderIcons.Add(icedCoffeeSprite);
 
+            avaliableOrders.orderListText.Add(icedCoffeeOT);
+
             avaliableOrders.orderCost.Add(icedCoffeeAmount);
 
             sceneInfo.IcedCoffeeUnlocked = true;
@@ -293,6 +299,8 @@ public class UnlockCoffee : MonoBehaviour
             avaliableOrders.coffeeOrders.Add("Iced Latte");
             avaliableOrders.orderIcons.Add(icedLatteSprite);
 
+            avaliableOrders.orderListText.Add(icedLatteOT);
+
             avaliableOrders.orderCost.Add(icedLatteAmount);
 
             sceneInfo.IcedLatteUnlocked = true;
@@ -341,6 +349,8 @@ public class UnlockCoffee : MonoBehaviour
             avaliableOrders.coffeeOrders.Add("Mocha");
             avaliableOrders.orderIcons.Add(mochaSprite);
 
+            avaliableOrders.orderListText.Add(mochaOT);
+
             avaliableOrders.orderCost.Add(mochaAmount);
 
             sceneInfo.MochaUnlocked = true;
@@ -388,6 +398,8 @@ public class UnlockCoffee : MonoBehaviour
 
             avaliableOrders.coffeeOrders.Add("Tea");
             avaliableOrders.orderIcons.Add(teaSprite);
+
+            avaliableOrders.orderListText.Add(teaOT);
 
             avaliableOrders.orderCost.Add(teaAmount);
 
