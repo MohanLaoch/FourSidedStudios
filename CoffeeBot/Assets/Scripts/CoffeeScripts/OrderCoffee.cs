@@ -135,6 +135,7 @@ public class OrderCoffee : MonoBehaviour
 
 
         GetComponent<NpcStateManager>().SwitchState(GetComponent<NpcStateManager>().leavingState);
+        //activate colliders again
         GetComponent<NavMeshAgent>().enabled = true;
         GetComponent<NpcStateManager>().isLeaving = true;
         GetComponent<Animator>().SetBool("isWalking", true);

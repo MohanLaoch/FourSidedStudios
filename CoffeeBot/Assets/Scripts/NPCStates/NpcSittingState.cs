@@ -138,6 +138,11 @@ public class NpcSittingState : NpcBaseState
             npc.GetComponent<Rigidbody>().AddTorque(FlipDir * FlipForceRot, ForceMode.Impulse);
             npc.SwitchState(npc.injuredState);
         }
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Interactables") && !collision.gameObject.GetComponent<Interactable>().isMoving)
+        {
+            SetAllCollidersStatus(true);
+            Debug.Log("turning on colliders");
+        }
 
 
     } 
