@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
 
 
 public class PauseMenu : MonoBehaviour, IDataPersistence
@@ -15,9 +17,6 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
     [SerializeField] private GameObject unlockCoffeeUI;
     [SerializeField] private GameObject optionsUI;
 
-
-
-
     [SerializeField] private bool isPaused;
 
     [SerializeField]
@@ -28,10 +27,48 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
     public bool isPrisoner = false;
 
     public TotalInjuryCounter totalInjuryCounter;
+
+    public Button CoffeeUnlock1;
+    public Button CoffeeUnlock2;
+    public Button CoffeeUnlock3;
+    public Button CoffeeUnlock4;
+    public Button CoffeeUnlock5;
+    public Button CoffeeUnlock6;
+
+
+
     private void Awake()
     {
        playerInputActions = new PlayerInputActions();
        
+    }
+
+    public void Start()
+    {
+        if(sceneInfo.ChaiLatteUnlocked)
+        {
+            CoffeeUnlock1.interactable = false;
+        }
+        if (sceneInfo.HotChocolateUnlocked)
+        {
+            CoffeeUnlock2.interactable = false;
+        }
+        if (sceneInfo.IcedCoffeeUnlocked)
+        {
+            CoffeeUnlock3.interactable = false;
+        }
+        if (sceneInfo.IcedLatteUnlocked)
+        {
+            CoffeeUnlock4.interactable = false;
+        }
+        if (sceneInfo.MochaUnlocked)
+        {
+            CoffeeUnlock5.interactable = false;
+        }
+        if (sceneInfo.TeaUnlocked)
+        {
+            CoffeeUnlock6.interactable = false;
+        }
     }
 
     private void Update()
