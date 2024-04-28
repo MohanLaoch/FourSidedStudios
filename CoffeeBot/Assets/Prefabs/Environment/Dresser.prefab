@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 441508168863751681}
   - component: {fileID: 3571168422437949860}
   - component: {fileID: 1615562512106874222}
+  - component: {fileID: 621492686417274049}
   m_Layer: 0
   m_Name: Dresser
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   - {fileID: 2331754884444517058}
   - {fileID: 5637189662215967730}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
 --- !u!33 &3571168422437949860
 MeshFilter:
@@ -89,6 +90,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &621492686417274049
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966969880710399163}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36553743, y: 0.12755612, z: 0.30507284}
+  m_Center: {x: 0, y: -0.0000014267865, z: 0.08169494}
 --- !u!1 &1044508810229035439
 GameObject:
   m_ObjectHideFlags: 0

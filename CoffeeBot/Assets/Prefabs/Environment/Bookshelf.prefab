@@ -1256,6 +1256,7 @@ GameObject:
   - component: {fileID: 2070033564883573583}
   - component: {fileID: 3104641617165440234}
   - component: {fileID: 932544550270574624}
+  - component: {fileID: 1943259602}
   m_Layer: 0
   m_Name: Bookshelf
   m_TagString: Untagged
@@ -1327,7 +1328,7 @@ Transform:
   - {fileID: 6848365028226195199}
   - {fileID: 1366096101858504342}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
 --- !u!33 &3104641617165440234
 MeshFilter:
@@ -1379,6 +1380,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1943259602
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725419770929807861}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7754266, y: 0.5792494, z: 1.8310595}
+  m_Center: {x: 0, y: 0, z: 0.9155297}
 --- !u!1 &1849276543118711208
 GameObject:
   m_ObjectHideFlags: 0
