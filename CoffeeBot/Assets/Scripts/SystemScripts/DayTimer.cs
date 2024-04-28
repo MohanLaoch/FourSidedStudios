@@ -14,6 +14,7 @@ public class DayTimer : MonoBehaviour, IDataPersistence
     public TextMeshProUGUI billsText;
     public TextMeshProUGUI billsText2;
     public TextMeshProUGUI totalEarnedText;
+    public TextMeshProUGUI MoneyText;
 
 
 
@@ -134,6 +135,7 @@ public class DayTimer : MonoBehaviour, IDataPersistence
         billsText.text = "Water bills: " + sceneInfo.WaterBills.ToString("0");
         billsText2.text = "Electricity bills: " + sceneInfo.ElectricityBills.ToString("0");
         totalEarnedText.text = "Total earned: " + sceneInfo.money.ToString("0");
+        MoneyText.text = sceneInfo.money.ToString("0");
 
 
     }

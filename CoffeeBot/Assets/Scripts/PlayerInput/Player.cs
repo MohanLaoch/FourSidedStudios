@@ -29,7 +29,7 @@ public class Player : MonoBehaviour, IDataPersistence
     public Animator PlayerAnim;
     public float Speed = 5f;
     public float OgSpeed = 2f;
-    public float DashForce = 15f;
+    public float DashForce = 25f;
     public float FlipForceRot = 5f;
     public float RotSpeed = 50f;
     public float MaxSpeed = 7f;
