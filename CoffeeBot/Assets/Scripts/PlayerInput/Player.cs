@@ -24,7 +24,8 @@ public class Player : MonoBehaviour, IDataPersistence
 
 
     public SceneInfo sceneInfo;
-    public TextMeshProUGUI Daytext; 
+    public TextMeshProUGUI Daytext;
+    public TextMeshProUGUI noCreditsText;
 
     public Animator PlayerAnim;
     public float Speed = 5f;
@@ -647,6 +648,16 @@ public class Player : MonoBehaviour, IDataPersistence
         Gizmos.DrawCube(transform.position -transform.up * maxDistance, boxSize);
     }
 
+    IEnumerator NoCredits()
+    {
+        noCreditsText.gameObject.SetActive(true);
+
+        yield return new WaitForSecondsRealtime(2);
+
+        noCreditsText.gameObject.SetActive(false);
+
+    }
+
 
      public void UpgradeSpeed()
      {
@@ -661,7 +672,7 @@ public class Player : MonoBehaviour, IDataPersistence
         }
         else
         {
-
+            StartCoroutine(NoCredits());
         }
      }
 
@@ -677,9 +688,9 @@ public class Player : MonoBehaviour, IDataPersistence
         }
         else
         {
-
+            StartCoroutine(NoCredits());
         }
-        
+
     }
 
 
@@ -696,7 +707,7 @@ public class Player : MonoBehaviour, IDataPersistence
         }
         else
         {
-   
+            StartCoroutine(NoCredits());
         }
     }
 
@@ -713,8 +724,12 @@ public class Player : MonoBehaviour, IDataPersistence
             sceneInfo.DashUnlocked = true;
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
         }
-    
-        
+        else
+        {
+            StartCoroutine(NoCredits());
+        }
+
+
     }
 
     public void UnlockInstaStock()
@@ -735,7 +750,11 @@ public class Player : MonoBehaviour, IDataPersistence
             sceneInfo.instaStockUnlocked = true;
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
         }
-        
+        else
+        {
+            StartCoroutine(NoCredits());
+        }
+
     }
 
     public void UpgradeStorage()
@@ -746,6 +765,10 @@ public class Player : MonoBehaviour, IDataPersistence
             sceneInfo.money -= 10;
             sceneInfo.storageMax++;
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
+        }
+        else
+        {
+            StartCoroutine(NoCredits());
         }
     }
     public void UnlockGumballMachine()
@@ -762,6 +785,10 @@ public class Player : MonoBehaviour, IDataPersistence
             GumballMachine.gameObject.SetActive(true);
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
         }
+        else
+        {
+            StartCoroutine(NoCredits());
+        }
     }
 
     public void UnlockRoboMop()
@@ -776,6 +803,10 @@ public class Player : MonoBehaviour, IDataPersistence
             sceneInfo.money -= 100;
             sceneInfo.roboMopUnlocked = true;
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
+        }
+        else
+        {
+            StartCoroutine(NoCredits());
         }
     }
 

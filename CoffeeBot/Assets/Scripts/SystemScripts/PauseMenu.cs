@@ -35,6 +35,10 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
     public Button CoffeeUnlock5;
     public Button CoffeeUnlock6;
 
+    public Button UpgradeUnlock1;
+    public Button UpgradeUnlock2;
+    public Button UpgradeUnlock3;
+    public Button UpgradeUnlock4;
 
 
     private void Awake()
@@ -68,6 +72,23 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         if (sceneInfo.TeaUnlocked)
         {
             CoffeeUnlock6.interactable = false;
+        }
+
+        if(sceneInfo.gumballMachineUnlocked)
+        {
+            UpgradeUnlock1.interactable = false;
+        }
+        if (sceneInfo.DashUnlocked)
+        {
+            UpgradeUnlock2.interactable = false;
+        }
+        if (sceneInfo.roboMopUnlocked)
+        {
+            UpgradeUnlock3.interactable = false;
+        }
+        if (sceneInfo.instaStockUnlocked)
+        {
+            UpgradeUnlock4.interactable = false;
         }
     }
 
