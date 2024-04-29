@@ -9721,6 +9721,7 @@ MonoBehaviour:
   moneyTracker: {fileID: 7311876698218171413}
   acceptedCoffeeTag: 
   coffeeImage: {fileID: 83895503}
+  coffeeCost: 0
   coffeeText: {fileID: 8598563822240521350}
   responseText: {fileID: 860131033}
   responseBubble: {fileID: 820012701}
@@ -9730,10 +9731,14 @@ MonoBehaviour:
   - Delicious!
   - Enjoy your coffee too! Oops.
   - Thanks!
+  - I was craving that.
+  - "This is the best caf\xE9 in town!"
   negativeResponses:
   - ...
   - I've been waiting for ages!
   - I didn't order a yappuccino.
+  - Did you forget about my order?
+  - I won't be coming back here...
   positiveBubble: {fileID: 21300000, guid: bdab35be3f8d6a34e8c52e4a75e6f7e1, type: 3}
   negativeBubble: {fileID: 21300000, guid: cf6dcdc7d7cc0d540a6dc61fbd042cf9, type: 3}
 --- !u!114 &7311876698218171412
