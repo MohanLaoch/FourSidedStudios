@@ -1093,3 +1093,17 @@
 | • Changed gumball machine for updated 3D model |
 | • Updated throw UI in tutorial |
 | • Coffees now give an individual base value of credits. These values can be changed in editor |
+
+### 27/04/2024
+
+| **James** |
+| :--- |
+| • Added more volume sliders |
+| • Added more camera options |
+| • Added a script to prevent soft locking |
+
+### 29/04/2024
+
+| **James** |
+| :--- |
+| • Added some more responses to NPCs getting coffee |
