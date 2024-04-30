@@ -1107,3 +1107,12 @@
 | **James** |
 | :--- |
 | • Added some more responses to NPCs getting coffee |
+
+### 30/04/2024
+
+| **Mark** |
+| :--- |
+| • Imported character select background|
+| • Added the above to Character select scene|
+| • Updated tutorial pause menu backgrounds|
+| • Added sound files to fmod project|
