@@ -6,6 +6,8 @@ using UnityEngine;
 public class UnlockCoffee : MonoBehaviour
 {
     public SceneInfo sceneInfo;
+    public Player player;
+    public PauseMenu pauseMenu;
     // Player starts off being able to make an Americano, a Cappuccino, and a Latte
 
     public CraftCoffee craftCoffee;
@@ -151,6 +153,12 @@ public class UnlockCoffee : MonoBehaviour
             avaliableOrders.orderCost.Add(chaiAmount);
 
             sceneInfo.ChaiLatteUnlocked = true;
+
+            pauseMenu.CoffeeUnlock1.interactable = false;
+        }
+        else if(!sceneInfo.ChaiLatteUnlocked)
+        {
+            StartCoroutine(player.NoCredits());
         }
        
     }
@@ -202,8 +210,14 @@ public class UnlockCoffee : MonoBehaviour
             avaliableOrders.orderCost.Add(hotChocolateAmount);
 
             sceneInfo.HotChocolateUnlocked = true;
+
+            pauseMenu.CoffeeUnlock2.interactable = false;
         }
-        
+        else if(!sceneInfo.HotChocolateUnlocked)
+        {
+            StartCoroutine(player.NoCredits());
+        }
+
     }
 
     public void UnlockIcedCoffee()
@@ -253,8 +267,14 @@ public class UnlockCoffee : MonoBehaviour
             avaliableOrders.orderCost.Add(icedCoffeeAmount);
 
             sceneInfo.IcedCoffeeUnlocked = true;
+
+            pauseMenu.CoffeeUnlock3.interactable = false;
         }
-       
+        else if(!sceneInfo.IcedCoffeeUnlocked)
+        {
+            StartCoroutine(player.NoCredits());
+        }
+
     }
 
     public void UnlockIcedLatte()
@@ -304,6 +324,12 @@ public class UnlockCoffee : MonoBehaviour
             avaliableOrders.orderCost.Add(icedLatteAmount);
 
             sceneInfo.IcedLatteUnlocked = true;
+
+            pauseMenu.CoffeeUnlock4.interactable = false;
+        }
+        else if(!sceneInfo.IcedLatteUnlocked)
+        {
+            StartCoroutine(player.NoCredits());
         }
     }
 
@@ -354,6 +380,12 @@ public class UnlockCoffee : MonoBehaviour
             avaliableOrders.orderCost.Add(mochaAmount);
 
             sceneInfo.MochaUnlocked = true;
+
+            pauseMenu.CoffeeUnlock5.interactable = false;
+        }
+        else if (!sceneInfo.MochaUnlocked)
+        {
+            StartCoroutine(player.NoCredits());
         }
     }
 
@@ -404,6 +436,12 @@ public class UnlockCoffee : MonoBehaviour
             avaliableOrders.orderCost.Add(teaAmount);
 
             sceneInfo.TeaUnlocked = true;
+
+            pauseMenu.CoffeeUnlock6.interactable = false;
+        }
+        else if (!sceneInfo.TeaUnlocked)
+        {
+            StartCoroutine(player.NoCredits());
         }
     }
 }

@@ -89,6 +89,8 @@ public class Player : MonoBehaviour, IDataPersistence
 
     public DayTimer dayTimer;
 
+    public PauseMenu pauseMenu;
+
     public Scene currentScene;
     private void Awake()
     {
@@ -648,7 +650,7 @@ public class Player : MonoBehaviour, IDataPersistence
         Gizmos.DrawCube(transform.position -transform.up * maxDistance, boxSize);
     }
 
-    IEnumerator NoCredits()
+    public IEnumerator NoCredits()
     {
         noCreditsText.gameObject.SetActive(true);
 
@@ -723,6 +725,7 @@ public class Player : MonoBehaviour, IDataPersistence
             sceneInfo.money -= 100;
             sceneInfo.DashUnlocked = true;
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
+            pauseMenu.UpgradeUnlock2.interactable = false;
         }
         else
         {
@@ -749,6 +752,7 @@ public class Player : MonoBehaviour, IDataPersistence
             sceneInfo.money -= 100;
             sceneInfo.instaStockUnlocked = true;
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
+            pauseMenu.UpgradeUnlock4.interactable = false;
         }
         else
         {
@@ -784,6 +788,7 @@ public class Player : MonoBehaviour, IDataPersistence
             sceneInfo.gumballMachineUnlocked = true;
             GumballMachine.gameObject.SetActive(true);
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
+            pauseMenu.UpgradeUnlock1.interactable = false;
         }
         else
         {
@@ -803,6 +808,7 @@ public class Player : MonoBehaviour, IDataPersistence
             sceneInfo.money -= 100;
             sceneInfo.roboMopUnlocked = true;
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
+            pauseMenu.UpgradeUnlock3.interactable = false;
         }
         else
         {
