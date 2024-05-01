@@ -1131,3 +1131,4 @@
 | • Resized menu buttons in main scene|
 | • imported mp4 of trailer|
 | • created video player element in main scene|
+| • CoffeeSteam VFX prefab|
