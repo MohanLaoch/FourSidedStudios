@@ -32,7 +32,8 @@ public class NpcInjuredState : NpcBaseState
     public override void EnterState(NpcStateManager npc)
     {
         fallingSound = AudioManager.instance.CreateInstance(FMODEvents.instance.NPCFalling);
-        UpdateNpcSound();
+
+
         Anim = npc.GetComponent<Animator>();
         agent = npc.GetComponent<NavMeshAgent>();
         /*if (agent.height < 1.5)
@@ -50,7 +51,12 @@ public class NpcInjuredState : NpcBaseState
 
 
         npc.GetComponent<Rigidbody>().AddForce(Vector3.forward * 0.5f, ForceMode.Impulse);
-        currentTime = maxTime;        
+        currentTime = maxTime;
+
+        if (agent.height > 1.5f)
+        {
+            UpdateNpcSound();
+        }
     }
 
     public override void UpdateState(NpcStateManager npc)
@@ -135,16 +141,20 @@ public class NpcInjuredState : NpcBaseState
     {
         PLAYBACK_STATE playbackState;
         fallingSound.getPlaybackState(out playbackState);
-        /*if (agent.height < 1.5)
-        {
-           // return;
-            //add srk injured sound here?
-        }*/
+
         if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
         {
             fallingSound.start();
         }
+        /*if (agent.height < 1.5)
+        {
+            //return;
+            //add srk injured sound here?
+        }
+        else
+        {
 
+        }*/
 
     }
 

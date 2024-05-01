@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using FMOD.Studio;
 
 public class NpcWanderState : NpcBaseState
 {
@@ -17,10 +18,13 @@ public class NpcWanderState : NpcBaseState
     public float FlipForceRot = 1f;
 
     private GameObject gumballMachine;
+    private EventInstance srkLaughSound;
+
     //private GameObject SlipperyFloor;
 
     public override void EnterState(NpcStateManager npc)
     {
+        srkLaughSound = AudioManager.instance.CreateInstance(FMODEvents.instance.SrkLaugh);
         gumballMachine = GameObject.FindGameObjectWithTag("GumballMachine");
         NpcAnim = npc.GetComponentInChildren<Animator>();
         agent = npc.GetComponent<NavMeshAgent>();
@@ -31,7 +35,7 @@ public class NpcWanderState : NpcBaseState
         if(agent.height < 1.5f)
         {
             wanderRadius = 10f;
-            wanderTimer = 1f;
+            wanderTimer = 5f;
         }
         
     }
@@ -42,11 +46,18 @@ public class NpcWanderState : NpcBaseState
         
         timer += Time.deltaTime;
 
-        if (timer >= wanderTimer)
+        if (timer >= wanderTimer && agent.height > 1.5f)
         {
             Vector3 newPos = RandomNavSphere(npc.transform.position, wanderRadius, -1);
             agent.SetDestination(newPos);
             timer = 0;
+        }
+        else if(timer >= wanderTimer && agent.height < 1.5f)
+        {
+            Vector3 newPos = RandomNavSphere(npc.transform.position, wanderRadius, -1);
+            agent.SetDestination(newPos);
+            timer = 0;
+            UpdateSrkSound();
         }
 
         if (agent.remainingDistance < 0.5)
@@ -118,6 +129,16 @@ public class NpcWanderState : NpcBaseState
 
 
 
+        }
+    }
+    private void UpdateSrkSound()
+    {
+
+        PLAYBACK_STATE playbackState;
+        srkLaughSound.getPlaybackState(out playbackState);
+        if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+        {
+            srkLaughSound.start();
         }
     }
 }

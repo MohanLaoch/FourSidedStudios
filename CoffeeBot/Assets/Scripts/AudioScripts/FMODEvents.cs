@@ -26,6 +26,8 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference NPCMoney { get; private set; }
 
     [field: SerializeField] public EventReference NPCFalling { get; private set; }
+    [field: SerializeField] public EventReference SrkLaugh { get; private set; }
+
 
 
     [field: Header("CoffeeSFX")]
