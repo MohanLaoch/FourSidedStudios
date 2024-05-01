@@ -1,59 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9149234655722001460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/NPC/NPCFalling
-  m_EditorClassIdentifier: 
-  Path: event:/NPC/NPCFalling
-  Guid:
-    Data1: -1726511152
-    Data2: 1318870305
-    Data3: -1158441284
-    Data4: 1744850521
-  Banks:
-  - {fileID: 4887608583169680875}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
---- !u!114 &-8888159467183582229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Serg.io/SpillEffect
-  m_EditorClassIdentifier: 
-  Path: event:/Serg.io/SpillEffect
-  Guid:
-    Data1: -936859193
-    Data2: 1197067599
-    Data3: 1527422123
-    Data4: -523906587
-  Banks:
-  - {fileID: 3373333903977561061}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 660
 --- !u!114 &-6782609054513851589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,38 +15,11 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638501622884163364
+  lastModified: 638427369359638355
   FileSizes:
   - Name: Desktop
     Value: 2076
   Exists: 1
---- !u!114 &-6086017965805953237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/NPC/SrkLaugh
-  m_EditorClassIdentifier: 
-  Path: event:/NPC/SrkLaugh
-  Guid:
-    Data1: -1576110668
-    Data2: 1230673808
-    Data3: -178382456
-    Data4: 1568963900
-  Banks:
-  - {fileID: 4887608583169680875}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1000
 --- !u!114 &-5985958375240678780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +88,7 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 638498470573847844
+  lastModified: 638427369417840129
   FileSizes:
   - Name: Desktop
     Value: 5449120
@@ -284,17 +203,12 @@ MonoBehaviour:
   - {fileID: -2855408835893807952}
   - {fileID: -1561400506105364341}
   - {fileID: -2289247542226816510}
-  - {fileID: -6086017965805953237}
-  - {fileID: -9149234655722001460}
-  - {fileID: 7507934787797985135}
-  - {fileID: -8888159467183582229}
-  - {fileID: 6861792543117259877}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6782609054513851589}
   StringsBanks:
   - {fileID: 6128693005037801278}
-  cacheTime: 638501622884533702
+  cacheTime: 638427369445820944
   cacheVersion: 131609
 --- !u!114 &463458265107453034
 MonoBehaviour:
@@ -337,34 +251,10 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Serg.io.bank
   Name: Serg.io
   StudioPath: bank:/Serg.io
-  lastModified: 638498471165994553
+  lastModified: 638427369445820944
   FileSizes:
   - Name: Desktop
-    Value: 2305888
-  Exists: 1
---- !u!114 &4000395605078059555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/PlayerMove/PitchChange
-  m_EditorClassIdentifier: 
-  Name: PitchChange
-  StudioPath: 
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 3416683468
-    data2: 2445142201
-  Type: 0
-  IsGlobal: 0
-  Labels: []
+    Value: 2245088
   Exists: 1
 --- !u!114 &4764089716858289380
 MonoBehaviour:
@@ -408,10 +298,10 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/NPC.bank
   Name: NPC
   StudioPath: bank:/NPC
-  lastModified: 638501622884533702
+  lastModified: 638427369418366331
   FileSizes:
   - Name: Desktop
-    Value: 143872
+    Value: 95872
   Exists: 1
 --- !u!114 &5089757307834482330
 MonoBehaviour:
@@ -511,10 +401,10 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638501622884193391
+  lastModified: 638427369359653897
   FileSizes:
   - Name: Desktop
-    Value: 1764
+    Value: 1480
   Exists: 1
 --- !u!114 &6139607209554578035
 MonoBehaviour:
@@ -543,33 +433,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &6861792543117259877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Serg.io/PlayerFlip
-  m_EditorClassIdentifier: 
-  Path: event:/Serg.io/PlayerFlip
-  Guid:
-    Data1: 852315113
-    Data2: 1186605323
-    Data3: -1817779551
-    Data4: 181311104
-  Banks:
-  - {fileID: 3373333903977561061}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 874
 --- !u!114 &7078618584812175710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -597,34 +460,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
---- !u!114 &7507934787797985135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Serg.io/PlayerMove
-  m_EditorClassIdentifier: 
-  Path: event:/Serg.io/PlayerMove
-  Guid:
-    Data1: 1832409504
-    Data2: 1122824177
-    Data3: -2092996736
-    Data4: -1171653887
-  Banks:
-  - {fileID: 3373333903977561061}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 4000395605078059555}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3850
 --- !u!114 &8459935840170534523
 MonoBehaviour:
   m_ObjectHideFlags: 0
