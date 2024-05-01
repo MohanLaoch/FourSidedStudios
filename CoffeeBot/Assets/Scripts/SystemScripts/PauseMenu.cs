@@ -40,6 +40,8 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
     public Button UpgradeUnlock3;
     public Button UpgradeUnlock4;
 
+    public Button UpgradesMenuButton;
+
 
     private void Awake()
     {
@@ -89,6 +91,11 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         if (sceneInfo.instaStockUnlocked)
         {
             UpgradeUnlock4.interactable = false;
+        }
+
+        if(sceneInfo.dayCount >= 5)
+        {
+            UpgradesMenuButton.interactable = false;
         }
     }
 
