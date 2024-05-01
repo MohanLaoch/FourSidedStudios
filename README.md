@@ -1116,3 +1116,10 @@
 | • Added the above to Character select scene|
 | • Updated tutorial pause menu backgrounds|
 | • Added sound files to fmod project|
+
+| **Declan** |
+| :--- |
+| • Fixed button issues|
+| • Fixed settings saving|
+| • added not enough credits pop up|
+| • various bug fixes|
