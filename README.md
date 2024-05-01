@@ -1123,3 +1123,11 @@
 | • Fixed settings saving|
 | • added not enough credits pop up|
 | • various bug fixes|
+
+### 1/5/2024
+
+| **Mark** |
+| :--- |
+| • Resized menu buttons in main scene|
+| • imported mp4 of trailer|
+| • created video player element in main scene|
