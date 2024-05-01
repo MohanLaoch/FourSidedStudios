@@ -1132,3 +1132,4 @@
 | • imported mp4 of trailer|
 | • created video player element in main scene|
 | • CoffeeSteam VFX prefab|
+| • Added click sound effects to fmod|
