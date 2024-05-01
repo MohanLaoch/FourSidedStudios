@@ -22,7 +22,7 @@ public class MoneyTracker : MonoBehaviour
     public Image sliderFill;
 
     [Header("Timer Settings")]
-    public float maxTime = 30;
+    public float maxTime = 45;
     public float currentTime;
     private bool countDown = true;
 

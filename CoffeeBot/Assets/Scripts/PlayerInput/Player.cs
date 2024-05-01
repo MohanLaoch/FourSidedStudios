@@ -720,7 +720,7 @@ public class Player : MonoBehaviour, IDataPersistence
             return;
         }
 
-        if (sceneInfo.money >= 100)
+        if (sceneInfo.money >= 70)
         {
             sceneInfo.money -= 100;
             sceneInfo.DashUnlocked = true;
@@ -782,7 +782,7 @@ public class Player : MonoBehaviour, IDataPersistence
             return;
         }
 
-        if (sceneInfo.money >= 100)
+        if (sceneInfo.money >= 70)
         {
             sceneInfo.money -= 100;
             sceneInfo.gumballMachineUnlocked = true;
@@ -803,7 +803,7 @@ public class Player : MonoBehaviour, IDataPersistence
             return;
         }
 
-        if (sceneInfo.money >= 100)
+        if (sceneInfo.money >= 70)
         {
             sceneInfo.money -= 100;
             sceneInfo.roboMopUnlocked = true;
