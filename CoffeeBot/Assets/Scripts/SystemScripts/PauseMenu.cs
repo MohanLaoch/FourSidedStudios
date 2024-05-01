@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 
 public class PauseMenu : MonoBehaviour, IDataPersistence
@@ -41,6 +42,8 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
     public Button UpgradeUnlock4;
 
     public Button UpgradesMenuButton;
+
+    public GameObject pauseFirstButton, optionsFirstButton, optionsClosedButton, upgradesFirstButton, endOfDayFirstButton, coffeeMenuFirstButton;
 
 
     private void Awake()
@@ -144,6 +147,9 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         Cursor.visible = true;
         playerInputActions.Player.Disable();
         playerInputActions.Player.Flip.Disable();
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+
     }
     public void ActivateUpgradesMenu()
     {
@@ -153,6 +159,8 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         Cursor.visible = true;
         playerInputActions.Player.Disable();
         playerInputActions.Player.Flip.Disable();
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(upgradesFirstButton);
     }
 
     public void ActivateEndOfDayMenu()
@@ -164,6 +172,8 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         playerInputActions.Player.Disable();
         playerInputActions.Menu.Disable();
         playerInputActions.Player.Flip.Disable();
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(endOfDayFirstButton);
     }
     public void DeactivateEndOfDayMenu()
     {
@@ -185,6 +195,8 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         Cursor.visible = false;
         playerInputActions.Player.Enable();
         playerInputActions.Player.Flip.Enable();
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(coffeeMenuFirstButton);
     }
 
 
