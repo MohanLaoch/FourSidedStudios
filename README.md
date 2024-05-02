@@ -1063,16 +1063,16 @@
 
 ### 22/04/2024
 
+| **Declan** |
+| :--- |
+| • Fixed Save system issues with main menu|
+| • Added VFX code implemenation|
+
 | **James** |
 | :--- |
 | • Added Sliders for camera sensitivity |
 | • Added Slider for bot throw |
 | • Added Sliders for volume |
-
-| **Declan** |
-| :--- |
-| • Fixed Save system issues with main menu|
-| • Added VFX code implemenation|
 
 | **Niamh** |
 | :--- |
@@ -1110,13 +1110,6 @@
 
 ### 30/04/2024
 
-| **Mark** |
-| :--- |
-| • Imported character select background|
-| • Added the above to Character select scene|
-| • Updated tutorial pause menu backgrounds|
-| • Added sound files to fmod project|
-
 | **Declan** |
 | :--- |
 | • Fixed button issues|
@@ -1124,7 +1117,15 @@
 | • added not enough credits pop up|
 | • various bug fixes|
 
-### 1/5/2024
+| **Mark** |
+| :--- |
+| • Imported character select background|
+| • Added the above to Character select scene|
+| • Updated tutorial pause menu backgrounds|
+| • Added sound files to fmod project|
+
+
+### 01/05/2024
 
 | **Mark** |
 | :--- |
