@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class MouseHover : MonoBehaviour
+public class MouseHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject obj;
 
-    private void OnMouseOver()
+    public void OnPointerEnter(PointerEventData evenData)
     {
         obj.SetActive(true);
     }
 
-    private void OnMouseExit()
+    public void OnPointerExit(PointerEventData evenData)
     {
         obj.SetActive(false);
     }
+
 }
