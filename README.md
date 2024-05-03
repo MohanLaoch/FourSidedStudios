@@ -1134,3 +1134,15 @@
 | • created video player element in main scene|
 | • CoffeeSteam VFX prefab|
 | • Added click sound effects to fmod|
+
+### 02/05/2024
+
+| **James** |
+| :--- |
+| • NPC Barista now reacts with text to you harming customers too much or if the SRK is in the cafe |
+
+### 03/05/2024
+
+| **James** |
+| :--- |
+| • Added descriptions that appear when you hover above an upgrade |
