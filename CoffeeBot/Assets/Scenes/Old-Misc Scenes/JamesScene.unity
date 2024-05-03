@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.94965744, g: 0.23085779, b: 0.09409149, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2711,6 +2711,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cba2ac39d960e5b45a0069f7365ff31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  action:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   storageA: {fileID: 606247691}
   storageB: {fileID: 729852761}
   storageC: {fileID: 762203757}
@@ -2723,8 +2732,17 @@ MonoBehaviour:
   latte: {fileID: 827744618556922879, guid: bca3cffff7cbd5746b475f5a285e5184, type: 3}
   recipes: []
   recipeResults: []
+  falseRecipes: []
   secondsToWait: 1
   capacityRemoveAmount: 1
+  coffeeCraftImage: {fileID: 0}
+  coffeeCraftText: {fileID: 0}
+  recipeNames: []
+  americanoSprite: {fileID: 0}
+  cappuccinoSprite: {fileID: 0}
+  latteSprite: {fileID: 0}
+  nullSprite: {fileID: 0}
+  recipeImages: []
 --- !u!65 &143513329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10630,7 +10648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCapacity: 0
-  totalCurrentCapacity: 0
+  totalCapacity: 0
   maxCapacity: 10
   fillCapacity: 1
   itemName: 
@@ -10642,6 +10660,7 @@ MonoBehaviour:
   - TeaBags
   - Water
   - Null
+  indicatorText: {fileID: 0}
   storageText: {fileID: 1486374533}
   buttonText: {fileID: 649613547}
   storageImage: {fileID: 1453268519}
@@ -10657,6 +10676,7 @@ MonoBehaviour:
   nullSprite: {fileID: 21300000, guid: 2ec97e71825376e44b5ab83364cddb0e, type: 3}
   atStorage: 0
   husband: 0
+  sceneInfo: {fileID: 0}
 --- !u!65 &606247692
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10900,9 +10920,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NPC: {fileID: 1191204217}
+  SRK: {fileID: 0}
   Spawnpoint: {fileID: 621423306}
   NpcSpawnTime: 40
   NpcCount: 1
+  SRKChance: 0
+  sceneInfo: {fileID: 0}
+  nPCBarista: {fileID: 0}
 --- !u!4 &621423306
 Transform:
   m_ObjectHideFlags: 0
@@ -11501,7 +11525,7 @@ MonoBehaviour:
       Data2: 1320579798
       Data3: -2067279441
       Data4: 898307612
-    Path: event:/Environmet/Busyness
+    Path: event:/Environment/Busyness
   Event: 
   PlayEvent: 3
   StopEvent: 4
@@ -12598,7 +12622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCapacity: 0
-  totalCurrentCapacity: 0
+  totalCapacity: 0
   maxCapacity: 10
   fillCapacity: 1
   itemName: 
@@ -12610,6 +12634,7 @@ MonoBehaviour:
   - TeaBags
   - Water
   - Null
+  indicatorText: {fileID: 0}
   storageText: {fileID: 1560086370}
   buttonText: {fileID: 1487448750}
   storageImage: {fileID: 1035626391}
@@ -12625,6 +12650,7 @@ MonoBehaviour:
   nullSprite: {fileID: 21300000, guid: 2ec97e71825376e44b5ab83364cddb0e, type: 3}
   atStorage: 0
   husband: 0
+  sceneInfo: {fileID: 0}
 --- !u!4 &729852762
 Transform:
   m_ObjectHideFlags: 0
@@ -13374,7 +13400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCapacity: 0
-  totalCurrentCapacity: 0
+  totalCapacity: 0
   maxCapacity: 10
   fillCapacity: 1
   itemName: 
@@ -13386,6 +13412,7 @@ MonoBehaviour:
   - TeaBags
   - Water
   - Null
+  indicatorText: {fileID: 0}
   storageText: {fileID: 269543695}
   buttonText: {fileID: 1754315558}
   storageImage: {fileID: 1311672178}
@@ -13401,6 +13428,7 @@ MonoBehaviour:
   nullSprite: {fileID: 21300000, guid: 2ec97e71825376e44b5ab83364cddb0e, type: 3}
   atStorage: 0
   husband: 0
+  sceneInfo: {fileID: 0}
 --- !u!4 &762203758
 Transform:
   m_ObjectHideFlags: 0
@@ -15610,8 +15638,10 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
   followCamera: {fileID: 1109840631}
-  speed: 120
-  senseSlider: {fileID: 1562547035}
+  hSense: 0
+  vSense: 0
+  hSenseSlider: {fileID: 0}
+  vSenseSlider: {fileID: 0}
 --- !u!114 &912223791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15643,6 +15673,7 @@ MonoBehaviour:
     m_Flags: 0
   vcam1: {fileID: 1109840631}
   vcam2: {fileID: 2003155572}
+  camera: {fileID: 0}
 --- !u!4 &913574622 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 90082780381895707, guid: 8637d8e244176d2419924aa9ce5cfe56, type: 3}
@@ -19491,6 +19522,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2d2dba24484a70c44b7b66788bfa1f2d, type: 3}
   - {fileID: 21300000, guid: 6926421d53fdd0f489375cef4d214e63, type: 3}
   - {fileID: 21300000, guid: 7c0cc1f131fabf94db40eaec12480ec3, type: 3}
+  orderListText: []
+  orderCost: 
 --- !u!114 &1091607054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19503,6 +19536,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e4e25810ddf8764bbb2dd673156ffd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneInfo: {fileID: 0}
+  player: {fileID: 0}
+  pauseMenu: {fileID: 0}
   craftCoffee: {fileID: 143513328}
   avaliableOrders: {fileID: 1091607053}
   cocoPowder: {fileID: 7751796615635359277, guid: c4dd6f52046cd1246a8f0ca6061e1d2c, type: 3}
@@ -19516,16 +19552,35 @@ MonoBehaviour:
   hasTeaBags: 0
   chaiLatte: {fileID: 714728091722790835, guid: b06d21ed4cc2ad24d838a4dba2935c8f, type: 3}
   chaiLatteSprite: {fileID: 21300000, guid: b4a775694e6f5ae41a5d24c8d5a18f2b, type: 3}
+  chaiLatteOT: {fileID: 0}
+  chaiLatteRecipe: []
+  chaiAmount: 0
   hotChocolate: {fileID: 543574025478205594, guid: 2208f9bb131e63c4f8f96e856df32175, type: 3}
   hotChocolateSprite: {fileID: 21300000, guid: 461f903a4ef905348911f67ed3065994, type: 3}
+  hotChocolateOT: {fileID: 0}
+  hotChocolateRecipe: []
+  hotChocolateAmount: 0
   icedCoffee: {fileID: 4279669129957277555, guid: e00c512195ba8f54cb592c3b2f8b6039, type: 3}
   icedCoffeeSprite: {fileID: 21300000, guid: 0f2e2ab36532ac747bc7f92390dd27bc, type: 3}
+  icedCoffeeOT: {fileID: 0}
+  icedCoffeeRecipe: []
+  icedCoffeeAmount: 0
   icedLatte: {fileID: 3550900732743563856, guid: 3f860dffe26d65449a8ef9e8b1cac7ab, type: 3}
   icedLatteSprite: {fileID: 21300000, guid: 592d1b1057c36ae49959bb7cd3f62c56, type: 3}
+  icedLatteOT: {fileID: 0}
+  icedLatteRecipe: []
+  icedLatteAmount: 0
   mocha: {fileID: 8980933884433199634, guid: 6c04f9da085804b4283cba23ee22168b, type: 3}
   mochaSprite: {fileID: 21300000, guid: fc5c810b176e17d4c9f24245d0db0216, type: 3}
+  mochaOT: {fileID: 0}
+  mochaRecipe: []
+  mochaAmount: 0
   tea: {fileID: 3839246333272701524, guid: 52cca9df32ec01e44a52ae462dd1b54a, type: 3}
   teaSprite: {fileID: 21300000, guid: 79514ca706511af4eb9b7036e5211b26, type: 3}
+  teaOT: {fileID: 0}
+  teaRecipe: []
+  teaAmount: 0
+  MoneyText: {fileID: 0}
 --- !u!1001 &1092042125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29412,6 +29467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalInjuryCounter: 0
+  npcBarista: {fileID: 0}
 --- !u!4 &1580734995
 Transform:
   m_ObjectHideFlags: 0
@@ -32987,6 +33043,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1da0663b0d851cf41b0753e43faab685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneInfo: {fileID: 0}
+  moneyText: {fileID: 0}
 --- !u!4 &1785864628 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 90082780381895707, guid: 8637d8e244176d2419924aa9ce5cfe56, type: 3}
@@ -35374,10 +35432,31 @@ MonoBehaviour:
   pauseUI: {fileID: 520225658}
   upgradeUI: {fileID: 360748610}
   endOfDayUI: {fileID: 1095687351}
+  unlockCoffeeUI: {fileID: 0}
+  optionsUI: {fileID: 0}
   isPaused: 0
   sceneInfo: {fileID: 11400000, guid: 4a278d09038d67347a83391bb02cbcee, type: 2}
+  dayTimer: {fileID: 0}
   isNextScene: 0
+  isPrisoner: 0
   totalInjuryCounter: {fileID: 0}
+  CoffeeUnlock1: {fileID: 0}
+  CoffeeUnlock2: {fileID: 0}
+  CoffeeUnlock3: {fileID: 0}
+  CoffeeUnlock4: {fileID: 0}
+  CoffeeUnlock5: {fileID: 0}
+  CoffeeUnlock6: {fileID: 0}
+  UpgradeUnlock1: {fileID: 0}
+  UpgradeUnlock2: {fileID: 0}
+  UpgradeUnlock3: {fileID: 0}
+  UpgradeUnlock4: {fileID: 0}
+  UpgradesMenuButton: {fileID: 0}
+  pauseFirstButton: {fileID: 0}
+  optionsFirstButton: {fileID: 0}
+  optionsClosedButton: {fileID: 0}
+  upgradesFirstButton: {fileID: 0}
+  endOfDayFirstButton: {fileID: 0}
+  coffeeMenuFirstButton: {fileID: 0}
 --- !u!4 &1945000795
 Transform:
   m_ObjectHideFlags: 0
@@ -35412,6 +35491,7 @@ MonoBehaviour:
   billsText: {fileID: 188702197}
   billsText2: {fileID: 2012861550}
   totalEarnedText: {fileID: 1663984973}
+  MoneyText: {fileID: 0}
   upgradesMenu: {fileID: 360748610}
   endOfDayMenu: {fileID: 1095687351}
   maxTime: 180

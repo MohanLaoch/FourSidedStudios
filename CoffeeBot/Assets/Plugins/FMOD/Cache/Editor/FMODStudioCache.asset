@@ -96,36 +96,10 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638503510258983254
+  lastModified: 638503535613451077
   FileSizes:
   - Name: Desktop
     Value: 2076
-  Exists: 1
---- !u!114 &-5985958375240678780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/StrainRadio/Strained
-  m_EditorClassIdentifier: 
-  Name: Strained
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3402970462
-    data2: 1337652109
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - NotStrained
-  - Strained
   Exists: 1
 --- !u!114 &-5037510701733710993
 MonoBehaviour:
@@ -152,6 +126,32 @@ MonoBehaviour:
   Labels:
   - IsClicked
   - NotClicked
+  Exists: 1
+--- !u!114 &-3616819608471810168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/StrainRadio/Strained
+  m_EditorClassIdentifier: 
+  Name: Strained
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3402970462
+    data2: 1337652109
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - NotStrained
+  - Strained
   Exists: 1
 --- !u!114 &-3227867483018160399
 MonoBehaviour:
@@ -223,67 +223,11 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 638503510258523535
+  lastModified: 638503535613310928
   FileSizes:
   - Name: Desktop
     Value: 5449120
   Exists: 1
---- !u!114 &-2289247542226816510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Environmet/StrainRadio
-  m_EditorClassIdentifier: 
-  Path: event:/Environmet/StrainRadio
-  Guid:
-    Data1: -2133373184
-    Data2: 1242312114
-    Data3: -545283155
-    Data4: 1256072622
-  Banks:
-  - {fileID: 3373333903977561061}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -5985958375240678780}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 140878
---- !u!114 &-1561400506105364341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Environmet/Busyness
-  m_EditorClassIdentifier: 
-  Path: event:/Environmet/Busyness
-  Guid:
-    Data1: -1210514119
-    Data2: 1320579798
-    Data3: -2067279441
-    Data4: 898307612
-  Banks:
-  - {fileID: -2829904035710282659}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 463458265107453034}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 435169
 --- !u!114 &-867277461890181809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,8 +308,6 @@ MonoBehaviour:
   - {fileID: 5619812738720315303}
   - {fileID: 6139607209554578035}
   - {fileID: -2855408835893807952}
-  - {fileID: -1561400506105364341}
-  - {fileID: -2289247542226816510}
   - {fileID: 2270765960980991360}
   - {fileID: -3227867483018160399}
   - {fileID: -856842411376078420}
@@ -373,14 +315,16 @@ MonoBehaviour:
   - {fileID: -8077971366026363984}
   - {fileID: -8550461806842305362}
   - {fileID: 5344177886579684485}
+  - {fileID: 8285722662044857721}
+  - {fileID: 341209824911441291}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6782609054513851589}
   StringsBanks:
   - {fileID: 6128693005037801278}
-  cacheTime: 638503510261513182
+  cacheTime: 638503535639611040
   cacheVersion: 131609
---- !u!114 &463458265107453034
+--- !u!114 &341209824911441291
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -389,23 +333,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Busyness/Business
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/StrainRadio
   m_EditorClassIdentifier: 
-  Name: Business
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 228373346
-    data2: 4200143532
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Cafe_Quiet
-  - Cafe_Busy
-  Exists: 1
+  Path: event:/Environment/StrainRadio
+  Guid:
+    Data1: -2133373184
+    Data2: 1242312114
+    Data3: -545283155
+    Data4: 1256072622
+  Banks:
+  - {fileID: 3373333903977561061}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3616819608471810168}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 140878
 --- !u!114 &2270765960980991360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,7 +418,7 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Serg.io.bank
   Name: Serg.io
   StudioPath: bank:/Serg.io
-  lastModified: 638503510261513182
+  lastModified: 638503535639611040
   FileSizes:
   - Name: Desktop
     Value: 2305888
@@ -519,7 +465,7 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/NPC.bank
   Name: NPC
   StudioPath: bank:/NPC
-  lastModified: 638503510260657602
+  lastModified: 638503535614489121
   FileSizes:
   - Name: Desktop
     Value: 143872
@@ -635,6 +581,32 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 498
+--- !u!114 &5928383478723371193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Busyness/Business
+  m_EditorClassIdentifier: 
+  Name: Business
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 228373346
+    data2: 4200143532
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Cafe_Quiet
+  - Cafe_Busy
+  Exists: 1
 --- !u!114 &6128693005037801278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -650,7 +622,7 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638503510259013259
+  lastModified: 638503535613481106
   FileSizes:
   - Name: Desktop
     Value: 1950
@@ -697,7 +669,7 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Menu.bank
   Name: Menu
   StudioPath: bank:/Menu
-  lastModified: 638503510260080658
+  lastModified: 638503535613981117
   FileSizes:
   - Name: Desktop
     Value: 13120
@@ -729,6 +701,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &8285722662044857721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/Busyness
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Busyness
+  Guid:
+    Data1: -1210514119
+    Data2: 1320579798
+    Data3: -2067279441
+    Data4: 898307612
+  Banks:
+  - {fileID: -2829904035710282659}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5928383478723371193}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 435169
 --- !u!114 &8459935840170534523
 MonoBehaviour:
   m_ObjectHideFlags: 0

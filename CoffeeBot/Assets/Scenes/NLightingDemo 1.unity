@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.94965744, g: 0.23085779, b: 0.09409149, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2379,7 +2379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCapacity: 0
-  totalCurrentCapacity: 0
+  totalCapacity: 0
   maxCapacity: 10
   fillCapacity: 1
   itemName: 
@@ -2387,6 +2387,7 @@ MonoBehaviour:
   - CoffeeBox
   - CupBox
   - MilkBox
+  indicatorText: {fileID: 0}
   storageText: {fileID: 2039130940}
   buttonText: {fileID: 181941539}
   storageImage: {fileID: 836955599}
@@ -2398,6 +2399,7 @@ MonoBehaviour:
   nullSprite: {fileID: 21300000, guid: 2ec97e71825376e44b5ab83364cddb0e, type: 3}
   atStorage: 0
   husband: 0
+  sceneInfo: {fileID: 0}
 --- !u!4 &129557910
 Transform:
   m_ObjectHideFlags: 0
@@ -2671,10 +2673,31 @@ MonoBehaviour:
   pauseUI: {fileID: 241141517}
   upgradeUI: {fileID: 1973638065}
   endOfDayUI: {fileID: 0}
+  unlockCoffeeUI: {fileID: 0}
+  optionsUI: {fileID: 0}
   isPaused: 0
   sceneInfo: {fileID: 11400000, guid: 4a278d09038d67347a83391bb02cbcee, type: 2}
+  dayTimer: {fileID: 0}
   isNextScene: 0
+  isPrisoner: 0
   totalInjuryCounter: {fileID: 0}
+  CoffeeUnlock1: {fileID: 0}
+  CoffeeUnlock2: {fileID: 0}
+  CoffeeUnlock3: {fileID: 0}
+  CoffeeUnlock4: {fileID: 0}
+  CoffeeUnlock5: {fileID: 0}
+  CoffeeUnlock6: {fileID: 0}
+  UpgradeUnlock1: {fileID: 0}
+  UpgradeUnlock2: {fileID: 0}
+  UpgradeUnlock3: {fileID: 0}
+  UpgradeUnlock4: {fileID: 0}
+  UpgradesMenuButton: {fileID: 0}
+  pauseFirstButton: {fileID: 0}
+  optionsFirstButton: {fileID: 0}
+  optionsClosedButton: {fileID: 0}
+  upgradesFirstButton: {fileID: 0}
+  endOfDayFirstButton: {fileID: 0}
+  coffeeMenuFirstButton: {fileID: 0}
 --- !u!114 &151512014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2694,6 +2717,7 @@ MonoBehaviour:
   billsText: {fileID: 0}
   billsText2: {fileID: 0}
   totalEarnedText: {fileID: 0}
+  MoneyText: {fileID: 0}
   upgradesMenu: {fileID: 1973638065}
   endOfDayMenu: {fileID: 0}
   maxTime: 180
@@ -4353,7 +4377,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FlipForce: 1
   FlipForceRot: 1
+  PlayerFlipForce: 0
+  PlayerFlipForceRot: 0
   hasSlipped: 0
+  roboMop: {fileID: 0}
 --- !u!65 &347172570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5157,7 +5184,7 @@ MonoBehaviour:
       Data2: 1320579798
       Data3: -2067279441
       Data4: 898307612
-    Path: event:/Environmet/Busyness
+    Path: event:/Environment/Busyness
   Event: 
   PlayEvent: 3
   StopEvent: 4
@@ -6585,7 +6612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCapacity: 0
-  totalCurrentCapacity: 0
+  totalCapacity: 0
   maxCapacity: 10
   fillCapacity: 1
   itemName: 
@@ -6593,6 +6620,7 @@ MonoBehaviour:
   - CoffeeBox
   - CupBox
   - MilkBox
+  indicatorText: {fileID: 0}
   storageText: {fileID: 1518098406}
   buttonText: {fileID: 1381003910}
   storageImage: {fileID: 842178984}
@@ -6604,6 +6632,7 @@ MonoBehaviour:
   nullSprite: {fileID: 21300000, guid: 2ec97e71825376e44b5ab83364cddb0e, type: 3}
   atStorage: 0
   husband: 0
+  sceneInfo: {fileID: 0}
 --- !u!4 &654338564
 Transform:
   m_ObjectHideFlags: 0
@@ -7408,6 +7437,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cba2ac39d960e5b45a0069f7365ff31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  action:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   storageA: {fileID: 1889565373}
   storageB: {fileID: 654338563}
   storageC: {fileID: 129557909}
@@ -7420,8 +7458,17 @@ MonoBehaviour:
   latte: {fileID: 0}
   recipes: []
   recipeResults: []
+  falseRecipes: []
   secondsToWait: 1
   capacityRemoveAmount: 1
+  coffeeCraftImage: {fileID: 0}
+  coffeeCraftText: {fileID: 0}
+  recipeNames: []
+  americanoSprite: {fileID: 0}
+  cappuccinoSprite: {fileID: 0}
+  latteSprite: {fileID: 0}
+  nullSprite: {fileID: 0}
+  recipeImages: []
 --- !u!65 &737878703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23321,7 +23368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCapacity: 0
-  totalCurrentCapacity: 0
+  totalCapacity: 0
   maxCapacity: 10
   fillCapacity: 1
   itemName: 
@@ -23329,6 +23376,7 @@ MonoBehaviour:
   - CoffeeBox
   - CupBox
   - MilkBox
+  indicatorText: {fileID: 0}
   storageText: {fileID: 2102060212}
   buttonText: {fileID: 853851539}
   storageImage: {fileID: 1040379654}
@@ -23340,6 +23388,7 @@ MonoBehaviour:
   nullSprite: {fileID: 21300000, guid: 2ec97e71825376e44b5ab83364cddb0e, type: 3}
   atStorage: 0
   husband: 0
+  sceneInfo: {fileID: 0}
 --- !u!4 &1889565374
 Transform:
   m_ObjectHideFlags: 0

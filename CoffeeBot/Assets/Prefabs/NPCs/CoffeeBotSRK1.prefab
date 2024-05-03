@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 395598227921737200}
   - component: {fileID: 395598227921737210}
   - component: {fileID: 395598227921737211}
+  - component: {fileID: -3470700650767412724}
   m_Layer: 7
   m_Name: CoffeeBotSRK1
   m_TagString: NPC
@@ -206,7 +207,7 @@ Transform:
   - {fileID: 1826460404595938008}
   - {fileID: 7989303212204956845}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &395598227921737213
 Animator:
@@ -288,8 +289,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.85392475, y: 0.5666133, z: 0.6701145}
-  m_Center: {x: -0.022428513, y: 0.7329306, z: 0.027405739}
+  m_Size: {x: 0.85392475, y: 0.91724455, z: 0.6701145}
+  m_Center: {x: -0.022428513, y: 0.557615, z: 0.027405739}
 --- !u!114 &395598227921737200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,6 +342,23 @@ MonoBehaviour:
   NPCAnim: {fileID: 395598227921737213}
   storage: {fileID: 0}
   isMoving: 0
+--- !u!114 &-3470700650767412724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024184990578822985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ed8d14f983328b4694189affa5f4fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FlipForce: 1
+  FlipForceRot: 1
+  PlayerFlipForce: 0
+  PlayerFlipForceRot: 0
+  hasSlipped: 0
 --- !u!1 &1031567577211594217
 GameObject:
   m_ObjectHideFlags: 0

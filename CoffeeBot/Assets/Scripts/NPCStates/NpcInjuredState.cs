@@ -42,8 +42,12 @@ public class NpcInjuredState : NpcBaseState
         }*/
         npc.injureEffect.Play();
         totalInjuryCounter = GameObject.Find("InjuryManager").GetComponent<TotalInjuryCounter>();
-        InjuryCounter++;
-        totalInjuryCounter.totalInjuryCounter++;
+        if(agent.height > 1.5f)
+        {
+            InjuryCounter++;
+            totalInjuryCounter.totalInjuryCounter++;
+        }
+
         totalInjuryCounter.Warning(); // this line was added by James
         //Debug.Log(totalInjuryCounter.totalInjuryCounter);
         NpcTransform = npc.GetComponent<Transform>();

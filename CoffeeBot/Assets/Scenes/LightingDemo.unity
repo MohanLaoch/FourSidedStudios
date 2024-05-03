@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.043411914, g: 0.044258617, b: 0.05935309, a: 1}
+  m_IndirectSpecularColor: {r: 0.30322725, g: 0.12813418, b: 0.342678, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2379,7 +2379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCapacity: 0
-  totalCurrentCapacity: 0
+  totalCapacity: 0
   maxCapacity: 10
   fillCapacity: 1
   itemName: 
@@ -2387,6 +2387,7 @@ MonoBehaviour:
   - CoffeeBox
   - CupBox
   - MilkBox
+  indicatorText: {fileID: 0}
   storageText: {fileID: 2039130940}
   buttonText: {fileID: 181941539}
   storageImage: {fileID: 836955599}
@@ -2398,6 +2399,7 @@ MonoBehaviour:
   nullSprite: {fileID: 21300000, guid: 2ec97e71825376e44b5ab83364cddb0e, type: 3}
   atStorage: 0
   husband: 0
+  sceneInfo: {fileID: 0}
 --- !u!4 &129557910
 Transform:
   m_ObjectHideFlags: 0
@@ -2431,6 +2433,8 @@ MonoBehaviour:
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
   NPCAnim: {fileID: 0}
+  storage: {fileID: 0}
+  isMoving: 0
 --- !u!65 &129557912
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2668,9 +2672,32 @@ MonoBehaviour:
     m_Flags: 0
   pauseUI: {fileID: 241141517}
   upgradeUI: {fileID: 1973638065}
+  endOfDayUI: {fileID: 0}
+  unlockCoffeeUI: {fileID: 0}
+  optionsUI: {fileID: 0}
   isPaused: 0
   sceneInfo: {fileID: 11400000, guid: 4a278d09038d67347a83391bb02cbcee, type: 2}
+  dayTimer: {fileID: 0}
   isNextScene: 0
+  isPrisoner: 0
+  totalInjuryCounter: {fileID: 0}
+  CoffeeUnlock1: {fileID: 0}
+  CoffeeUnlock2: {fileID: 0}
+  CoffeeUnlock3: {fileID: 0}
+  CoffeeUnlock4: {fileID: 0}
+  CoffeeUnlock5: {fileID: 0}
+  CoffeeUnlock6: {fileID: 0}
+  UpgradeUnlock1: {fileID: 0}
+  UpgradeUnlock2: {fileID: 0}
+  UpgradeUnlock3: {fileID: 0}
+  UpgradeUnlock4: {fileID: 0}
+  UpgradesMenuButton: {fileID: 0}
+  pauseFirstButton: {fileID: 0}
+  optionsFirstButton: {fileID: 0}
+  optionsClosedButton: {fileID: 0}
+  upgradesFirstButton: {fileID: 0}
+  endOfDayFirstButton: {fileID: 0}
+  coffeeMenuFirstButton: {fileID: 0}
 --- !u!114 &151512014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2686,7 +2713,13 @@ MonoBehaviour:
   pauseMenu: {fileID: 151512013}
   sceneInfo: {fileID: 11400000, guid: 4a278d09038d67347a83391bb02cbcee, type: 2}
   timerText: {fileID: 822742159}
+  creditsText: {fileID: 0}
+  billsText: {fileID: 0}
+  billsText2: {fileID: 0}
+  totalEarnedText: {fileID: 0}
+  MoneyText: {fileID: 0}
   upgradesMenu: {fileID: 1973638065}
+  endOfDayMenu: {fileID: 0}
   maxTime: 180
   currentTime: 0
   timerLimit: 0
@@ -4342,9 +4375,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01cbdb4d69249a94d86ec5a2a5170db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Npc: {fileID: 1515424864}
   FlipForce: 1
   FlipForceRot: 1
+  PlayerFlipForce: 0
+  PlayerFlipForceRot: 0
+  hasSlipped: 0
+  roboMop: {fileID: 0}
 --- !u!65 &347172570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5148,7 +5184,7 @@ MonoBehaviour:
       Data2: 1320579798
       Data3: -2067279441
       Data4: 898307612
-    Path: event:/Environmet/Busyness
+    Path: event:/Environment/Busyness
   Event: 
   PlayEvent: 3
   StopEvent: 4
@@ -6576,7 +6612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCapacity: 0
-  totalCurrentCapacity: 0
+  totalCapacity: 0
   maxCapacity: 10
   fillCapacity: 1
   itemName: 
@@ -6584,6 +6620,7 @@ MonoBehaviour:
   - CoffeeBox
   - CupBox
   - MilkBox
+  indicatorText: {fileID: 0}
   storageText: {fileID: 1518098406}
   buttonText: {fileID: 1381003910}
   storageImage: {fileID: 842178984}
@@ -6595,6 +6632,7 @@ MonoBehaviour:
   nullSprite: {fileID: 21300000, guid: 2ec97e71825376e44b5ab83364cddb0e, type: 3}
   atStorage: 0
   husband: 0
+  sceneInfo: {fileID: 0}
 --- !u!4 &654338564
 Transform:
   m_ObjectHideFlags: 0
@@ -6628,6 +6666,8 @@ MonoBehaviour:
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
   NPCAnim: {fileID: 0}
+  storage: {fileID: 0}
+  isMoving: 0
 --- !u!65 &654338566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7397,6 +7437,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cba2ac39d960e5b45a0069f7365ff31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  action:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   storageA: {fileID: 1889565373}
   storageB: {fileID: 654338563}
   storageC: {fileID: 129557909}
@@ -7404,22 +7453,22 @@ MonoBehaviour:
   - 
   - 
   - 
-  recipies:
-  - CoffeeBoxMilkBoxCupBox
-  - CoffeeBoxCupBoxMilkBox
-  - MilkBoxCoffeeBoxCupBox
-  - MilkBoxCupBoxCoffeeBox
-  - CupBoxMilkBoxCoffeeBox
-  - CupBoxCoffeeBoxMilkBox
-  recipieResults:
-  - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
-  - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
-  - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
-  - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
-  - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
-  - {fileID: 8262267694540606119, guid: edea4c16ec364db488f001ab06df6457, type: 3}
+  americano: {fileID: 0}
+  cappuccino: {fileID: 0}
+  latte: {fileID: 0}
+  recipes: []
+  recipeResults: []
+  falseRecipes: []
   secondsToWait: 1
   capacityRemoveAmount: 1
+  coffeeCraftImage: {fileID: 0}
+  coffeeCraftText: {fileID: 0}
+  recipeNames: []
+  americanoSprite: {fileID: 0}
+  cappuccinoSprite: {fileID: 0}
+  latteSprite: {fileID: 0}
+  nullSprite: {fileID: 0}
+  recipeImages: []
 --- !u!65 &737878703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15902,17 +15951,12 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c47073255887ae45ba9155de60a6a55, type: 3}
---- !u!1 &1515424864 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3293066056719402991, guid: f79bddfcf297aec4f8c63d88fe857e43, type: 3}
-  m_PrefabInstance: {fileID: 811908836}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1515424865 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3293066056719402986, guid: f79bddfcf297aec4f8c63d88fe857e43, type: 3}
   m_PrefabInstance: {fileID: 811908836}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515424864}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66468a8920be86c40b8345bb518e88c1, type: 3}
@@ -21853,6 +21897,8 @@ MonoBehaviour:
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
   NPCAnim: {fileID: 0}
+  storage: {fileID: 0}
+  isMoving: 0
 --- !u!65 &1832804075
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23322,7 +23368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCapacity: 0
-  totalCurrentCapacity: 0
+  totalCapacity: 0
   maxCapacity: 10
   fillCapacity: 1
   itemName: 
@@ -23330,6 +23376,7 @@ MonoBehaviour:
   - CoffeeBox
   - CupBox
   - MilkBox
+  indicatorText: {fileID: 0}
   storageText: {fileID: 2102060212}
   buttonText: {fileID: 853851539}
   storageImage: {fileID: 1040379654}
@@ -23341,6 +23388,7 @@ MonoBehaviour:
   nullSprite: {fileID: 21300000, guid: 2ec97e71825376e44b5ab83364cddb0e, type: 3}
   atStorage: 0
   husband: 0
+  sceneInfo: {fileID: 0}
 --- !u!4 &1889565374
 Transform:
   m_ObjectHideFlags: 0
@@ -23374,6 +23422,8 @@ MonoBehaviour:
   CounterObj: {fileID: 0}
   HoldArea: {fileID: 0}
   NPCAnim: {fileID: 0}
+  storage: {fileID: 0}
+  isMoving: 0
 --- !u!65 &1889565376
 BoxCollider:
   m_ObjectHideFlags: 0
