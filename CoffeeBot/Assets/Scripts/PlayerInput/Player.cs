@@ -138,6 +138,7 @@ public class Player : MonoBehaviour, IDataPersistence
 
     void Start()
     {
+        currentScene = SceneManager.GetActiveScene();
         testingInputSystem.OnInteractAction += TestingInputSystem_OnInteractAction;
 
         Grabbing = AudioManager.instance.CreateInstance(FMODEvents.instance.grabSound);
@@ -161,7 +162,13 @@ public class Player : MonoBehaviour, IDataPersistence
         }
 
         boxUI = GameObject.Find("NullBox");
-      
+
+        if (currentScene.name == "Tutorial")
+        {
+            Debug.Log("OOGABOOGA");
+            sceneInfo.storageMax = 1;
+        }
+
     }
 
     private void TestingInputSystem_OnInteractAction(object sender, System.EventArgs e)
@@ -368,6 +375,10 @@ public class Player : MonoBehaviour, IDataPersistence
         {
             ApplyDashCooldown();
         }
+
+
+
+
     }
 
 
