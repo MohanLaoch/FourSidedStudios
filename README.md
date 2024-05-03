@@ -1146,3 +1146,10 @@
 | **James** |
 | :--- |
 | • Added descriptions that appear when you hover above an upgrade |
+
+### 03/05/2024
+
+| **Mark** |
+| :--- |
+| • Connected menu button sound effects|
+| • Swapped out menu buttons (resume, save & quit, upgrades)|
