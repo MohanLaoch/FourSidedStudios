@@ -27,32 +27,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
---- !u!114 &-8175061110855272472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/ButtonPressed/Clicked
-  m_EditorClassIdentifier: 
-  Name: Clicked
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 638112461
-    data2: 2712379718
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - IsClicked
-  - NotClicked
-  Exists: 1
 --- !u!114 &-8077971366026363984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,7 +69,7 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638502655549317518
+  lastModified: 638501622884163364
   FileSizes:
   - Name: Desktop
     Value: 2076
@@ -125,53 +99,6 @@ MonoBehaviour:
   Labels:
   - NotStrained
   - Strained
-  Exists: 1
---- !u!114 &-3813112849613451224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Menu/MouseHover
-  m_EditorClassIdentifier: 
-  Path: event:/Menu/MouseHover
-  Guid:
-    Data1: 1903542240
-    Data2: 1175977873
-    Data3: 734307505
-    Data4: 609074633
-  Banks:
-  - {fileID: -3454655380591972227}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 26
---- !u!114 &-3454655380591972227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Menu.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Menu.bank
-  Name: Menu
-  StudioPath: bank:/Menu
-  lastModified: 638502655550312695
-  FileSizes:
-  - Name: Desktop
-    Value: 13120
   Exists: 1
 --- !u!114 &-3227867483018160399
 MonoBehaviour:
@@ -243,7 +170,7 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 638502655548937435
+  lastModified: 638498470573847844
   FileSizes:
   - Name: Desktop
     Value: 5449120
@@ -375,7 +302,6 @@ MonoBehaviour:
   - {fileID: -2829904035710282659}
   - {fileID: 4887608583169680875}
   - {fileID: 3373333903977561061}
-  - {fileID: -3454655380591972227}
   EditorEvents:
   - {fileID: 5532710119417938881}
   - {fileID: 7078618584812175710}
@@ -389,8 +315,6 @@ MonoBehaviour:
   - {fileID: 2270765960980991360}
   - {fileID: -3227867483018160399}
   - {fileID: -856842411376078420}
-  - {fileID: -3813112849613451224}
-  - {fileID: 7891574922082311892}
   - {fileID: -8635635702489135998}
   - {fileID: -8077971366026363984}
   EditorParameters: []
@@ -398,7 +322,7 @@ MonoBehaviour:
   - {fileID: -6782609054513851589}
   StringsBanks:
   - {fileID: 6128693005037801278}
-  cacheTime: 638502655552213021
+  cacheTime: 638501622884533702
   cacheVersion: 131609
 --- !u!114 &463458265107453034
 MonoBehaviour:
@@ -492,7 +416,7 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Serg.io.bank
   Name: Serg.io
   StudioPath: bank:/Serg.io
-  lastModified: 638502655552213021
+  lastModified: 638498471165994553
   FileSizes:
   - Name: Desktop
     Value: 2305888
@@ -539,7 +463,7 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/NPC.bank
   Name: NPC
   StudioPath: bank:/NPC
-  lastModified: 638502655551152843
+  lastModified: 638501622884533702
   FileSizes:
   - Name: Desktop
     Value: 143872
@@ -642,10 +566,10 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638502655549347520
+  lastModified: 638501622884193391
   FileSizes:
   - Name: Desktop
-    Value: 1950
+    Value: 1764
   Exists: 1
 --- !u!114 &6139607209554578035
 MonoBehaviour:
@@ -701,34 +625,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
---- !u!114 &7891574922082311892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Menu/ButtonPressed
-  m_EditorClassIdentifier: 
-  Path: event:/Menu/ButtonPressed
-  Guid:
-    Data1: -1757620500
-    Data2: 1338523611
-    Data3: 368391096
-    Data4: -821866395
-  Banks:
-  - {fileID: -3454655380591972227}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -8175061110855272472}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 720
 --- !u!114 &8459935840170534523
 MonoBehaviour:
   m_ObjectHideFlags: 0

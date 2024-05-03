@@ -663,11 +663,11 @@ public class Player : MonoBehaviour, IDataPersistence
 
      public void UpgradeSpeed()
      {
-        if(sceneInfo.money >= 20)
+        if(sceneInfo.money >= 10)
         {
-            sceneInfo.money -= 20;
-            MaxSpeed += 20;
-            Acceleration += 20;
+            sceneInfo.money -= 10;
+            MaxSpeed += 10;
+            Acceleration += 10;
             sceneInfo.playerSpeed = MaxSpeed;
             sceneInfo.playerAcceleration = Acceleration;
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
@@ -680,10 +680,10 @@ public class Player : MonoBehaviour, IDataPersistence
 
     public void UpgradeHandling()
      {
-        if (sceneInfo.money >= 20)
+        if (sceneInfo.money >= 10)
         {
-            sceneInfo.money -= 20;
-            RotSpeed += 20;
+            sceneInfo.money -= 10;
+            RotSpeed += 10;
             sceneInfo.playerRotSpeed = RotSpeed;
             //sceneInfo.money = moneytracker.money;
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
@@ -699,10 +699,10 @@ public class Player : MonoBehaviour, IDataPersistence
 
     public void UpgradeMaxThrow()
     {
-        if(sceneInfo.money >= 20)
+        if(sceneInfo.money >= 10)
         {
-            sceneInfo.money -= 20;
-            MaxThrowForce += 20;
+            sceneInfo.money -= 10;
+            MaxThrowForce += 10;
             sceneInfo.playerMaxThrowForce = MaxThrowForce;
             //sceneInfo.money = moneytracker.money;
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
@@ -722,7 +722,7 @@ public class Player : MonoBehaviour, IDataPersistence
 
         if (sceneInfo.money >= 70)
         {
-            sceneInfo.money -= 100;
+            sceneInfo.money -= 70;
             sceneInfo.DashUnlocked = true;
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
             pauseMenu.UpgradeUnlock2.interactable = false;
@@ -747,9 +747,9 @@ public class Player : MonoBehaviour, IDataPersistence
         {
             return;
         }
-        if (sceneInfo.money >= 100)
+        if (sceneInfo.money >= 30)
         {
-            sceneInfo.money -= 100;
+            sceneInfo.money -= 30;
             sceneInfo.instaStockUnlocked = true;
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
             pauseMenu.UpgradeUnlock4.interactable = false;
@@ -784,7 +784,7 @@ public class Player : MonoBehaviour, IDataPersistence
 
         if (sceneInfo.money >= 70)
         {
-            sceneInfo.money -= 100;
+            sceneInfo.money -= 70;
             sceneInfo.gumballMachineUnlocked = true;
             GumballMachine.gameObject.SetActive(true);
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
@@ -805,7 +805,7 @@ public class Player : MonoBehaviour, IDataPersistence
 
         if (sceneInfo.money >= 70)
         {
-            sceneInfo.money -= 100;
+            sceneInfo.money -= 70;
             sceneInfo.roboMopUnlocked = true;
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
             pauseMenu.UpgradeUnlock3.interactable = false;

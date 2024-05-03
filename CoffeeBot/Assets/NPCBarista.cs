@@ -13,7 +13,7 @@ public class NPCBarista : MonoBehaviour
 
     private bool canSpawn = true;
 
-    private void OnTriggerEnter(Collider other)
+   /*private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "SugarRushKid" && canSpawn)
         {
@@ -22,6 +22,14 @@ public class NPCBarista : MonoBehaviour
 
             StartCoroutine(Wait());
         }
+    }*/
+
+    public void Kid()
+    {
+        canSpawn = false;
+        Instantiate(kidWarning, viewportContent.transform);
+
+        StartCoroutine(Wait());
     }
 
     public void Injury()

@@ -11,10 +11,11 @@ public class NpcSpawnerTesting : MonoBehaviour
     public int NpcCount = 1;
     public int SRKChance;
     public SceneInfo sceneInfo;
+    public NPCBarista nPCBarista;
     public void Start()
     {
         SRKChance = Random.Range(1, 10);
-        Instantiate(SRK, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
+        Instantiate(NPC, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
         StartCoroutine(SpawnNPC());
     }
 
@@ -44,7 +45,7 @@ public class NpcSpawnerTesting : MonoBehaviour
         while(NpcCount < 10)
         {
             yield return new WaitForSeconds(NpcSpawnTime);
-            SRKChance = Random.Range(1, 7);
+            SRKChance = Random.Range(7, 7);
             if(SRKChance < 6)
             {
                 Instantiate(NPC, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
@@ -53,6 +54,8 @@ public class NpcSpawnerTesting : MonoBehaviour
             else if(SRKChance >= 6)
             {
                 SpawnSRK();
+                nPCBarista.Kid();
+                //trigger warning method from barista :skull:
                 //SRKChance = Random.Range(1, 7);
             }
 
