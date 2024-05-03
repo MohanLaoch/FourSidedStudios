@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 using Unity.VisualScripting;
+using FMOD.Studio;
 
 public class SceneController : MonoBehaviour
 {
     public SceneInfo sceneInfo;
+
+    private EventInstance ButtonClick;
+    private EventInstance ButtonSelected;
 
 
     [Header("Menu Buttons")]
@@ -55,7 +59,10 @@ public class SceneController : MonoBehaviour
 
     private void Start()
     {       
-        if(!DataPersistenceManager.instance.HasGameData())
+        ButtonClick = AudioManager.instance.CreateInstance(FMODEvents.instance.ButtonClickSFX);
+        ButtonSelected = AudioManager.instance.CreateInstance(FMODEvents.instance.ButtonSelectedSFX);
+
+        if (!DataPersistenceManager.instance.HasGameData())
         {
             continueGameButton.interactable = false;
         }
@@ -115,5 +122,24 @@ public class SceneController : MonoBehaviour
         sceneInfo.SkinCounter = 5;
     }
 
+    public void UpdateClickSound()
+    {
+        PLAYBACK_STATE playbackState;
+        ButtonClick.getPlaybackState(out playbackState);
+        if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+        {
+            ButtonClick.start();
+        }
+    }
+
+    public void UpdateEnterSound()
+    {
+        PLAYBACK_STATE playbackState;
+        ButtonSelected.getPlaybackState(out playbackState);
+        if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+        {
+            ButtonSelected.start();
+        }
+    }
 
 }

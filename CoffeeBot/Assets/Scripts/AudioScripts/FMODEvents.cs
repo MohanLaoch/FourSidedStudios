@@ -34,6 +34,12 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference CoffeeSFX { get; private set; }
 
 
+    [field: Header("ButtonSFX")]
+    [field: SerializeField] public EventReference ButtonClickSFX { get; private set; }
+    [field: SerializeField] public EventReference ButtonSelectedSFX { get; private set; }
+
+
+
     public static FMODEvents instance { get; private set; }
 
     private void Awake()
