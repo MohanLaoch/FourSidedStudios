@@ -12,6 +12,8 @@ public class GameData
     public float hSense;
     public float vSense;
 
+    public float volumeSliderValue;
+
     
 
     public GameData()
@@ -20,6 +22,7 @@ public class GameData
         tutorialPosition = new Vector3(-4.37267f, 1.2f, -25.67498f);
         hSense = 125;
         vSense = 125;
+        volumeSliderValue = 1;
         playerAttributesData = new AttributesData();
         
     }

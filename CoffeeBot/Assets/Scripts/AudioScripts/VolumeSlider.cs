@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class VolumeSlider : MonoBehaviour
+public class VolumeSlider : MonoBehaviour, IDataPersistence
 {
     private enum VolumeType
     {
@@ -26,6 +26,19 @@ public class VolumeSlider : MonoBehaviour
         volumeSlider = this.GetComponent<Slider>();
     }
 
+    public void LoadData(GameData data)
+    {
+        volumeSlider.value = data.volumeSliderValue;
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.volumeSliderValue = volumeSlider.value;
+    }
+
+
+
+
     private void Update()
     {
         switch(volumeType)
@@ -47,6 +60,7 @@ public class VolumeSlider : MonoBehaviour
                 break;
 
         }
+        Debug.Log(volumeSlider.value);
     }
 
     public void OnSliderValueChanged()
