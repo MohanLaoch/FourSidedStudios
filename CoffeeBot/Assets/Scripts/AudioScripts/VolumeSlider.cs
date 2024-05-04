@@ -20,10 +20,11 @@ public class VolumeSlider : MonoBehaviour, IDataPersistence
     [SerializeField] private VolumeType volumeType;
 
     private Slider volumeSlider;
-
+    public SceneInfo sceneInfo;
     private void Awake()
     {
         volumeSlider = this.GetComponent<Slider>();
+        volumeSlider.value = sceneInfo.musicVolume;
     }
 
     public void LoadData(GameData data)
@@ -45,15 +46,19 @@ public class VolumeSlider : MonoBehaviour, IDataPersistence
         {
             case VolumeType.MASTER:
                 volumeSlider.value = AudioManager.instance.masterVolume;
+                sceneInfo.musicVolume = volumeSlider.value;
                 break;
             case VolumeType.MUSIC:
                 volumeSlider.value = AudioManager.instance.musicVolume;
+                sceneInfo.musicVolume = volumeSlider.value;
                 break;
             case VolumeType.AMBIENCE:
                 volumeSlider.value = AudioManager.instance.ambienceVolume;
+                sceneInfo.musicVolume = volumeSlider.value;
                 break;
             case VolumeType.SFX:
                 volumeSlider.value = AudioManager.instance.SFXVolume;
+                sceneInfo.musicVolume = volumeSlider.value;
                 break;
             default:
                 Debug.LogWarning("Volume Type not supported: " + volumeType);
@@ -69,15 +74,19 @@ public class VolumeSlider : MonoBehaviour, IDataPersistence
         {
             case VolumeType.MASTER:
                 AudioManager.instance.masterVolume = volumeSlider.value;
+                sceneInfo.musicVolume = volumeSlider.value;
                 break;
             case VolumeType.MUSIC:
                 AudioManager.instance.musicVolume = volumeSlider.value;
+                sceneInfo.musicVolume = volumeSlider.value;
                 break;
             case VolumeType.AMBIENCE:
                 AudioManager.instance.ambienceVolume = volumeSlider.value;
+                sceneInfo.musicVolume = volumeSlider.value;
                 break;
             case VolumeType.SFX:
                 AudioManager.instance.SFXVolume = volumeSlider.value;
+                sceneInfo.musicVolume = volumeSlider.value;
                 break;
             default:
                 Debug.LogWarning("Volume Type not supported: " + volumeType);

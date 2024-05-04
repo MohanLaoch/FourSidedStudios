@@ -21,6 +21,7 @@ public class SceneInfo : ScriptableObject
     public bool roboMopUnlocked = false;
     public int storageMax = 5;
     public int SkinCounter = 1;
+    public float musicVolume = 1;
 
     [Header("Coffee Unlocks")]
     public bool ChaiLatteUnlocked;
