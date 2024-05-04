@@ -45,7 +45,7 @@ public class NpcSpawnerTesting : MonoBehaviour
         while(NpcCount < 10)
         {
             yield return new WaitForSeconds(NpcSpawnTime);
-            SRKChance = Random.Range(7, 7);
+            SRKChance = Random.Range(1, 7);
             if(SRKChance < 6)
             {
                 Instantiate(NPC, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);

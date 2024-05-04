@@ -48,6 +48,11 @@ public class AudioManager : MonoBehaviour
         return emitter;
     }
 
+    public void SetMusicArea(MusicArea area)
+    {
+        musicEventInstance.setParameterByName("area", (float) area);
+    }
+
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
     {
         RuntimeManager.PlayOneShot(sound, worldPos);
