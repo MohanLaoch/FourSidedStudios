@@ -1153,3 +1153,9 @@
 | :--- |
 | • Connected menu button sound effects|
 | • Swapped out menu buttons (resume, save & quit, upgrades)|
+
+### 04/05/2024
+
+| **Mark** |
+| :--- |
+| • Coffee cups emit steam|
