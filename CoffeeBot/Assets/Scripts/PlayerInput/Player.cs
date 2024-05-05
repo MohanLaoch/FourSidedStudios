@@ -470,7 +470,7 @@ public class Player : MonoBehaviour, IDataPersistence
         {
 
 
-            if (isMoving || dashIsCooldown)
+            if (/*isMoving || */dashIsCooldown)
             {
                 return;
             }
@@ -480,7 +480,8 @@ public class Player : MonoBehaviour, IDataPersistence
             {
                 dashIsCooldown = true;
                 dashCooldownTimer = dashCooldownTime;
-                rb.AddForce(transform.forward * DashForce, ForceMode.Impulse);
+                playerInput.enabled = false;
+                rb.AddForce(transform.forward * DashForce, ForceMode.Force);
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.Flip, this.transform.position);
             }
         }
@@ -497,6 +498,7 @@ public class Player : MonoBehaviour, IDataPersistence
 
         if(dashCooldownTimer < 0.0f)
         {
+            playerInput.enabled = true;
             dashIsCooldown = false;
             //play sound to indicate cooldown ended
         }

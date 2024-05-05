@@ -253,7 +253,7 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         dayTimer.currentTime = 180f;
         sceneInfo.dayCount++;
         DataPersistenceManager.instance.SaveGame();
-        SceneManager.LoadScene("Prototype 1");
+        SceneManager.LoadSceneAsync("Prototype 1");
         
         Time.timeScale = 1;
         DeactivateMenu();

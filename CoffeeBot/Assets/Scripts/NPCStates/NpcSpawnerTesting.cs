@@ -51,7 +51,7 @@ public class NpcSpawnerTesting : MonoBehaviour
                 Instantiate(NPC, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
                 
             }
-            else if(SRKChance >= 6)
+            else if(SRKChance >= 6 && sceneInfo.dayCount >= 2)
             {
                 SpawnSRK();
                 nPCBarista.Kid();
