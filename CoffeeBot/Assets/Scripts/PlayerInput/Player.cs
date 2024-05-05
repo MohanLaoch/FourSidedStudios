@@ -69,6 +69,7 @@ public class Player : MonoBehaviour, IDataPersistence
     public float MaxThrowForce = 10f;
     public float ThrowChargeSpeed = 5f;
     public GameObject ObjectHeld;
+    public GameObject HighlightRing;
 
     private WaitForEndOfFrame waitForEndOfFrame;
 
@@ -352,9 +353,14 @@ public class Player : MonoBehaviour, IDataPersistence
             if (raycastHit.transform.TryGetComponent(out StorageBox storageBox))
             {
                 boxUI = storageBox.gameObject.transform.GetChild(0).gameObject;
-                Highlighted = true;
+                Highlighted = true;              
+            }
 
-               
+            if(raycastHit.transform.TryGetComponent(out Interactable interactable) && !raycastHit.transform.TryGetComponent(out StorageBox storageBox1))
+            {
+                HighlightRing.transform.parent = interactable.transform;
+                HighlightRing.SetActive(true);
+                Highlighted = true;
             }
         }
         else
@@ -365,10 +371,16 @@ public class Player : MonoBehaviour, IDataPersistence
         if (Highlighted)
         {
             boxUI.SetActive(true);
+            HighlightRing.SetActive(true);
+
         }
         else
         {
             boxUI.SetActive(false);
+            HighlightRing.SetActive(false);
+            HighlightRing.transform.parent = transform;
+
+
         }
 
         if (dashIsCooldown)
