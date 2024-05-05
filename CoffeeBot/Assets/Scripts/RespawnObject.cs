@@ -19,7 +19,7 @@ public class RespawnObject : MonoBehaviour
     {
         if (ignoreTags.Contains(other.gameObject.tag.ToString()))
         {
-            fallenObject = null;
+            Destroy(other.gameObject);
         }
         else
         {
