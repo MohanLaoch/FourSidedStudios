@@ -20,7 +20,9 @@ public class DayTimer : MonoBehaviour, IDataPersistence
 
     public GameObject upgradesMenu;
     public GameObject endOfDayMenu;
-    public GameObject OrderPanel, OrderImage, ThrowBar;
+
+    public GameObject[] UiElements;
+
 
     [Header("Settings")]
     public float maxTime = 180;
@@ -138,11 +140,28 @@ public class DayTimer : MonoBehaviour, IDataPersistence
         totalEarnedText.text = "Total credits: " + sceneInfo.money.ToString("0");
         MoneyText.text = sceneInfo.money.ToString("0");
 
-        OrderPanel.gameObject.SetActive(false);
-        OrderImage.gameObject.SetActive(false);
-        ThrowBar.gameObject.SetActive(false);
+
+        DisableUI();
+        
 
 
+
+    }
+    public void EnableUI()
+    {
+        for (int i = 0; i < UiElements.Length; i++)
+        {
+            UiElements[i].SetActive(true);
+        }
+
+    }
+
+    public void DisableUI()
+    {
+        for (int i = 0; i < UiElements.Length; i++)
+        {
+            UiElements[i].SetActive(false);
+        }
 
     }
 

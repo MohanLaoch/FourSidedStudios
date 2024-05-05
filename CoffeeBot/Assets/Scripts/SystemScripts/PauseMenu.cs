@@ -259,10 +259,7 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         DeactivateMenu();
         DeactivateUpgradesMenu();
 
-        dayTimer.OrderImage.SetActive(true);
-        dayTimer.OrderPanel.SetActive(true);
-        dayTimer.ThrowBar.SetActive(true);
-        
+        dayTimer.EnableUI();
         
         
         
