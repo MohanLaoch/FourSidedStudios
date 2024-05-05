@@ -45,6 +45,9 @@ public class Storage : MonoBehaviour
     {
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
+        playerInputActions.Player.Empty.performed += EmptyStorage;
+
+
     }
 
     private void Update()
@@ -80,12 +83,10 @@ public class Storage : MonoBehaviour
         if (atStorage)
         {
             indicatorText.SetActive(true);
-
-
-            if (Input.GetKeyDown(KeyCode.F))
+            /*if (Input.GetKeyDown(KeyCode.F))
             {
                 EmptyStorage();
-            }
+            }*/
 
         }
         else if (!atStorage)
@@ -168,13 +169,17 @@ public class Storage : MonoBehaviour
     }
 
 
-    public void EmptyStorage()
+    public void EmptyStorage(InputAction.CallbackContext context)
     {
-        currentCapacity = 0;
-        totalCapacity = 0;
-        itemName = null;
-        storageImage.sprite = nullSprite;
-        buttonText.text = "E".ToString();
+        if(context.performed && atStorage)
+        {
+            currentCapacity = 0;
+            totalCapacity = 0;
+            itemName = null;
+            storageImage.sprite = nullSprite;
+            buttonText.text = "E".ToString();
+        }
+
 
     }
 }

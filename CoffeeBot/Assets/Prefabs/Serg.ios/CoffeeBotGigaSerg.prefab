@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 38812732}
   m_Layer: 2
   m_Name: FlipReset
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,23 +166,23 @@ MonoBehaviour:
   slider: {fileID: 0}
   gradient:
     serializedVersion: 2
-    key0: {r: 0.18823528, g: 1, b: 0, a: 1}
-    key1: {r: 0.18823528, g: 1, b: 0, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 0.5764706, g: 0.7843138, b: 0.28627452, a: 1}
+    key1: {r: 0.9960785, g: 0.8705883, b: 0.227451, a: 1}
+    key2: {r: 0.9960785, g: 0.8705883, b: 0.2392157, a: 0}
+    key3: {r: 0.9215687, g: 0.5921569, b: 0.08235294, a: 0}
+    key4: {r: 0.9960785, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
+    ctime1: 16384
+    ctime2: 32768
+    ctime3: 49151
+    ctime4: 65535
     ctime5: 0
     ctime6: 0
     ctime7: 0
-    atime0: 54548
+    atime0: 0
     atime1: 65535
     atime2: 0
     atime3: 0
@@ -190,8 +190,8 @@ MonoBehaviour:
     atime5: 0
     atime6: 0
     atime7: 0
-    m_Mode: 1
-    m_NumColorKeys: 2
+    m_Mode: 0
+    m_NumColorKeys: 5
     m_NumAlphaKeys: 2
   fill: {fileID: 0}
 --- !u!114 &66035397
@@ -434,7 +434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5747058252908322557
 Transform:
   m_ObjectHideFlags: 0
@@ -796,7 +796,7 @@ Transform:
   - {fileID: 1209321416}
   - {fileID: 8558776738211970087}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!54 &24923723
 Rigidbody:
@@ -924,7 +924,7 @@ MonoBehaviour:
   PlayerAnim: {fileID: 24923725}
   Speed: 200
   OgSpeed: 200
-  DashForce: 5
+  DashForce: 600
   FlipForceRot: 5
   RotSpeed: 200
   MaxSpeed: 250
@@ -955,7 +955,7 @@ MonoBehaviour:
   MaxThrowForce: 10
   ThrowChargeSpeed: 2
   ObjectHeld: {fileID: 0}
-  HighlightRing: {fileID: 0}
+  HighlightRing: {fileID: 5263719917303395701}
   Skin1: {fileID: 222021584539643574}
   Skin2: {fileID: 4193225558066846392}
   Skin3: {fileID: 3715930084849341318}
@@ -1306,7 +1306,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8558776738211970087
 Transform:
   m_ObjectHideFlags: 0
@@ -1334,7 +1334,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 115.36
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1621,6 +1621,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8975034987821452153, guid: 7de564ae365abd64e81a1283ab8e1c60, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7de564ae365abd64e81a1283ab8e1c60, type: 3}
@@ -1684,6 +1688,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 236990002834434950, guid: 0ba8933f919cbc7429cfa7b0d467dbdb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411662170250869864, guid: 0ba8933f919cbc7429cfa7b0d467dbdb, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8160017691252454193, guid: 0ba8933f919cbc7429cfa7b0d467dbdb, type: 3}
