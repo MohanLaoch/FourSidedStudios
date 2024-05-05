@@ -1159,3 +1159,12 @@
 | **Mark** |
 | :--- |
 | • Coffee cups emit steam|
+
+### 05/05/2024
+
+| **Mark** |
+| :--- |
+| • Coffee cup steam now emits upwards regardles of cup orientation|
+| • imported store room label|
+| • imported mop mat|
+| • implemented both of the above to prototype 1 scene|
