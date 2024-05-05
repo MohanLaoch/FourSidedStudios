@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30322725, g: 0.12813418, b: 0.342678, a: 1}
+  m_IndirectSpecularColor: {r: 0.30321336, g: 0.12815265, b: 0.34266487, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 8
+  m_CameraDistance: 9.799997
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -7702,8 +7702,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.4806, y: 0.0605}
-  m_SizeDelta: {x: 0.9612, y: 0.9298}
+  m_AnchoredPosition: {x: 0.00000011921, y: 0.35337973}
+  m_SizeDelta: {x: 3.6959, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698752768
 MonoBehaviour:
@@ -7725,7 +7725,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: R
+  m_text: Press R anywhere to craft.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00afa0892ed9028409abaf8925dbc2b9, type: 2}
   m_sharedMaterial: {fileID: -5795291947100703062, guid: 00afa0892ed9028409abaf8925dbc2b9, type: 2}
@@ -7752,14 +7752,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.6
-  m_fontSizeBase: 0.6
+  m_fontSize: 0.35
+  m_fontSizeBase: 0.35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 32
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -7788,7 +7788,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.96067333, y: 0.93345094, z: 0.9562969, w: 0.93269014}
+  m_margin: {x: 0.80564976, y: 1.1650712, z: 0.77037024, w: 0.9014764}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -9004,7 +9004,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 18b8c89cebe89e44ea96c93d5585aba0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b97f00477d93f1e4a8db17eb0e5e996c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9040,8 +9040,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00000025312, y: 2.5317}
-  m_SizeDelta: {x: 0.6, y: 0.6}
+  m_AnchoredPosition: {x: 0.00000025312, y: 2.98036}
+  m_SizeDelta: {x: 2.5, y: 1.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &813567621
 GameObject:
@@ -12459,7 +12459,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227607207}
   m_LocalRotation: {x: 0.34202015, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: -4.3726697, y: 5.3910646, z: -31.803335}
+  m_LocalPosition: {x: -4.3726697, y: 6.548081, z: -33.182213}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18444,8 +18444,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.702133, y: 2.4019034, z: 3.8635924}
-  m_Center: {x: -0.17249823, y: 0.7009516, z: -1.3619844}
+  m_Size: {x: 11.11458, y: 2.4019034, z: 6.4874353}
+  m_Center: {x: -2.3787212, y: 0.7009516, z: -2.6739054}
 --- !u!114 &1626287187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22542,6 +22542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d91391bc275ec440800f2fa9a5bb9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ignoreTags: []
   fallenObject: {fileID: 0}
 --- !u!64 &1954091868
 MeshCollider:
@@ -23555,7 +23556,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055847430}
   m_LocalRotation: {x: 0.34202015, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: -4.3726697, y: 5.3910646, z: -31.803335}
+  m_LocalPosition: {x: -4.3726697, y: 6.548081, z: -33.182213}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
