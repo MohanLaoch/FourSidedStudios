@@ -75,9 +75,10 @@ public class SceneController : MonoBehaviour
     }
 
     public void StartGame()
-    {
+    {     
         SceneManager.LoadSceneAsync("Prototype 1");
-        
+        DataPersistenceManager.instance.NewGame();
+        DataPersistenceManager.instance.SaveGame();
         //Time.timeScale = 1;
     }
 
