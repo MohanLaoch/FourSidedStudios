@@ -359,6 +359,7 @@ public class Player : MonoBehaviour, IDataPersistence
             if(raycastHit.transform.TryGetComponent(out Interactable interactable) && !raycastHit.transform.TryGetComponent(out StorageBox storageBox1))
             {
                 HighlightRing.transform.parent = interactable.transform;
+                HighlightRing.transform.position = interactable.transform.localPosition;
                 HighlightRing.SetActive(true);
                 Highlighted = true;
             }
@@ -379,6 +380,7 @@ public class Player : MonoBehaviour, IDataPersistence
             boxUI.SetActive(false);
             HighlightRing.SetActive(false);
             HighlightRing.transform.parent = transform;
+            HighlightRing.transform.position = transform.localPosition;
 
 
         }
@@ -482,7 +484,7 @@ public class Player : MonoBehaviour, IDataPersistence
         {
 
 
-            if (/*isMoving || */dashIsCooldown)
+            if (isMoving || dashIsCooldown)
             {
                 return;
             }
@@ -493,7 +495,7 @@ public class Player : MonoBehaviour, IDataPersistence
                 dashIsCooldown = true;
                 dashCooldownTimer = dashCooldownTime;
                 playerInput.enabled = false;
-                rb.AddForce(transform.forward * DashForce, ForceMode.Force);
+                rb.AddForce(transform.forward * DashForce, ForceMode.Impulse);
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.Flip, this.transform.position);
             }
         }
