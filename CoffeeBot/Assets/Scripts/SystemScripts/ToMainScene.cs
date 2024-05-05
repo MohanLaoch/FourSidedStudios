@@ -52,5 +52,12 @@ public class ToMainScene : MonoBehaviour
             return;
     }
 
+    public void SkipTutorial()
+    {
+        SceneManager.LoadScene(sceneName);
+        sceneInfo.Reset();
+        DataPersistenceManager.instance.NewGame();
+    }
+
 
 }
