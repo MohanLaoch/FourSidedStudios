@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RespawnObject : MonoBehaviour
 {
+    public List<string> ignoreTags = new List<string>();
+
     public GameObject fallenObject;
 
     private GameObject player;
@@ -15,7 +17,7 @@ public class RespawnObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.tag == "NPC")
+        if (ignoreTags.Contains(other.gameObject.tag.ToString()))
         {
             fallenObject = null;
         }
