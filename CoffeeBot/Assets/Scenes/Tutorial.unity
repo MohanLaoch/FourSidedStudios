@@ -14756,9 +14756,7 @@ MonoBehaviour:
   MoneyText: {fileID: 0}
   upgradesMenu: {fileID: 0}
   endOfDayMenu: {fileID: 0}
-  OrderPanel: {fileID: 0}
-  OrderImage: {fileID: 0}
-  ThrowBar: {fileID: 0}
+  UiElements: []
   maxTime: 180
   currentTime: 0
   timerLimit: 0
@@ -19510,10 +19508,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 25e3913612bc6494bb941b2c40dff744, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 25e3913612bc6494bb941b2c40dff744, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: 25e3913612bc6494bb941b2c40dff744, type: 3}
-    m_DisabledSprite: {fileID: 21300000, guid: 42f23aa94e1a6374f809a42b7948fb77, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 7298b6b2d64235f45822036b8db82b70, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 7298b6b2d64235f45822036b8db82b70, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 7298b6b2d64235f45822036b8db82b70, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: ae07d5458c3695f4f93e861452002902, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -19557,7 +19555,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 42f23aa94e1a6374f809a42b7948fb77, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ae07d5458c3695f4f93e861452002902, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

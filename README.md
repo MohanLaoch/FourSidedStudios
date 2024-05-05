@@ -1168,3 +1168,8 @@
 | • imported store room label|
 | • imported mop mat|
 | • implemented both of the above to prototype 1 scene|
+| • imported highlighted coffee upgrade icons|
+| • imported highlighted passive and active upgrades|
+| • implemented the above to prototype 1 scene|
+| • imported tutorial skip buttons|
+| • implemented the above to tutorial scene|
