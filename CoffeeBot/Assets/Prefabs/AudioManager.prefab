@@ -74,32 +74,32 @@ MonoBehaviour:
     Path: event:/Serg.io/PlayerMove
   <Radio>k__BackingField:
     Guid:
-      Data1: -2133373184
-      Data2: 1242312114
-      Data3: -545283155
-      Data4: 1256072622
-    Path: event:/Environment/StrainRadio
+      Data1: -1933487269
+      Data2: 1295896043
+      Data3: -1409378138
+      Data4: 2131176060
+    Path: event:/Music
   <NPCMoney>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1227529414
+      Data2: 1119458696
+      Data3: -1421025639
+      Data4: 1406855855
+    Path: event:/NPC/NPCPayment
   <NPCFalling>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1726511152
+      Data2: 1318870305
+      Data3: -1158441284
+      Data4: 1744850521
+    Path: event:/NPC/NPCFalling
   <SrkLaugh>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1576110668
+      Data2: 1230673808
+      Data3: -178382456
+      Data4: 1568963900
+    Path: event:/NPC/SrkLaugh
   <CoffeeSFX>k__BackingField:
     Guid:
       Data1: 1122483876
@@ -109,18 +109,18 @@ MonoBehaviour:
     Path: event:/Serg.io/CarryingTooMuch
   <ButtonClickSFX>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1757620500
+      Data2: 1338523611
+      Data3: 368391096
+      Data4: -821866395
+    Path: event:/Menu/ButtonPressed
   <ButtonSelectedSFX>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1903542240
+      Data2: 1175977873
+      Data3: 734307505
+      Data4: 609074633
+    Path: event:/Menu/MouseHover
 --- !u!1 &4475520785044726936
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +152,7 @@ Transform:
   m_Children:
   - {fileID: 4475520784811740056}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4475520785044726939
 MonoBehaviour:
@@ -166,4 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a75417cc7ed9034286eb66627602334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  masterVolume: 1
+  musicVolume: 1
+  ambienceVolume: 1
+  SFXVolume: 1
   Radio: {fileID: 0}

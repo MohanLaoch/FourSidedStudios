@@ -54,12 +54,13 @@ public class AudioManager : MonoBehaviour
         ambienceBus = RuntimeManager.GetBus("bus:/AmbienceBus");
         sfxBus = RuntimeManager.GetBus("bus:/SFXBus");
 
+        InitializeMusic(FMODEvents.instance.Radio);
 
     }
 
     private void Start()
     {
-        InitializeMusic(FMODEvents.instance.Radio);
+        //InitializeMusic(FMODEvents.instance.Radio);
     }
 
     private void Update()

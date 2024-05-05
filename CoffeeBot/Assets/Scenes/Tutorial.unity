@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30321336, g: 0.12815265, b: 0.34266487, a: 1}
+  m_IndirectSpecularColor: {r: 0.30322725, g: 0.12813418, b: 0.342678, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3840,7 +3840,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313871547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.330378, y: -18.381702, z: 0.054746628}
+  m_LocalPosition: {x: -4.65, y: 5.31, z: -11.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6830,6 +6830,7 @@ GameObject:
   m_Component:
   - component: {fileID: 619707780}
   - component: {fileID: 619707781}
+  - component: {fileID: 619707782}
   m_Layer: 5
   m_Name: BackgroundChattingVolume
   m_TagString: Untagged
@@ -6911,7 +6912,33 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 619707782}
+        m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
+        m_MethodName: OnSliderValueChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &619707782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619707779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ebeb3b46f9554642ad84674432884f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeType: 2
+  sceneInfo: {fileID: 11400000, guid: 4a278d09038d67347a83391bb02cbcee, type: 2}
 --- !u!1001 &638190421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8434,6 +8461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 781226454}
   - component: {fileID: 781226455}
+  - component: {fileID: 781226456}
   m_Layer: 5
   m_Name: MasterVolume
   m_TagString: Untagged
@@ -8515,7 +8543,33 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 781226456}
+        m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
+        m_MethodName: OnSliderValueChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &781226456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781226453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ebeb3b46f9554642ad84674432884f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeType: 0
+  sceneInfo: {fileID: 11400000, guid: 4a278d09038d67347a83391bb02cbcee, type: 2}
 --- !u!1 &788491270
 GameObject:
   m_ObjectHideFlags: 0
@@ -11618,126 +11672,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <Radio>k__BackingField.Path
-      value: event:/Music
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <NPCMoney>k__BackingField.Path
-      value: event:/NPC/NPCPayment
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <SrkLaugh>k__BackingField.Path
-      value: event:/NPC/SrkLaugh
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <NPCFalling>k__BackingField.Path
-      value: event:/NPC/NPCFalling
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <Radio>k__BackingField.Guid.Data1
-      value: -1933487269
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <Radio>k__BackingField.Guid.Data2
-      value: 1295896043
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <Radio>k__BackingField.Guid.Data3
-      value: -1409378138
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <Radio>k__BackingField.Guid.Data4
-      value: 2131176060
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <ButtonClickSFX>k__BackingField.Path
-      value: event:/Menu/ButtonPressed
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <NPCMoney>k__BackingField.Guid.Data1
-      value: -1227529414
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <NPCMoney>k__BackingField.Guid.Data2
-      value: 1119458696
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <NPCMoney>k__BackingField.Guid.Data3
-      value: -1421025639
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <NPCMoney>k__BackingField.Guid.Data4
-      value: 1406855855
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <SrkLaugh>k__BackingField.Guid.Data1
-      value: -1576110668
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <SrkLaugh>k__BackingField.Guid.Data2
-      value: 1230673808
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <SrkLaugh>k__BackingField.Guid.Data3
-      value: -178382456
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <SrkLaugh>k__BackingField.Guid.Data4
-      value: 1568963900
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <NPCFalling>k__BackingField.Guid.Data1
-      value: -1726511152
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <NPCFalling>k__BackingField.Guid.Data2
-      value: 1318870305
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <NPCFalling>k__BackingField.Guid.Data3
-      value: -1158441284
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <NPCFalling>k__BackingField.Guid.Data4
-      value: 1744850521
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <ButtonSelectedSFX>k__BackingField.Path
-      value: event:/Menu/MouseHover
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <ButtonClickSFX>k__BackingField.Guid.Data1
-      value: -1757620500
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <ButtonClickSFX>k__BackingField.Guid.Data2
-      value: 1338523611
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <ButtonClickSFX>k__BackingField.Guid.Data3
-      value: 368391096
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <ButtonClickSFX>k__BackingField.Guid.Data4
-      value: -821866395
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <ButtonSelectedSFX>k__BackingField.Guid.Data1
-      value: 1903542240
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <ButtonSelectedSFX>k__BackingField.Guid.Data2
-      value: 1175977873
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <ButtonSelectedSFX>k__BackingField.Guid.Data3
-      value: 734307505
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475520784811740059, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
-      propertyPath: <ButtonSelectedSFX>k__BackingField.Guid.Data4
-      value: 609074633
-      objectReference: {fileID: 0}
     - target: {fileID: 4475520785044726936, guid: 3b04ea05713af9549be60ae770d155ee, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -11925,6 +11859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1185633585}
   - component: {fileID: 1185633586}
+  - component: {fileID: 1185633587}
   m_Layer: 5
   m_Name: BackgroundMusicVolume
   m_TagString: Untagged
@@ -12006,7 +11941,33 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1185633587}
+        m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
+        m_MethodName: OnSliderValueChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1185633587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185633584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ebeb3b46f9554642ad84674432884f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeType: 1
+  sceneInfo: {fileID: 11400000, guid: 4a278d09038d67347a83391bb02cbcee, type: 2}
 --- !u!1 &1217885313
 GameObject:
   m_ObjectHideFlags: 0
@@ -16107,6 +16068,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1457848224}
   - component: {fileID: 1457848225}
+  - component: {fileID: 1457848226}
   m_Layer: 5
   m_Name: SoundEffectsVolume
   m_TagString: Untagged
@@ -16188,7 +16150,33 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1457848226}
+        m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
+        m_MethodName: OnSliderValueChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1457848226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457848223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ebeb3b46f9554642ad84674432884f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeType: 3
+  sceneInfo: {fileID: 11400000, guid: 4a278d09038d67347a83391bb02cbcee, type: 2}
 --- !u!1 &1458368738
 GameObject:
   m_ObjectHideFlags: 0

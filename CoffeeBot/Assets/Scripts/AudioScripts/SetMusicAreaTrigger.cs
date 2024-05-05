@@ -13,7 +13,8 @@ public class SetMusicAreaTrigger : MonoBehaviour
 
     public void Start()
     {
-      AudioManager.instance.SetMusicArea(area);       
+        AudioManager.instance.SetMusicArea(area);
+        Debug.Log("Bungus");
     }
 
 
