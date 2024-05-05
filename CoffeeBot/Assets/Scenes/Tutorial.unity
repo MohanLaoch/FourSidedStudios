@@ -241,7 +241,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 9.799997
+  m_CameraDistance: 8.000001
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -12459,7 +12459,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227607207}
   m_LocalRotation: {x: 0.34202015, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: -4.3726697, y: 6.548081, z: -33.182213}
+  m_LocalPosition: {x: -4.3726697, y: 5.3910646, z: -31.803335}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22542,7 +22542,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d91391bc275ec440800f2fa9a5bb9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreTags: []
+  ignoreTags:
+  - Latte
+  - Cappuccino
   fallenObject: {fileID: 0}
 --- !u!64 &1954091868
 MeshCollider:
@@ -23556,7 +23558,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055847430}
   m_LocalRotation: {x: 0.34202015, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: -4.3726697, y: 6.548081, z: -33.182213}
+  m_LocalPosition: {x: -4.3726697, y: 5.3910646, z: -31.803335}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
