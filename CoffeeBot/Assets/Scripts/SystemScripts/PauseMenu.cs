@@ -11,6 +11,8 @@ using UnityEngine.EventSystems;
 public class PauseMenu : MonoBehaviour, IDataPersistence
 {
     [SerializeField] private PlayerInputActions playerInputActions;
+    [SerializeField] private CameraControls cameraControls;
+
     [SerializeField] private InputAction menu;
     [SerializeField] private GameObject pauseUI;
     [SerializeField] private GameObject upgradeUI;
@@ -45,11 +47,12 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
 
     public GameObject pauseFirstButton, optionsFirstButton, optionsClosedButton, upgradesFirstButton, endOfDayFirstButton, coffeeMenuFirstButton;
 
+    public GameObject MainCamera;
+
 
     private void Awake()
     {
-       playerInputActions = new PlayerInputActions();
-       
+        playerInputActions = new PlayerInputActions();
     }
 
     public void Start()
@@ -147,8 +150,12 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         Cursor.visible = true;
         playerInputActions.Player.Disable();
         playerInputActions.Player.Flip.Disable();
+
+
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+
+        DisableCamera();
 
     }
     public void ActivateUpgradesMenu()
@@ -161,6 +168,8 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         playerInputActions.Player.Flip.Disable();
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(upgradesFirstButton);
+
+        DisableCamera();
     }
 
     public void ActivateEndOfDayMenu()
@@ -174,6 +183,8 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         playerInputActions.Player.Flip.Disable();
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(endOfDayFirstButton);
+
+        DisableCamera();
     }
     public void DeactivateEndOfDayMenu()
     {
@@ -184,6 +195,8 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         Cursor.visible = false;
         playerInputActions.Player.Enable();
         playerInputActions.Player.Flip.Enable();
+
+        EnableCamera();
     }
 
     public void DeactivateUnlockCoffeeMenu()
@@ -197,6 +210,8 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         playerInputActions.Player.Flip.Enable();
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(coffeeMenuFirstButton);
+
+        EnableCamera();
     }
 
 
@@ -213,6 +228,8 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         playerInputActions.Player.Enable();
         playerInputActions.Player.Flip.Enable();
 
+        EnableCamera();
+
 
     }
     public void DeactivateUpgradesMenu()
@@ -225,8 +242,19 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         playerInputActions.Player.Enable();
         playerInputActions.Player.Flip.Enable();
 
-
+        EnableCamera();
     }
+
+    public void DisableCamera()
+    {
+        MainCamera.GetComponent<Cinemachine.CinemachineInputProvider>().enabled = false;
+    }
+
+    public void EnableCamera()
+    {
+        MainCamera.GetComponent<Cinemachine.CinemachineInputProvider>().enabled = true;
+    }
+
 
 
     public void ResetScene()
