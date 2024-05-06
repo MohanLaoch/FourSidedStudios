@@ -16,6 +16,7 @@ public class NpcLeavingState : NpcBaseState
 
     public override void UpdateState(NpcStateManager npc)
     {
+        NpcAnim.SetBool("Fallen", false);
         NpcAnim.SetBool("IsWalking", true);
         NpcAnim.SetBool("IsSitting", false);
 

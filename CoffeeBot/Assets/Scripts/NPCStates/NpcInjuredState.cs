@@ -9,7 +9,7 @@ public class NpcInjuredState : NpcBaseState
     public float maxTime = 8;
     public float currentTime;
     private bool countDown = true;
-    private bool timerActive = true;
+    public bool timerActive = true;
 
     private bool hasLimit = true;
     public float timerLimit;

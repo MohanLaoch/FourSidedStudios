@@ -16,7 +16,7 @@ public class NpcStateManager : MonoBehaviour
     public NpcLeavingState leavingState = new NpcLeavingState();   
     public NpcSittingState sittingState = new NpcSittingState();
     public NpcInjuredState injuredState = new NpcInjuredState();
-    void Start()
+    public void Awake()
     {
         player = FindObjectOfType<Player>();
         currentState = sittingState;
@@ -33,7 +33,7 @@ public class NpcStateManager : MonoBehaviour
     {
         currentState.OnCollisionEnter(this, collision);
     }
-    void Update()
+    public void Update()
     {
         currentState.UpdateState(this); 
     }
