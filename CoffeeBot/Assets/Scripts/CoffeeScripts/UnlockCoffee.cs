@@ -156,7 +156,7 @@ public class UnlockCoffee : MonoBehaviour
 
             pauseMenu.CoffeeUnlock1.interactable = false;
 
-            DataPersistenceManager.instance.SaveGame();
+            //DataPersistenceManager.instance.SaveGame();
         }
         else if(!sceneInfo.ChaiLatteUnlocked)
         {
@@ -215,7 +215,7 @@ public class UnlockCoffee : MonoBehaviour
 
             pauseMenu.CoffeeUnlock2.interactable = false;
 
-            DataPersistenceManager.instance.SaveGame();
+            //DataPersistenceManager.instance.SaveGame();
         }
         else if(!sceneInfo.HotChocolateUnlocked)
         {
@@ -274,7 +274,7 @@ public class UnlockCoffee : MonoBehaviour
 
             pauseMenu.CoffeeUnlock3.interactable = false;
 
-            DataPersistenceManager.instance.SaveGame();
+           // DataPersistenceManager.instance.SaveGame();
         }
         else if(!sceneInfo.IcedCoffeeUnlocked)
         {
@@ -333,7 +333,7 @@ public class UnlockCoffee : MonoBehaviour
 
             pauseMenu.CoffeeUnlock4.interactable = false;
 
-            DataPersistenceManager.instance.SaveGame();
+            //DataPersistenceManager.instance.SaveGame();
         }
         else if(!sceneInfo.IcedLatteUnlocked)
         {
@@ -391,7 +391,7 @@ public class UnlockCoffee : MonoBehaviour
 
             pauseMenu.CoffeeUnlock5.interactable = false;
 
-            DataPersistenceManager.instance.SaveGame();
+           // DataPersistenceManager.instance.SaveGame();
         }
         else if (!sceneInfo.MochaUnlocked)
         {
@@ -449,7 +449,7 @@ public class UnlockCoffee : MonoBehaviour
 
             pauseMenu.CoffeeUnlock6.interactable = false;
 
-            DataPersistenceManager.instance.SaveGame();
+            //DataPersistenceManager.instance.SaveGame();
         }
         else if (!sceneInfo.TeaUnlocked)
         {

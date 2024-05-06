@@ -264,7 +264,7 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         DeactivateMenu();
 
         sceneInfo.isNextScene = isNextScene;
-        sceneInfo.Reset();      
+          
     }
 
     public void ResetTutorial()
