@@ -126,7 +126,17 @@ public class MoneyTracker : MonoBehaviour
         // stop the timer & give the player money and a tip & set the new money text & start the timer again
 
         StopTimer();
-        sceneInfo.money += moneyGiven + (currentTime / tipDivide);
+        
+        if (!upset)
+        {
+            sceneInfo.money += moneyGiven + (maxTime / tipDivide);
+        }
+        else
+        {
+            sceneInfo.money += moneyGiven;
+        }
+
+
         moneyText.text = ": " + sceneInfo.money.ToString("0");
         //trigger money effect here
         moneyEffect.Play();
