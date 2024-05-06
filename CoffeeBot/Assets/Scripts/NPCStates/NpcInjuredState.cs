@@ -9,7 +9,7 @@ public class NpcInjuredState : NpcBaseState
     public float maxTime = 8;
     public float currentTime;
     private bool countDown = true;
-    public bool timerActive = true;
+    public bool timerActive;
 
     private bool hasLimit = true;
     public float timerLimit;
@@ -32,10 +32,14 @@ public class NpcInjuredState : NpcBaseState
     public override void EnterState(NpcStateManager npc)
     {
         fallingSound = AudioManager.instance.CreateInstance(FMODEvents.instance.NPCFalling);
-
+        timerActive = true;
 
         Anim = npc.GetComponent<Animator>();
         agent = npc.GetComponent<NavMeshAgent>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        interactable = npc.gameObject.GetComponent<Interactable>();
+        NpcTransform = npc.GetComponent<Transform>();
+        Npcrb = npc.GetComponent<Rigidbody>();
         /*if (agent.height < 1.5)
         {
             Anim = npc.GetComponent<Animator>();
@@ -66,7 +70,59 @@ public class NpcInjuredState : NpcBaseState
 
     public override void UpdateState(NpcStateManager npc)
     {
-        NPCFlailing(npc);
+        //NPCFlailing(npc);
+        //lord save us here we go
+
+        Debug.Log(currentTime);
+
+
+        Anim.SetBool("Fallen", true);
+        Anim.SetBool("IsSitting", false);
+
+
+        if (npc.player.Holding == true)
+        {
+            Npcrb.transform.rotation = interactable.rb.transform.rotation;
+        }
+        
+
+
+        if (timerActive)
+        {
+          currentTime -= Time.deltaTime;
+        }
+
+
+        if (currentTime <= 0 && npc.player.Holding == true && player.HoldingNPC == true)
+        {
+            currentTime = maxTime;
+        }
+        if (currentTime <= 3 && npc.player.HoldingNPC == false)
+        {
+            Anim.SetBool("Fallen", false);
+            Anim.SetBool("IsWalking", false);
+
+
+            NpcTransform.rotation = Quaternion.Euler(0, 0, 0);
+            NpcTransform.position = new Vector3(NpcTransform.position.x, NpcTransform.position.y, NpcTransform.position.z);
+        }
+        if (currentTime <= 0 && npc.player.HoldingNPC == false)
+        {
+            agent.enabled = true;
+            if (npc.TryGetComponent(out NpcStateManager npcStateManager) && npcStateManager.isLeaving)
+            {
+                npc.SwitchState(npc.leavingState);
+            }
+            else if (InjuryCounter >= 3)
+            {
+                npc.SwitchState(npc.leavingState);
+            }
+            else
+            {
+                npc.SwitchState(npc.wanderState);
+            }
+        }
+
     }
 
     public override void OnCollisionEnter(NpcStateManager npc, Collision collision)
@@ -79,15 +135,12 @@ public class NpcInjuredState : NpcBaseState
 
     public void NPCFlailing(NpcStateManager npc)
     {
-        Anim = npc.GetComponent<Animator>();
+        Debug.Log(currentTime);
 
-        NpcTransform = npc.GetComponent<Transform>();
-        Npcrb = npc.GetComponent<Rigidbody>();
+
         Anim.SetBool("Fallen", true);
         Anim.SetBool("IsSitting", false);
 
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        interactable = npc.gameObject.GetComponent<Interactable>();
 
         if(player.Holding == true)
         {
@@ -120,7 +173,7 @@ public class NpcInjuredState : NpcBaseState
         }
         if(currentTime <= 0 && npc.player.HoldingNPC == false)
         {
-            npc.GetComponent<NavMeshAgent>().enabled = true;
+            agent.enabled = true;
             if (npc.GetComponent<NpcStateManager>().isLeaving)
             {
                 npc.SwitchState(npc.leavingState);
@@ -132,7 +185,6 @@ public class NpcInjuredState : NpcBaseState
             else
             {
                 npc.SwitchState(npc.wanderState);
-
             }
         }
             

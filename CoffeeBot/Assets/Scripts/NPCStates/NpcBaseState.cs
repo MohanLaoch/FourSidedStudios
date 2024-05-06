@@ -4,7 +4,7 @@ public abstract class NpcBaseState
 {
     
 
-    public abstract void EnterState(NpcStateManager npc);
+   public abstract void EnterState(NpcStateManager npc);
 
    public abstract void UpdateState(NpcStateManager npc);
 

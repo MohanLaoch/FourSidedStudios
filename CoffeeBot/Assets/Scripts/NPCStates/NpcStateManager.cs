@@ -16,7 +16,7 @@ public class NpcStateManager : MonoBehaviour
     public NpcLeavingState leavingState = new NpcLeavingState();   
     public NpcSittingState sittingState = new NpcSittingState();
     public NpcInjuredState injuredState = new NpcInjuredState();
-    public void Awake()
+    public void Start()
     {
         player = FindObjectOfType<Player>();
         currentState = sittingState;
