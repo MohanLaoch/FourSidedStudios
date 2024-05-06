@@ -112,10 +112,14 @@ public class UnlockCoffee : MonoBehaviour
         {
             return;
         }*/
-
-        if(sceneInfo.money >= 15)
+        
+        if(sceneInfo.money >= 15 || sceneInfo.ChaiLatteUnlocked)
         {
-            sceneInfo.money -= 15;
+            if(!sceneInfo.ChaiLatteUnlocked)
+            {
+                sceneInfo.money -= 15;
+            }
+            
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
 
             craftCoffee.recipes.Add("MilkTeaBagsNull");
@@ -172,9 +176,13 @@ public class UnlockCoffee : MonoBehaviour
             return;
         }*/
 
-        if (sceneInfo.money >= 15)
+        if (sceneInfo.money >= 15 || sceneInfo.HotChocolateUnlocked)
         {
-            sceneInfo.money -= 15;
+            if (!sceneInfo.HotChocolateUnlocked)
+            {
+                sceneInfo.money -= 15;
+            }
+            
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
 
             craftCoffee.recipes.Add("MilkCocoPowderNull");
@@ -231,9 +239,13 @@ public class UnlockCoffee : MonoBehaviour
             return;
         }*/
 
-        if (sceneInfo.money >= 15)
+        if (sceneInfo.money >= 15 || sceneInfo.IcedCoffeeUnlocked)
         {
-            sceneInfo.money -= 15;
+            if (!sceneInfo.IcedCoffeeUnlocked)
+            {
+                sceneInfo.money -= 15;
+            }
+
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
 
             craftCoffee.recipes.Add("IceCoffeeBeansWater");
@@ -290,9 +302,12 @@ public class UnlockCoffee : MonoBehaviour
             return;
         }*/
 
-        if (sceneInfo.money >= 15)
+        if (sceneInfo.money >= 15 || sceneInfo.IcedLatteUnlocked)
         {
-            sceneInfo.money -= 15;
+            if (!sceneInfo.IcedLatteUnlocked)
+            {
+                sceneInfo.money -= 15;
+            }
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
 
             craftCoffee.recipes.Add("MilkCoffeeBeansIce");
@@ -348,9 +363,13 @@ public class UnlockCoffee : MonoBehaviour
             return;
         }*/
 
-        if (sceneInfo.money >= 15)
+        if (sceneInfo.money >= 15 || sceneInfo.MochaUnlocked)
         {
-            sceneInfo.money -= 15;
+            if (!sceneInfo.MochaUnlocked)
+            {
+                sceneInfo.money -= 15;
+            }
+
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
 
             craftCoffee.recipes.Add("MilkCoffeeBeansCocoPowder");
@@ -406,9 +425,13 @@ public class UnlockCoffee : MonoBehaviour
             return;
         }*/
 
-        if (sceneInfo.money >= 15)
+        if (sceneInfo.money >= 15 || sceneInfo.TeaUnlocked)
         {
-            sceneInfo.money -= 15;
+            if (!sceneInfo.TeaUnlocked)
+            {
+                sceneInfo.money -= 15;
+            }
+
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
 
             craftCoffee.recipes.Add("MilkWaterTeaBags");
