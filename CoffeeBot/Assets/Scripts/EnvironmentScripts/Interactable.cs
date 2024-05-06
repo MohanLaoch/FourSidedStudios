@@ -67,7 +67,7 @@ public class Interactable : MonoBehaviour
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
             npcStateManager = gameObject.GetComponent<NpcStateManager>();
             npcStateManager.SwitchState(npcStateManager.injuredState);
-            rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+            rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
 
             
 
