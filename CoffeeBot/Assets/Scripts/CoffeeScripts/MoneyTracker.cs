@@ -20,6 +20,10 @@ public class MoneyTracker : MonoBehaviour
     public Slider slider;
     public Gradient sliderGradient;
     public Image sliderFill;
+    public TextMeshProUGUI givenMoneyText;
+
+    public Animator givenMoneyAnim;
+    public AnimationEvent givenMoneyAnimEvent;
 
     [Header("Timer Settings")]
     public float maxTime = 45;
@@ -44,6 +48,11 @@ public class MoneyTracker : MonoBehaviour
 
 
         moneyText = GameObject.Find("MoneyText").GetComponent<TextMeshProUGUI>();
+        givenMoneyText = GameObject.Find("GivenMoneyText").GetComponent<TextMeshProUGUI>();
+
+        givenMoneyAnim = GameObject.Find("GivenMoneyText").GetComponent<Animator>();
+        givenMoneyAnimEvent = GameObject.Find("GivenMoneyText").GetComponent<AnimationEvent>();
+
         //money = sceneInfo.money;
 
         // set the timer to maxTime, and the value of the slider to currentTime
@@ -130,12 +139,20 @@ public class MoneyTracker : MonoBehaviour
         if (!upset)
         {
             sceneInfo.money += moneyGiven + (maxTime / tipDivide);
+            givenMoneyText.text = "+" + (moneyGiven + (maxTime / tipDivide)).ToString("0");
+
         }
         else
         {
             sceneInfo.money += moneyGiven;
+            givenMoneyText.text = "+" + moneyGiven.ToString("0");
+
         }
 
+        givenMoneyAnim.SetBool("MoneyGiven", true);
+        
+        //givenMoneyAnim.SetBool("MoneyGiven", false);
+        
 
         moneyText.text = ": " + sceneInfo.money.ToString("0");
         //trigger money effect here
