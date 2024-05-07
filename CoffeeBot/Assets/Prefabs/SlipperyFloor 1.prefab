@@ -190,6 +190,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2103849337474205134}
     m_Modifications:
+    - target: {fileID: 2308171063801533620, guid: 143069214acee2443935b03e1beceb92, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308171063801533620, guid: 143069214acee2443935b03e1beceb92, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2308171063801533622, guid: 143069214acee2443935b03e1beceb92, type: 3}
       propertyPath: m_Name
       value: Splash
