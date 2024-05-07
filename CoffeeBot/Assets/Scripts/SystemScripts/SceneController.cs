@@ -58,7 +58,8 @@ public class SceneController : MonoBehaviour
     }
 
     private void Start()
-    {       
+    {
+
         ButtonClick = AudioManager.instance.CreateInstance(FMODEvents.instance.ButtonClickSFX);
         ButtonSelected = AudioManager.instance.CreateInstance(FMODEvents.instance.ButtonSelectedSFX);
 

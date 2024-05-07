@@ -106,6 +106,8 @@ public class Player : MonoBehaviour, IDataPersistence
         playerInputActions.Player.Throw.started += Throw;
         playerInputActions.Player.Throw.canceled += Throw;
         playerInputActions.Player.Storing.performed += Storing;
+        playerInputActions.Player.ActualFlip.performed += SecretFlip;
+
 
 
 
@@ -504,6 +506,15 @@ public class Player : MonoBehaviour, IDataPersistence
             return;
         }
 
+    }
+
+    public void SecretFlip(InputAction.CallbackContext context)
+    {
+        if(context.performed && IsGrounded())
+        {
+            rb.AddForce(Vector3.up * FlipForceRot, ForceMode.Impulse);
+            rb.AddTorque(Vector3.forward * FlipForceRot, ForceMode.Impulse);
+        }
     }
 
     public void ApplyDashCooldown()

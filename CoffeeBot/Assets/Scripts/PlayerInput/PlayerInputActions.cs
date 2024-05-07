@@ -98,6 +98,15 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Hold(duration=1,pressPoint=1)"",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""ActualFlip"",
+                    ""type"": ""Button"",
+                    ""id"": ""9d1c9e6e-33ed-4b18-b714-36f81d5ec6f6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -364,6 +373,17 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Throw"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8fbf7d50-1e08-4cdc-9321-d727780f5595"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ActualFlip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -419,6 +439,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Player_Storing = m_Player.FindAction("Storing", throwIfNotFound: true);
         m_Player_Empty = m_Player.FindAction("Empty", throwIfNotFound: true);
         m_Player_Throw = m_Player.FindAction("Throw", throwIfNotFound: true);
+        m_Player_ActualFlip = m_Player.FindAction("ActualFlip", throwIfNotFound: true);
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
         m_Menu_Escape = m_Menu.FindAction("Escape", throwIfNotFound: true);
@@ -489,6 +510,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Storing;
     private readonly InputAction m_Player_Empty;
     private readonly InputAction m_Player_Throw;
+    private readonly InputAction m_Player_ActualFlip;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -501,6 +523,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @Storing => m_Wrapper.m_Player_Storing;
         public InputAction @Empty => m_Wrapper.m_Player_Empty;
         public InputAction @Throw => m_Wrapper.m_Player_Throw;
+        public InputAction @ActualFlip => m_Wrapper.m_Player_ActualFlip;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -534,6 +557,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Throw.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
                 @Throw.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
                 @Throw.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrow;
+                @ActualFlip.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnActualFlip;
+                @ActualFlip.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnActualFlip;
+                @ActualFlip.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnActualFlip;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -562,6 +588,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Throw.started += instance.OnThrow;
                 @Throw.performed += instance.OnThrow;
                 @Throw.canceled += instance.OnThrow;
+                @ActualFlip.started += instance.OnActualFlip;
+                @ActualFlip.performed += instance.OnActualFlip;
+                @ActualFlip.canceled += instance.OnActualFlip;
             }
         }
     }
@@ -609,6 +638,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnStoring(InputAction.CallbackContext context);
         void OnEmpty(InputAction.CallbackContext context);
         void OnThrow(InputAction.CallbackContext context);
+        void OnActualFlip(InputAction.CallbackContext context);
     }
     public interface IMenuActions
     {

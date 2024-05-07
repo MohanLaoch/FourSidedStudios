@@ -76,6 +76,15 @@
                     "processors": "",
                     "interactions": "Hold(duration=1,pressPoint=1)",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "ActualFlip",
+                    "type": "Button",
+                    "id": "9d1c9e6e-33ed-4b18-b714-36f81d5ec6f6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -340,6 +349,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Throw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8fbf7d50-1e08-4cdc-9321-d727780f5595",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ActualFlip",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

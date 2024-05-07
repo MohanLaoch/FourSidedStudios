@@ -310,7 +310,7 @@ public class PauseMenu : MonoBehaviour, IDataPersistence
         }
        else if (sceneInfo.dayCount >= 6 && isPrisoner == true)
        {
- 
+            
             SceneManager.LoadScene("PrisonEnding");
             DeactivateUpgradesMenu();
             Cursor.visible = true;
