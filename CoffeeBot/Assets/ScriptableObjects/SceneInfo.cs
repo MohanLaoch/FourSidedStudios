@@ -21,7 +21,11 @@ public class SceneInfo : ScriptableObject
     public bool roboMopUnlocked = false;
     public int storageMax = 5;
     public int SkinCounter = 1;
+
+    public float masterVolume = 1;
     public float musicVolume = 1;
+    public float ambienceVolume = 1;
+    public float SFXVolume = 1;
 
     [Header("Coffee Unlocks")]
     public bool ChaiLatteUnlocked;
@@ -57,7 +61,12 @@ public class SceneInfo : ScriptableObject
         MochaUnlocked = false;
         TeaUnlocked = false;
 
-    }
+        masterVolume = 1;
+        musicVolume = 1;
+        ambienceVolume = 1;
+        SFXVolume = 1;
+
+}
 
     
 

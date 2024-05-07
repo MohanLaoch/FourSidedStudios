@@ -1,8 +1,7 @@
-using System.Collections;
+using FMOD.Studio;
+using FMODUnity;
 using System.Collections.Generic;
 using UnityEngine;
-using FMODUnity;
-using FMOD.Studio;
 public class AudioManager : MonoBehaviour
 {
     [Header("Volume")]
@@ -26,7 +25,7 @@ public class AudioManager : MonoBehaviour
     private Bus sfxBus;
 
 
-
+    public SceneInfo sceneInfo;
     public GameObject Radio;
     private List<EventInstance> eventInstances;
 
@@ -61,14 +60,29 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         //InitializeMusic(FMODEvents.instance.Radio);
+        masterVolume = sceneInfo.masterVolume;
+
+        musicVolume = sceneInfo.musicVolume;
+
+        ambienceVolume = sceneInfo.ambienceVolume;
+
+        SFXVolume = sceneInfo.SFXVolume;
     }
 
     private void Update()
     {
         masterBus.setVolume(masterVolume);
+        sceneInfo.masterVolume = masterVolume;
+
         musicBus.setVolume(musicVolume);
+       sceneInfo.musicVolume = musicVolume;
+
         ambienceBus.setVolume(ambienceVolume);
+        sceneInfo.ambienceVolume = ambienceVolume;
+
         sfxBus.setVolume(SFXVolume);
+        sceneInfo.SFXVolume = SFXVolume;
+
     }
 
     private void InitializeMusic(EventReference musicEventReference)
