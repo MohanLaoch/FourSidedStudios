@@ -18,7 +18,7 @@ public class GameData
 
     public GameData()
     {
-        playerPosition = new Vector3(7f, 1.2f, 1.563f);
+        playerPosition = new Vector3(2f, 1.2f, -5f);
         tutorialPosition = new Vector3(-4.37267f, 1.2f, -25.67498f);
         hSense = 125;
         vSense = 125;
