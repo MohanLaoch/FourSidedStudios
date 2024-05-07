@@ -40,11 +40,11 @@ public class CameraOptions : MonoBehaviour, IDataPersistence
 
     void SetSlider()
     {
-        hSenseSlider.maxValue = 1f; //250
-        hSenseSlider.minValue = 0.1f; //50
+        hSenseSlider.maxValue = 0.5f; //250
+        hSenseSlider.minValue = 0.01f; //50
 
-        vSenseSlider.maxValue = 1f;
-        vSenseSlider.minValue = 0.1f;
+        vSenseSlider.maxValue = 0.5f;
+        vSenseSlider.minValue = 0.01f;
 
         hSenseSlider.value = hSense;
         vSenseSlider.value = vSense;
