@@ -546,7 +546,13 @@ public class Player : MonoBehaviour, IDataPersistence
 
     public void Throw(InputAction.CallbackContext context)
     {
+        if(!Holding)
+        {
+            return;
+        }
+
         Vector3 ThrowDir = transform.TransformDirection(Vector3.forward);
+
         if (context.started && Holding)
         {
             StartCoroutine(HoldButtonRoutine());
