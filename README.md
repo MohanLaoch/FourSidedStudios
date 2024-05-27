@@ -1173,3 +1173,9 @@
 | • implemented the above to prototype 1 scene|
 | • imported tutorial skip buttons|
 | • implemented the above to tutorial scene|
+
+### 027/05/2024
+
+| **Mark** |
+| :--- |
+| • Adjusted resource boxes pivot point|
