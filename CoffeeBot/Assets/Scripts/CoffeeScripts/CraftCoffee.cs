@@ -67,7 +67,7 @@ public class CraftCoffee : MonoBehaviour
         recipes.Add("CoffeeBeansWaterNull");
         recipes.Add("CoffeeBeansNullWater");
         recipes.Add("NullWaterCoffeeBeans");
-        //recipes.Add("NullWaterCoffeeBeans");
+        recipes.Add("NullCoffeeBeansWater");
 
         for (int i = 0; i < 6; i++)
         {
