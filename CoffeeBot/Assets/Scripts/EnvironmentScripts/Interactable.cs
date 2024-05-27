@@ -14,6 +14,7 @@ public class Interactable : MonoBehaviour
     private NpcStateManager npcStateManager;
     public Storage storage;
     public bool isMoving = false;
+    public Vector3 defaultRot;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -84,8 +85,11 @@ public class Interactable : MonoBehaviour
         }
         else
         {
+
             transform.parent = HoldArea.transform;
-            rb.position = HoldArea.transform.position;
+            transform.localPosition = Vector3.zero;
+            transform.rotation = Quaternion.Euler(defaultRot);
+            //rb.position = HoldArea.transform.position;
             rb.constraints = RigidbodyConstraints.FreezeAll;
             rb.mass = 0;
         }
