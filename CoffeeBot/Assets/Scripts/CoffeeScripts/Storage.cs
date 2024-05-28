@@ -94,7 +94,7 @@ public class Storage : MonoBehaviour
             indicatorText.SetActive(false);
         }
 
-        storageText.text = /*itemName + " " + */ currentCapacity.ToString();
+        storageText.text = /*itemName + " " + */ currentCapacity + "/" + maxCapacity.ToString();
     }
 
 

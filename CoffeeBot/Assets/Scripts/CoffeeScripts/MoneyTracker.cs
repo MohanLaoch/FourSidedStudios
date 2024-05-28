@@ -28,7 +28,7 @@ public class MoneyTracker : MonoBehaviour
     public float MoneyGivenCooldown = 3;
     public bool MoneyIsGiven;
     [Header("Timer Settings")]
-    public float maxTime = 45;
+    public float maxTime = 90;
     public float currentTime;
     private bool countDown = true;
 

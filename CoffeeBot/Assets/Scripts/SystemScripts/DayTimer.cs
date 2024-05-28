@@ -120,10 +120,19 @@ public class DayTimer : MonoBehaviour, IDataPersistence
 
     private void SetTimerText()
     {
-
-        float minutes = Mathf.FloorToInt (currentTime / 60);
-        float seconds = Mathf.FloorToInt (currentTime % 60);
-        timerText.text = "Day: " + sceneInfo.dayCount.ToString("0") + "/5" + " | Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+        if (currentTime <= 30)
+        {
+            timerText.color = Color.red;
+            float minutes = Mathf.FloorToInt(currentTime / 60);
+            float seconds = Mathf.FloorToInt(currentTime % 60);
+            timerText.text = "Day: " + sceneInfo.dayCount.ToString("0") + "/5" + " | Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
+        else
+        {
+            float minutes = Mathf.FloorToInt(currentTime / 60);
+            float seconds = Mathf.FloorToInt(currentTime % 60);
+            timerText.text = "Day: " + sceneInfo.dayCount.ToString("0") + "/5" + " | Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
 
     }
 

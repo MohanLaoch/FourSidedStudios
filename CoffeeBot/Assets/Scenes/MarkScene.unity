@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028541, g: 0.2257162, b: 0.30692482, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -629,6 +629,7 @@ MonoBehaviour:
   NPCAnim: {fileID: 0}
   storage: {fileID: 0}
   isMoving: 0
+  defaultRot: {x: 0, y: 0, z: 0}
 --- !u!4 &61243449 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1f891263573f26a4a93d478b8dcc8786, type: 3}
@@ -6809,7 +6810,7 @@ MonoBehaviour:
       Data2: 1242312114
       Data3: -545283155
       Data4: 1256072622
-    Path: event:/Environment/StrainRadio
+    Path: event:/StrainRadio
   Event: 
   PlayEvent: 1
   StopEvent: 0
@@ -8279,6 +8280,7 @@ MonoBehaviour:
   NPCAnim: {fileID: 0}
   storage: {fileID: 0}
   isMoving: 0
+  defaultRot: {x: 0, y: 0, z: 0}
 --- !u!4 &349575569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1f891263573f26a4a93d478b8dcc8786, type: 3}
@@ -9062,6 +9064,7 @@ MonoBehaviour:
   NPCAnim: {fileID: 1160594565}
   storage: {fileID: 0}
   isMoving: 0
+  defaultRot: {x: 0, y: 0, z: 0}
 --- !u!65 &385421445
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9124,6 +9127,10 @@ MonoBehaviour:
     m_NumColorKeys: 4
     m_NumAlphaKeys: 2
   sliderFill: {fileID: 1968077905}
+  givenMoneyText: {fileID: 0}
+  givenMoneyAnim: {fileID: 0}
+  MoneyGivenCooldown: 3
+  MoneyIsGiven: 0
   maxTime: 30
   currentTime: 0
   timerLimit: 0
@@ -14746,6 +14753,7 @@ MonoBehaviour:
   upgradesFirstButton: {fileID: 0}
   endOfDayFirstButton: {fileID: 0}
   coffeeMenuFirstButton: {fileID: 0}
+  MainCamera: {fileID: 0}
 --- !u!4 &788972176
 Transform:
   m_ObjectHideFlags: 0
@@ -20233,6 +20241,7 @@ MonoBehaviour:
   NPCAnim: {fileID: 0}
   storage: {fileID: 0}
   isMoving: 0
+  defaultRot: {x: 0, y: 0, z: 0}
 --- !u!4 &1118071591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1f891263573f26a4a93d478b8dcc8786, type: 3}
@@ -26313,6 +26322,7 @@ MonoBehaviour:
   NPCAnim: {fileID: 0}
   storage: {fileID: 0}
   isMoving: 0
+  defaultRot: {x: 0, y: 0, z: 0}
 --- !u!4 &1188513745 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1f891263573f26a4a93d478b8dcc8786, type: 3}
