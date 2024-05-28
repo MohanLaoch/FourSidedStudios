@@ -9,6 +9,7 @@ public class DayTimer : MonoBehaviour, IDataPersistence
     public SceneInfo sceneInfo;
 
     [Header("UI Elements")]
+    public TextMeshProUGUI dayCounterText;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI creditsText;
     public TextMeshProUGUI billsText;
@@ -122,16 +123,18 @@ public class DayTimer : MonoBehaviour, IDataPersistence
     {
         if (currentTime <= 30)
         {
-            timerText.color = Color.red;
             float minutes = Mathf.FloorToInt(currentTime / 60);
             float seconds = Mathf.FloorToInt(currentTime % 60);
-            timerText.text = "Day: " + sceneInfo.dayCount.ToString("0") + "/5" + " | Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+            dayCounterText.text = "Day: " + sceneInfo.dayCount.ToString("0") + "/5" + " | Time left: ";
+            timerText.color = Color.red;
+            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
         else
         {
             float minutes = Mathf.FloorToInt(currentTime / 60);
             float seconds = Mathf.FloorToInt(currentTime % 60);
-            timerText.text = "Day: " + sceneInfo.dayCount.ToString("0") + "/5" + " | Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+            dayCounterText.text = "Day: " + sceneInfo.dayCount.ToString("0") + "/5" + " | Time left: ";
+            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
 
     }
