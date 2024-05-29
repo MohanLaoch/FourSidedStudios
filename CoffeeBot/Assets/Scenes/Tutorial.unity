@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30321336, g: 0.12815265, b: 0.34266487, a: 1}
+  m_IndirectSpecularColor: {r: 0.30322725, g: 0.12813418, b: 0.342678, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8273,7 +8273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5741020048260922060, guid: 49d1f76f763226149b2bde7a701dfadd, type: 3}
       propertyPath: action.m_SingletonActionBindings.Array.data[1].m_Path
-      value: <Gamepad>/rightStickPress
+      value: <Gamepad>/buttonWest
       objectReference: {fileID: 0}
     - target: {fileID: 5741020048260922060, guid: 49d1f76f763226149b2bde7a701dfadd, type: 3}
       propertyPath: action.m_SingletonActionBindings.Array.data[0].m_Action
@@ -8624,6 +8624,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 1.351
       objectReference: {fileID: 0}
+    - target: {fileID: 1482964727, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.243
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482964727, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.134
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482964727, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.376
+      objectReference: {fileID: 0}
     - target: {fileID: 1553618392, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8642,6 +8654,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 222021584539643574, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 236990001940839718, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.149
+      objectReference: {fileID: 0}
+    - target: {fileID: 236990001940839718, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.031
+      objectReference: {fileID: 0}
+    - target: {fileID: 236990001940839718, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1642389129339958234, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
@@ -8696,8 +8720,28 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7409956907646837257, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.159
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409956907646837257, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.052
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409956907646837257, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 7411662171547085512, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
       propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288480963055675906, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.078
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378439892388379125, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8975034988716057548, guid: 9959bb5d39f8bac488c2c9c310411043, type: 3}
@@ -18111,6 +18155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1347141498}
   sceneInfo: {fileID: 11400000, guid: 4a278d09038d67347a83391bb02cbcee, type: 2}
+  dayCounterText: {fileID: 0}
   timerText: {fileID: 0}
   creditsText: {fileID: 0}
   billsText: {fileID: 0}
