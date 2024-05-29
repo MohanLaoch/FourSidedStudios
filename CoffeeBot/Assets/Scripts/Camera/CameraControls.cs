@@ -107,7 +107,7 @@ public partial class @CameraControls : IInputActionCollection2, IDisposable
                     ""id"": ""65ec2222-f6e4-4631-b5b2-aca958d8cefb"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""ScaleVector2(x=2.5,y=2.5)"",
                     ""groups"": """",
                     ""action"": ""Look"",
                     ""isComposite"": false,
