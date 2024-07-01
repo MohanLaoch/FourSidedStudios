@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30321336, g: 0.12815265, b: 0.34266487, a: 1}
+  m_IndirectSpecularColor: {r: 0.30322725, g: 0.12813418, b: 0.342678, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5882,6 +5882,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1383124894901354728, guid: 4c47073255887ae45ba9155de60a6a55, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.011
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383124894901354728, guid: 4c47073255887ae45ba9155de60a6a55, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.61
+      objectReference: {fileID: 0}
     - target: {fileID: 1449017626277795274, guid: 4c47073255887ae45ba9155de60a6a55, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -29834,7 +29842,7 @@ GameObject:
   - component: {fileID: 1289894929416594577}
   - component: {fileID: 1289894929416594583}
   - component: {fileID: 1289894929416594576}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: ButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30001,8 +30009,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.25, z: 1}
-  m_Center: {x: 0, y: -0.38, z: 0}
+  m_Size: {x: 1, y: 0.72144616, z: 1}
+  m_Center: {x: 0, y: -0.14427692, z: 0}
 --- !u!1 &1289894929458196349
 GameObject:
   m_ObjectHideFlags: 0
@@ -30153,7 +30161,7 @@ GameObject:
   - component: {fileID: 1289894930186253052}
   - component: {fileID: 1289894930186253053}
   - component: {fileID: 1289894930186253054}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: StorageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30229,7 +30237,7 @@ GameObject:
   - component: {fileID: 1289894930219756125}
   - component: {fileID: 1289894930219756115}
   - component: {fileID: 1289894930219756124}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: StorageImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30306,7 +30314,7 @@ GameObject:
   - component: {fileID: 1289894930457860197}
   - component: {fileID: 1289894930457860187}
   - component: {fileID: 1289894930457860196}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: TextImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30384,6 +30392,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 972b675d96bb60b43bd18b626a1cf602, type: 3}
       propertyPath: m_Name
       value: CoffeeHopperBottom_model
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 972b675d96bb60b43bd18b626a1cf602, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -30465,6 +30477,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoffeeHopperBottom_model (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 972b675d96bb60b43bd18b626a1cf602, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 972b675d96bb60b43bd18b626a1cf602, type: 3}
@@ -30545,6 +30561,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoffeeHopperMiddle_model (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a25a14d831caae4f98966544cede16c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a25a14d831caae4f98966544cede16c, type: 3}
@@ -30562,7 +30582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2316033414656757207}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CoffeeHopper2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30658,6 +30678,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 30e838d946d1e9b4994d2eb095d17ec1, type: 3}
       propertyPath: m_Name
       value: CoffeeHopperTop_model
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 30e838d946d1e9b4994d2eb095d17ec1, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -30773,6 +30797,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3containerstand_model (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 153e4aa20721cdf4f9d60d668f6ab0b8, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 153e4aa20721cdf4f9d60d668f6ab0b8, type: 3}
@@ -30790,7 +30818,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2316033415360985133}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CoffeeHopper1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30887,6 +30915,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoffeeHopperMiddle_model
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a25a14d831caae4f98966544cede16c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a25a14d831caae4f98966544cede16c, type: 3}
@@ -30966,6 +30998,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 30e838d946d1e9b4994d2eb095d17ec1, type: 3}
       propertyPath: m_Name
       value: CoffeeHopperTop_model (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 30e838d946d1e9b4994d2eb095d17ec1, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -38678,8 +38714,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.25, z: 1}
-  m_Center: {x: 0, y: -0.38, z: 0}
+  m_Size: {x: 1, y: 0.7214462, z: 1}
+  m_Center: {x: 0, y: -0.1442769, z: 0}
 --- !u!23 &6661905969327424101
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38996,8 +39032,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.25, z: 1}
-  m_Center: {x: 0, y: -0.38, z: 0}
+  m_Size: {x: 1, y: 0.7214462, z: 1}
+  m_Center: {x: 0, y: -0.1442769, z: 0}
 --- !u!114 &7124562293754631818
 MonoBehaviour:
   m_ObjectHideFlags: 0
