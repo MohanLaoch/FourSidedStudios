@@ -9574,7 +9574,11 @@ MonoBehaviour:
     m_NumColorKeys: 4
     m_NumAlphaKeys: 2
   sliderFill: {fileID: 1202229740}
-  maxTime: 60
+  givenMoneyText: {fileID: 0}
+  givenMoneyAnim: {fileID: 0}
+  MoneyGivenCooldown: 3
+  MoneyIsGiven: 0
+  maxTime: 90
   currentTime: 0
   timerLimit: 0
   upset: 0
@@ -9622,6 +9626,7 @@ MonoBehaviour:
   NPCAnim: {fileID: 7617953996999605009}
   storage: {fileID: 0}
   isMoving: 0
+  defaultRot: {x: 0, y: 0, z: 0}
 --- !u!54 &7311876698218171432
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9700,6 +9705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   furnitureManager: {fileID: 1483290656989490380, guid: d0ad1172aad19654b93fcdcf78786ef3, type: 3}
+  moneyTracker: {fileID: 7311876698218171413}
   player: {fileID: 0}
   hasLeft: 0
   isLeaving: 0

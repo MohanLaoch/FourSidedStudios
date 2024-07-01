@@ -37,7 +37,12 @@ public class NpcWanderState : NpcBaseState
             wanderRadius = 10f;
             wanderTimer = 5f;
         }
-        
+
+        if (agent.height > 1.5f && npc.GetComponent<NpcStateManager>().moneyTracker.upset)
+        {
+            npc.SwitchState(npc.leavingState);
+        }
+
     }
 
     public override void UpdateState(NpcStateManager npc)
@@ -80,7 +85,10 @@ public class NpcWanderState : NpcBaseState
             agent.SetDestination(target.position);
         }
 
-
+        if(agent.height > 1.5f && npc.GetComponent<NpcStateManager>().moneyTracker.upset)
+        {           
+            npc.SwitchState(npc.leavingState);                       
+        }
 
     }
 

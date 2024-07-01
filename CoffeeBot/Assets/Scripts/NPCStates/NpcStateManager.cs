@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class NpcStateManager : MonoBehaviour
 {
     public FurnitureManager furnitureManager;
+    public MoneyTracker moneyTracker;
     public Player player;
     public bool hasLeft = false;
     public bool isLeaving = false;

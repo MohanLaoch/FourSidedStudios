@@ -99,6 +99,12 @@ public class NpcSittingState : NpcBaseState
             //navMeshAgent.enabled = true;
 
         }
+
+        if(npc.GetComponent<NpcStateManager>().moneyTracker.upset)
+        {
+            npc.SwitchState(npc.leavingState);
+            //put this in wander state if it works
+        }
     }
 
     public override void OnCollisionEnter(NpcStateManager npc, Collision collision)
