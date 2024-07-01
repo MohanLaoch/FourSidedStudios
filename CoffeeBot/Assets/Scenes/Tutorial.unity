@@ -30026,6 +30026,7 @@ GameObject:
   - component: {fileID: 1289894929458196343}
   - component: {fileID: 1289894929458196336}
   - component: {fileID: 1289894929458196342}
+  - component: {fileID: 1289894929458196350}
   m_Layer: 7
   m_Name: StorageUnitA
   m_TagString: Storage
@@ -30033,6 +30034,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!135 &1289894929458196350
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289894929458196349}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.54
+  m_Center: {x: -0.00008273125, y: 0.21109468, z: 0.06}
 --- !u!224 &1289894930186253052
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38624,6 +38638,7 @@ GameObject:
   - component: {fileID: 6661905969327424099}
   - component: {fileID: 6661905969327424097}
   - component: {fileID: 6661905969327424103}
+  - component: {fileID: 6661905969327424104}
   m_Layer: 7
   m_Name: StorageUnitB
   m_TagString: Storage
@@ -38785,6 +38800,19 @@ MonoBehaviour:
   storage: {fileID: 0}
   isMoving: 0
   defaultRot: {x: 0, y: 0, z: 0}
+--- !u!135 &6661905969327424104
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6661905969327424096}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.54
+  m_Center: {x: -0.00008273125, y: 0.21109468, z: 0.06}
 --- !u!222 &6661905969563963040
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39118,6 +39146,7 @@ GameObject:
   - component: {fileID: 7124562293754631830}
   - component: {fileID: 7124562293754631828}
   - component: {fileID: 7124562293754631818}
+  - component: {fileID: 7124562293754631832}
   m_Layer: 7
   m_Name: StorageUnitC
   m_TagString: Storage
@@ -39155,6 +39184,19 @@ Transform:
   m_Father: {fileID: 507917317}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &7124562293754631832
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7124562293754631829}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.54
+  m_Center: {x: -0.00008273125, y: 0.21109468, z: 0.06}
 --- !u!224 &7124562293934633448
 RectTransform:
   m_ObjectHideFlags: 0
