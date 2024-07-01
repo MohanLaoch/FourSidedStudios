@@ -28,6 +28,15 @@ public class Player : MonoBehaviour, IDataPersistence
     public TextMeshProUGUI noCreditsText;
 
     public Animator PlayerAnim;
+    public AnimatorStateInfo playeranimStateInfo;
+    public float Ntime;
+    public bool animationFinished;
+    public bool animStarted;
+    public float armsCooldownTime;
+    private float armsCooldownTimer;
+    private bool armIsCooldown = false;
+
+
     public float Speed = 5f;
     public float OgSpeed = 2f;
     public float DashForce = 25f;
@@ -38,6 +47,7 @@ public class Player : MonoBehaviour, IDataPersistence
     public float dashCooldownTime;
     private float dashCooldownTimer;
     private bool dashIsCooldown = false;
+    public bool Dashing = false;
 
     public Rigidbody rb;
     public Transform RayZone;
@@ -134,7 +144,8 @@ public class Player : MonoBehaviour, IDataPersistence
         }
 
 
-
+        playeranimStateInfo = PlayerAnim.GetCurrentAnimatorStateInfo(0);
+        Ntime = playeranimStateInfo.normalizedTime;
 
     }
 
@@ -171,6 +182,8 @@ public class Player : MonoBehaviour, IDataPersistence
             Debug.Log("OOGABOOGA");
             sceneInfo.storageMax = 1;
         }
+
+  
 
     }
 
@@ -341,8 +354,11 @@ public class Player : MonoBehaviour, IDataPersistence
     {
         
         PlayerMovement.setParameterByName("PitchChange", Speed);
-
-        HandleMovement();
+        if(!Dashing)
+        {
+            HandleMovement();
+        }
+        
         UpdateMovementSound();
         
         MaxSpeed = sceneInfo.playerSpeed;
@@ -392,7 +408,11 @@ public class Player : MonoBehaviour, IDataPersistence
             ApplyDashCooldown();
         }
 
-
+        if (armIsCooldown)
+        {
+            ApplyArmCooldown();
+        }
+           
 
 
     }
@@ -486,7 +506,7 @@ public class Player : MonoBehaviour, IDataPersistence
         {
 
 
-            if (isMoving || dashIsCooldown)
+            if (dashIsCooldown)
             {
                 return;
             }
@@ -494,6 +514,7 @@ public class Player : MonoBehaviour, IDataPersistence
            
             if (context.performed && IsGrounded())
             {
+                Dashing = true;
                 dashIsCooldown = true;
                 dashCooldownTimer = dashCooldownTime;
                 playerInput.enabled = false;
@@ -520,11 +541,28 @@ public class Player : MonoBehaviour, IDataPersistence
     public void ApplyDashCooldown()
     {
         dashCooldownTimer -= Time.deltaTime;
-
+        if(dashCooldownTimer < 1f)
+        {
+            Dashing = false;
+        }
+         
         if(dashCooldownTimer < 0.0f)
         {
             playerInput.enabled = true;
             dashIsCooldown = false;
+            //play sound to indicate cooldown ended
+        }
+
+    }
+
+    public void ApplyArmCooldown()
+    {
+       armsCooldownTimer -= Time.deltaTime;
+
+        if (armsCooldownTimer < 0.0f)
+        {
+            playerInput.enabled = true;
+            armIsCooldown = false;
             //play sound to indicate cooldown ended
         }
 
@@ -623,8 +661,13 @@ public class Player : MonoBehaviour, IDataPersistence
         UpdateArmSound();
         
         //armies.setparamaterbyname("parameter1, 0);
+        /*when the animation is finished, THEN set the bool to true*/
+
         PlayerAnim.SetBool("ArmsRaised", true);
+
+
         PlayerAnim.SetBool("ArmsLowered", false);
+
 
     }
 
@@ -643,17 +686,25 @@ public class Player : MonoBehaviour, IDataPersistence
 
     public void ArmRaise(InputAction.CallbackContext context)
     {
-
+        if(armIsCooldown)
+        {
+            return;
+        }
 
         if (context.performed && !ArmsRaised)
         {
             ArmsRaised = true;
+            armIsCooldown = true;
+            armsCooldownTimer = armsCooldownTime;
+            playerInput.enabled = false;
             ArmRising();
-
         }
         else if (context.performed && ArmsRaised)
         {
             ArmsRaised = false;
+            armIsCooldown = true;
+            armsCooldownTimer = armsCooldownTime;
+            playerInput.enabled = false;
             ArmLowering();
         }
 
