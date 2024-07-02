@@ -81,27 +81,27 @@ public class UnlockCoffee : MonoBehaviour
 
     public void Start()
     {
-      if(sceneInfo.ChaiLatteUnlocked)
+      if(sceneInfo.dayCount >=4) // Tea day 4
       {
             UnlockChaiLatte();
       }
-      if(sceneInfo.HotChocolateUnlocked)
+      if(sceneInfo.dayCount >= 3) // Choc day 3
       {
             UnlockHotChocolate();
       }
-      if(sceneInfo.IcedCoffeeUnlocked)
+      if(sceneInfo.dayCount >= 2) // Ice day 2
       {
             UnlockIcedCoffee();
       }
-      if(sceneInfo.IcedLatteUnlocked)
+      if(sceneInfo.dayCount >= 2) // Ice day 2
       {
             UnlockIcedLatte();
       }
-      if(sceneInfo.MochaUnlocked)
+      if(sceneInfo.dayCount >= 3) // Choc day 3
       {
             UnlockMocha();
       }
-      if(sceneInfo.TeaUnlocked)
+      if(sceneInfo.dayCount >= 4) // Tea day 4
       {
             UnlockTea();
       }
