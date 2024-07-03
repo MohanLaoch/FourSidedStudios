@@ -41,6 +41,7 @@ public class NpcWanderState : NpcBaseState
         if (agent.height > 1.5f && npc.GetComponent<NpcStateManager>().moneyTracker.upset)
         {
             npc.SwitchState(npc.leavingState);
+            npc.GetComponent<OrderCoffee>().NoOrder();
         }
 
     }

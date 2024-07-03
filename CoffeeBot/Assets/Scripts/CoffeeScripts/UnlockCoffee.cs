@@ -81,7 +81,7 @@ public class UnlockCoffee : MonoBehaviour
 
     public void Start()
     {
-      if(sceneInfo.dayCount >=4) // Tea day 4
+      if(sceneInfo.dayCount >= 4) // Tea day 4
       {
             UnlockChaiLatte();
       }

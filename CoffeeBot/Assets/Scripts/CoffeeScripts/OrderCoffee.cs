@@ -147,6 +147,19 @@ public class OrderCoffee : MonoBehaviour
 
         moneyTracker.CompleteOrder();
 
+
+        
+    }
+
+    public void NoOrder()
+    {
+        responseBubbleImage.sprite = negativeBubble;
+
+        int randomIndex = Random.Range(0, negativeResponses.Length);
+
+        string randomResponse = negativeResponses[randomIndex];
+
+        responseText.text = randomResponse;
     }
 
     /* randomly order from a list of coffeeOrders - choose a random string, which will give us it's int 

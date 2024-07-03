@@ -103,6 +103,7 @@ public class NpcSittingState : NpcBaseState
         if(npc.GetComponent<NpcStateManager>().moneyTracker.upset)
         {
             npc.SwitchState(npc.leavingState);
+            npc.GetComponent<OrderCoffee>().NoOrder();
             //put this in wander state if it works
         }
     }
