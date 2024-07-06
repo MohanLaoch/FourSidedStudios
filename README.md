@@ -1187,3 +1187,10 @@
 | • imported xbox control sprites (standard+bubbles)|
 | • imported promotion 3 ending screen sprite|
 | • added the above to GoodEnding Scene|
+
+### 06/07/2024
+
+| **Mark** |
+| :--- |
+| • imported bankrupt serg.io + all relevant textures|
+| • added the above to Mark Scene|
