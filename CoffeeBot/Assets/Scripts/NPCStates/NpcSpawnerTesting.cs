@@ -16,7 +16,11 @@ public class NpcSpawnerTesting : MonoBehaviour
     {
         SRKChance = Random.Range(1, 10);
         Instantiate(NPC, new Vector3(Spawnpoint.position.x, Spawnpoint.position.y, Spawnpoint.position.z), Quaternion.identity);
-        StartCoroutine(SpawnNPC());
+
+        if(sceneInfo.dayCount != 0)
+        {
+            StartCoroutine(SpawnNPC());
+        }
     }
 
     public void Update()

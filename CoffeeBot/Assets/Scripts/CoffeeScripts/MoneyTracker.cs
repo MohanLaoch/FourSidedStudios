@@ -41,11 +41,12 @@ public class MoneyTracker : MonoBehaviour
     [HideInInspector]
     public bool upset = false;
 
-    
 
     // Start is called before the first frame update
     void Start()
     {
+
+
         moneySound = AudioManager.instance.CreateInstance(FMODEvents.instance.NPCMoney);
 
 

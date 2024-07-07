@@ -55,8 +55,15 @@ public class DayTimer : MonoBehaviour, IDataPersistence
 
     private void Start()
     {
-        StartFirstDay();       
-
+        if(sceneInfo.dayCount != 0)
+        {
+            StartFirstDay();
+        }
+        else
+        {
+            timerActive = false;
+            currentTime = 120;
+        }
     }
 
     private void Update()

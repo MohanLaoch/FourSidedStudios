@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using TMPro;
 
 public class ToMainScene : MonoBehaviour
 {
@@ -13,7 +15,9 @@ public class ToMainScene : MonoBehaviour
     public SceneInfo sceneInfo;
 
     public GameObject npcText;
+    public GameObject npcTextMainScene;
     private bool canLoad = false;
+
 
     private void OnEnable()
     {
@@ -24,19 +28,31 @@ public class ToMainScene : MonoBehaviour
     {
         action.Disable();
     }
+    public void Awake()
+    {
+        if (sceneInfo.dayCount != 0)
+        {
+            GetComponent<ToMainScene>().enabled = false;
+        }
+    }
 
     private void Start()
     {
+        npcTextMainScene = GameObject.Find("BaristaText");
+
         action.performed += ctx => LoadNextScene();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Latte" || other.gameObject.tag == "Cappuccino")
+        
+
+        if (other.gameObject.tag == "Latte" || other.gameObject.tag == "Cappuccino" || other.gameObject.tag == "Americano")
         {
             Destroy(other.gameObject);
             canLoad = true;
-            npcText.SetActive(true);
+            npcTextMainScene.GetComponent<Image>().enabled = true;
+            npcTextMainScene.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
         }
     }
 
@@ -44,9 +60,12 @@ public class ToMainScene : MonoBehaviour
     {
         if (canLoad)
         {
-            SceneManager.LoadScene(sceneName);
-            sceneInfo.Reset();
             DataPersistenceManager.instance.NewGame();
+            sceneInfo.Reset();
+            DataPersistenceManager.instance.SaveGame();           
+            SceneManager.LoadScene(sceneName);
+            
+            
         }
         else
             return;
