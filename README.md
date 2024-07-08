@@ -1194,3 +1194,9 @@
 | :--- |
 | • imported bankrupt serg.io + all relevant textures|
 | • added the above to Mark Scene|
+
+### 08/07/2024
+
+| **Mark** |
+| :--- |
+| • flap physics|
