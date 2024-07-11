@@ -17208,7 +17208,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh66784
+  m_Name: pb_Mesh62792
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -63140,15 +63140,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8271462726415679057, guid: 68fa0633d76c0f54cbc7ccefe8f74b58, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.53
       objectReference: {fileID: 0}
     - target: {fileID: 8271462726415679057, guid: 68fa0633d76c0f54cbc7ccefe8f74b58, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.209
       objectReference: {fileID: 0}
     - target: {fileID: 8271462726415679057, guid: 68fa0633d76c0f54cbc7ccefe8f74b58, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -7.15
       objectReference: {fileID: 0}
     - target: {fileID: 8271462726415679057, guid: 68fa0633d76c0f54cbc7ccefe8f74b58, type: 3}
       propertyPath: m_LocalRotation.w
@@ -63177,6 +63177,30 @@ PrefabInstance:
     - target: {fileID: 8271462726415679057, guid: 68fa0633d76c0f54cbc7ccefe8f74b58, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448923307840805278, guid: 68fa0633d76c0f54cbc7ccefe8f74b58, type: 3}
+      propertyPath: m_LowAngularXLimit.limit
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448923307840805278, guid: 68fa0633d76c0f54cbc7ccefe8f74b58, type: 3}
+      propertyPath: m_HighAngularXLimit.limit
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448923307943296012, guid: 68fa0633d76c0f54cbc7ccefe8f74b58, type: 3}
+      propertyPath: m_AngularYMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448923307943296012, guid: 68fa0633d76c0f54cbc7ccefe8f74b58, type: 3}
+      propertyPath: m_AngularYLimit.limit
+      value: 62.981285
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448923307943296012, guid: 68fa0633d76c0f54cbc7ccefe8f74b58, type: 3}
+      propertyPath: m_LowAngularXLimit.limit
+      value: -177
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448923307943296012, guid: 68fa0633d76c0f54cbc7ccefe8f74b58, type: 3}
+      propertyPath: m_HighAngularXLimit.limit
+      value: -177
       objectReference: {fileID: 0}
     - target: {fileID: 8755546512673711339, guid: 68fa0633d76c0f54cbc7ccefe8f74b58, type: 3}
       propertyPath: m_Name
