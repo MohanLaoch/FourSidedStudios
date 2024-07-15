@@ -62,7 +62,7 @@ public class DayTimer : MonoBehaviour, IDataPersistence
         else
         {
             timerActive = false;
-            currentTime = 120;
+            currentTime = 180;
         }
     }
 
