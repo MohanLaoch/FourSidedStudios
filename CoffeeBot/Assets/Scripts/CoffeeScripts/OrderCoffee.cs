@@ -48,7 +48,7 @@ public class OrderCoffee : MonoBehaviour
     private void Awake()
     {
         // assign player script
-        player = GameObject.Find("Sergio").GetComponent<Player>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         avaliableOrders = GameObject.Find("UnlockCoffee").GetComponent<AvaliableOrders>();
         viewportContent = GameObject.Find("Content");
 
