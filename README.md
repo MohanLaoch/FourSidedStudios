@@ -1206,3 +1206,10 @@
 | **Mark** |
 | :--- |
 | • bankrupt serg.io prefab, ready for giga serg merge|
+
+### 22/07/2024
+
+| **Mark** |
+| :--- |
+| • GigaSerg the second added to Mark Scene|
+| • added animator to the above|
