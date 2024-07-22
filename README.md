@@ -1213,3 +1213,5 @@
 | :--- |
 | • GigaSerg the second added to Mark Scene|
 | • added animator to the above|
+| • Imported bankrupt serg skin selection button sprites|
+| • added the above to skin selection scene|
