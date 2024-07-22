@@ -12,7 +12,7 @@ public class OrderCoffee : MonoBehaviour
     public AvaliableOrders avaliableOrders;
     public Player player;
     public MoneyTracker moneyTracker;
-    
+    public SceneInfo sceneInfo;
 
     [Header("Coffee")]
 
@@ -133,8 +133,10 @@ public class OrderCoffee : MonoBehaviour
             responseText.text = randomResponse;
         }
 
-
-        GetComponent<NpcStateManager>().SwitchState(GetComponent<NpcStateManager>().leavingState);
+        if(sceneInfo.dayCount != 0)
+        {
+         GetComponent<NpcStateManager>().SwitchState(GetComponent<NpcStateManager>().leavingState);
+        }
         //activate colliders again
         GetComponent<NavMeshAgent>().enabled = true;
         GetComponent<NpcStateManager>().isLeaving = true;
