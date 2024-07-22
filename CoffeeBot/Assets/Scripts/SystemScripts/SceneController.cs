@@ -123,6 +123,10 @@ public class SceneController : MonoBehaviour
     {
         sceneInfo.SkinCounter = 5;
     }
+    public void SetSkin6()
+    {
+        sceneInfo.SkinCounter = 6;
+    }
 
     public void UpdateClickSound()
     {

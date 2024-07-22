@@ -88,6 +88,7 @@ public class Player : MonoBehaviour, IDataPersistence
     public GameObject Skin3;
     public GameObject Skin4;
     public GameObject Skin5;
+    public GameObject Skin6;
 
     public bool Highlighted = false;
     public GameObject boxUI;
@@ -139,6 +140,9 @@ public class Player : MonoBehaviour, IDataPersistence
                 break;
             case 5:
                 Skin5.SetActive(true);
+                break;
+            case 6:
+                Skin6.SetActive(true);
                 break;
 
         }
@@ -570,10 +574,14 @@ public class Player : MonoBehaviour, IDataPersistence
 
     public void Storing(InputAction.CallbackContext context)
     {
-        if(context.performed && GumballMachine.GetComponent<GumballMachine>().AtMachine)
+        if(GumballMachine != null)
         {
-            EPressed = true;
+            if (context.performed && GumballMachine.GetComponent<GumballMachine>().AtMachine)
+            {
+                EPressed = true;
+            }
         }
+
 
 
         if (Holding && storage.atStorage)
