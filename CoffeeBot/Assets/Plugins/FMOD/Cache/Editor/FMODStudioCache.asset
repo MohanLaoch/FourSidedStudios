@@ -1,33 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8931155856931033950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/StrainRadio
-  m_EditorClassIdentifier: 
-  Path: event:/StrainRadio
-  Guid:
-    Data1: -2133373184
-    Data2: 1242312114
-    Data3: -545283155
-    Data4: 1256072622
-  Banks:
-  - {fileID: -2829904035710282659}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 7497791465903808492}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 140878
 --- !u!114 &-8635635702489135998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,35 +81,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 660
---- !u!114 &-7940175985813623500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Environment/Busyness
-  m_EditorClassIdentifier: 
-  Path: event:/Environment/Busyness
-  Guid:
-    Data1: -1210514119
-    Data2: 1320579798
-    Data3: -2067279441
-    Data4: 898307612
-  Banks:
-  - {fileID: -2829904035710282659}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -7201420702147015251}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 435169
---- !u!114 &-7201420702147015251
+--- !u!114 &-7004692793883034818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,21 +91,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Busyness/Business
+  m_Name: parameter:/StrainRadio/Strained
   m_EditorClassIdentifier: 
-  Name: Business
+  Name: Strained
   StudioPath: 
   Min: 0
   Max: 1
   Default: 0
   ID:
-    data1: 228373346
-    data2: 4200143532
+    data1: 3402970462
+    data2: 1337652109
   Type: 2
   IsGlobal: 0
   Labels:
-  - Cafe_Quiet
-  - Cafe_Busy
+  - NotStrained
+  - Strained
   Exists: 1
 --- !u!114 &-6782609054513851589
 MonoBehaviour:
@@ -178,37 +122,10 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638507047303668917
+  lastModified: 638501776538044180
   FileSizes:
   - Name: Desktop
-    Value: 2526
-  Exists: 1
---- !u!114 &-5290639569961846647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/area
-  m_EditorClassIdentifier: 
-  Name: area
-  StudioPath: 
-  Min: 0
-  Max: 2
-  Default: 0
-  ID:
-    data1: 37750113
-    data2: 2903817195
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Menu
-  - Tutorial
-  - MainLevel
+    Value: 2076
   Exists: 1
 --- !u!114 &-5037510701733710993
 MonoBehaviour:
@@ -235,32 +152,6 @@ MonoBehaviour:
   Labels:
   - IsClicked
   - NotClicked
-  Exists: 1
---- !u!114 &-3444313035998587557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/Strained
-  m_EditorClassIdentifier: 
-  Name: Strained
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3402970462
-    data2: 1337652109
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - NotStrained
-  - Strained
   Exists: 1
 --- !u!114 &-3227867483018160399
 MonoBehaviour:
@@ -290,35 +181,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3850
---- !u!114 &-2902860349501499245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music
-  m_EditorClassIdentifier: 
-  Path: event:/Music
-  Guid:
-    Data1: -1933487269
-    Data2: 1295896043
-    Data3: -1409378138
-    Data4: 2131176060
-  Banks:
-  - {fileID: -2829904035710282659}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -5290639569961846647}
-  - {fileID: -3444313035998587557}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-2855408835893807952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,10 +223,36 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 638507047302998916
+  lastModified: 638501776537734126
   FileSizes:
   - Name: Desktop
-    Value: 8765664
+    Value: 5449120
+  Exists: 1
+--- !u!114 &-989248690691967166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Busyness/Business
+  m_EditorClassIdentifier: 
+  Name: Business
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 228373346
+    data2: 4200143532
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Cafe_Quiet
+  - Cafe_Busy
   Exists: 1
 --- !u!114 &-867277461890181809
 MonoBehaviour:
@@ -453,18 +341,16 @@ MonoBehaviour:
   - {fileID: -8077971366026363984}
   - {fileID: -8550461806842305362}
   - {fileID: 5344177886579684485}
-  - {fileID: -8931155856931033950}
-  - {fileID: -7940175985813623500}
-  - {fileID: -2902860349501499245}
-  - {fileID: 998291232557851947}
+  - {fileID: 5086281923751768966}
+  - {fileID: 877387630374301806}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6782609054513851589}
   StringsBanks:
   - {fileID: 6128693005037801278}
-  cacheTime: 638507047305771106
+  cacheTime: 638501776571400014
   cacheVersion: 131609
---- !u!114 &998291232557851947
+--- !u!114 &877387630374301806
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -474,23 +360,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/MenuMusic
+  m_Name: event:/Environmet/StrainRadio
   m_EditorClassIdentifier: 
-  Path: event:/MenuMusic
+  Path: event:/Environmet/StrainRadio
   Guid:
-    Data1: -1218806650
-    Data2: 1270962436
-    Data3: 232150918
-    Data4: -2003544044
+    Data1: -2133373184
+    Data2: 1242312114
+    Data3: -545283155
+    Data4: 1256072622
   Banks:
-  - {fileID: -2829904035710282659}
+  - {fileID: 3373333903977561061}
   IsStream: 1
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: -7004692793883034818}
   MinDistance: 1
   MaxDistance: 20
-  Length: 32000
+  Length: 140878
 --- !u!114 &2270765960980991360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -557,10 +444,10 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Serg.io.bank
   Name: Serg.io
   StudioPath: bank:/Serg.io
-  lastModified: 638507047305771106
+  lastModified: 638501776570909924
   FileSizes:
   - Name: Desktop
-    Value: 349856
+    Value: 2305888
   Exists: 1
 --- !u!114 &4764089716858289380
 MonoBehaviour:
@@ -604,11 +491,39 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/NPC.bank
   Name: NPC
   StudioPath: bank:/NPC
-  lastModified: 638507047304945283
+  lastModified: 638501776539339416
   FileSizes:
   - Name: Desktop
     Value: 143872
   Exists: 1
+--- !u!114 &5086281923751768966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environmet/Busyness
+  m_EditorClassIdentifier: 
+  Path: event:/Environmet/Busyness
+  Guid:
+    Data1: -1210514119
+    Data2: 1320579798
+    Data3: -2067279441
+    Data4: 898307612
+  Banks:
+  - {fileID: -2829904035710282659}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -989248690691967166}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 435169
 --- !u!114 &5089757307834482330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,10 +650,10 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638507047303709020
+  lastModified: 638501776538064184
   FileSizes:
   - Name: Desktop
-    Value: 2198
+    Value: 1950
   Exists: 1
 --- !u!114 &6139607209554578035
 MonoBehaviour:
@@ -782,7 +697,7 @@ MonoBehaviour:
   Path: Assets/Fmod/CoffeeBotFmod/Build/Desktop/Menu.bank
   Name: Menu
   StudioPath: bank:/Menu
-  lastModified: 638507047304019020
+  lastModified: 638501776571400014
   FileSizes:
   - Name: Desktop
     Value: 13120
@@ -814,32 +729,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
---- !u!114 &7497791465903808492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/StrainRadio/Strained
-  m_EditorClassIdentifier: 
-  Name: Strained
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3402970462
-    data2: 1337652109
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - NotStrained
-  - Strained
-  Exists: 1
 --- !u!114 &8459935840170534523
 MonoBehaviour:
   m_ObjectHideFlags: 0

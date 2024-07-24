@@ -1215,3 +1215,10 @@
 | • added animator to the above|
 | • Imported bankrupt serg skin selection button sprites|
 | • added the above to skin selection scene|
+
+### 24/07/2024
+
+| **Mark** |
+| :--- |
+| • Imported locked character select button sprites|
+| • Readded respective hats to Serg.io + Gold Serg.io in Prototype 1 scene + Tutorial scene|
