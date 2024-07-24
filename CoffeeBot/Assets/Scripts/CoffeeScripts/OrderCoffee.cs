@@ -103,6 +103,7 @@ public class OrderCoffee : MonoBehaviour
     private void CompleteOrder()
     {
         Destroy(orderGameObject);
+        
 
         acceptedCoffeeTag = "";
 
