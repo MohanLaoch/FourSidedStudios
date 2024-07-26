@@ -1222,3 +1222,9 @@
 | :--- |
 | • Imported locked character select button sprites|
 | • Readded respective hats to Serg.io + Gold Serg.io in Prototype 1 scene + Tutorial scene|
+
+### 26/07/2024
+
+| **Mark** |
+| :--- |
+| • Imported scene + day title sprites|
