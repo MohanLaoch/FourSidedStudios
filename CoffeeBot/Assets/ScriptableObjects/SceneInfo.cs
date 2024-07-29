@@ -36,6 +36,16 @@ public class SceneInfo : ScriptableObject
     public bool TeaUnlocked;
 
 
+    [Header("Skin Unlocks")]
+    public int SpillsCleaned = 0;
+    public int OrdersCompleted = 0;
+    public bool GoodEndingAchieved = false;
+    public bool BadEndingAchieved = false;
+    public bool PrisonEndingAchieved = false;
+    public bool AllAchievementsUnlocked = false;
+
+
+
 
 
     public void Reset()
@@ -66,7 +76,7 @@ public class SceneInfo : ScriptableObject
         ambienceVolume = 1;
         SFXVolume = 1;
 
-}
+    }
 
     
 

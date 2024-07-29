@@ -324,6 +324,8 @@ public class Player : MonoBehaviour, IDataPersistence
         sceneInfo.IcedLatteUnlocked = data.playerAttributesData.IcedLatteUnlocked;
         sceneInfo.MochaUnlocked = data.playerAttributesData.MochaUnlocked;
         sceneInfo.TeaUnlocked = data.playerAttributesData.TeaUnlocked;
+
+        sceneInfo.SpillsCleaned = data.playerAttributesData.SpillsCleaned;
     }
 
     public void SaveData(GameData data)
@@ -352,6 +354,8 @@ public class Player : MonoBehaviour, IDataPersistence
         data.playerAttributesData.IcedLatteUnlocked = sceneInfo.IcedLatteUnlocked;
         data.playerAttributesData.MochaUnlocked = sceneInfo.MochaUnlocked;
         data.playerAttributesData.TeaUnlocked = sceneInfo.TeaUnlocked;
+
+        data.playerAttributesData.SpillsCleaned = sceneInfo.SpillsCleaned;
 
     }
     void Update()

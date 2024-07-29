@@ -45,6 +45,8 @@ public class AttributesData
 
     public bool TeaUnlocked;
 
+    public int SpillsCleaned;
+
     public AttributesData()
     {
         currentTime = 180f;
