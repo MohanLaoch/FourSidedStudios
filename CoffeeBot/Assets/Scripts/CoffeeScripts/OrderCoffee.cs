@@ -88,22 +88,25 @@ public class OrderCoffee : MonoBehaviour
         if (other.gameObject.tag == acceptedCoffeeTag)
         {
             CompleteOrder();
-
+            other.gameObject.transform.Find("HighlightRing").transform.parent = player.transform;
             Destroy(other.gameObject);
-
+            Debug.Log("testasdiujfnasopiudhf");
             
             //reset itemholding bool here
             player.Holding = false;
         }
-        else
-            return; // code for rejecting an order can be put here
+        else if(other.gameObject.tag != acceptedCoffeeTag)
+        {
+            return;
+        }
+            //return; // code for rejecting an order can be put here
         
     }
 
     private void CompleteOrder()
     {
         Destroy(orderGameObject);
-        
+           
 
         acceptedCoffeeTag = "";
 

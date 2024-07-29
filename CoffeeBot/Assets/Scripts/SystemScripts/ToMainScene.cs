@@ -46,14 +46,17 @@ public class ToMainScene : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
-
-        if (other.gameObject.tag == "Latte" || other.gameObject.tag == "Cappuccino" || other.gameObject.tag == "Americano")
+        if(sceneInfo.dayCount == 0)
         {
-            Destroy(other.gameObject);
-            canLoad = true;
-            npcTextMainScene.GetComponent<Image>().enabled = true;
-            npcTextMainScene.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
+            if (other.gameObject.tag == "Latte" || other.gameObject.tag == "Cappuccino" || other.gameObject.tag == "Americano")
+            {
+                Destroy(other.gameObject);
+                canLoad = true;
+                npcTextMainScene.GetComponent<Image>().enabled = true;
+                npcTextMainScene.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
+            }
         }
+
     }
 
     private void LoadNextScene()

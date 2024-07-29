@@ -390,10 +390,14 @@ public class Player : MonoBehaviour, IDataPersistence
 
             if(raycastHit.transform.TryGetComponent(out Interactable interactable) && !raycastHit.transform.TryGetComponent(out StorageBox storageBox1))
             {
-                HighlightRing.transform.parent = interactable.transform;
-                HighlightRing.transform.position = interactable.transform.localPosition;
-                HighlightRing.SetActive(true);
-                Highlighted = true;
+                if(HighlightRing != null)
+                {
+                    HighlightRing.transform.parent = interactable.transform;
+                    HighlightRing.transform.position = interactable.transform.localPosition;
+                    HighlightRing.SetActive(true);
+                    Highlighted = true;
+                }
+
             }
         }
         else
@@ -401,7 +405,7 @@ public class Player : MonoBehaviour, IDataPersistence
             Highlighted = false;
         }
 
-        if (Highlighted)
+        if (Highlighted && HighlightRing != null)
         {
             boxUI.SetActive(true);
             HighlightRing.SetActive(true);
@@ -409,11 +413,13 @@ public class Player : MonoBehaviour, IDataPersistence
         }
         else
         {
-            boxUI.SetActive(false);
-            HighlightRing.SetActive(false);
-            HighlightRing.transform.parent = transform;
-            HighlightRing.transform.position = transform.localPosition;
-
+            if(HighlightRing != null)
+            {
+                boxUI.SetActive(false);
+                HighlightRing.SetActive(false);
+                HighlightRing.transform.parent = transform;
+                HighlightRing.transform.position = transform.localPosition;
+            }
 
         }
 
