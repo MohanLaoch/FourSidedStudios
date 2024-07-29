@@ -12,6 +12,8 @@ public class NpcLeavingState : NpcBaseState
     public override void EnterState(NpcStateManager npc)
     {
         NpcAnim = npc.GetComponentInChildren<Animator>();
+        npc.sittingState.SetAllCollidersStatus(true);
+       
     }
 
     public override void UpdateState(NpcStateManager npc)

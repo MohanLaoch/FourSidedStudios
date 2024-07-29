@@ -147,8 +147,11 @@ public class NpcSittingState : NpcBaseState
         }
         if(collision.gameObject.layer == LayerMask.NameToLayer("Interactables") && !collision.gameObject.GetComponent<Interactable>().isMoving)
         {
-            SetAllCollidersStatus(true);
+            npc.transform.parent = null;
+            currentChair.GetComponent<BoxCollider>().enabled = true;
+            //SetAllCollidersStatus(true);
             Debug.Log("turning on colliders");
+            Debug.Log(currentChair);
         }
 
 

@@ -369,6 +369,16 @@ public class Player : MonoBehaviour, IDataPersistence
         Acceleration = sceneInfo.playerAcceleration;
         RotSpeed = sceneInfo.playerRotSpeed;
 
+        if (dashIsCooldown)
+        {
+            ApplyDashCooldown();
+        }
+
+        if (armIsCooldown)
+        {
+            ApplyArmCooldown();
+        }
+
         Debug.DrawRay(RayZone.transform.position, transform.TransformDirection(Vector3.forward), Color.green);
         if (Physics.Raycast(RayZone.transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit raycastHit, 1.2f, interactablesLayerMask))
         {
@@ -407,16 +417,6 @@ public class Player : MonoBehaviour, IDataPersistence
 
         }
 
-        if (dashIsCooldown)
-        {
-            ApplyDashCooldown();
-        }
-
-        if (armIsCooldown)
-        {
-            ApplyArmCooldown();
-        }
-           
 
 
     }
