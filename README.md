@@ -1228,3 +1228,11 @@
 | **Mark** |
 | :--- |
 | • Imported scene + day title sprites|
+
+### 29/07/2024
+
+| **Mark** |
+| :--- |
+| • Imported Sack + SackRigged + Pallet models|
+| • Added the above to Mark Scene|
+| • Added physics to SackRigged|
