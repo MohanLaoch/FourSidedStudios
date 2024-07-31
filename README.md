@@ -1236,3 +1236,12 @@
 | • Imported Sack + SackRigged + Pallet models|
 | • Added the above to Mark Scene|
 | • Added physics to SackRigged|
+
+### 31/07/2024
+
+| **Mark** |
+| :--- |
+| • Imported StoreRoomCrate|
+| • Imported StoreRoomCrate Textures|
+| • Added the above to Mark Scene|
+| • Created Prefab "Pile'o'Boxes"|
