@@ -47,6 +47,14 @@ public class AttributesData
 
     public int SpillsCleaned;
 
+    public int OrdersCompleted;
+
+    public bool GoodEndingAchieved;
+
+    public bool BadEndingAchieved;
+
+    public bool PrisonEndingAchieved;
+
     public AttributesData()
     {
         currentTime = 180f;

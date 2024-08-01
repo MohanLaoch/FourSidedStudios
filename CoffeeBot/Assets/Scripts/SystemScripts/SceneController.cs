@@ -107,7 +107,10 @@ public class SceneController : MonoBehaviour
 
     public void SetSkin2()
     {
-        sceneInfo.SkinCounter = 2;
+        if (sceneInfo.GoodEndingAchieved)
+        {
+            sceneInfo.SkinCounter = 2;
+        }
     }
 
     public void SetSkin3()
@@ -121,15 +124,24 @@ public class SceneController : MonoBehaviour
 
     public void SetSkin4()
     {
-        sceneInfo.SkinCounter = 4;
+        if (sceneInfo.PrisonEndingAchieved)
+        {
+            sceneInfo.SkinCounter = 4;
+        }
     }
     public void SetSkin5()
     {
-        sceneInfo.SkinCounter = 5;
+        if (sceneInfo.OrdersCompleted >= 30)
+        {
+            sceneInfo.SkinCounter = 5;
+        }
     }
     public void SetSkin6()
     {
-        sceneInfo.SkinCounter = 6;
+        if (sceneInfo.BadEndingAchieved)
+        {
+            sceneInfo.SkinCounter = 6;
+        }
     }
 
     public void UpdateClickSound()

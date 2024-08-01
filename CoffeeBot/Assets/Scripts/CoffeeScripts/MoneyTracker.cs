@@ -165,6 +165,7 @@ public class MoneyTracker : MonoBehaviour
 
         givenMoneyAnim.SetBool("MoneyGiven", true);
         MoneyIsGiven = true;
+        sceneInfo.OrdersCompleted++;
 
 
 
