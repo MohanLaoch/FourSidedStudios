@@ -360,7 +360,23 @@ public class Player : MonoBehaviour, IDataPersistence
     }
     void Update()
     {
-        
+        InputSystem.onDeviceChange +=
+    (device, change) =>
+    {
+        switch (change)
+        {
+            case InputDeviceChange.Added:
+                Debug.Log($"Device {device} was added");
+                sceneInfo.ControllerConnected = true;
+                break;
+            case InputDeviceChange.Removed:
+                Debug.Log($"Device {device} was removed");
+                sceneInfo.ControllerConnected = false;
+                break;
+        }
+    };
+
+
         PlayerMovement.setParameterByName("PitchChange", Speed);
         if(!Dashing)
         {

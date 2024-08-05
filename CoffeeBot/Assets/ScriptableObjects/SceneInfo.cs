@@ -44,6 +44,8 @@ public class SceneInfo : ScriptableObject
     public bool PrisonEndingAchieved = false;
     public bool AllAchievementsUnlocked = false;
 
+    [Header("Controller")]
+    public bool ControllerConnected = false;
 
 
 
