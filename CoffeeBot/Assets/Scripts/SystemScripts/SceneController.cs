@@ -131,7 +131,7 @@ public class SceneController : MonoBehaviour
     }
     public void SetSkin5()
     {
-        if (sceneInfo.OrdersCompleted >= 30)
+        if (sceneInfo.OrdersCompleted >= 20)
         {
             sceneInfo.SkinCounter = 5;
         }
