@@ -25,6 +25,9 @@ public class Storage : MonoBehaviour
     public GameObject indicatorText;
     public TextMeshProUGUI storageText;
     public TextMeshProUGUI buttonText;
+    public Sprite buttonY;
+    public Sprite buttonB;
+    public Image controllerButton;
     public Image storageImage;
 
     [Header("Sprites")]
@@ -66,6 +69,7 @@ public class Storage : MonoBehaviour
             itemName = null;
             storageImage.sprite = nullSprite;
             buttonText.text = "E".ToString();
+            controllerButton.sprite = buttonY;
         }
 
         // if the storge goes above current capacity bring it back down to the current (so no item overflow)
@@ -145,6 +149,7 @@ public class Storage : MonoBehaviour
                     storageImage.sprite = currrentSprite;
 
                     buttonText.text = "F".ToString();
+                    controllerButton.sprite = buttonB;
 
                     itemName = other.gameObject.tag.ToString();
 
