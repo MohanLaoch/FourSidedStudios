@@ -1245,3 +1245,9 @@
 | • Imported StoreRoomCrate Textures|
 | • Added the above to Mark Scene|
 | • Created Prefab "Pile'o'Boxes"|
+
+### 10/08/2024
+
+| **Mark** |
+| :--- |
+| • Imported achievement popup sprites|
