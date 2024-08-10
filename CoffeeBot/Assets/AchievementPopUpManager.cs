@@ -7,7 +7,12 @@ using TMPro;
 public class AchievementPopUpManager : MonoBehaviour
 {
     public SceneInfo sceneInfo;
-    public TextMeshProUGUI achievementText;
+    //public TextMeshProUGUI achievementText;
+    public Sprite achievementSprite1;
+    public Sprite achievementSprite2;
+    public Sprite achievementSprite3;
+    public Sprite achievementSprite4;
+    public Sprite achievementSprite5;
 
     private void Start()
     {
@@ -68,35 +73,38 @@ public class AchievementPopUpManager : MonoBehaviour
 
     public void PlayAnim1()
     {
+            GetComponent<Image>().sprite = achievementSprite1;
             GetComponent<Animator>().SetTrigger("AchievementUnlocked");
-            achievementText.text = "Hoover skin unlocked! Clean 30 spills." + sceneInfo.SpillsCleaned.ToString() + "/ 30";     
+            //achievementText.text = "Hoover skin unlocked! Clean 30 spills." + sceneInfo.SpillsCleaned.ToString() + "/ 30";
+            
     }
 
     public void PlayAnim2()
     {
+            GetComponent<Image>().sprite = achievementSprite2;
             GetComponent<Animator>().SetTrigger("AchievementUnlocked");
-            achievementText.text = "Coffee skin unlocked! Complete 20 orders." + sceneInfo.OrdersCompleted.ToString() + "/ 20";
+            //achievementText.text = "Coffee skin unlocked! Complete 20 orders." + sceneInfo.OrdersCompleted.ToString() + "/ 20";
         
     }
     public void PlayAnim3()
     {
-       
+            GetComponent<Image>().sprite = achievementSprite3;
             GetComponent<Animator>().SetTrigger("AchievementUnlocked");
-            achievementText.text = "Gold skin unlocked! Earned over 50 credits.";
+            //achievementText.text = "Gold skin unlocked! Earned over 50 credits.";
         
     }
     public void PlayAnim4()
     {
-        
+            GetComponent<Image>().sprite = achievementSprite4;
             GetComponent<Animator>().SetTrigger("AchievementUnlocked");
-            achievementText.text = "Cardboard skin unlocked! Earned under 50 credits.";
+            //achievementText.text = "Cardboard skin unlocked! Earned under 50 credits.";
         
     }
     public void PlayAnim5()
     {
-        
+            GetComponent<Image>().sprite = achievementSprite5;
             GetComponent<Animator>().SetTrigger("AchievementUnlocked");
-            achievementText.text = "Inmate skin unlocked! Injured 10 customers.";
+            //achievementText.text = "Inmate skin unlocked! Injured 10 customers.";
         
     }
 }
