@@ -24,6 +24,7 @@ public class DayTimer : MonoBehaviour, IDataPersistence
 
     public GameObject[] UiElements;
 
+    public Sprite daySprite;
 
     [Header("Settings")]
     public float maxTime = 180;
@@ -93,6 +94,8 @@ public class DayTimer : MonoBehaviour, IDataPersistence
         }
 
         SetTimerText();
+
+
 
     }
 

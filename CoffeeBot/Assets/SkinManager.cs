@@ -23,32 +23,34 @@ public class SkinManager : MonoBehaviour
 
     public void Start()
     {
+
       if(sceneInfo.OrdersCompleted < 20)
       {
-            CoffeeButton.enabled = false;
+            CoffeeButton.interactable = false;
             CoffeeButton.GetComponent<Image>().sprite = CoffeeLockedSprite;
       }
 
-      if(sceneInfo.SpillsCleaned < 30)
+      if (sceneInfo.SpillsCleaned < 30)
       {
-            HooverButton.enabled = false;
+            HooverButton.interactable = false;
             HooverButton.GetComponent<Image>().sprite = HooverLockedSprite;
       }
+
       if (sceneInfo.GoodEndingAchieved == false)
       {
-           GoldButton.enabled = false;
+           GoldButton.interactable = false;
            GoldButton.GetComponent<Image>().sprite = GoldLockedSprite;
       }
 
       if (sceneInfo.BadEndingAchieved == false)
       {
-          CardboardButton.enabled = false;
+          CardboardButton.interactable = false;
           CardboardButton.GetComponent<Image>().sprite = CardboardLockedSprite;
       }
 
       if (sceneInfo.PrisonEndingAchieved == false)
       {
-          InmateButton.enabled = false;
+          InmateButton.interactable = false;
           InmateButton.GetComponent<Image>().sprite = InmateLockedSprite;
       }
 
