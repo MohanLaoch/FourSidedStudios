@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30321336, g: 0.12815265, b: 0.34266487, a: 1}
+  m_IndirectSpecularColor: {r: 0.30322725, g: 0.12813418, b: 0.342678, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17021,7 +17021,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 20.599976, y: 24.600006}
+  m_AnchoredPosition: {x: 20.599976, y: 24.599976}
   m_SizeDelta: {x: 31.6047, y: 20.9782}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1165238743
@@ -33192,6 +33192,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 7833474b-885c-41c7-bb62-c00eb01464aa
       m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 70e33c2b-8886-4b1e-b642-7abb4bc68c3f
+      m_Path: <Gamepad>/dpad/left
       m_Interactions: 
       m_Processors: 
       m_Groups: 
