@@ -38,7 +38,7 @@ public class ToMainScene : MonoBehaviour
 
     private void Start()
     {
-        npcTextMainScene = GameObject.Find("BaristaText");
+        npcTextMainScene = GameObject.FindGameObjectWithTag("BaristaText");
 
         action.performed += ctx => LoadNextScene();
     }
@@ -52,8 +52,9 @@ public class ToMainScene : MonoBehaviour
             {
                 Destroy(other.gameObject);
                 canLoad = true;
-                npcTextMainScene.GetComponent<Image>().enabled = true;
-                npcTextMainScene.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
+                //npcTextMainScene.GetComponent<Image>().enabled = true;
+                // npcTextMainScene.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
+                npcTextMainScene.transform.GetChild(0).gameObject.SetActive(true);
             }
         }
 
