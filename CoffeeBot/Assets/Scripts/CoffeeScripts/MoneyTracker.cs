@@ -126,17 +126,24 @@ public class MoneyTracker : MonoBehaviour
 
     public void StartTimer()
     {
-        // set the timer to maxTime, and the value of the slider to currentTime
+        if (sceneInfo.dayCount != 0)
+        {
+            // set the timer to maxTime, and the value of the slider to currentTime
 
-        timerActive = true;
-        currentTime = maxTime;
-        slider.maxValue = maxTime;
-        slider.value = currentTime;
+            timerActive = true;
+            currentTime = maxTime;
+            slider.maxValue = maxTime;
+            slider.value = currentTime;
 
-        // set the colour of the timer
+            // set the colour of the timer
 
-        sliderFill.color = sliderGradient.Evaluate(1f);
-        sliderFill.color = sliderGradient.Evaluate(slider.normalizedValue);
+            sliderFill.color = sliderGradient.Evaluate(1f);
+            sliderFill.color = sliderGradient.Evaluate(slider.normalizedValue);
+        }
+        else
+        {
+            timerActive = false;
+        }
     }
 
     public void StopTimer()

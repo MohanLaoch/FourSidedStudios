@@ -21,7 +21,7 @@ public class PreventObjectSoftLock : MonoBehaviour
 
             rb.constraints = RigidbodyConstraints.None;
 
-            other.gameObject.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z - 2);
+            other.gameObject.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z - 1);
 
             playerScript.Holding = false;
         }
