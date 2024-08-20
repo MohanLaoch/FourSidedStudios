@@ -165,10 +165,7 @@ public class DayTimer : MonoBehaviour, IDataPersistence
         MoneyText.text = sceneInfo.money.ToString("0");
 
 
-        DisableUI();
-        
-
-
+        DisableUI();      
 
     }
     public void EnableUI()
