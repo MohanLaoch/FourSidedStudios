@@ -26,6 +26,8 @@ public class DayTimer : MonoBehaviour, IDataPersistence
 
     public Sprite daySprite;
 
+    public PlayerInputActions playerInputActions;
+
     [Header("Settings")]
     public float maxTime = 180;
     public float currentTime;
@@ -50,7 +52,7 @@ public class DayTimer : MonoBehaviour, IDataPersistence
 
     private void Awake()
     {
-        
+        playerInputActions = new PlayerInputActions();
     }
 
 

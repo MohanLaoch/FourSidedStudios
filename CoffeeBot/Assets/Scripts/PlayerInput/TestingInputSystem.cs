@@ -14,7 +14,7 @@ public class TestingInputSystem : MonoBehaviour
     
     public PlayerInput playerInput;
     private PlayerInputActions playerInputActions;
-
+    public DayTimer dayTimer;
 
     public ThrowBar throwBar;
 
@@ -48,6 +48,15 @@ public class TestingInputSystem : MonoBehaviour
 
     }
 
+    public void Update()
+    {
+       if(dayTimer.currentTime == 0)
+       {
+            playerInputActions.Player.Interact.Disable();
+       }
+
+    }
+
     private void Interact_started(InputAction.CallbackContext obj)
     {
         
@@ -76,12 +85,8 @@ public class TestingInputSystem : MonoBehaviour
    
 
     public void Interact_performed(InputAction.CallbackContext obj)
-    {
-        
-        
-       OnInteractAction?.Invoke(this, EventArgs.Empty);
-        
-
+    {                
+       OnInteractAction?.Invoke(this, EventArgs.Empty);       
     }
 
     

@@ -8,6 +8,7 @@ public class NPCLeavingTrigger : MonoBehaviour
 {
     public SceneInfo sceneInfo;
     public TextMeshProUGUI moneyText;
+    public Player player;
     private void Awake()
     {
        
@@ -29,6 +30,7 @@ public class NPCLeavingTrigger : MonoBehaviour
             other.gameObject.SetActive(false);
             sceneInfo.money += 15;
             moneyText.text = ": " + sceneInfo.money.ToString("0");
+            player.Holding = false;          
         }
     
     }
