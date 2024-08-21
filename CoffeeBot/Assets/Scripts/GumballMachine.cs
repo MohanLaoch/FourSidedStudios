@@ -43,6 +43,13 @@ public class GumballMachine : MonoBehaviour
             AtMachine = true;
         }
     }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            AtMachine = false;
+        }
+    }
 
     public void Update()
     {
