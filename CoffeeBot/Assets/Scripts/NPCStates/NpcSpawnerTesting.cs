@@ -31,22 +31,22 @@ public class NpcSpawnerTesting : MonoBehaviour
                 NpcSpawnTime = 40;
                 break;
             case 2:
-                NpcSpawnTime = 30;
+                NpcSpawnTime = 35;
                 break;
             case 3:
-                NpcSpawnTime = 25;
+                NpcSpawnTime = 30;
                 break;
             case 4:
-                NpcSpawnTime = 20;
+                NpcSpawnTime = 25;
                 break;
             case 5:
-                NpcSpawnTime = 15;
+                NpcSpawnTime = 25;
                 break;
         }
     }
     public IEnumerator SpawnNPC()
     {
-        while(NpcCount < 10)
+        while(NpcCount < 7)
         {
             yield return new WaitForSeconds(NpcSpawnTime);
             SRKChance = Random.Range(1, 7);

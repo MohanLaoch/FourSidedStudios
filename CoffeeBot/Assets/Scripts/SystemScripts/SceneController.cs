@@ -164,4 +164,10 @@ public class SceneController : MonoBehaviour
         }
     }
 
+    public void ResetAchievements()
+    {
+        sceneInfo.ResetAchievements();
+        SetSkin1();
+    }
+
 }

@@ -162,10 +162,7 @@ public class UnlockCoffee : MonoBehaviour
 
             //DataPersistenceManager.instance.SaveGame();
         }
-        else if(!sceneInfo.ChaiLatteUnlocked)
-        {
-            StartCoroutine(player.NoCredits());
-        }
+
        
     }
 
@@ -225,10 +222,7 @@ public class UnlockCoffee : MonoBehaviour
 
             //DataPersistenceManager.instance.SaveGame();
         }
-        else if(!sceneInfo.HotChocolateUnlocked)
-        {
-            StartCoroutine(player.NoCredits());
-        }
+
 
     }
 
@@ -288,10 +282,7 @@ public class UnlockCoffee : MonoBehaviour
 
            // DataPersistenceManager.instance.SaveGame();
         }
-        else if(!sceneInfo.IcedCoffeeUnlocked)
-        {
-            StartCoroutine(player.NoCredits());
-        }
+
 
     }
 
@@ -350,10 +341,7 @@ public class UnlockCoffee : MonoBehaviour
 
             //DataPersistenceManager.instance.SaveGame();
         }
-        else if(!sceneInfo.IcedLatteUnlocked)
-        {
-            StartCoroutine(player.NoCredits());
-        }
+
     }
 
     public void UnlockMocha()
@@ -412,10 +400,7 @@ public class UnlockCoffee : MonoBehaviour
 
            // DataPersistenceManager.instance.SaveGame();
         }
-        else if (!sceneInfo.MochaUnlocked)
-        {
-            StartCoroutine(player.NoCredits());
-        }
+
     }
 
     public void UnlockTea()
@@ -474,10 +459,7 @@ public class UnlockCoffee : MonoBehaviour
 
             //DataPersistenceManager.instance.SaveGame();
         }
-        else if (!sceneInfo.TeaUnlocked)
-        {
-            StartCoroutine(player.NoCredits());
-        }
+
     }
 }
 

@@ -24,13 +24,13 @@ public class SkinManager : MonoBehaviour
     public void Start()
     {
 
-      if(sceneInfo.OrdersCompleted < 20)
+      if(sceneInfo.OrdersCompleted < 10)
       {
             CoffeeButton.interactable = false;
             CoffeeButton.GetComponent<Image>().sprite = CoffeeLockedSprite;
       }
 
-      if (sceneInfo.SpillsCleaned < 30)
+      if (sceneInfo.SpillsCleaned < 5)
       {
             HooverButton.interactable = false;
             HooverButton.GetComponent<Image>().sprite = HooverLockedSprite;

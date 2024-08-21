@@ -86,6 +86,21 @@ public class SceneInfo : ScriptableObject
 
     }
 
+    public void ResetAchievements()
+    {
+      SpillsCleaned = 0;
+      OrdersCompleted = 0;
+      GoodEndingAchieved = false;
+      BadEndingAchieved = false;
+      PrisonEndingAchieved = false;
+      AllAchievementsUnlocked = false;
+
+      hasRun1 = false;
+      hasRun2 = false;
+      hasRun3 = false;
+      hasRun4 = false;
+      hasRun5 = false;
+    }
     
 
 }
