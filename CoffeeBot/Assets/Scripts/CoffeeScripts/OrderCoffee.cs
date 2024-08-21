@@ -152,7 +152,7 @@ public class OrderCoffee : MonoBehaviour
 
         moneyTracker.CompleteOrder();
 
-
+        Destroy(orderGameObject); // removes the Order from the order list (DO NOT DELETE)
         
     }
 
