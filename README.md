@@ -1251,3 +1251,10 @@
 | **Mark** |
 | :--- |
 | • Imported achievement popup sprites|
+
+### 21/08/2024
+
+| **Mark** |
+| :--- |
+| • Imported reset achievement sprite|
+| • added the above to main menu scene|
