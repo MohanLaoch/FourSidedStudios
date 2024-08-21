@@ -8,6 +8,8 @@ public class RoboMop : MonoBehaviour
     public NavMeshAgent MopAgent;
     public bool SpillDetected;
     public Vector3 startingPos;
+
+
     void Start()
     {
         
@@ -32,8 +34,9 @@ public class RoboMop : MonoBehaviour
         {
             return;
         }
-        else 
+        else if(MopAgent.enabled)
         {
+            GetComponent<Rigidbody>().useGravity = false;
             
 
             if (SpillDetected)

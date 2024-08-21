@@ -174,6 +174,7 @@ public class Player : MonoBehaviour, IDataPersistence
         {
             Mop.GetComponent<NavMeshAgent>().enabled = true;
             Mop.GetComponent<Interactable>().enabled = false;
+            Mop.layer = LayerMask.NameToLayer("Default");
 
             MopChild1.gameObject.SetActive(false);
             MopChild2.gameObject.SetActive(true);
@@ -183,7 +184,6 @@ public class Player : MonoBehaviour, IDataPersistence
 
         if (currentScene.name == "Tutorial")
         {
-            Debug.Log("OOGABOOGA");
             sceneInfo.storageMax = 1;
         }
 
