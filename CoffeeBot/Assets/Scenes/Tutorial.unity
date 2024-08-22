@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30322725, g: 0.12813418, b: 0.342678, a: 1}
+  m_IndirectSpecularColor: {r: 0.30321336, g: 0.12815265, b: 0.34266487, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10750,7 +10750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 611040535}
   - component: {fileID: 611040537}
-  - component: {fileID: 611040536}
+  - component: {fileID: 611040538}
   m_Layer: 0
   m_Name: SacksRespawn (3)
   m_TagString: Untagged
@@ -10773,20 +10773,6 @@ Transform:
   m_Father: {fileID: 2069534817}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &611040536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 611040534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d91391bc275ec440800f2fa9a5bb9b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ignoreTags: []
-  fallenObject: {fileID: 0}
 --- !u!65 &611040537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10800,6 +10786,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &611040538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611040534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1d44d7580d0804f8ea792827fdb5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  softLockObject:
+  - CoffeeBeans
+  - Milk
+  player: {fileID: 714793110}
+  playerScript: {fileID: 1841819689}
 --- !u!1001 &619690035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19465,7 +19468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1145661521}
   - component: {fileID: 1145661523}
-  - component: {fileID: 1145661522}
+  - component: {fileID: 1145661524}
   m_Layer: 0
   m_Name: SacksRespawn
   m_TagString: Untagged
@@ -19488,20 +19491,6 @@ Transform:
   m_Father: {fileID: 2069534817}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1145661522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145661520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d91391bc275ec440800f2fa9a5bb9b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ignoreTags: []
-  fallenObject: {fileID: 0}
 --- !u!65 &1145661523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19515,6 +19504,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1145661524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145661520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1d44d7580d0804f8ea792827fdb5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  softLockObject:
+  - CoffeeBeans
+  - Milk
+  player: {fileID: 714793110}
+  playerScript: {fileID: 1841819689}
 --- !u!1 &1147503022
 GameObject:
   m_ObjectHideFlags: 0
@@ -20965,7 +20971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1217690003}
   - component: {fileID: 1217690005}
-  - component: {fileID: 1217690004}
+  - component: {fileID: 1217690006}
   m_Layer: 0
   m_Name: SacksRespawn (1)
   m_TagString: Untagged
@@ -20988,20 +20994,6 @@ Transform:
   m_Father: {fileID: 2069534817}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1217690004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217690002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d91391bc275ec440800f2fa9a5bb9b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ignoreTags: []
-  fallenObject: {fileID: 0}
 --- !u!65 &1217690005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21015,6 +21007,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1217690006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217690002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1d44d7580d0804f8ea792827fdb5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  softLockObject:
+  - CoffeeBeans
+  - Milk
+  player: {fileID: 714793110}
+  playerScript: {fileID: 1841819689}
 --- !u!1 &1217885313
 GameObject:
   m_ObjectHideFlags: 0
@@ -33195,7 +33204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1805926713}
   - component: {fileID: 1805926715}
-  - component: {fileID: 1805926714}
+  - component: {fileID: 1805926716}
   m_Layer: 0
   m_Name: SacksRespawn (2)
   m_TagString: Untagged
@@ -33218,20 +33227,6 @@ Transform:
   m_Father: {fileID: 2069534817}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1805926714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805926712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d91391bc275ec440800f2fa9a5bb9b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ignoreTags: []
-  fallenObject: {fileID: 0}
 --- !u!65 &1805926715
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33245,6 +33240,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1805926716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805926712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1d44d7580d0804f8ea792827fdb5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  softLockObject:
+  - CoffeeBeans
+  - Milk
+  player: {fileID: 714793110}
+  playerScript: {fileID: 1841819689}
 --- !u!1001 &1822048901
 PrefabInstance:
   m_ObjectHideFlags: 0
