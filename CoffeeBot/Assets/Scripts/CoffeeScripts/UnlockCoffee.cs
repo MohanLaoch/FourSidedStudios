@@ -113,12 +113,12 @@ public class UnlockCoffee : MonoBehaviour
             return;
         }*/
         
-        if(sceneInfo.money >= 15 || sceneInfo.ChaiLatteUnlocked)
+       /* if(sceneInfo.money >= 15 || sceneInfo.ChaiLatteUnlocked)
         {
             if(!sceneInfo.ChaiLatteUnlocked)
             {
                 sceneInfo.money -= 15;
-            }
+            }*/
             
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
 
@@ -161,7 +161,7 @@ public class UnlockCoffee : MonoBehaviour
             pauseMenu.CoffeeUnlock1.interactable = false;
 
             //DataPersistenceManager.instance.SaveGame();
-        }
+       // }
 
        
     }
@@ -173,12 +173,12 @@ public class UnlockCoffee : MonoBehaviour
             return;
         }*/
 
-        if (sceneInfo.money >= 15 || sceneInfo.HotChocolateUnlocked)
+        /*if (sceneInfo.money >= 15 || sceneInfo.HotChocolateUnlocked)
         {
             if (!sceneInfo.HotChocolateUnlocked)
             {
                 sceneInfo.money -= 15;
-            }
+            }*/
             
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
 
@@ -221,7 +221,7 @@ public class UnlockCoffee : MonoBehaviour
             pauseMenu.CoffeeUnlock2.interactable = false;
 
             //DataPersistenceManager.instance.SaveGame();
-        }
+       // }
 
 
     }
@@ -233,12 +233,12 @@ public class UnlockCoffee : MonoBehaviour
             return;
         }*/
 
-        if (sceneInfo.money >= 15 || sceneInfo.IcedCoffeeUnlocked)
+       /* if (sceneInfo.money >= 15 || sceneInfo.IcedCoffeeUnlocked)
         {
             if (!sceneInfo.IcedCoffeeUnlocked)
             {
                 sceneInfo.money -= 15;
-            }
+            }*/
 
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
 
@@ -281,7 +281,7 @@ public class UnlockCoffee : MonoBehaviour
             pauseMenu.CoffeeUnlock3.interactable = false;
 
            // DataPersistenceManager.instance.SaveGame();
-        }
+       // }
 
 
     }
@@ -293,12 +293,12 @@ public class UnlockCoffee : MonoBehaviour
             return;
         }*/
 
-        if (sceneInfo.money >= 15 || sceneInfo.IcedLatteUnlocked)
+       /* if (sceneInfo.money >= 15 || sceneInfo.IcedLatteUnlocked)
         {
             if (!sceneInfo.IcedLatteUnlocked)
             {
                 sceneInfo.money -= 15;
-            }
+            }*/
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
 
             craftCoffee.recipes.Add("MilkCoffeeBeansIce");
@@ -340,7 +340,7 @@ public class UnlockCoffee : MonoBehaviour
             pauseMenu.CoffeeUnlock4.interactable = false;
 
             //DataPersistenceManager.instance.SaveGame();
-        }
+       // }
 
     }
 
@@ -351,12 +351,12 @@ public class UnlockCoffee : MonoBehaviour
             return;
         }*/
 
-        if (sceneInfo.money >= 15 || sceneInfo.MochaUnlocked)
+       /* if (sceneInfo.money >= 15 || sceneInfo.MochaUnlocked)
         {
             if (!sceneInfo.MochaUnlocked)
             {
                 sceneInfo.money -= 15;
-            }
+            }*/
 
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
 
@@ -399,7 +399,7 @@ public class UnlockCoffee : MonoBehaviour
             pauseMenu.CoffeeUnlock5.interactable = false;
 
            // DataPersistenceManager.instance.SaveGame();
-        }
+        //}
 
     }
 
@@ -410,12 +410,12 @@ public class UnlockCoffee : MonoBehaviour
             return;
         }*/
 
-        if (sceneInfo.money >= 15 || sceneInfo.TeaUnlocked)
+        /*if (sceneInfo.money >= 15 || sceneInfo.TeaUnlocked)
         {
             if (!sceneInfo.TeaUnlocked)
             {
                 sceneInfo.money -= 15;
-            }
+            }*/
 
             MoneyText.text = ": " + sceneInfo.money.ToString("0");
 
@@ -460,7 +460,7 @@ public class UnlockCoffee : MonoBehaviour
             //DataPersistenceManager.instance.SaveGame();
         }
 
-    }
+   // }
 }
 
 /*
