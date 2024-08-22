@@ -40,13 +40,13 @@ public class AchievementPopUpManager : MonoBehaviour
 
     private void Update()
     {
-        if(sceneInfo.SpillsCleaned >= 30 && sceneInfo.hasRun1 == false)
+        if(sceneInfo.SpillsCleaned >= 5 && sceneInfo.hasRun1 == false)
         {
             sceneInfo.hasRun1 = true;
             PlayAnim1();
         }
 
-        if(sceneInfo.OrdersCompleted >= 20 && sceneInfo.hasRun2 == false)
+        if(sceneInfo.OrdersCompleted >= 10 && sceneInfo.hasRun2 == false)
         {
             sceneInfo.hasRun2 = true;
             PlayAnim2();

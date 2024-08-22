@@ -115,7 +115,7 @@ public class SceneController : MonoBehaviour
 
     public void SetSkin3()
     {
-        if(sceneInfo.SpillsCleaned >= 20)
+        if(sceneInfo.SpillsCleaned >= 5)
         {
             sceneInfo.SkinCounter = 3;
         }
@@ -131,7 +131,7 @@ public class SceneController : MonoBehaviour
     }
     public void SetSkin5()
     {
-        if (sceneInfo.OrdersCompleted >= 20)
+        if (sceneInfo.OrdersCompleted >= 10)
         {
             sceneInfo.SkinCounter = 5;
         }
