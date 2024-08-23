@@ -22,6 +22,8 @@ public class DayTimer : MonoBehaviour, IDataPersistence
     public GameObject upgradesMenu;
     public GameObject endOfDayMenu;
 
+    public SkinManager skinManager;
+
     public GameObject[] UiElements;
 
     public Sprite daySprite;
@@ -92,7 +94,8 @@ public class DayTimer : MonoBehaviour, IDataPersistence
 
         if (currentTime <= 0)
         {
-            FinishDay();
+            skinManager.SkinCheck();
+            FinishDay();        
         }
 
         SetTimerText();

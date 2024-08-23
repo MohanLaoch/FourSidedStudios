@@ -16,11 +16,11 @@ public class AchievementPopUpManager : MonoBehaviour
 
     private void Start()
     {
-        if (sceneInfo.SpillsCleaned >= 30)
+        if (sceneInfo.SpillsCleaned >= 5)
         {
             sceneInfo.hasRun1 = true;
         }
-        if (sceneInfo.OrdersCompleted >= 20)
+        if (sceneInfo.OrdersCompleted >= 10)
         {
             sceneInfo.hasRun2 = true;
         }
