@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SceneInfo
   m_EditorClassIdentifier: 
   isNextScene: 0
-  money: -90
-  dayCount: 5
+  money: 0
+  dayCount: 1
   playerSpeed: 200
   playerRotSpeed: 200
   playerAcceleration: 10
@@ -39,7 +39,7 @@ MonoBehaviour:
   MochaUnlocked: 0
   TeaUnlocked: 0
   SpillsCleaned: 0
-  OrdersCompleted: 0
+  OrdersCompleted: 1
   GoodEndingAchieved: 0
   BadEndingAchieved: 0
   PrisonEndingAchieved: 0
@@ -49,4 +49,4 @@ MonoBehaviour:
   hasRun3: 0
   hasRun4: 0
   hasRun5: 0
-  ControllerConnected: 0
+  ControllerConnected: 1
