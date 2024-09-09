@@ -104,6 +104,8 @@ public class Player : MonoBehaviour, IDataPersistence
     public PauseMenu pauseMenu;
 
     public Scene currentScene;
+
+    public GameObject testcube;
     private void Awake()
     {
         Time.timeScale = 1;

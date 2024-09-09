@@ -7,6 +7,7 @@ using FMOD.Studio;
 
 public class MoneyTracker : MonoBehaviour
 {
+    public Player player;
     public ParticleSystem moneyEffect;
     private EventInstance moneySound;
     public SceneInfo sceneInfo;
@@ -45,7 +46,7 @@ public class MoneyTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        player = FindObjectOfType<Player>();
 
         moneySound = AudioManager.instance.CreateInstance(FMODEvents.instance.NPCMoney);
 
@@ -153,9 +154,12 @@ public class MoneyTracker : MonoBehaviour
 
     public void CompleteOrder()
     {
+
+        player.Holding = false;
         // stop the timer & give the player money and a tip & set the new money text & start the timer again
 
         StopTimer();
+        
         
         if (!upset)
         {

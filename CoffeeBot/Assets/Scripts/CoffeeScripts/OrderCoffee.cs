@@ -48,7 +48,7 @@ public class OrderCoffee : MonoBehaviour
     private void Awake()
     {
         // assign player script
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player = FindObjectOfType<Player>();
         avaliableOrders = GameObject.Find("UnlockCoffee").GetComponent<AvaliableOrders>();
         viewportContent = GameObject.Find("Content");
 
@@ -58,6 +58,8 @@ public class OrderCoffee : MonoBehaviour
         Order();
 
     }
+
+
 
     private void Order()
     {
@@ -152,8 +154,10 @@ public class OrderCoffee : MonoBehaviour
 
         moneyTracker.CompleteOrder();
 
-        Destroy(orderGameObject); // removes the Order from the order list (DO NOT DELETE)
         player.Holding = false;
+
+        Destroy(orderGameObject); // removes the Order from the order list (DO NOT DELETE)
+        
     }
 
     public void NoOrder()
