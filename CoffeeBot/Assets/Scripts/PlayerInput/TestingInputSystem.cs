@@ -50,10 +50,14 @@ public class TestingInputSystem : MonoBehaviour
 
     public void Update()
     {
-       if(dayTimer.currentTime == 0)
+      /* if(dayTimer.enabled == false)
+       {
+            return;
+       }
+       else if(dayTimer.currentTime == 0)
        {
             playerInputActions.Player.Interact.Disable();
-       }
+       }*/
 
     }
 
