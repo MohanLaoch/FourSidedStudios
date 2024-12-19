@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7218558505077508735}
   - component: {fileID: 8326299385560331462}
   - component: {fileID: 8126519800673007932}
+  - component: {fileID: 5379735474247896308}
   m_Layer: 0
   m_Name: Chassis
   m_TagString: Untagged
@@ -83,6 +84,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5379735474247896308
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103321871598563970}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1047742, y: 1.7412738, z: 2.3719947}
+  m_Center: {x: -0.00000048238735, y: -0.019387128, z: 1.0160173}
 --- !u!1 &1438891655024087822
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +357,7 @@ GameObject:
   - component: {fileID: 3722074175007764727}
   - component: {fileID: 4181675038643444037}
   - component: {fileID: 7324280975438514209}
+  - component: {fileID: 9114388798933511002}
   m_Layer: 0
   m_Name: Forks
   m_TagString: Untagged
@@ -415,6 +430,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9114388798933511002
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3525710558100776900}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4866149, y: 4.0540624, z: 0.2485891}
+  m_Center: {x: 0, y: -2.4876602, z: 0.16364807}
 --- !u!1 &4062693455512092654
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,6 +950,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6375831082697802842}
+  - component: {fileID: 981198029383926917}
+  - component: {fileID: 3895244967709736606}
   m_Layer: 0
   m_Name: Forklift2
   m_TagString: Untagged
@@ -957,8 +987,34 @@ Transform:
   - {fileID: 37632393936206650}
   - {fileID: 1300882331421171785}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &981198029383926917
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994379315321020128}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3982267, y: 0.04879516, z: 0.34832567}
+  m_Center: {x: 0.14113289, y: 0.36573726, z: 1.9632384}
+--- !u!65 &3895244967709736606
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994379315321020128}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1746883, y: 0.17484836, z: 1.1938658}
+  m_Center: {x: -0.223337, y: 0.12380306, z: 1.9143192}
 --- !u!1 &6017948874350874284
 GameObject:
   m_ObjectHideFlags: 0
